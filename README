@@ -5,4 +5,11 @@ Latest version of the readme file: https://gerrit.wikimedia.org/r/gitweb?p=media
 
 == About ==
 
-DataTypes defines a collection of types
+DataTypes defines a collection of data types which consist out of
+
+* An unique type identifier
+* An internationalized label
+* A single DataValue
+* Zero or one ValueParser
+* Zero or one ValueFormatter
+* Zero or more ValueValidator objects
