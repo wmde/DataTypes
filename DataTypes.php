@@ -51,6 +51,7 @@ if ( !defined( 'DATAVALUES' ) ) {
 
 define( 'DataTypes_VERSION', '0.1' );
 
+global $wgDataTypes;
 $wgDataTypes = array(
 //	'geo' => array(
 //		'datavalue' => 'geo-dv',

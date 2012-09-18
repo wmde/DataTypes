@@ -30,6 +30,9 @@ class TypeFactory {
 
 	/**
 	 * Maps type id to Type.
+	 *
+	 * @since 0.1
+	 *
 	 * @var array of Type
 	 */
 	protected $types;
@@ -44,6 +47,8 @@ class TypeFactory {
 	}
 
 	/**
+	 * Returns the global instance of the factory.
+	 *
 	 * @since 0.1
 	 *
 	 * @return TypeFactory
@@ -60,11 +65,40 @@ class TypeFactory {
 		return $instance;
 	}
 
-	protected function initialize()  {
+	/**
+	 * Initializes the factory.
+	 *
+	 * @since 0.1
+	 */
+	protected function initialize() {
+		global $wgDataTypes;
 
+		foreach ( $wgDataTypes as $typeId => $typeData ) {
+			$this->types[$typeId] = $this->newType( $typeId, $typeData );
+		}
 	}
 
 	/**
+	 * Returns a new instance of DataType constructed from the
+	 * provided type data.
+	 *
+	 * @since 0.1
+	 *
+	 * @param string $typeId
+	 * @param array $typeData
+	 *
+	 * @return DataType
+	 * @throws InvalidArgumentException
+	 */
+	protected function newType( $typeId, array $typeData ) {
+		return new TypeObject( $typeId ); // TODO
+	}
+
+	/**
+	 * Returns the type identifiers.
+	 *
+	 * @since 0.1
+	 *
 	 * @return array of $typeId
 	 */
 	public function getTypesIds() {
@@ -72,15 +106,27 @@ class TypeFactory {
 	}
 
 	/**
-	 * @param $typeId
+	 * Returns the data type that has the specified type identifier
+	 * or null if there is no such data type.
+	 *
+	 * @since 0.1
+	 *
+	 * @param string $typeId
+	 *
 	 * @return DataType
 	 */
 	public function getType( $typeId ) {
-		return $this->types[$typeId];
+		return array_key_exists( $typeId, $this->types ) ? $this->types[$typeId] : null;
 	}
 
 	/**
-	 * @return array of Type
+	 * Returns all data types in an associative array with
+	 * the keys being type identifiers pointing to their
+	 * corresponding data type.
+	 *
+	 * @since 0.1
+	 *
+	 * @return array of DataType
 	 */
 	public function getTypes() {
 		return $this->types;

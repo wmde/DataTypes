@@ -28,26 +28,77 @@
  */
 class TypeObject implements DataType {
 
-	public function __construct() {
+	/**
+	 * @since 0.1
+	 * @var string
+	 */
+	protected $typeId;
 
+	/**
+	 * Constructor.
+	 * Typically you should not construct such objects yourself but use the TypeFactory.
+	 *
+	 * @since 0.1
+	 *
+	 * @param string $typeId
+	 */
+	public function __construct( $typeId ) {
+		$this->typeId = $typeId;
 	}
 
-	public function getType() {
-
+	/**
+	 * @see DataType::getIdentifier
+	 *
+	 * @since 0.1
+	 *
+	 * @return string
+	 */
+	public function getIdentifier() {
+		return $this->typeId;
 	}
 
+	/**
+	 * @see DataType::getDataValueType
+	 *
+	 * @since 0.1
+	 *
+	 * @return string
+	 */
 	public function getDataValueType() {
 
 	}
 
+	/**
+	 * @see DataType::getParser
+	 *
+	 * @since 0.1
+	 *
+	 * @return ValueParser
+	 */
 	public function getParser() {
 
 	}
 
+	/**
+	 * @see DataType::getFormatter
+	 *
+	 * @since 0.1
+	 *
+	 * @return ValueFormatter
+	 */
 	public function getFormatter() {
 
 	}
 
+	/**
+	 * @see DataType::getLabel
+	 *
+	 * @since 0.1
+	 *
+	 * @param string $langCode
+	 *
+	 * @return string|null
+	 */
 	public function getLabel( $langCode ) {
 
 	}

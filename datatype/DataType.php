@@ -28,20 +28,53 @@
  */
 interface DataType {
 
-	public function getType();
+	/**
+	 * Returns the identifier of this data type.
+	 *
+	 * @since 0.1
+	 *
+	 * @return string
+	 */
+	public function getIdentifier();
 
+	/**
+	 * Returns the DataValue used by this data type.
+	 *
+	 * @since 0.1
+	 *
+	 * @return string
+	 */
 	public function getDataValueType();
 
+	/**
+	 * Returns the ValueParser used by this data type.
+	 *
+	 * @since 0.1
+	 *
+	 * @return ValueParser
+	 */
 	public function getParser();
 
 	/**
-	 * @abstract
+	 * Returns the ValueFormatter used by this data type.
+	 *
+	 * @since 0.1
+	 *
 	 * @return ValueFormatter
 	 */
 	public function getFormatter();
 
-	//public function getValidators();
-
+	/**
+	 * Returns the label of the data type in the provided language or null if there is none.
+	 *
+	 * @since 0.1
+	 *
+	 * @param string $langCode
+	 *
+	 * @return string|null
+	 */
 	public function getLabel( $langCode );
+
+	// TODO: validators
 
 }
