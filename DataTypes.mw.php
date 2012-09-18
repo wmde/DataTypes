@@ -48,6 +48,12 @@ $wgExtensionCredits['other'][] = array(
 
 $wgExtensionMessagesFiles['DataTypes'] = __DIR__ . '/DataTypes.i18n.php';
 
+foreach ( include( __DIR__ . '/DataTypes.classes.php' ) as $class => $file ) {
+	if ( !array_key_exists( $class, $GLOBALS['wgAutoloadLocalClasses'] ) ) {
+		$wgAutoloadClasses[$class] = __DIR__ . '/' . $file;
+	}
+}
+
 /**
  * Hook to add PHPUnit test cases.
  * @see https://www.mediawiki.org/wiki/Manual:Hooks/UnitTestsList
@@ -60,7 +66,9 @@ $wgExtensionMessagesFiles['DataTypes'] = __DIR__ . '/DataTypes.i18n.php';
  */
 $wgHooks['UnitTestsList'][] = function( array &$files ) {
 	$testFiles = array(
+		'datatype/DataType',
 
+		'includes/DataTypeFactory',
 	);
 
 	foreach ( $testFiles as $file ) {

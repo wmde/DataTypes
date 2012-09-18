@@ -35,7 +35,7 @@ interface DataType {
 	 *
 	 * @return string
 	 */
-	public function getIdentifier();
+	public function getId();
 
 	/**
 	 * Returns the DataValue used by this data type.
@@ -83,6 +83,6 @@ interface DataType {
 	 *
 	 * @return array of ValueValidator
 	 */
-	//public function getValidators(); // TODO
+	public function getValidators();
 
 }

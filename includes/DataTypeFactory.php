@@ -26,7 +26,7 @@
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-class TypeFactory {
+class DataTypeFactory {
 
 	/**
 	 * Maps type id to Type.
@@ -35,7 +35,7 @@ class TypeFactory {
 	 *
 	 * @var array of Type
 	 */
-	protected $types;
+	protected $types = array();
 
 	/**
 	 * Constructor.
@@ -51,9 +51,9 @@ class TypeFactory {
 	 *
 	 * @since 0.1
 	 *
-	 * @return TypeFactory
+	 * @return DataTypeFactory
 	 */
-	public function singleton() {
+	public static function singleton() {
 		static $instance = false;
 
 		if ( $instance === false ) {
@@ -91,7 +91,39 @@ class TypeFactory {
 	 * @throws InvalidArgumentException
 	 */
 	protected function newType( $typeId, array $typeData ) {
-		return new TypeObject( $typeId ); // TODO
+		if ( !array_key_exists( 'datavalue', $typeData ) || !is_string( $typeData['datavalue'] ) ) {
+			throw new InvalidArgumentException( 'Invalid datavalue type provided to DataTypeFactory' );
+		}
+
+		// TODO: use string ids for components once they have their own factories
+
+		$parser = array_key_exists( 'parser', $typeData ) ? $typeData['parser'] : 'NullParser';
+		$parser = new $parser();
+
+//		$formatter = array_key_exists( 'formatter', $typeData ) ? $typeData['formatter'] : 'NullFormatter';
+//		$formatter = new $formatter();
+		$formatter = null; // TODO
+
+		if ( array_key_exists( 'validators', $typeData ) ) {
+			$validators = is_array( $typeData['validators'] ) ? $typeData['validators'] : array( $typeData['validators'] );
+		}
+		else {
+			$validators = array();
+		}
+
+		foreach ( $validators as &$validator ) {
+			if ( is_string( $validator ) ) {
+				$validator = new $validator();
+			}
+		}
+
+		return new TypeObject(
+			$typeId,
+			$typeData['datavalue'],
+			$parser,
+			$formatter,
+			$validators
+		);
 	}
 
 	/**
@@ -101,7 +133,7 @@ class TypeFactory {
 	 *
 	 * @return array of $typeId
 	 */
-	public function getTypesIds() {
+	public function getTypeIds() {
 		return array_keys( $this->types );
 	}
 
@@ -113,7 +145,7 @@ class TypeFactory {
 	 *
 	 * @param string $typeId
 	 *
-	 * @return DataType
+	 * @return DataType|null
 	 */
 	public function getType( $typeId ) {
 		return array_key_exists( $typeId, $this->types ) ? $this->types[$typeId] : null;

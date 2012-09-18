@@ -29,10 +29,49 @@
 class TypeObject implements DataType {
 
 	/**
+	 * Identifier for the data type.
+	 *
 	 * @since 0.1
+	 *
 	 * @var string
 	 */
 	protected $typeId;
+
+	/**
+	 * Identifier for the type of the DataValue.
+	 *
+	 * @since 0.1
+	 *
+	 * @var string
+	 */
+	protected $dataValueType;
+
+	/**
+	 * The ValueParser used by this data type.
+	 *
+	 * @since 0.1
+	 *
+	 * @var ValueParser
+	 */
+	protected $parser;
+
+	/**
+	 * The ValueFormatter used by this data type.
+	 *
+	 * @since 0.1
+	 *
+	 * @var ValueFormatter
+	 */
+	protected $formatter;
+
+	/**
+	 * The ValueValidator objects used by this data type.
+	 *
+	 * @since 0.1
+	 *
+	 * @var array of ValueValidator
+	 */
+	protected $validators;
 
 	/**
 	 * Constructor.
@@ -40,20 +79,28 @@ class TypeObject implements DataType {
 	 *
 	 * @since 0.1
 	 *
-	 * @param string $typeId
+	 * @param $typeId string
+	 * @param $dataValueType string
+	 * @param $parser ValueParser
+	 * @param $formatter ValueFormatter
+	 * @param $validators array of ValueValidator
 	 */
-	public function __construct( $typeId ) {
+	public function __construct( $typeId, $dataValueType, ValueParser $parser, /* ValueFormatter */ $formatter, array $validators ) {
 		$this->typeId = $typeId;
+		$this->dataValueType = $dataValueType;
+		$this->parser = $parser;
+		$this->formatter = $formatter;
+		$this->validators = $validators;
 	}
 
 	/**
-	 * @see DataType::getIdentifier
+	 * @see DataType::getId
 	 *
 	 * @since 0.1
 	 *
 	 * @return string
 	 */
-	public function getIdentifier() {
+	public function getId() {
 		return $this->typeId;
 	}
 
@@ -65,7 +112,7 @@ class TypeObject implements DataType {
 	 * @return string
 	 */
 	public function getDataValueType() {
-
+		return $this->dataValueType;
 	}
 
 	/**
@@ -76,7 +123,7 @@ class TypeObject implements DataType {
 	 * @return ValueParser
 	 */
 	public function getParser() {
-
+		return $this->parser;
 	}
 
 	/**
@@ -87,7 +134,18 @@ class TypeObject implements DataType {
 	 * @return ValueFormatter
 	 */
 	public function getFormatter() {
+		return $this->formatter;
+	}
 
+	/**
+	 * @see DataType::getValidators
+	 *
+	 * @since 0.1
+	 *
+	 * @return array of ValueValidator
+	 */
+	public function getValidators() {
+		return $this->validators;
 	}
 
 	/**
@@ -100,7 +158,7 @@ class TypeObject implements DataType {
 	 * @return string|null
 	 */
 	public function getLabel( $langCode ) {
-
+		// TODO
 	}
 
 }
