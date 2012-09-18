@@ -75,6 +75,14 @@ interface DataType {
 	 */
 	public function getLabel( $langCode );
 
-	// TODO: validators
+
+	/**
+	 * Returns the ValueValidators that are supported by this data type.
+	 *
+	 * @since 0.1
+	 *
+	 * @return array of ValueValidator
+	 */
+	//public function getValidators(); // TODO
 
 }
