@@ -47,3 +47,25 @@ $wgExtensionCredits['other'][] = array(
 );
 
 $wgExtensionMessagesFiles['DataTypes'] = __DIR__ . '/DataTypes.i18n.php';
+
+/**
+ * Hook to add PHPUnit test cases.
+ * @see https://www.mediawiki.org/wiki/Manual:Hooks/UnitTestsList
+ *
+ * @since 0.1
+ *
+ * @param array $files
+ *
+ * @return boolean
+ */
+$wgHooks['UnitTestsList'][] = function( array &$files ) {
+	$testFiles = array(
+
+	);
+
+	foreach ( $testFiles as $file ) {
+		$files[] = __DIR__ . '/tests/' . $file . 'Test.php';
+	}
+
+	return true;
+};
