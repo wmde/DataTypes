@@ -2,7 +2,6 @@
 
 /**
  * Entry point for the DataTypes extension.
- * For usage as MediaWiki extension, use the DataTypes.mw.php entry point.
  *
  * Documentation:	 		https://www.mediawiki.org/wiki/Extension:DataTypes
  * Support					https://www.mediawiki.org/wiki/Extension_talk:DataTypes
@@ -45,8 +44,12 @@
  * @ingroup DataTypes
  */
 
-if ( !defined( 'DATAVALUES' ) ) {
+if ( !defined( 'DATAVALUES' ) && !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
+}
+
+if ( !defined( 'DATAVALUES' ) ) {
+	define( 'DATAVALUES', true );
 }
 
 define( 'DataTypes_VERSION', '0.1' );
@@ -66,7 +69,10 @@ $wgDataTypes = array(
 //	),
 );
 
-if ( !defined( 'MEDIAWIKI' ) ) {
+if ( defined( 'MEDIAWIKI' ) ) {
+	include __DIR__ . '/DataTypes.mw.php';
+}
+else {
 	spl_autoload_register( function ( $className ) {
 		static $classes = false;
 
