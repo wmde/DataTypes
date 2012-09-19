@@ -49,6 +49,8 @@ interface DataType {
 	/**
 	 * Returns the ValueParser used by this data type.
 	 *
+	 * TODO: support for multiple parsers
+	 *
 	 * @since 0.1
 	 *
 	 * @return ValueParser
@@ -57,6 +59,8 @@ interface DataType {
 
 	/**
 	 * Returns the ValueFormatter used by this data type.
+	 *
+	 * TODO: support for multiple formatters
 	 *
 	 * @since 0.1
 	 *
