@@ -28,7 +28,7 @@
  */
 return array(
 	'DataType' => 'datatype/DataType.php',
-	'TypeObject' => 'datatype/TypeObject.php',
+	'DataTypeObject' => 'datatype/DataTypeObject.php',
 
 	'DataTypeFactory' => 'includes/DataTypeFactory.php',
 );

@@ -117,7 +117,7 @@ class DataTypeFactory {
 			}
 		}
 
-		return new TypeObject(
+		return new DataTypeObject(
 			$typeId,
 			$typeData['datavalue'],
 			$parser,

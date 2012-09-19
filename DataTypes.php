@@ -56,6 +56,13 @@ define( 'DataTypes_VERSION', '0.1' );
 
 global $wgDataTypes;
 $wgDataTypes = array(
+	'item' => array(
+		'datavalue' => 'number',
+	),
+	'commonsMedia' => array(
+		'datavalue' => 'string',
+	),
+
 //	'geo' => array(
 //		'datavalue' => 'geo-dv',
 //		'parser' => 'geo-parser',

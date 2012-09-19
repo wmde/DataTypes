@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Implementation of the data types interface.
+ * Implementation of the DataType interface.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,7 +26,7 @@
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-class TypeObject implements DataType {
+class DataTypeObject implements DataType {
 
 	/**
 	 * Identifier for the data type.
@@ -158,7 +158,7 @@ class TypeObject implements DataType {
 	 * @return string|null
 	 */
 	public function getLabel( $langCode ) {
-		// TODO
+
 	}
 
 }
