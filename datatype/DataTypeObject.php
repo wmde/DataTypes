@@ -158,7 +158,10 @@ class DataTypeObject implements DataType {
 	 * @return string|null
 	 */
 	public function getLabel( $langCode ) {
-
+		// TODO: implement i18n system
+		// https://www.mediawiki.org/wiki/Help:Extension:Translate/Group_configuration_example#Step_2:_File_Format_Support
+		// https://gerrit.wikimedia.org/r/gitweb?p=mediawiki/extensions/Translate.git;a=tree;f=ffs;hb=HEAD
+		return __CLASS__ . $langCode;
 	}
 
 }
