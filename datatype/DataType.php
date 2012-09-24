@@ -1,5 +1,7 @@
 <?php
 
+namespace DataTypes;
+
 /**
  * Interface for data types.
  *

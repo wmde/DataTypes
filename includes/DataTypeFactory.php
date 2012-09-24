@@ -1,5 +1,8 @@
 <?php
 
+namespace DataTypes;
+use InvalidArgumentException;
+
 /**
  * Factory for creating data types.
  *
@@ -97,7 +100,7 @@ class DataTypeFactory {
 
 		// TODO: use string ids for components once they have their own factories
 
-		$parser = array_key_exists( 'parser', $typeData ) ? $typeData['parser'] : 'NullParser';
+		$parser = array_key_exists( 'parser', $typeData ) ? $typeData['parser'] : 'ValueParsers\NullParser';
 		$parser = new $parser();
 
 //		$formatter = array_key_exists( 'formatter', $typeData ) ? $typeData['formatter'] : 'NullFormatter';

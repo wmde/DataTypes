@@ -1,7 +1,7 @@
 <?php
 
 namespace DataTypes\Test;
-use DataTypeFactory, DataType;
+use DataTypes\DataTypeFactory, DataTypes\DataType;
 
 /**
  * Unit tests for the TypeFactory class.
@@ -35,7 +35,7 @@ use DataTypeFactory, DataType;
 class DataTypeFactoryTest extends \MediaWikiTestCase {
 
 	public function testSingleton() {
-		$this->assertInstanceOf( 'DataTypeFactory', DataTypeFactory::singleton() );
+		$this->assertInstanceOf( 'DataTypes\DataTypeFactory', DataTypeFactory::singleton() );
 		$this->assertTrue( DataTypeFactory::singleton() === DataTypeFactory::singleton() );
 	}
 
@@ -54,7 +54,7 @@ class DataTypeFactoryTest extends \MediaWikiTestCase {
 		$factory = DataTypeFactory::singleton();
 
 		foreach ( $factory->getTypeIds() as $id ) {
-			$this->assertInstanceOf( 'DataType', $factory->getType( $id ) );
+			$this->assertInstanceOf( 'DataTypes\DataType', $factory->getType( $id ) );
 		}
 
 		$this->assertInternalType( 'null', $factory->getType( "I'm in your tests, being rather silly ~=[,,_,,]:3" ) );

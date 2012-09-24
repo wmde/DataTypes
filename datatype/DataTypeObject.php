@@ -1,5 +1,8 @@
 <?php
 
+namespace DataTypes;
+use ValueParsers\ValueParser;
+
 /**
  * Implementation of the DataType interface.
  *

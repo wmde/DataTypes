@@ -1,7 +1,7 @@
 <?php
 
 namespace DataTypes\Test;
-use DataTypeFactory, DataType;
+use DataTypes\DataTypeFactory, DataTypes\DataType;
 
 /**
  * Unit tests for DataType implementations.
@@ -47,7 +47,7 @@ class DataTypeTest extends \MediaWikiTestCase {
 
 	/**
 	 * @dataProvider instanceProvider
-	 * @param \DataType $type
+	 * @param DataType $type
 	 */
 	public function testGetId( DataType $type ) {
 		$this->assertInternalType( 'string', $type->getId() );
@@ -55,7 +55,7 @@ class DataTypeTest extends \MediaWikiTestCase {
 
 	/**
 	 * @dataProvider instanceProvider
-	 * @param \DataType $type
+	 * @param DataType $type
 	 */
 	public function testGetDataValueType( DataType $type ) {
 		$this->assertInternalType( 'string', $type->getDataValueType() );
@@ -63,15 +63,15 @@ class DataTypeTest extends \MediaWikiTestCase {
 
 	/**
 	 * @dataProvider instanceProvider
-	 * @param \DataType $type
+	 * @param DataType $type
 	 */
 	public function testGetParser( DataType $type ) {
-		$this->assertInstanceOf( 'ValueParser', $type->getParser() );
+		$this->assertInstanceOf( 'ValueParsers\ValueParser', $type->getParser() );
 	}
 
 	/**
 	 * @dataProvider instanceProvider
-	 * @param \DataType $type
+	 * @param DataType $type
 	 */
 	public function testGetFormatter( DataType $type ) {
 		//$this->assertInstanceOf( 'ValueFormatter', $type->getFormatter() );
@@ -80,19 +80,19 @@ class DataTypeTest extends \MediaWikiTestCase {
 
 	/**
 	 * @dataProvider instanceProvider
-	 * @param \DataType $type
+	 * @param DataType $type
 	 */
 	public function testGetValidators( DataType $type ) {
 		$this->assertInternalType( 'array', $type->getValidators() );
 
 		foreach ( $type->getValidators() as $validator ) {
-			$this->assertInstanceOf( 'ValueValidator', $validator );
+			$this->assertInstanceOf( 'ValueValidators\ValueValidator', $validator );
 		}
 	}
 
 	/**
 	 * @dataProvider instanceProvider
-	 * @param \DataType $type
+	 * @param DataType $type
 	 */
 	public function testGetLabel( DataType $type ) {
 		foreach ( array( 'en', 'de', 'nl', 'o_O' ) as $langCode ) {
