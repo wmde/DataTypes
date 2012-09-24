@@ -62,6 +62,9 @@ $wgDataTypes = array(
 	'commonsMedia' => array(
 		'datavalue' => 'string',
 	),
+	'string' => array(
+		'datavalue' => 'string',
+	),
 
 //	'geo' => array(
 //		'datavalue' => 'geo-dv',
