@@ -52,7 +52,7 @@ if ( !defined( 'DATAVALUES' ) ) {
 	define( 'DATAVALUES', true );
 }
 
-define( 'DataTypes_VERSION', '0.1' );
+define( 'DataTypes_VERSION', '0.1 alpha' );
 
 global $wgDataTypes;
 $wgDataTypes = array(
