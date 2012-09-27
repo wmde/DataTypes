@@ -34,9 +34,15 @@ $messages = array();
  */
 $messages['en'] = array(
 	'datatypes-desc' => 'Collection of data type definitions',
+
+	'datatypes-type-string' => 'String',
+	'datatypes-type-quantity' => 'Quantity',
 );
 
 /** Message documentation (Message documentation) */
 $messages['qqq'] = array(
 	'datatypes-desc' => '{{desc}}',
+
+	'datatypes-type-string' => 'The name of a data type',
+	'datatypes-type-quantity' => 'The name of a data type',
 );

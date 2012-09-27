@@ -96,7 +96,12 @@ class DataTypeTest extends \MediaWikiTestCase {
 	 */
 	public function testGetLabel( DataType $type ) {
 		foreach ( array( 'en', 'de', 'nl', 'o_O' ) as $langCode ) {
-			$this->assertTypeOrValue( 'string', $type->getLabel( $langCode ), null );
+			$actual = $type->getLabel( $langCode );
+			$this->assertTypeOrValue( 'string', $actual, null );
+
+			$expected = wfMessage( 'datatypes-type-' . $type->getId() )->inLanguage( $langCode )->text();
+
+			$this->assertEquals( $expected, $actual );
 		}
 	}
 
