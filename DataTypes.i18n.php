@@ -37,6 +37,12 @@ $messages['en'] = array(
 
 	'datatypes-type-string' => 'String',
 	'datatypes-type-quantity' => 'Quantity',
+	'datatypes-type-monolingual-text' => 'Monolingual text',
+	'datatypes-type-multilingual-text' => 'Multilingual text',
+	'datatypes-type-number' => 'Number',
+	'datatypes-type-mediawiki-title' => 'MediaWiki title',
+	'datatypes-type-unknown' => 'Unspecified',
+	'datatypes-type-boolean' => 'Boolean',
 );
 
 /** Message documentation (Message documentation) */
@@ -45,4 +51,10 @@ $messages['qqq'] = array(
 
 	'datatypes-type-string' => 'The name of a data type',
 	'datatypes-type-quantity' => 'The name of a data type',
+	'datatypes-type-monolingual-text' => 'The name of a data type',
+	'datatypes-type-multilingual-text' => 'The name of a data type',
+	'datatypes-type-number' => 'The name of a data type',
+	'datatypes-type-mediawiki-title' => 'The name of a data type',
+	'datatypes-type-unknown' => 'The name of a data type',
+	'datatypes-type-boolean' => 'The name of a data type',
 );
