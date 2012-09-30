@@ -56,9 +56,6 @@ define( 'DataTypes_VERSION', '0.1 alpha' );
 
 global $wgDataTypes;
 $wgDataTypes = array(
-	'item' => array(
-		'datavalue' => 'number',
-	),
 	'commonsMedia' => array(
 		'datavalue' => 'string',
 	),
