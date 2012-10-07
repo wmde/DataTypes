@@ -48,7 +48,6 @@ $messages['en'] = array(
 /** Message documentation (Message documentation) */
 $messages['qqq'] = array(
 	'datatypes-desc' => '{{desc}}',
-
 	'datatypes-type-string' => 'The name of a data type',
 	'datatypes-type-quantity' => 'The name of a data type',
 	'datatypes-type-monolingual-text' => 'The name of a data type',
@@ -58,3 +57,115 @@ $messages['qqq'] = array(
 	'datatypes-type-unknown' => 'The name of a data type',
 	'datatypes-type-boolean' => 'The name of a data type',
 );
+
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
+ * @author Wizardist
+ */
+$messages['be-tarask'] = array(
+	'datatypes-desc' => 'Збор вызначэньняў тыпаў зьвестак',
+	'datatypes-type-string' => 'Радок',
+	'datatypes-type-quantity' => 'Колькасьць',
+	'datatypes-type-monolingual-text' => 'Аднамоўны тэкст',
+	'datatypes-type-multilingual-text' => 'Шматмоўны тэкст',
+	'datatypes-type-number' => 'Лік',
+	'datatypes-type-mediawiki-title' => 'Загаловак MediaWiki',
+	'datatypes-type-unknown' => 'Не пазначаны',
+	'datatypes-type-boolean' => 'Булевы',
+);
+
+/** German (Deutsch)
+ * @author Kghbln
+ */
+$messages['de'] = array(
+	'datatypes-desc' => 'Stellt eine Zusammenstellung von Datentypdefinitionen bereit',
+	'datatypes-type-string' => 'Zeichenkette',
+	'datatypes-type-quantity' => 'Maß',
+	'datatypes-type-monolingual-text' => 'Einsprachiger Text',
+	'datatypes-type-multilingual-text' => 'Mehrsprachiger Text',
+	'datatypes-type-number' => 'Zahl',
+	'datatypes-type-mediawiki-title' => 'MediaWiki-Titel',
+	'datatypes-type-unknown' => 'Nicht angegeben',
+	'datatypes-type-boolean' => 'Wahrheitswert',
+);
+
+/** Upper Sorbian (hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'datatypes-desc' => 'Zběrka definicijow datowych typow',
+	'datatypes-type-string' => 'Znamješkowy rjećazk',
+	'datatypes-type-quantity' => 'Mnóstwo',
+	'datatypes-type-monolingual-text' => 'Jednorěčny tekst',
+	'datatypes-type-multilingual-text' => 'Wjacerěčny tekst',
+	'datatypes-type-number' => 'Ličba',
+	'datatypes-type-mediawiki-title' => 'Titul MediaWiki',
+	'datatypes-type-unknown' => 'Njepodaty',
+	'datatypes-type-boolean' => 'Boolean',
+);
+
+/** Italian (italiano)
+ * @author Beta16
+ */
+$messages['it'] = array(
+	'datatypes-desc' => 'Collezione di definizione di tipi di dati',
+	'datatypes-type-string' => 'Stringa',
+	'datatypes-type-quantity' => 'Quantità',
+	'datatypes-type-monolingual-text' => 'Testo monolingua',
+	'datatypes-type-multilingual-text' => 'Testo multilingua',
+	'datatypes-type-number' => 'Numero',
+	'datatypes-type-mediawiki-title' => 'Titolo MediaWiki',
+	'datatypes-type-unknown' => 'Non specificato',
+	'datatypes-type-boolean' => 'Booleano',
+);
+
+/** Japanese (日本語)
+ * @author Shirayuki
+ */
+$messages['ja'] = array(
+	'datatypes-desc' => 'データ型の定義のコレクション',
+	'datatypes-type-string' => '文字列',
+	'datatypes-type-monolingual-text' => '単一言語のテキスト',
+	'datatypes-type-multilingual-text' => '多言語のテキスト',
+	'datatypes-type-number' => '数値',
+	'datatypes-type-mediawiki-title' => 'MediaWiki ページ名',
+	'datatypes-type-unknown' => '未指定',
+	'datatypes-type-boolean' => 'ブール値',
+);
+
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
+$messages['lb'] = array(
+	'datatypes-type-monolingual-text' => 'Text an enger Sprooch',
+	'datatypes-type-multilingual-text' => 'Text a méi Sproochen',
+	'datatypes-type-number' => 'Zuel',
+	'datatypes-type-mediawiki-title' => 'MediaWiki-Titel',
+);
+
+/** Macedonian (македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'datatypes-desc' => 'Збир дефиниции на податочни типови',
+	'datatypes-type-string' => 'Низа',
+	'datatypes-type-quantity' => 'Количина',
+	'datatypes-type-monolingual-text' => 'Еднојазичен текст',
+	'datatypes-type-multilingual-text' => 'Повеќејазичен текст',
+	'datatypes-type-number' => 'Број',
+	'datatypes-type-mediawiki-title' => 'МедијаВики-наслов',
+	'datatypes-type-unknown' => 'Неукажано',
+	'datatypes-type-boolean' => 'Булов',
+);
+
+/** Telugu (తెలుగు)
+ * @author Veeven
+ */
+$messages['te'] = array(
+	'datatypes-type-string' => 'పదబంధం',
+	'datatypes-type-quantity' => 'రాశి',
+	'datatypes-type-monolingual-text' => 'ఏకభాషా పాఠ్యం',
+	'datatypes-type-multilingual-text' => 'పలు భాషల పాఠ్యం',
+	'datatypes-type-number' => 'సంఖ్య',
+	'datatypes-type-mediawiki-title' => 'మీడియావికీ శీర్షిక',
+);
+
