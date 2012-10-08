@@ -88,6 +88,21 @@ $messages['de'] = array(
 	'datatypes-type-boolean' => 'Wahrheitswert',
 );
 
+/** Spanish (español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'datatypes-desc' => 'Colección de definiciones de tipos de datos',
+	'datatypes-type-string' => 'Cadena',
+	'datatypes-type-quantity' => 'Cantidad',
+	'datatypes-type-monolingual-text' => 'Texto monolingüe',
+	'datatypes-type-multilingual-text' => 'Texto multilngüe',
+	'datatypes-type-number' => 'Número',
+	'datatypes-type-mediawiki-title' => 'Título de MediaWiki',
+	'datatypes-type-unknown' => 'No especificado',
+	'datatypes-type-boolean' => 'Expresión Booleana',
+);
+
 /** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
@@ -130,6 +145,21 @@ $messages['ja'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki ページ名',
 	'datatypes-type-unknown' => '未指定',
 	'datatypes-type-boolean' => 'ブール値',
+);
+
+/** Korean (한국어)
+ * @author 아라
+ */
+$messages['ko'] = array(
+	'datatypes-desc' => '데이데이터 형식 정의의 모음집',
+	'datatypes-type-string' => '문자열',
+	'datatypes-type-quantity' => '양',
+	'datatypes-type-monolingual-text' => '단일어 텍스트',
+	'datatypes-type-multilingual-text' => '다국어 텍스트',
+	'datatypes-type-number' => '숫자',
+	'datatypes-type-mediawiki-title' => '미디어위키 제목',
+	'datatypes-type-unknown' => '지정되지 않음',
+	'datatypes-type-boolean' => '부울',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
