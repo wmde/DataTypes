@@ -78,6 +78,8 @@ $wgDataTypes = array(
 //	),
 );
 
+// @codeCoverageIgnoreStart
+
 if ( defined( 'MEDIAWIKI' ) ) {
 	include __DIR__ . '/DataTypes.mw.php';
 }
@@ -121,3 +123,5 @@ class Message {
 	}
 
 }
+
+// @codeCoverageIgnoreEnd
