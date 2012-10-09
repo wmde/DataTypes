@@ -65,7 +65,7 @@ foreach ( include( __DIR__ . '/DataTypes.classes.php' ) as $class => $file ) {
 $wgHooks['UnitTestsList'][] = function( array &$files ) {
 	// @codeCoverageIgnoreStart
 	$testFiles = array(
-		'datatype/DataType',
+		'includes/DataType',
 
 		'includes/DataTypeFactory',
 	);

@@ -27,8 +27,7 @@
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
 return array(
-	'DataTypes\DataType' => 'datatype/DataType.php',
-	'DataTypes\DataTypeObject' => 'datatype/DataTypeObject.php',
-
+	'DataTypes\DataType' => 'includes/DataType.php',
 	'DataTypes\DataTypeFactory' => 'includes/DataTypeFactory.php',
+	'DataTypes\DataTypeObject' => 'includes/DataTypeObject.php',
 );
