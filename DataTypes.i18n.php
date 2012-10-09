@@ -103,6 +103,21 @@ $messages['es'] = array(
 	'datatypes-type-boolean' => 'Expresión Booleana',
 );
 
+/** Galician (galego)
+ * @author Toliño
+ */
+$messages['gl'] = array(
+	'datatypes-desc' => 'Colección de definicións de tipos de datos',
+	'datatypes-type-string' => 'Cadea',
+	'datatypes-type-quantity' => 'Cantidade',
+	'datatypes-type-monolingual-text' => 'Texto monolingüe',
+	'datatypes-type-multilingual-text' => 'Texto multilingüe',
+	'datatypes-type-number' => 'Número',
+	'datatypes-type-mediawiki-title' => 'Título de MediaWiki',
+	'datatypes-type-unknown' => 'Non especificado',
+	'datatypes-type-boolean' => 'Booleano',
+);
+
 /** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
