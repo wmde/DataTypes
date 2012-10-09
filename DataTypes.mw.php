@@ -63,6 +63,7 @@ foreach ( include( __DIR__ . '/DataTypes.classes.php' ) as $class => $file ) {
  * @return boolean
  */
 $wgHooks['UnitTestsList'][] = function( array &$files ) {
+	// @codeCoverageIgnoreStart
 	$testFiles = array(
 		'datatype/DataType',
 
@@ -74,12 +75,15 @@ $wgHooks['UnitTestsList'][] = function( array &$files ) {
 	}
 
 	return true;
+	// @codeCoverageIgnoreEnd
 };
 
 Message::registerTextFunction( function() {
+	// @codeCoverageIgnoreStart
 	$args = func_get_args();
 	$key = array_shift( $args );
 	$language = array_shift( $args );
 	$message = new \Message( $key, $args );
 	return $message->inLanguage( $language )->text();
+	// @codeCoverageIgnoreEnd
 } );
