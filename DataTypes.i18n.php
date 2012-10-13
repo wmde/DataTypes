@@ -133,6 +133,21 @@ $messages['gl'] = array(
 	'datatypes-type-boolean' => 'Booleano',
 );
 
+/** Hebrew (עברית)
+ * @author Amire80
+ */
+$messages['he'] = array(
+	'datatypes-desc' => 'אוסף של הגדרות סוגי נתונים',
+	'datatypes-type-string' => 'מחרוזת',
+	'datatypes-type-quantity' => 'כמות',
+	'datatypes-type-monolingual-text' => 'טקסט חד־לשוני',
+	'datatypes-type-multilingual-text' => 'טקסט רב־לשוני',
+	'datatypes-type-number' => 'מספר',
+	'datatypes-type-mediawiki-title' => 'כותרת מדיה־ויקי',
+	'datatypes-type-unknown' => 'בלתי־מוגדר',
+	'datatypes-type-boolean' => 'בוליאני',
+);
+
 /** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
@@ -215,6 +230,13 @@ $messages['mk'] = array(
 	'datatypes-type-mediawiki-title' => 'МедијаВики-наслов',
 	'datatypes-type-unknown' => 'Неукажано',
 	'datatypes-type-boolean' => 'Булов',
+);
+
+/** Dutch (Nederlands)
+ * @author Wiki13
+ */
+$messages['nl'] = array(
+	'datatypes-type-string' => 'Tekenreeks',
 );
 
 /** Telugu (తెలుగు)
