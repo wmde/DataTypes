@@ -90,13 +90,14 @@ $messages['de'] = array(
 
 /** Zazaki (Zazaki)
  * @author Erdemaslancan
+ * @author Mirzali
  */
 $messages['diq'] = array(
 	'datatypes-desc' => 'Agoznayeya babete malumat de koleksiyonan',
 	'datatypes-type-string' => 'La',
 	'datatypes-type-quantity' => 'Miktar',
 	'datatypes-type-monolingual-text' => 'Yewzıwan metin',
-	'datatypes-type-multilingual-text' => 'Zafzıwan metin',
+	'datatypes-type-multilingual-text' => 'Nuşteyê zehfzıwanan',
 	'datatypes-type-number' => 'Nımre',
 	'datatypes-type-mediawiki-title' => 'Sernamey MediaWiki',
 	'datatypes-type-unknown' => 'Nêvaciyayo',
