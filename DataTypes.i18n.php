@@ -234,10 +234,18 @@ $messages['mk'] = array(
 );
 
 /** Dutch (Nederlands)
+ * @author Siebrand
  * @author Wiki13
  */
 $messages['nl'] = array(
 	'datatypes-type-string' => 'Tekenreeks',
+	'datatypes-type-quantity' => 'Hoeveelheid',
+	'datatypes-type-monolingual-text' => 'Enkeltalige tekst',
+	'datatypes-type-multilingual-text' => 'Meertalige tekst',
+	'datatypes-type-number' => 'Getal',
+	'datatypes-type-mediawiki-title' => 'MeidaWikipagina',
+	'datatypes-type-unknown' => 'Niet aangegeven',
+	'datatypes-type-boolean' => 'Booleaanse operator',
 );
 
 /** Telugu (తెలుగు)
