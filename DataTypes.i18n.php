@@ -45,7 +45,8 @@ $messages['en'] = array(
 	'datatypes-type-boolean' => 'Boolean',
 );
 
-/** Message documentation (Message documentation) */
+/** Message documentation (Message documentation)
+ */
 $messages['qqq'] = array(
 	'datatypes-desc' => '{{desc}}',
 	'datatypes-type-string' => 'The name of a data type',
@@ -212,6 +213,7 @@ $messages['ko'] = array(
  * @author Robby
  */
 $messages['lb'] = array(
+	'datatypes-type-quantity' => 'Quantitéit',
 	'datatypes-type-monolingual-text' => 'Text an enger Sprooch',
 	'datatypes-type-multilingual-text' => 'Text a méi Sproochen',
 	'datatypes-type-number' => 'Zuel',
@@ -259,4 +261,3 @@ $messages['te'] = array(
 	'datatypes-type-number' => 'సంఖ్య',
 	'datatypes-type-mediawiki-title' => 'మీడియావికీ శీర్షిక',
 );
-
