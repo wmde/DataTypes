@@ -120,6 +120,21 @@ $messages['es'] = array(
 	'datatypes-type-boolean' => 'Expresión Booleana',
 );
 
+/** French (français)
+ * @author Gomoko
+ */
+$messages['fr'] = array(
+	'datatypes-desc' => 'Collection de définitions de types de donnée',
+	'datatypes-type-string' => 'Chaîne',
+	'datatypes-type-quantity' => 'Quantité',
+	'datatypes-type-monolingual-text' => 'Texte monolingue',
+	'datatypes-type-multilingual-text' => 'Texte multilingue',
+	'datatypes-type-number' => 'Nombre',
+	'datatypes-type-mediawiki-title' => 'Titre MediaWiki',
+	'datatypes-type-unknown' => 'Non spécifié',
+	'datatypes-type-boolean' => 'Booléen',
+);
+
 /** Galician (galego)
  * @author Toliño
  */
@@ -218,6 +233,7 @@ $messages['lb'] = array(
 	'datatypes-type-multilingual-text' => 'Text a méi Sproochen',
 	'datatypes-type-number' => 'Zuel',
 	'datatypes-type-mediawiki-title' => 'MediaWiki-Titel',
+	'datatypes-type-unknown' => 'Net uginn',
 );
 
 /** Macedonian (македонски)
