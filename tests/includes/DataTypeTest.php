@@ -35,7 +35,7 @@ use DataTypes\DataTypeFactory, DataTypes\DataType;
 class DataTypeTest extends \MediaWikiTestCase {
 
 	/**
-	 * @return array of DataType
+	 * @return DataType[]
 	 */
 	protected function getInstances() {
 		return DataTypeFactory::singleton()->getTypes();

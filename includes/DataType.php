@@ -2,6 +2,8 @@
 
 namespace DataTypes;
 
+use ValueParsers\ValueParser, ValueFormatters\ValueFormatter, ValueValidators\ValueValidator;
+
 /**
  * Interface for data types.
  *
@@ -87,7 +89,7 @@ interface DataType {
 	 *
 	 * @since 0.1
 	 *
-	 * @return array of ValueValidator
+	 * @return ValueValidator[]
 	 */
 	public function getValidators();
 

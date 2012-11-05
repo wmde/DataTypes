@@ -161,7 +161,7 @@ class DataTypeFactory {
 	 *
 	 * @since 0.1
 	 *
-	 * @return array of DataType
+	 * @return DataType[]
 	 */
 	public function getTypes() {
 		return $this->types;
