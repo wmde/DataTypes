@@ -1,7 +1,7 @@
 <?php
 
 namespace DataTypes;
-use ValueParsers\ValueParser, ValueFormatters\ValueFormatter;
+use ValueParsers\ValueParser, ValueFormatters\ValueFormatter, ValueValidators\ValueValidator;
 
 /**
  * Implementation of the DataType interface.
@@ -72,7 +72,7 @@ class DataTypeObject implements DataType {
 	 *
 	 * @since 0.1
 	 *
-	 * @var array of ValueValidator
+	 * @var ValueValidator[]
 	 */
 	protected $validators;
 
@@ -82,13 +82,13 @@ class DataTypeObject implements DataType {
 	 *
 	 * @since 0.1
 	 *
-	 * @param $typeId string
-	 * @param $dataValueType string
-	 * @param $parser ValueParser
-	 * @param $formatter ValueFormatter
-	 * @param $validators array of ValueValidator
+	 * @param string $typeId
+	 * @param string $dataValueType
+	 * @param ValueParser $parser
+	 * @param ValueFormatter $formatter
+	 * @param ValueValidator[] $validators
 	 */
-	public function __construct( $typeId, $dataValueType, ValueParser $parser, /* ValueFormatter */ $formatter, array $validators ) {
+	public function __construct( $typeId, $dataValueType, ValueParser $parser, $formatter, array $validators ) {
 		$this->typeId = $typeId;
 		$this->dataValueType = $dataValueType;
 		$this->parser = $parser;
@@ -145,7 +145,7 @@ class DataTypeObject implements DataType {
 	 *
 	 * @since 0.1
 	 *
-	 * @return array of ValueValidator
+	 * @return ValueValidator[]
 	 */
 	public function getValidators() {
 		return $this->validators;

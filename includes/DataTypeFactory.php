@@ -36,7 +36,7 @@ class DataTypeFactory {
 	 *
 	 * @since 0.1
 	 *
-	 * @var array of Type
+	 * @var DataType[]
 	 */
 	protected $types = array();
 
