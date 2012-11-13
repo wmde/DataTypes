@@ -33,7 +33,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
-global $wgExtensionCredits, $wgExtensionMessagesFiles, $wgAutoloadClasses, $wgHooks;
+global $wgExtensionCredits, $wgExtensionMessagesFiles, $wgAutoloadClasses, $wgHooks, $wgResourceModules;
 
 $wgExtensionCredits['datavalues'][] = array(
 	'path' => __FILE__,
@@ -87,3 +87,9 @@ Message::registerTextFunction( function() {
 	return $message->inLanguage( $language )->text();
 	// @codeCoverageIgnoreEnd
 } );
+
+// Resource Loader module registration
+$wgResourceModules = array_merge(
+	$wgResourceModules,
+	include( __DIR__ . '/Resources.php' )
+);

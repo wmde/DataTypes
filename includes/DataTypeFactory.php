@@ -32,7 +32,7 @@ use InvalidArgumentException;
 class DataTypeFactory {
 
 	/**
-	 * Maps type id to Type.
+	 * Maps type id to DataType.
 	 *
 	 * @since 0.1
 	 *
