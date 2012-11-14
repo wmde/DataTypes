@@ -97,7 +97,7 @@
 			}
 
 			// call bridge to to the specific widget
-			methodValue = getBridgeToSubView( realWidgetName ).apply( this, bridgeArgs );
+			methodValue = getBridgeToSubView( realWidgetName ).apply( $subject, bridgeArgs );
 
 			// if the method has returned something special, return it (standard bridge behavior)
 			if( methodValue !== instance && methodValue !== undefined ) {

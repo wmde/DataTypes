@@ -88,6 +88,33 @@ Message::registerTextFunction( function() {
 	// @codeCoverageIgnoreEnd
 } );
 
+/**
+ * Hook to add QUnit test cases.
+ * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderTestModules
+ * @since 0.1
+ *
+ * @param array &$testModules
+ * @param \ResourceLoader &$resourceLoader
+ * @return boolean
+ */
+$wgHooks['ResourceLoaderTestModules'][] = function ( array &$testModules, \ResourceLoader &$resourceLoader ) {
+	$moduleTemplate = array(
+		'localBasePath' => __DIR__,
+		'remoteExtPath' => 'DataValues/DataTypes',
+	);
+
+	$testModules['qunit']['dataTypes.jquery.valueview.tests'] = $moduleTemplate + array(
+		'scripts' => array(
+			'tests/qunit/jquery.valueview.tests.js',
+		),
+		'dependencies' => array(
+			'dataTypes.jquery.valueview',
+		),
+	);
+
+	return true;
+};
+
 // Resource Loader module registration
 $wgResourceModules = array_merge(
 	$wgResourceModules,
