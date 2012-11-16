@@ -105,6 +105,21 @@ $messages['diq'] = array(
 	'datatypes-type-boolean' => 'Boolean',
 );
 
+/** Lower Sorbian (dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'datatypes-desc' => 'Zběrka definicijow datowych typow',
+	'datatypes-type-string' => 'Znamuškowy rjeśazk',
+	'datatypes-type-quantity' => 'Kopica',
+	'datatypes-type-monolingual-text' => 'Jadnorěcny tekst',
+	'datatypes-type-multilingual-text' => 'Wěcejrěcny tekst',
+	'datatypes-type-number' => 'Licba',
+	'datatypes-type-mediawiki-title' => 'Titel MediaWiki',
+	'datatypes-type-unknown' => 'Njepódany',
+	'datatypes-type-boolean' => 'Boolean',
+);
+
 /** Spanish (español)
  * @author Armando-Martin
  */
