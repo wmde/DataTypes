@@ -118,40 +118,6 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 	},
 
 	/**
-	 * Returns the DOM node(s) representing the value in its editable state.
-	 * @since 0.1
-	 * @abstract
-	 */
-	_serveEditableValueDom: dv.util.abstractMember,
-
-	/**
-	 * Returns the DOM node(s) representing the value in its static state (not editable).
-	 * @since 0.1
-	 * @abstract
-	 */
-	_serveStaticValueDom: dv.util.abstractMember,
-
-	/**
-	 * Updates the inner 'value DOM', representing the value, with a given set of DOM nodes.
-	 * No DOM manipulation be triggered if the given nodes are the same as the current nodes.
-	 * @since 0.1
-	 *
-	 * @param $newValueNodes
-	 */
-	_updateValueDom: function( $newValueNodes ) {
-		var $oldValueNodes = this.$valueDomParent.children();
-
-		// no need to replace nodes, if they are the same!
-		if( $oldValueNodes.length !== $newValueNodes.length
-			|| $oldValueNodes.not( $newValueNodes ).length > 0
-			|| $newValueNodes.not( $oldValueNodes ).length > 0
-		) {
-			// replace nodes, representing the value
-			$newValueNodes.appendTo( this.$valueDomParent );
-		}
-	},
-
-	/**
 	 * When calling this, the view will transform into a form with input fields or advanced widgets
 	 * for editing the related data value.
 	 *
@@ -182,7 +148,7 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 	 * @since 0.1
 	 *
 	 * @param {Boolean} [dropValue] If true, the value from before edit mode has been started will
-	 *                  be reinstated. false by default.
+	 *                  be reinstated. false by default. Consider using cancelEditing() instead.
 	 */
 	stopEditing: function( dropValue ) {
 		if( !this.isInEditMode() ) {
@@ -301,18 +267,7 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 //	 *
 //	 * @return $.Deferred
 //	 */
-//	validatedValue: function() {
-//	},
-
-	/**
-	 * Responsible for displaying a certain value. This means that the DOM nodes or widgets
-	 * currently representing the value have to be updated.
-	 * @since 0.1
-	 * @abstract
-	 *
-	 * @param {dv.DataValue} value
-	 */
-	_displayValue: dv.util.abstractMember,
+//	validatedValue: function() {},
 
 	/**
 	 * Will return a value which can then be fed to the value parser to create a DataValue. This
@@ -335,6 +290,50 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 	 * @return {*}
 	 */
 	_getRawValue: dv.util.abstractMember,
+
+	/**
+	 * Responsible for displaying a certain value. This means that the DOM nodes or widgets
+	 * currently representing the value have to be updated.
+	 * @since 0.1
+	 * @abstract
+	 *
+	 * @param {dv.DataValue} value
+	 */
+	_displayValue: dv.util.abstractMember,
+
+	/**
+	 * Returns the DOM node(s) representing the value in its editable state.
+	 * @since 0.1
+	 * @abstract
+	 */
+	_serveEditableValueDom: dv.util.abstractMember,
+
+	/**
+	 * Returns the DOM node(s) representing the value in its static state (not editable).
+	 * @since 0.1
+	 * @abstract
+	 */
+	_serveStaticValueDom: dv.util.abstractMember,
+
+	/**
+	 * Updates the inner 'value DOM', representing the value, with a given set of DOM nodes.
+	 * No DOM manipulation will be triggered if the given nodes are the same as the current nodes.
+	 * @since 0.1
+	 *
+	 * @param $newValueNodes
+	 */
+	_updateValueDom: function( $newValueNodes ) {
+		var $oldValueNodes = this.$valueDomParent.children();
+
+		// no need to replace nodes, if they are the same!
+		if( $oldValueNodes.length !== $newValueNodes.length
+			|| $oldValueNodes.not( $newValueNodes ).length > 0
+			|| $newValueNodes.not( $oldValueNodes ).length > 0
+			) {
+			// replace nodes, representing the value
+			$newValueNodes.appendTo( this.$valueDomParent );
+		}
+	},
 
 	/**
 	 * Will take the current raw value of the widget and parse it by taking the value parser
@@ -367,6 +366,7 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 				self.__lastUpdateValue = undefined;
 			}
 		} );
+		// TODO: display some message if parsing failed due to bad API connection
 	}
 
 } );

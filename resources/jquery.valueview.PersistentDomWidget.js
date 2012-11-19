@@ -79,30 +79,6 @@ $.valueview.PersistentDomWidget = dv.util.inherit( PARENT, {
 	},
 
 	/**
-	 * Has the task to re-format the DOM structure originally built by '_buildValueDom' and appended
-	 * to this.$valueDomParent. After the formatting all inputs elements for editing the value
-	 * should not look like accessible inputs anymore.
-	 * Can be used to bind/unbind events, change styles and CSS classes or other properties of
-	 * DOM nodes in this.$valueDomParent.
-	 *
-	 * @since 0.1
-	 * @abstract
-	 */
-	_formatAsStaticValue: dv.util.abstractMember,
-
-	/**
-	 * Has the task to re-format the DOM structure originally built by '_buildValueDom' and appended
-	 * to this.$valueDomParent. After the formatting all input elements for editing the value should
-	 * be accessible by the user to edit the value.
-	 * Can be used to bind/unbind events, change styles and CSS classes or other properties of
-	 * DOM nodes in this.$valueDomParent.
-	 *
-	 * @since 0.1
-	 * @abstract
-	 */
-	_formatAsEditableValue: dv.util.abstractMember,
-
-	/**
 	 * Builds the input element(s) for editing, ready to be inserted into the DOM. The widget will
 	 * append these nodes into the 'this.$valueDomParent' node.
 	 *
@@ -129,7 +105,31 @@ $.valueview.PersistentDomWidget = dv.util.inherit( PARENT, {
 	 * @param {jQuery} valueDom All the DOM nodes which will be appended to 'this.$valueDomParent'.
 	 * @private
 	 */
-	_createValueDomShortCuts: function( valueDom ) { /* not abstract! */ }
+	_createValueDomShortCuts: function( valueDom ) { /* not abstract! */ },
+
+	/**
+	 * Has the task to re-format the DOM structure originally built by '_buildValueDom' and appended
+	 * to this.$valueDomParent. After the formatting all inputs elements for editing the value
+	 * should not look like accessible inputs anymore.
+	 * Can be used to bind/unbind events, change styles and CSS classes or other properties of
+	 * DOM nodes in this.$valueDomParent.
+	 *
+	 * @since 0.1
+	 * @abstract
+	 */
+	_formatAsStaticValue: dv.util.abstractMember,
+
+	/**
+	 * Has the task to re-format the DOM structure originally built by '_buildValueDom' and appended
+	 * to this.$valueDomParent. After the formatting all input elements for editing the value should
+	 * be accessible by the user to edit the value.
+	 * Can be used to bind/unbind events, change styles and CSS classes or other properties of
+	 * DOM nodes in this.$valueDomParent.
+	 *
+	 * @since 0.1
+	 * @abstract
+	 */
+	_formatAsEditableValue: dv.util.abstractMember
 } );
 
 }( dataValues, dataTypes, jQuery ) );
