@@ -55,12 +55,26 @@ return call_user_func( function() {
 			'scripts' => array(
 				'jquery.valueview.js',
 				'jquery.valueview.Widget.js',
+				'jquery.valueview.PersistentDomWidget.js',
+				'jquery.valueview.SingleInputWidget.js',
 			),
 			'dependencies' => array(
 				'dataTypes.DataType',
 				'dataValues.util',
-				'dataValues.DataValue',
-				'valueParsers.ValueParser'
+				'dataValues.values',
+				'valueParsers.parsers'
+			),
+			'styles' => array(
+				'jquery.valueview.css',
+			),
+		),
+
+		'dataTypes.jquery.valueview.views' => $moduleTemplate + array(
+			'scripts' => array(
+				'views/string.js',
+			),
+			'dependencies' => array(
+				'dataTypes.jquery.valueview',
 			),
 		)
 	);

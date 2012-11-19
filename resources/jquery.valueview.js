@@ -80,7 +80,7 @@
 	 *
 	 * @param {jQuery} $subject
 	 * @param {String} method Name of the member function to be executed
-	 * @returns mixed
+	 * @returns {*}
 	 */
 	$.fn.valueview.execute = function( $subject, method /**, ... args ... */ ) {
 		var bridgeArgs = Array.prototype.slice.call( arguments, 1 ),
@@ -115,7 +115,7 @@
 	 *
 	 * @param {jQuery} $subject
 	 * @param {String} method Name of the member function to be executed
-	 * @returns mixed
+	 * @returns {*}
 	 *
 	 * @throws {Error} if 'on' option is not set properly and no view can be chosen based on it.
 	 */
@@ -124,6 +124,8 @@
 
 		var viewName = $.fn.valueview.chooseView(
 			$.isPlainObject( options ) ? options.on : options );
+
+		// TODO: if 'on' is a DataValue, we probably want to set the initial value to its value.
 
 		if( viewName === null ) {
 			throw new Error( "The 'on' option or first parameter has to be set to a sufficient criteria for choosing a view" );

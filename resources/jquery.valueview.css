@@ -1,0 +1,29 @@
+/**
+ * Style for valueview
+ *
+ * @since 0.1
+ * @file
+ * @ingroup DataTypes
+ *
+ * @license GNU GPL v2+
+ * @author Daniel Werner < danweetz@web.de >
+ */
+
+.valueview .valueview-input {
+	font-family: sans-serif;
+	color: inherit;
+	background-color: transparent;
+	border: 1px solid transparent;
+	border-radius: 0;
+	padding: 0 2px;
+	resize: none;
+}
+
+.valueview-instaticmode .valueview-input {
+	outline: none; /* get rid of Chromes outline on focus */
+}
+
+.valueview-ineditmode .valueview-input {
+	border-color: #AAA;
+	background-color: white;
+}
