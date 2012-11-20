@@ -4,7 +4,7 @@
  *
  * @since 0.1
  * @file
- * @ingroup DataValues
+ * @ingroup DataTypes
  *
  * @licence GNU GPL v2+
  * @author Daniel Werner
