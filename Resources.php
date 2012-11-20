@@ -38,8 +38,11 @@ return call_user_func( function() {
 	return array(
 		'dataTypes' => $moduleTemplate + array(
 			'scripts' => array(
-				'dataTypes.js',
+				'dataTypes.js'
 			),
+			'dependencies' => array(
+				'dataTypes.dataTypesModule'
+			)
 		),
 
 		'dataTypes.DataType' => $moduleTemplate + array(
@@ -48,6 +51,8 @@ return call_user_func( function() {
 			),
 			'dependencies' => array(
 				'dataTypes',
+				'dataValues',
+				'valueParsers'
 			),
 		),
 

@@ -105,7 +105,8 @@ $wgHooks['ResourceLoaderTestModules'][] = function ( array &$testModules, \Resou
 
 	$testModules['qunit']['dataTypes.jquery.valueview.tests'] = $moduleTemplate + array(
 		'scripts' => array(
-			'tests/qunit/jquery.valueview.tests.js',
+			'tests/qunit/dataTypes.tests.js',
+			'tests/qunit/jquery.valueview.tests.js'
 		),
 		'dependencies' => array(
 			'dataTypes.jquery.valueview',

@@ -20,7 +20,7 @@
 	 * @since 0.1
 	 */
 	dt.DataType = function( typeId, dataValueType, parser, formatter, validators ) {
-		if( validators === undefined ) {
+		if( dataValueType === undefined ) {
 			throw new Error( 'All arguments must be provided for creating a new DataType object' );
 		}
 		this._typeId = typeId;
