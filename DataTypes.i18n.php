@@ -271,6 +271,7 @@ $messages['mk'] = array(
  * @author Wiki13
  */
 $messages['nl'] = array(
+	'datatypes-desc' => 'Verameling gegevenstypedefinities',
 	'datatypes-type-string' => 'Tekenreeks',
 	'datatypes-type-quantity' => 'Hoeveelheid',
 	'datatypes-type-monolingual-text' => 'Enkeltalige tekst',
