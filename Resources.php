@@ -76,6 +76,10 @@ return call_user_func( function() {
 			'dependencies' => array(
 				'dataTypes.jquery.valueview',
 			),
+		),
+
+		'dataTypes.dataTypesModule' => $moduleTemplate + array(
+			'class' => 'DataTypes\DataTypesModule',
 		)
 	);
 

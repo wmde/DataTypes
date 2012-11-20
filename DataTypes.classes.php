@@ -30,4 +30,5 @@ return array(
 	'DataTypes\DataType' => 'includes/DataType.php',
 	'DataTypes\DataTypeFactory' => 'includes/DataTypeFactory.php',
 	'DataTypes\DataTypeObject' => 'includes/DataTypeObject.php',
+	'DataTypes\DataTypesModule' => 'includes/modules/DataTypesModule.php'
 );
