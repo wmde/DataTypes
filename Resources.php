@@ -37,11 +37,9 @@ return call_user_func( function() {
 
 	return array(
 		'dataTypes' => $moduleTemplate + array(
-
 			'scripts' => 'dataTypes.js', // also contains dataType.DataType constructor
 			'dependencies' => array(
 				'dataTypes.dataTypesModule',
-				//'dataTypes',
 				'dataValues',
 				'valueParsers'
 			),

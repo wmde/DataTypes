@@ -29,7 +29,7 @@ class DataTypesModule extends ResourceLoaderModule {
 		$types = array();
 
 		foreach ( DataTypeFactory::singleton()->getTypes() as $type ) {
-			$types[ $type->getId() ] = $type->getDataValueType();
+			$types[ $type->getId() ] = $type->toArray();
 		}
 
 		return 'mediaWiki.config.set( "wbDataTypes", ' . \FormatJson::encode( $types ) . ' );';

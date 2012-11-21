@@ -164,4 +164,17 @@ class DataTypeObject implements DataType {
 		return Message::text( 'datatypes-type-' . $this->getId(), $langCode );
 	}
 
+	/**
+	 * @see DataType::toArray
+	 *
+	 * @since 0.1
+	 *
+	 * @return array
+	 */
+	public function toArray() {
+		return array(
+			'dataValueType' => $this->dataValueType
+		);
+	}
+
 }

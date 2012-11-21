@@ -91,6 +91,19 @@ var dataTypes = new ( function( $, mw, undefined ) {
 		}
 	};
 
+	/**
+	 * Creates a new DataType object from a given JSON structure.
+	 * @since 0.1
+	 *
+	 * @param {String} typeId Data type id
+	 * @param {Object} json JSON structure containing data type info
+	 * @return {dt.DataType} DataType object
+	 */
+	dt.DataType.newFromJSON = function( typeId, json ) {
+		// TODO: inmplement parser, formatter and validators parameters
+		return new dt.DataType( typeId, json.dataValueType );
+	};
+
 
 	/**
 	 * @var {Object} Data type definitions
@@ -98,9 +111,7 @@ var dataTypes = new ( function( $, mw, undefined ) {
 	var dts = {};
 
 	$.each( mw.config.get( 'wbDataTypes' ) || {}, function( dtTypeId, dtDefinition ) {
-		// NOTE: dtDefinition is just the data value type as of now, this will be an array later!
-		// TODO: inmplement parser, formatter and validators parameters
-		dts[ dtTypeId ] = new dt.DataType( dtTypeId, dtDefinition );
+		dts[ dtTypeId ] = dt.DataType.newFromJSON( dtTypeId, dtDefinition );
 	} );
 
 	/**
@@ -121,7 +132,7 @@ var dataTypes = new ( function( $, mw, undefined ) {
 	 *
 	 * @return {String[]}
 	 */
-	this.getDataTypes = function() {
+	this.getDataTypeIds = function() {
 		var keys = [];
 
 		for ( var key in dts ) {
