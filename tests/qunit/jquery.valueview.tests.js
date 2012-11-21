@@ -102,7 +102,7 @@ var // TEST HELPERS
 		];
 
 		// test everything for both, $.fn.valueview and the bridge created for the specific view!
-		$.each( tests, function() {
+		$.each( tests, function( i, val ) {
 			var fnName = this[0],
 				fullFnName = 'jQuery.fn.' + fnName,
 				options = this[1] || {},
