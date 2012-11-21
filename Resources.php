@@ -37,20 +37,11 @@ return call_user_func( function() {
 
 	return array(
 		'dataTypes' => $moduleTemplate + array(
-			'scripts' => array(
-				'dataTypes.js'
-			),
-			'dependencies' => array(
-				'dataTypes.dataTypesModule'
-			)
-		),
 
-		'dataTypes.DataType' => $moduleTemplate + array(
-			'scripts' => array(
-				'DataType.js',
-			),
+			'scripts' => 'dataTypes.js', // also contains dataType.DataType constructor
 			'dependencies' => array(
-				'dataTypes',
+				'dataTypes.dataTypesModule',
+				//'dataTypes',
 				'dataValues',
 				'valueParsers'
 			),
@@ -64,7 +55,7 @@ return call_user_func( function() {
 				'jquery.valueview.SingleInputWidget.js',
 			),
 			'dependencies' => array(
-				'dataTypes.DataType',
+				'dataTypes',
 				'dataValues.util',
 				'dataValues.values',
 				'valueParsers.parsers'

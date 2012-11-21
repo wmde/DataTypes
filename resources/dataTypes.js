@@ -3,37 +3,115 @@
  * @see https://www.mediawiki.org/wiki/Extension:DataTypes
  *
  * @file
- * @ingroup DataValues
+ * @ingroup DataTypes
  *
  * @licence GNU GPL v2+
+ * @author Daniel Werner
  * @author H. Snater < mediawiki@snater.com >
  */
 
 /**
  * Global 'dataTypes' object
- * @type {Object}
+ * @since 0.1
+ * @type Object
  */
 var dataTypes = new ( function( $, mw, undefined ) {
 	'use strict';
 
+	// TODO: the whole structure of this is a little weird, perhaps there should be a
+	//       'dataTypeStore' or something rather than having this in the 'dataTypes' object.
+	//       For this 'dataTypeStore' there could be serveral instances, different extensions could
+	//       use their own set of data types without them getting mixed up.
+
+	var dt = this;
+
+	/**
+	 * Base constructor for objects representing a data type.
+	 * @constructor
+	 * @abstract
+	 * @since 0.1
+	 *
+	 * @param {String} typeId
+	 * @param {String} dataValueType
+	 * @param {vp.Parser} parser
+	 * @param {Object} formatter
+	 * @param {Object} validators
+	 */
+	dt.DataType = function( typeId, dataValueType, parser, formatter, validators ) {
+		if( dataValueType === undefined ) {
+			throw new Error( 'All arguments must be provided for creating a new DataType object' );
+		}
+		this._typeId = typeId;
+		this._dataValueType = dataValueType;
+		this._parser = parser;
+		this._formatter = formatter;
+		this._validators = validators;
+	};
+	dt.DataType.prototype = {
+		/**
+		 * Returns the data type's identifier.
+		 * @since 0.1
+		 *
+		 * @return String
+		 */
+		getId: function() {
+			return this._typeId;
+		},
+
+		/**
+		 * Returns the DataValue used by this data type.
+		 * @since 0.1
+		 *
+		 * @return String
+		 */
+		getDataValueType: function() {
+			return this._dataValueType;
+		},
+
+		/**
+		 * Returns the ValueParser used by this data type.
+		 * @since 0.1
+		 *
+		 * @return dv.ValueParser
+		 */
+		getParser: function() {
+			return this._parser;
+		},
+
+		// TODO: add other getters
+
+		/**
+		 * Returns the label of data type.
+		 * @since 0.1
+		 *
+		 * @return String
+		 */
+		getLabel: function() {
+			return mw.message( 'datatypes-type-' + this.getId() );
+		}
+	};
+
+
 	/**
 	 * @var {Object} Data type definitions
 	 */
-	this._dts = mw.config.get( 'wbDataTypes' );
+	var dts = {};
+
+	$.each( mw.config.get( 'wbDataTypes' ) || {}, function( dtTypeId, dtDefinition ) {
+		// NOTE: dtDefinition is just the data value type as of now, this will be an array later!
+		// TODO: inmplement parser, formatter and validators parameters
+		dts[ dtTypeId ] = new dt.DataType( dtTypeId, dtDefinition );
+	} );
 
 	/**
-	 * Constructs and returns a new DataType of specified type id with the provided data.
+	 * Returns the data type with a specific data type ID.
+	 * @since 0.1
 	 *
 	 * @param {String} dataTypeId
-	 * @return {dt.DataType}
+	 * @return {dt.DataType|null} Null if the data type is not known.
 	 */
-	this.newDataType = function( dataTypeId ) {
-		if ( this._dts[dataTypeId] === undefined ) {
-			throw new Error( 'Unknown data type: "' + dataTypeId + '" has no associated DataType class.' );
-		} else {
-			// TODO: inmplement parser, formatter, validators parameters
-			return new this.DataType( dataTypeId, this._dts[dataTypeId] );
-		}
+	this.getDataType = function( dataTypeId ) {
+		return dts[ dataTypeId ] || null;
 	};
 
 	/**
@@ -46,8 +124,8 @@ var dataTypes = new ( function( $, mw, undefined ) {
 	this.getDataTypes = function() {
 		var keys = [];
 
-		for ( var key in this._dts ) {
-			if ( this._dts.hasOwnProperty( key ) ) {
+		for ( var key in dts ) {
+			if ( dts.hasOwnProperty( key ) ) {
 				keys.push( key );
 			}
 		}
@@ -57,12 +135,29 @@ var dataTypes = new ( function( $, mw, undefined ) {
 
 	/**
 	 * Returns if there is a DatType with the provided type.
+	 * @since 0.1
 	 *
 	 * @param {String} dataTypeId
 	 * @return {Boolean}
 	 */
 	this.hasDataType = function( dataTypeId ) {
-		return ( this._dts[dataTypeId] !== undefined );
+		return ( dts[dataTypeId] !== undefined );
+	};
+
+	/**
+	 * Registers a new data type.
+	 * If there is a data type with the same id, it will be overridden with the provided one.
+	 * // TODO/FIXME: not sure this behavior is a good idea
+	 *
+	 * @since 0.1
+	 *
+	 * @param {dt.DataType} dataType
+	 */
+	this.registerDataType = function( dataType ) {
+		if( !( dataType instanceof this.DataType ) ) {
+			throw new Error( 'Can only register instances of dataTypes.DataType as data types' );
+		}
+		dts[ dataType.getId() ] = dataType;
 	};
 
 } )( jQuery, mediaWiki );

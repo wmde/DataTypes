@@ -1,5 +1,5 @@
 /**
- * QUnit tests for jQuery.valueview
+ * QUnit tests for DataTypes data type store/factory
  * @see https://www.mediawiki.org/wiki/Extension:Wikibase
  *
  * @since 0.1
@@ -13,43 +13,29 @@
 ( function( mw, dt, dv, $, QUnit, undefined ) {
 	'use strict';
 
-	QUnit.module( 'dataTypes.dataTypes.tests', QUnit.newMwEnvironment() );
+	QUnit.module( 'dataTypes.tests', QUnit.newMwEnvironment() );
 
 	QUnit.test( 'Test initializing a DataType object', function( assert ) {
+		// create new data type for testing and register it:
+		var testDataType = new dt.DataType( 'foo', 'fooDataValueType' ),
+			testDataTypeId = testDataType.getId();
 
-		// TODO: remove dynamic loading as soon as the module gets loaded on page initialization
-		QUnit.stop();
+		dt.registerDataType( testDataType );
 
-		mw.loader.using( 'dataTypes.DataType', function() {
-			var testDataTypeId = 'commonsMedia';
-			var testDataType = dt.newDataType( testDataTypeId );
+		assert.ok(
+			dt.hasDataType( testDataTypeId ),
+			'hasDataType: Data type "' + testDataTypeId + '" is available after registering it'
+		);
 
-			assert.ok(
-				dt.hasDataType( testDataTypeId ),
-				'hasDataType: Data type "' + testDataTypeId + '" is available.'
-			);
+		assert.ok(
+			$.inArray( dt.getDataTypes(), testDataTypeId ),
+			'getDataTypes: Data type "' + testDataTypeId + '" is available.'
+		);
 
-			assert.ok(
-				$.inArray( dt.getDataTypes(), testDataTypeId ),
-				'getDataTypes: Data type "' + testDataTypeId + '" is available.'
-			);
-
-			assert.equal(
-				testDataType.getId(),
-				testDataTypeId,
-				'Instantiated "' + testDataTypeId + '" data type.'
-			);
-
-			assert.equal(
-				testDataType.getDataValueType(),
-				'string',
-				'Verified data value type.'
-			);
-
-			QUnit.start();
-
-		} );
-
+		assert.ok(
+			testDataType === dt.getDataType( testDataTypeId ),
+			'getDataType: returns exact same instance of the data type which was registered before'
+		);
 	} );
 
 }( mediaWiki, dataTypes, dataValues, jQuery, QUnit ) );
