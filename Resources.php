@@ -55,6 +55,7 @@ return call_user_func( function() {
 				'jquery.valueview.SingleInputWidget.js',
 			),
 			'dependencies' => array(
+				'jquery.ui.widget',
 				'dataTypes',
 				'dataValues.util',
 				'dataValues.values',
