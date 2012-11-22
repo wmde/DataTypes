@@ -161,3 +161,5 @@ var dataTypes = new ( function( $, mw, undefined ) {
 	};
 
 } )( jQuery, mediaWiki );
+
+window.dataTypes = dataTypes; // global alias
