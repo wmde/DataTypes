@@ -122,7 +122,7 @@
 	$.fn.valueview.fabricate = function( $subject, options /**, ... more options ... */ ) {
 		// allow to give a DataType instance rather than options as short-cut
 
-		var viewName = $.fn.valueview.chooseView(
+		var viewName = $.valueview.chooseView(
 			$.isPlainObject( options ) ? options.on : options );
 
 		// TODO: if 'on' is a DataValue, we probably want to set the initial value to its value.
@@ -158,7 +158,7 @@
 	 *
 	 * @throws {Error} if no sufficient first parameter is given.
 	 */
-	$.fn.valueview.chooseView = function( onTheBasisOf ) {
+	$.valueview.chooseView = function( onTheBasisOf ) {
 		var valueType;
 
 		if( onTheBasisOf instanceof dv.DataValue ) {
@@ -172,6 +172,17 @@
 		}
 
 		return valueViews[ valueType ] || null;
+	};
+
+	/**
+	 * Returns whether there is a view available for representing a data value or a data value
+	 * valid against a given data type.
+	 *
+	 * @param {dv.DataValue|dt.DataType} dataHint
+	 * @return {Boolean} false if no view is available
+	 */
+	$.valueview.canChooseView = function( onTheBasisOf ) {
+		return $.valueview.chooseView( onTheBasisOf ) !== null;
 	};
 
 	/**

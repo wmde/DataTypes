@@ -82,6 +82,11 @@ var // TEST HELPERS
 		);
 
 		assert.ok(
+			$.valueview.canChooseView( fooType ),
+			"$.valueview.canChooseView() states that the view is registered"
+		);
+
+		assert.ok(
 			$.isFunction( $.fn.valueview_foo ),
 			'jQuery prototype has been extended with bridge to the new valueview widget'
 		);
