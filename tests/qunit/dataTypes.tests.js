@@ -4,7 +4,7 @@
  *
  * @since 0.1
  * @file
- * @ingroup DataValues
+ * @ingroup DataTypes
  *
  * @licence GNU GPL v2+
  * @author H. Snater < mediawiki@snater.com >
@@ -28,7 +28,7 @@
 		);
 
 		assert.ok(
-			$.inArray( dt.getDataTypes(), testDataTypeId ),
+			$.inArray( dt.getDataTypeIds(), testDataTypeId ),
 			'getDataTypes: Data type "' + testDataTypeId + '" is available.'
 		);
 
