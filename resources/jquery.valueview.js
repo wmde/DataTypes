@@ -178,7 +178,7 @@
 	 * Returns whether there is a view available for representing a data value or a data value
 	 * valid against a given data type.
 	 *
-	 * @param {dv.DataValue|dt.DataType} dataHint
+	 * @param {dv.DataValue|dt.DataType} onTheBasisOf
 	 * @return {Boolean} false if no view is available
 	 */
 	$.valueview.canChooseView = function( onTheBasisOf ) {
