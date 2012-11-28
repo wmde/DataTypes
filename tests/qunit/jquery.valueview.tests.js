@@ -72,6 +72,10 @@ var // TEST HELPERS
 			 */
 			someTestFunc: function( func ) {
 				return func.call( this );
+			},
+			// implement necessary abstract functions
+			_serveStaticValueDom: function() {
+				return $( '<textarea/>' );
 			}
 		} );
 
