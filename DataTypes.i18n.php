@@ -59,6 +59,21 @@ $messages['qqq'] = array(
 	'datatypes-type-boolean' => 'The name of a data type',
 );
 
+/** Asturian (asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'datatypes-desc' => 'Coleición de definiciones de tipos de datos',
+	'datatypes-type-string' => 'Cadena',
+	'datatypes-type-quantity' => 'Cantidá',
+	'datatypes-type-monolingual-text' => 'Testu monollingüe',
+	'datatypes-type-multilingual-text' => 'Testu multillingüe',
+	'datatypes-type-number' => 'Númberu',
+	'datatypes-type-mediawiki-title' => 'Títulu de MediaWiki',
+	'datatypes-type-unknown' => 'No especificáu',
+	'datatypes-type-boolean' => 'Booleanu',
+);
+
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author Wizardist
  */
