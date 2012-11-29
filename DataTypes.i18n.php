@@ -150,6 +150,19 @@ $messages['es'] = array(
 	'datatypes-type-boolean' => 'Expresión Booleana',
 );
 
+/** Finnish (suomi)
+ * @author Nedergard
+ */
+$messages['fi'] = array(
+	'datatypes-type-string' => 'Merkkijono',
+	'datatypes-type-quantity' => 'Määrä',
+	'datatypes-type-monolingual-text' => 'Yksikielinen teksti',
+	'datatypes-type-multilingual-text' => 'Monikielinen teksti',
+	'datatypes-type-number' => 'Numero',
+	'datatypes-type-mediawiki-title' => 'MediaWiki-otsikko',
+	'datatypes-type-unknown' => 'Määrittelemätön',
+);
+
 /** French (français)
  * @author Gomoko
  */
