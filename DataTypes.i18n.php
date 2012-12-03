@@ -321,3 +321,18 @@ $messages['te'] = array(
 	'datatypes-type-number' => 'సంఖ్య',
 	'datatypes-type-mediawiki-title' => 'మీడియావికీ శీర్షిక',
 );
+
+/** Ukrainian (українська)
+ * @author Base
+ */
+$messages['uk'] = array(
+	'datatypes-desc' => 'Набір визначень типів даних',
+	'datatypes-type-string' => 'Рядок',
+	'datatypes-type-quantity' => 'Кількість',
+	'datatypes-type-monolingual-text' => 'Одномовний текст',
+	'datatypes-type-multilingual-text' => 'Багатомовний текст',
+	'datatypes-type-number' => 'Число',
+	'datatypes-type-mediawiki-title' => 'Заголовок MediaWiki',
+	'datatypes-type-unknown' => 'Не визначений',
+	'datatypes-type-boolean' => 'Булев',
+);
