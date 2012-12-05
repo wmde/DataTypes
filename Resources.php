@@ -51,6 +51,7 @@ return call_user_func( function() {
 				'jquery.valueview.Widget.js',
 				'jquery.valueview.PersistentDomWidget.js',
 				'jquery.valueview.SingleInputWidget.js',
+				'jquery.valueview.LinkedSingleInputWidget.js'
 			),
 			'dependencies' => array(
 				'jquery.ui.widget',

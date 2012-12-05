@@ -14,6 +14,7 @@
  * @option {String} inputPlaceholder Can be used to display a hint for the user if the input is empty.
  *
  * @constructor
+ * @abstract
  * @extends jQuery.valueview.PersistentDomWidget
  * @since 0.1
  */
@@ -24,7 +25,7 @@ $.valueview.SingleInputWidget = dv.util.inherit( PARENT, {
 	 * static DOM mode. This is achieved by simply styling the input differently in static mode.
 	 * @type jQuery
 	 */
-	$inputElem: null,
+	$input: null,
 
 	/**
 	 * @see jQuery.Widget.options
@@ -49,14 +50,14 @@ $.valueview.SingleInputWidget = dv.util.inherit( PARENT, {
 	 */
 	_createValueDomShortCuts: function( valueDom ) {
 		// add reference to our only input element so we can use it in the _formatAs...() functions
-		this.$inputElem = valueDom.first();
+		this.$input = valueDom.first();
 	},
 
 	/**
 	 * @see jQuery.valueview.PersistentDomWidget._formatAsStaticValue
 	 */
 	_formatAsStaticValue: function() {
-		this.$inputElem.prop( {
+		this.$input.prop( {
 			disabled: true,
 			spellcheck: false,
 			placeholder: '' // don't want to see any placeholder text in static mode
@@ -66,8 +67,8 @@ $.valueview.SingleInputWidget = dv.util.inherit( PARENT, {
 	/**
 	 * @see jQuery.valueview.PersistentDomWidget._formatAsEditableValue
 	 */
-	_formatAsEditableValue: function( dropValue ) {
-		this.$inputElem.prop( {
+	_formatAsEditableValue: function() {
+		this.$input.prop( {
 			disabled: false,
 			spellcheck: true, // TODO: doesn't really work, seems fully disabled in Chrome now
 			placeholder: this.option( 'inputPlaceholder' )
@@ -80,14 +81,14 @@ $.valueview.SingleInputWidget = dv.util.inherit( PARENT, {
 	 * @see jQuery.valueview.Widget._displayValue
 	 */
 	_displayValue: function( value ) {
-		this.$inputElem.val( value.getValue() );
+		this.$input.val( value.getValue() );
 	},
 
 	/**
 	 * @see jQuery.valueview.Widget._getRawValue
 	 */
 	_getRawValue: function() {
-		return this.$inputElem.val();
+		return this.$input.val();
 	}
 } );
 
