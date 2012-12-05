@@ -39,6 +39,22 @@ $.valueview.LinkedSingleInputWidget = dv.util.inherit( PARENT, {
 	} ),
 
 	/**
+	 * @see jQuery.Widget._create
+	 */
+	_create: function() {
+		this.element.addClass( 'linkedsingleinputvalueview' );
+		PARENT.prototype._create.call( this );
+	},
+
+	/**
+	 * @see jQuery.Widget.destroy
+	 */
+	destroy: function() {
+		this.element.removeClass( 'linkedsingleinputvalueview' );
+		return PARENT.prototype.destroy.call( this );
+	},
+
+	/**
 	 * Creates an 'a' tag with the value input element inside.
 	 * The input element will be created in _buildInputDom() which can be overwritten to change the
 	 * type of input element.

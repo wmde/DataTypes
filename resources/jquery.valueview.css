@@ -27,3 +27,9 @@
 	border-color: #AAA;
 	background-color: white;
 }
+
+.valueview-ineditmode.linkedsingleinputvalueview a,
+.valueview-ineditmode.linkedsingleinputvalueview a {
+	/* make sure input box which still is inside a doesn't display text as links */
+	color: inherit;
+}

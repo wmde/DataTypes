@@ -68,6 +68,7 @@ return call_user_func( function() {
 		'dataTypes.jquery.valueview.views' => $moduleTemplate + array(
 			'scripts' => array(
 				'views/string.js',
+				'views/commonsMedia.js',
 			),
 			'dependencies' => array(
 				'dataTypes.jquery.valueview',
