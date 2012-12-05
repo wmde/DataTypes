@@ -4,7 +4,7 @@
  * @licence GNU GPL v2+
  * @author Daniel Werner
  */
-( function( dv, dt, $, undefined ) {
+( function( dv, dt, $ ) {
 	'use strict';
 
 /**
@@ -19,11 +19,15 @@
 $.valueview.Widget = dv.util.inherit( $.Widget, {
 	/**
 	 * Defines which type of DataValue can be handled by this 'valueview' widget.
-	 * @type String
-	 *
-	 * TODO: make a constant out of this DATA_VALUE_TYPE since this is not really considered private
+	 * @type String|null
 	 */
 	dataValueType: null,
+
+	/**
+	 * One DataType ID of a DataType for which instances of this widget can serve DataValue objects.
+	 * @type String|null
+	 */
+	dataTypeId: null,
 
 	/**
 	 * @type valueParsers.ValueParser
@@ -38,14 +42,24 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 	$valueDomParent: null,
 
 	/**
+	 * This is not to be overwritten by any widget implementations. This will hold the name of the
+	 * 'valueview' widget instance. This is basically the name of the property in which the view's
+	 * prototype is stored in, in jQuery.valueview
+	 * This will be set by
+	 * @final
+	 * @type String
+	 */
+	instanceViewName: null,
+
+	/**
 	 * Current value
-	 * @type dv.DataValue
+	 * @type dv.DataValue|null
 	 */
 	_value: null,
 
 	/**
 	 * Value from before edit mode.
-	 * @type dv.DataValue
+	 * @type dv.DataValue|null
 	 */
 	_initialValue: null,
 
@@ -125,7 +139,7 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 	 */
 	startEditing: function() {
 		if( this.isInEditMode() ) {
-			return; // return nothing to allow chaining // TODO: really?
+			return; // return nothing to allow chaining
 		}
 		this._initialValue = this._value;
 		this._isInEditMode = true;
@@ -211,8 +225,8 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 	 *
 	 * @since 0.1
 	 *
-	 * @param {dv.DataValue} value
-	 * @return {dv.DataValue|undefined}
+	 * @param {dv.DataValue|null} value
+	 * @return {dv.DataValue|null|undefined} null if no value is set currently
 	 *
 	 * TODO: Handling of null as value.
 	 *
@@ -244,11 +258,18 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 	 * make sure that the new value will be displayed.
 	 * @since 0.1
 	 *
-	 * @param {dv.DataValue} value
+	 * @param {dv.DataValue|null} value
 	 */
 	_setValue: function( value ) {
-		if( !( value instanceof dv.DataValue )
-			|| value.getType() !== this.dataValueType
+		// unsuitable value if given value's type isn't the one the widget was made for (if any)
+		// AND if data type this widget is made for (if any) requires a different DataValue type
+		if( value !== null // null represents empty value
+			&& ( !( value instanceof dv.DataValue )
+				|| (
+					   value.getType() !== this.dataValueType
+					&& value.getType() !== dt.getDataType( this.dataTypeId ).getDataValueType()
+				)
+			)
 		) {
 			throw new Error( 'Given value type is not compatible with what the view can handle' );
 		}
@@ -297,7 +318,7 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 	 * @since 0.1
 	 * @abstract
 	 *
-	 * @param {dv.DataValue} value
+	 * @param {dv.DataValue|null} value
 	 */
 	_displayValue: dv.util.abstractMember,
 

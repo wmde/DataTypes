@@ -27,7 +27,14 @@
 	 * Map from DataValue types to widgets responsible for the type.
 	 * @type Object
 	 */
-	var valueViews = {};
+	var valueViewsByDataValues = {};
+
+	/**
+	 * Map from DataType IDs to widgets responsible for the type. This overrules the valueViews
+	 * if $.valueview receives a DataType in its 'on' options and the type can be found in here.
+	 * @type Object
+	 */
+	var valueViewsByDataTypes = {};
 
 	/**
 	 * Helper function, will return a function as created by $.widget.bridge
@@ -89,7 +96,7 @@
 		// consider that there are several nodes in the $subject
 		$subject.each( function() {
 			var instance = $.data( this, 'valueview' ),
-				realWidgetName = valueViews[ instance.dataValueType ],
+				realWidgetName = instance.instanceViewName,
 				methodValue;
 
 			if( !instance ) {
@@ -115,7 +122,6 @@
 	 *
 	 * @param {jQuery} $subject
 	 * @param {String} method Name of the member function to be executed
-	 * @returns {*}
 	 *
 	 * @throws {Error} if 'on' option is not set properly and no view can be chosen based on it.
 	 */
@@ -159,19 +165,31 @@
 	 * @throws {Error} if no sufficient first parameter is given.
 	 */
 	$.valueview.chooseView = function( onTheBasisOf ) {
-		var valueType;
+		var valueType,
+			dataTypeId,
+			view;
 
 		if( onTheBasisOf instanceof dv.DataValue ) {
 			valueType = onTheBasisOf.getType();
 		}
 		else if( onTheBasisOf instanceof dt.DataType ) {
 			valueType = onTheBasisOf.getDataValueType();
+			dataTypeId = onTheBasisOf.getId();
 		}
 		else {
 			throw new Error( 'No sufficient indicator provided for choosing a valueview view widget' );
 		}
 
-		return valueViews[ valueType ] || null;
+		if( dataTypeId ) {
+			// try to get a view designed for this specific DataType
+			view = valueViewsByDataTypes[ dataTypeId ];
+		}
+		if( !view ) {
+			// no view for specific data type or only DataValue given, so get the view for that
+			view = valueViewsByDataValues[ valueType ];
+		}
+
+		return view || null;
 	};
 
 	/**
@@ -235,7 +253,8 @@
 		// all widget fabricated with this are supposed to be in the 'valueview' namespace.
 		$.widget( 'valueview.' + name, base, $.extend( prototype, {
 			widgetName: bridgeName,
-			widgetBaseClass: 'valueview'
+			widgetBaseClass: 'valueview',
+			instanceViewName: name // for knowing view's name
 		} ) );
 
 		if( fnBeforeBridge !== undefined ) {
@@ -262,15 +281,22 @@
 
 		// get the 'dataValueType' property from the new prototype. Can't take this from the
 		// original prototype because this might be taken from the base prototype.
-		var widgetsValueType = $.valueview[ name ].prototype.dataValueType;
-
-		if( !widgetsValueType ) {
-			throw new Error( "The 'valueview' widget has no 'dataValueType' property, can't register this view." );
-		}
+		var widgetsValueType = $.valueview[ name ].prototype.dataValueType,
+			widgetsDataTypeId = $.valueview[ name ].prototype.dataTypeId,
+			viewCriteria;
 
 		// TODO: consider multiple widgets per type and...
 		// TODO: ...think about criteria definitions to choose between them in $.fn.valueview()
-		valueViews[ widgetsValueType ] = name;
+		if( widgetsDataTypeId ) {
+			valueViewsByDataTypes[ widgetsDataTypeId ] = name;
+		}
+		else if( widgetsValueType ) {
+			valueViewsByDataValues[ widgetsValueType ] = name;
+		}
+		else {
+			throw new Error( "The 'valueview' widget has no indication about its purpose, either" +
+				"the 'dataValueType' or 'dataTypeId' property must be defined for registration." );
+		}
 	};
 
 }( dataValues, dataTypes, jQuery ) );

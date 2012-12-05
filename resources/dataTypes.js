@@ -20,7 +20,7 @@ var dataTypes = new ( function( $, mw, undefined ) {
 
 	// TODO: the whole structure of this is a little weird, perhaps there should be a
 	//       'dataTypeStore' or something rather than having this in the 'dataTypes' object.
-	//       For this 'dataTypeStore' there could be serveral instances, different extensions could
+	//       For this 'dataTypeStore' there could be several instances, different extensions could
 	//       use their own set of data types without them getting mixed up.
 
 	var dt = this;
