@@ -72,7 +72,6 @@ $.valueview.LinkedSingleInputWidget = dv.util.inherit( PARENT, {
 	 * Builds the input element for editing, ready to be inserted into the DOM.
 	 *
 	 * @return {jQuery}
-	 * @private
 	 */
 	_buildInputDom: function() {
 		var $input = PARENT.prototype._buildValueDom.call( this )

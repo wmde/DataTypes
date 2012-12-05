@@ -19,10 +19,16 @@
 		 * @see jQuery.Widget._create
 		 */
 		_create: function() {
+			var self = this;
+
 			// provide parser for strings
 			this.valueParser = new vp.StringParser();
 
 			PARENT.prototype._create.call( this );
+
+			this.element.on( 'suggesterresponse', function( event, response ) {
+				self._updateValue();
+			} );
 		},
 
 		/**
@@ -34,6 +40,24 @@
 			}
 			return 'http://commons.wikimedia.org/wiki/File:'
 				+ mw.util.wikiUrlencode( value.getValue() );
+		},
+
+		/**
+		 * @see $.valueview.LinkedSingleInputWidget._buildInputDom
+		 */
+		_buildInputDom: function() {
+			var $input = PARENT.prototype._buildInputDom.call( this );
+			$input.suggester( {
+				ajax: {
+					url: 'http://commons.wikimedia.org/w/api.php',
+					params: {
+						action: 'opensearch',
+						namespace: 6
+					}
+				},
+				replace: [/^File:/, '']
+			} );
+			return $input;
 		}
 	} );
 
