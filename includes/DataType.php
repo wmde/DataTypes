@@ -2,7 +2,9 @@
 
 namespace DataTypes;
 
-use ValueParsers\ValueParser, ValueFormatters\ValueFormatter, ValueValidators\ValueValidator;
+use ValueParsers\ValueParser;
+use ValueFormatters\ValueFormatter;
+use ValueValidators\ValueValidator;
 
 /**
  * Interface for data types.
@@ -30,50 +32,130 @@ use ValueParsers\ValueParser, ValueFormatters\ValueFormatter, ValueValidators\Va
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-interface DataType {
+class DataType {
 
 	/**
-	 * Returns the identifier of this data type.
+	 * Identifier for the data type.
+	 *
+	 * @since 0.1
+	 *
+	 * @var string
+	 */
+	protected $typeId;
+
+	/**
+	 * Identifier for the type of the DataValue.
+	 *
+	 * @since 0.1
+	 *
+	 * @var string
+	 */
+	protected $dataValueType;
+
+	/**
+	 * The ValueParser used by this data type.
+	 *
+	 * @since 0.1
+	 *
+	 * @var ValueParser
+	 */
+	protected $parser;
+
+	/**
+	 * The ValueFormatter used by this data type.
+	 *
+	 * @since 0.1
+	 *
+	 * @var ValueFormatter
+	 */
+	protected $formatter;
+
+	/**
+	 * The ValueValidator objects used by this data type.
+	 *
+	 * @since 0.1
+	 *
+	 * @var ValueValidator[]
+	 */
+	protected $validators;
+
+	/**
+	 * Constructor.
+	 * Typically you should not construct such objects yourself but use the TypeFactory.
+	 *
+	 * @since 0.1
+	 *
+	 * @param string $typeId
+	 * @param string $dataValueType
+	 * @param ValueParser $parser
+	 * @param ValueFormatter $formatter
+	 * @param ValueValidator[] $validators
+	 */
+	public function __construct( $typeId, $dataValueType, ValueParser $parser, $formatter, array $validators ) {
+		$this->typeId = $typeId;
+		$this->dataValueType = $dataValueType;
+		$this->parser = $parser;
+		$this->formatter = $formatter;
+		$this->validators = $validators;
+	}
+
+	/**
+	 * @see DataType::getId
 	 *
 	 * @since 0.1
 	 *
 	 * @return string
 	 */
-	public function getId();
+	public function getId() {
+		return $this->typeId;
+	}
 
 	/**
-	 * Returns the DataValue used by this data type.
+	 * @see DataType::getDataValueType
 	 *
 	 * @since 0.1
 	 *
 	 * @return string
 	 */
-	public function getDataValueType();
+	public function getDataValueType() {
+		return $this->dataValueType;
+	}
 
 	/**
-	 * Returns the ValueParser used by this data type.
-	 *
-	 * TODO: support for multiple parsers
+	 * @see DataType::getParser
 	 *
 	 * @since 0.1
 	 *
 	 * @return ValueParser
 	 */
-	public function getParser();
+	public function getParser() {
+		return $this->parser;
+	}
 
 	/**
-	 * Returns the ValueFormatter used by this data type.
-	 *
-	 * TODO: support for multiple formatters
+	 * @see DataType::getFormatter
 	 *
 	 * @since 0.1
 	 *
 	 * @return ValueFormatter
 	 */
-	public function getFormatter();
+	public function getFormatter() {
+		return $this->formatter;
+	}
 
 	/**
-	 * Returns the label of the data type in the provided language or null if there is none.
+	 * @see DataType::getValidators
+	 *
+	 * @since 0.1
+	 *
+	 * @return ValueValidator[]
+	 */
+	public function getValidators() {
+		return $this->validators;
+	}
+
+	/**
+	 * @see DataType::getLabel
 	 *
 	 * @since 0.1
 	 *
@@ -81,24 +163,21 @@ interface DataType {
 	 *
 	 * @return string|null
 	 */
-	public function getLabel( $langCode );
+	public function getLabel( $langCode ) {
+		return Message::text( 'datatypes-type-' . $this->getId(), $langCode );
+	}
 
 	/**
-	 * Returns the ValueValidators that are supported by this data type.
-	 *
-	 * @since 0.1
-	 *
-	 * @return ValueValidator[]
-	 */
-	public function getValidators();
-
-	/**
-	 * Returns the data type as an array.
+	 * @see DataType::toArray
 	 *
 	 * @since 0.1
 	 *
 	 * @return array
 	 */
-	public function toArray();
+	public function toArray() {
+		return array(
+			'dataValueType' => $this->dataValueType
+		);
+	}
 
 }

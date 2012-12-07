@@ -1,7 +1,8 @@
 <?php
 
 namespace DataTypes\Test;
-use DataTypes\DataTypeFactory, DataTypes\DataType;
+use DataTypes\DataTypeFactory;
+use DataTypes\DataType;
 
 /**
  * Unit tests for the TypeFactory class.
@@ -34,13 +35,24 @@ use DataTypes\DataTypeFactory, DataTypes\DataType;
  */
 class DataTypeFactoryTest extends \MediaWikiTestCase {
 
-	public function testSingleton() {
-		$this->assertInstanceOf( 'DataTypes\DataTypeFactory', DataTypeFactory::singleton() );
-		$this->assertTrue( DataTypeFactory::singleton() === DataTypeFactory::singleton() );
+	/**
+	 * @var null|DataTypeFactory
+	 */
+	protected $instance = null;
+
+	/**
+	 * @return DataTypeFactory
+	 */
+	protected function getInstance() {
+		if ( $this->instance === null ) {
+			$this->instance = new DataTypeFactory( $GLOBALS['wgDataTypes'] );
+		}
+
+		return $this->instance;
 	}
 
 	public function testGetTypeIds() {
-		$ids = DataTypeFactory::singleton()->getTypeIds();
+		$ids = $this->getInstance()->getTypeIds();
 		$this->assertInternalType( 'array', $ids );
 
 		foreach ( $ids as $id ) {
@@ -51,7 +63,7 @@ class DataTypeFactoryTest extends \MediaWikiTestCase {
 	}
 
 	public function testGetType() {
-		$factory = DataTypeFactory::singleton();
+		$factory = $this->getInstance();
 
 		foreach ( $factory->getTypeIds() as $id ) {
 			$this->assertInstanceOf( 'DataTypes\DataType', $factory->getType( $id ) );
@@ -61,7 +73,7 @@ class DataTypeFactoryTest extends \MediaWikiTestCase {
 	}
 
 	public function testGetTypes() {
-		$factory = DataTypeFactory::singleton();
+		$factory = $this->getInstance();
 
 		$this->assertArrayEquals(
 			$factory->getTypeIds(),
