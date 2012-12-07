@@ -310,6 +310,14 @@ $messages['nl'] = array(
 	'datatypes-type-boolean' => 'Booleaanse operator',
 );
 
+/** Somali (Soomaaliga)
+ * @author Abshirdheere
+ */
+$messages['so'] = array(
+	'datatypes-type-quantity' => 'Tayo',
+	'datatypes-type-number' => 'Tiro',
+);
+
 /** Telugu (తెలుగు)
  * @author Veeven
  */
