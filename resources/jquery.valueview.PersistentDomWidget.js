@@ -82,6 +82,9 @@ $.valueview.PersistentDomWidget = dv.util.inherit( PARENT, {
 	 * Builds the input element(s) for editing, ready to be inserted into the DOM. The widget will
 	 * append these nodes into the 'this.$valueDomParent' node.
 	 *
+	 * NOTE: This function is explicitly called 'build' and not 'serve', since it will only be
+	 *       called once and not each time the DOM is required.
+	 *
 	 * @since 0.1
 	 * @abstract
 	 *
