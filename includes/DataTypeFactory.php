@@ -45,38 +45,8 @@ class DataTypeFactory {
 	 *
 	 * @since 0.1
 	 */
-	protected function __construct() {
-		// enforces singleton
-	}
-
-	/**
-	 * Returns the global instance of the factory.
-	 *
-	 * @since 0.1
-	 *
-	 * @return DataTypeFactory
-	 */
-	public static function singleton() {
-		static $instance = false;
-
-		if ( $instance === false ) {
-			$instance = new static();
-			$instance->initialize();
-		}
-
-
-		return $instance;
-	}
-
-	/**
-	 * Initializes the factory.
-	 *
-	 * @since 0.1
-	 */
-	protected function initialize() {
-		global $wgDataTypes;
-
-		foreach ( $wgDataTypes as $typeId => $typeData ) {
+	public function __construct( array $dataTypes = array() ) {
+		foreach ( $dataTypes as $typeId => $typeData ) {
 			$this->types[$typeId] = $this->newType( $typeId, $typeData );
 		}
 	}
@@ -120,7 +90,7 @@ class DataTypeFactory {
 			}
 		}
 
-		return new DataTypeObject(
+		return new DataType(
 			$typeId,
 			$typeData['datavalue'],
 			$parser,

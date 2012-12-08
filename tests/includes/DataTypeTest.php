@@ -38,7 +38,8 @@ class DataTypeTest extends \MediaWikiTestCase {
 	 * @return DataType[]
 	 */
 	protected function getInstances() {
-		return DataTypeFactory::singleton()->getTypes();
+		$factory = new DataTypeFactory( $GLOBALS['wgDataTypes'] );
+		return $factory->getTypes();
 	}
 
 	public function instanceProvider() {

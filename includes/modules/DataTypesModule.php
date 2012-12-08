@@ -1,7 +1,8 @@
 <?php
 
 namespace DataTypes;
-use ResourceLoaderModule, ResourceLoaderContext;
+use ResourceLoaderModule;
+use ResourceLoaderContext;
 
 /**
  * @since 0.2
@@ -28,7 +29,9 @@ class DataTypesModule extends ResourceLoaderModule {
 	public function getScript( ResourceLoaderContext $context ) {
 		$types = array();
 
-		foreach ( DataTypeFactory::singleton()->getTypes() as $type ) {
+		$factory = new DataTypeFactory( $GLOBALS['wgDataTypes'] );
+
+		foreach ( $factory->getTypes() as $type ) {
 			$types[ $type->getId() ] = $type->toArray();
 		}
 
