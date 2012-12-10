@@ -96,8 +96,6 @@ $.valueview.LinkedSingleInputWidget = dv.util.inherit( PARENT, {
 
 		this.$input.empty().remove();
 		this.$input = null;
-
-		this._displayValue( value );
 	},
 
 	/**
@@ -109,8 +107,6 @@ $.valueview.LinkedSingleInputWidget = dv.util.inherit( PARENT, {
 		this.$anchor.removeAttr( 'href' ); // can't use removeProp, behaves buggy
 		this.$input = this._buildInputDom();
 		this.$anchor.empty().append( this.$input );
-
-		this._displayValue( value );
 	},
 
 	/**
@@ -120,8 +116,10 @@ $.valueview.LinkedSingleInputWidget = dv.util.inherit( PARENT, {
 		var textValue = value === null ? '' : value.getValue();
 
 		if( this.$input ) {
+			// in edit mode:
 			this.$input.val( textValue );
 		} else {
+			// in static mode:
 			this.$anchor.prop( {
 				href: this._getLinkHrefFromValue( value )
 			} ).text( this._getLinkTextFromValue( value ) );

@@ -101,7 +101,9 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 		this.$valueDomParent = $( '<div/>', {
 			'class': this.widgetBaseClass + '-value'
 		} ).appendTo( this.element );
-		this._updateValueDom( this._serveStaticValueDom() );
+
+		this._replaceValueDom( this._serveStaticValueDom() );
+		this._displayValue( this._value );
 
 		// TODO(1/2): could try to extract some initial value from element...
 		// TODO(2/2): ...and set it as raw value which will trigger parser to get a proper DataValue
@@ -149,7 +151,8 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 		.removeClass( this.widgetBaseClass + '-instaticmode' );
 
 		// update the view:
-		this._updateValueDom( this._serveEditableValueDom() );
+		this._replaceValueDom( this._serveEditableValueDom() );
+		this._displayValue( this._value );
 	},
 
 	/**
@@ -162,7 +165,7 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 	 * @since 0.1
 	 *
 	 * @param {Boolean} [dropValue] If true, the value from before edit mode has been started will
-	 *                  be reinstated. false by default. Consider using cancelEditing() instead.
+	 *        be reinstated. false by default. Consider using cancelEditing() instead.
 	 */
 	stopEditing: function( dropValue ) {
 		if( !this.isInEditMode() ) {
@@ -170,7 +173,7 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 		}
 		if( dropValue ) {
 			// reinstate initial value from before edit mode
-			this.value( this._initialValue );
+			this._value = this._initialValue;
 		}
 		this._initialValue = null;
 		this._isInEditMode = false;
@@ -180,7 +183,8 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 		.addClass( this.widgetBaseClass + '-instaticmode' );
 
 		// update the view:
-		this._updateValueDom( this._serveStaticValueDom() );
+		this._replaceValueDom( this._serveStaticValueDom() );
+		this._displayValue( this._value );
 	},
 
 	/**
@@ -343,14 +347,14 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 	 *
 	 * @param $newValueNodes
 	 */
-	_updateValueDom: function( $newValueNodes ) {
+	_replaceValueDom: function( $newValueNodes ) {
 		var $oldValueNodes = this.$valueDomParent.children();
 
 		// no need to replace nodes, if they are the same!
 		if( $oldValueNodes.length !== $newValueNodes.length
 			|| $oldValueNodes.not( $newValueNodes ).length > 0
 			|| $newValueNodes.not( $oldValueNodes ).length > 0
-			) {
+		) {
 			// replace nodes, representing the value
 			$newValueNodes.appendTo( this.$valueDomParent );
 		}
