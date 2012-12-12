@@ -10,7 +10,8 @@
  */
 
 .valueview .valueview-input {
-	font-family: sans-serif;
+	font-family: inherit;
+	font-size: inherit;
 	color: inherit;
 	background-color: transparent;
 	border: 1px solid transparent;
