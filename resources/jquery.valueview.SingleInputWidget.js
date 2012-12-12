@@ -42,7 +42,9 @@ $.valueview.SingleInputWidget = dv.util.inherit( PARENT, {
 		return $( '<textarea/>', {
 			'class': this.widgetBaseClass + '-input',
 			'type': 'text'
-		} ).eachchange(); // TODO: see TODO in jquery.valueview.Widget about 'echchange'
+		} )
+		.inputAutoExpand( { expandWidth: false, expandHeight:true, suppressNewLine: true } )
+		.eachchange(); // TODO: see TODO in jquery.valueview.Widget about 'eachchange'
 	},
 
 	/**
@@ -58,7 +60,10 @@ $.valueview.SingleInputWidget = dv.util.inherit( PARENT, {
 	 */
 	_formatAsStaticValue: function() {
 		this.$input.prop( {
-			disabled: true,
+			// using readOnly instead of disabled since IE would overwrite font color with default
+			// system style regardless of any own definition
+			readOnly: true,
+			tabIndex: -1,
 			spellcheck: false,
 			placeholder: '' // don't want to see any placeholder text in static mode
 		} );
@@ -69,10 +74,10 @@ $.valueview.SingleInputWidget = dv.util.inherit( PARENT, {
 	 */
 	_formatAsEditableValue: function() {
 		this.$input.prop( {
-			disabled: false,
+			readOnly: false,
 			spellcheck: true, // TODO: doesn't really work, seems fully disabled in Chrome now
 			placeholder: this.option( 'inputPlaceholder' )
-		} );
+		} ).removeProp( 'tabIndex' );
 
 		// TODO: placeholder option should change placeholder at a later point as well
 	},
