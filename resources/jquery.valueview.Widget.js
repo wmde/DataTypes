@@ -73,7 +73,7 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 	 * @see jQuery.Widget.options
 	 */
 	options: $.extend( true, {}, $.Widget.prototype.options, {
-		// some other options
+		// TODO: 'value' option for initial value
 	} ),
 
 	/**
@@ -251,8 +251,8 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 		if( value === undefined ) {
 			return this._value;
 		}
-		if( !( value instanceof dv.DataValue ) ) {
-			throw new Error( 'The given value has to be an instance of dataValue.DataValue' );
+		if( value !== null && !( value instanceof dv.DataValue ) ) {
+			throw new Error( 'The given value has to be an instance of dataValue.DataValue or null' );
 		}
 		return this._setValue( value );
 	},
