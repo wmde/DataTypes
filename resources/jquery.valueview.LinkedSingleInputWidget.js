@@ -119,9 +119,17 @@ $.valueview.LinkedSingleInputWidget = dv.util.inherit( PARENT, {
 			this.$input.val( textValue );
 		} else {
 			// in static mode:
+			var linkContent = this._getLinkContentFromValue( value );
+
 			this.$anchor.prop( {
 				href: this._getLinkHrefFromValue( value )
-			} ).text( this._getLinkTextFromValue( value ) );
+			} );
+
+			if( typeof linkContent === 'string' ) {
+				this.$anchor.text( linkContent );
+			} else {
+				this.$anchor.append( linkContent );
+			}
 		}
 	},
 
@@ -137,13 +145,14 @@ $.valueview.LinkedSingleInputWidget = dv.util.inherit( PARENT, {
 	},
 
 	/**
-	 * Returns the href for the link based on a given value
+	 * Returns what should be inserted as the link's inner DOM. Can also return a plain string,
+	 * which will then be escaped and inserted as simple text.
 	 * @since 0.1
 	 *
 	 * @param {dv.DataValue|null} value
-	 * @return String
+	 * @return String|jQuery
 	 */
-	_getLinkTextFromValue: function( value ) {
+	_getLinkContentFromValue: function( value ) {
 		return value === null ? '' : value.getValue();
 	},
 
