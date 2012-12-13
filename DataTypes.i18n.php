@@ -137,13 +137,14 @@ $messages['dsb'] = array(
 
 /** Spanish (español)
  * @author Armando-Martin
+ * @author Minh Nguyen
  */
 $messages['es'] = array(
 	'datatypes-desc' => 'Colección de definiciones de tipos de datos',
 	'datatypes-type-string' => 'Cadena',
 	'datatypes-type-quantity' => 'Cantidad',
 	'datatypes-type-monolingual-text' => 'Texto monolingüe',
-	'datatypes-type-multilingual-text' => 'Texto multilngüe',
+	'datatypes-type-multilingual-text' => 'Texto multilingüe',
 	'datatypes-type-number' => 'Número',
 	'datatypes-type-mediawiki-title' => 'Título de MediaWiki',
 	'datatypes-type-unknown' => 'No especificado',
@@ -294,6 +295,21 @@ $messages['mk'] = array(
 	'datatypes-type-boolean' => 'Булов',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'datatypes-desc' => 'Koleksi definisi jenis data',
+	'datatypes-type-string' => 'Rentetan',
+	'datatypes-type-quantity' => 'Kuantiti',
+	'datatypes-type-monolingual-text' => 'Teks satu bahasa',
+	'datatypes-type-multilingual-text' => 'Teks berbilang bahasa',
+	'datatypes-type-number' => 'Nombor',
+	'datatypes-type-mediawiki-title' => 'Tajuk MediaWiki',
+	'datatypes-type-unknown' => 'Tidak ditentukan',
+	'datatypes-type-boolean' => 'Boolean',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  * @author Wiki13
@@ -343,4 +359,19 @@ $messages['uk'] = array(
 	'datatypes-type-mediawiki-title' => 'Заголовок MediaWiki',
 	'datatypes-type-unknown' => 'Не визначений',
 	'datatypes-type-boolean' => 'Булев',
+);
+
+/** Vietnamese (Tiếng Việt)
+ * @author Minh Nguyen
+ */
+$messages['vi'] = array(
+	'datatypes-desc' => 'Bộ sưu tập các định nghĩa kiểu dữ liệu',
+	'datatypes-type-string' => 'Chuỗi',
+	'datatypes-type-quantity' => 'Số lượng',
+	'datatypes-type-monolingual-text' => 'Văn bản đơn ngữ',
+	'datatypes-type-multilingual-text' => 'Văn bản đa ngữ',
+	'datatypes-type-number' => 'Số',
+	'datatypes-type-mediawiki-title' => 'Tiêu đề MediaWiki',
+	'datatypes-type-unknown' => 'Không xác định',
+	'datatypes-type-boolean' => 'Luận lý',
 );
