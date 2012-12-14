@@ -130,6 +130,8 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 			+ this.widgetBaseClass + '-ineditmode '
 		);
 
+		this.element.removeData( 'valueview' );
+
 		return $.Widget.prototype.destroy.call( this );
 	},
 
