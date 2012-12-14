@@ -284,6 +284,20 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 		this._displayValue( value );
 	},
 
+	/**
+	 * Focuses the widget.
+	 * @since 0.1
+	 * @abstract
+	 */
+	focus: dv.util.abstractMember,
+
+	/**
+	 * Removes focus from the widget.
+	 * @since 0.1
+	 * @abstract
+	 */
+	blur: dv.util.abstractMember,
+
 //	/**
 //	 * Returns a $.Deferred resolving as soon as the validation for the current value is done.
 //	 * This is necessary since validation might need API request and is happening whenever the

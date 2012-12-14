@@ -90,6 +90,24 @@ $.valueview.SingleInputWidget = dv.util.inherit( PARENT, {
 	},
 
 	/**
+	 * @see jQuery.valueview.Widget.focus
+	 */
+	focus: function() {
+		// move text cursor to the end of the textarea
+		var value = this.$input.val();
+		this.$input.val( '' );
+		this.$input.focus();
+		this.$input.val( value );
+	},
+
+	/**
+	 * @see jQuery.valueview.Widget.blur
+	 */
+	blur: function() {
+		this.$input.blur();
+	},
+
+	/**
 	 * @see jQuery.valueview.Widget._getRawValue
 	 */
 	_getRawValue: function() {
