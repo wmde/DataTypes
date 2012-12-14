@@ -28,6 +28,8 @@
 
 			this.element.on( 'suggesterresponse', function( event, response ) {
 				self._updateValue();
+				self.$input.data( 'AutoExpandInput' ).expand();
+				self.$input.data( 'suggester' ).repositionMenu();
 			} );
 		},
 
@@ -57,6 +59,11 @@
 				},
 				replace: [/^File:/, '']
 			} );
+
+			$input.eachchange( function( event, oldValue ) {
+				$input.data( 'suggester' ).repositionMenu();
+			} );
+
 			return $input;
 		}
 	} );

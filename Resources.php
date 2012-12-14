@@ -72,6 +72,7 @@ return call_user_func( function() {
 			),
 			'dependencies' => array(
 				'dataTypes.jquery.valueview',
+				'jquery.eachchange'
 			),
 		),
 
