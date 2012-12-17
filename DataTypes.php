@@ -64,6 +64,18 @@ $wgDataTypes = array(
 	'string' => array(
 		'datavalue' => 'string',
 	),
+	'geo-coordinate' => array(
+		'datavalue' => 'geocoordinate',
+	),
+	'quantity' => array(
+		'datavalue' => 'quantity',
+	),
+	'monolingual-text' => array(
+		'datavalue' => 'monolingualtext',
+	),
+	'multilingual-text' => array(
+		'datavalue' => 'multilingualtext',
+	),
 
 //	'geo' => array(
 //		'datavalue' => 'geo-dv',

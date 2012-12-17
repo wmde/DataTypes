@@ -43,6 +43,7 @@ $messages['en'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki title',
 	'datatypes-type-unknown' => 'Unspecified',
 	'datatypes-type-boolean' => 'Boolean',
+	'datatypes-type-geo-coordinate' => 'Geographical coordinate',
 );
 
 /** Message documentation (Message documentation)
@@ -57,6 +58,7 @@ $messages['qqq'] = array(
 	'datatypes-type-mediawiki-title' => 'The name of a data type',
 	'datatypes-type-unknown' => 'The name of a data type',
 	'datatypes-type-boolean' => 'The name of a data type',
+	'datatypes-type-geo-coordinate' => 'The name of a data type',
 );
 
 /** Asturian (asturianu)
