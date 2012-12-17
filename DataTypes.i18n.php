@@ -295,6 +295,7 @@ $messages['mk'] = array(
 	'datatypes-type-mediawiki-title' => 'МедијаВики-наслов',
 	'datatypes-type-unknown' => 'Неукажано',
 	'datatypes-type-boolean' => 'Булов',
+	'datatypes-type-geo-coordinate' => 'Географска координата',
 );
 
 /** Malay (Bahasa Melayu)
@@ -326,6 +327,13 @@ $messages['nl'] = array(
 	'datatypes-type-mediawiki-title' => 'MeidaWikipagina',
 	'datatypes-type-unknown' => 'Niet aangegeven',
 	'datatypes-type-boolean' => 'Booleaanse operator',
+);
+
+/** Pashto (پښتو)
+ * @author Ahmed-Najib-Biabani-Ibrahimkhel
+ */
+$messages['ps'] = array(
+	'datatypes-type-number' => 'شمېره',
 );
 
 /** Somali (Soomaaliga)
