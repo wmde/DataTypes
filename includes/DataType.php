@@ -1,7 +1,7 @@
 <?php
 
 namespace DataTypes;
-
+use InvalidArgumentException;
 use ValueParsers\ValueParser;
 use ValueFormatters\ValueFormatter;
 use ValueValidators\ValueValidator;
@@ -57,18 +57,18 @@ class DataType {
 	 *
 	 * @since 0.1
 	 *
-	 * @var ValueParser
+	 * @var ValueParser[]
 	 */
-	protected $parser;
+	protected $parsers;
 
 	/**
 	 * The ValueFormatter used by this data type.
 	 *
 	 * @since 0.1
 	 *
-	 * @var ValueFormatter
+	 * @var ValueFormatter[]
 	 */
-	protected $formatter;
+	protected $formatters;
 
 	/**
 	 * The ValueValidator objects used by this data type.
@@ -87,15 +87,25 @@ class DataType {
 	 *
 	 * @param string $typeId
 	 * @param string $dataValueType
-	 * @param ValueParser $parser
-	 * @param ValueFormatter $formatter
+	 * @param ValueParser[] $parsers
+	 * @param ValueFormatter[] $formatters
 	 * @param ValueValidator[] $validators
+	 *
+	 * @throws InvalidArgumentException
 	 */
-	public function __construct( $typeId, $dataValueType, ValueParser $parser, $formatter, array $validators ) {
+	public function __construct( $typeId, $dataValueType, array $parsers, array $formatters, array $validators ) {
+		if ( !is_string( $typeId ) ) {
+			throw new InvalidArgumentException( '$typeId must be a string' );
+		}
+
+		if ( !is_string( $dataValueType ) ) {
+			throw new InvalidArgumentException( '$dataValueType must be a string' );
+		}
+
 		$this->typeId = $typeId;
 		$this->dataValueType = $dataValueType;
-		$this->parser = $parser;
-		$this->formatter = $formatter;
+		$this->parsers = $parsers;
+		$this->formatters = $formatters;
 		$this->validators = $validators;
 	}
 
@@ -126,10 +136,10 @@ class DataType {
 	 *
 	 * @since 0.1
 	 *
-	 * @return ValueParser
+	 * @return ValueParser[]
 	 */
-	public function getParser() {
-		return $this->parser;
+	public function getParsers() {
+		return $this->parsers;
 	}
 
 	/**
@@ -137,10 +147,10 @@ class DataType {
 	 *
 	 * @since 0.1
 	 *
-	 * @return ValueFormatter
+	 * @return ValueFormatter[]
 	 */
-	public function getFormatter() {
-		return $this->formatter;
+	public function getFormatters() {
+		return $this->formatters;
 	}
 
 	/**

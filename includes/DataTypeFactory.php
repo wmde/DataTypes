@@ -75,7 +75,7 @@ class DataTypeFactory {
 
 //		$formatter = array_key_exists( 'formatter', $typeData ) ? $typeData['formatter'] : 'NullFormatter';
 //		$formatter = new $formatter();
-		$formatter = null; // TODO
+		$formatters = array(); // TODO
 
 		if ( array_key_exists( 'validators', $typeData ) ) {
 			$validators = is_array( $typeData['validators'] ) ? $typeData['validators'] : array( $typeData['validators'] );
@@ -93,8 +93,8 @@ class DataTypeFactory {
 		return new DataType(
 			$typeId,
 			$typeData['datavalue'],
-			$parser,
-			$formatter,
+			array( $parser ), // TODO
+			$formatters,
 			$validators
 		);
 	}
