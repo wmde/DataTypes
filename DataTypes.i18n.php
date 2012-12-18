@@ -89,10 +89,12 @@ $messages['be-tarask'] = array(
 	'datatypes-type-mediawiki-title' => 'Загаловак MediaWiki',
 	'datatypes-type-unknown' => 'Не пазначаны',
 	'datatypes-type-boolean' => 'Булевы',
+	'datatypes-type-geo-coordinate' => 'Геаграфічныя каардынаты',
 );
 
 /** German (Deutsch)
  * @author Kghbln
+ * @author Metalhead64
  */
 $messages['de'] = array(
 	'datatypes-desc' => 'Stellt eine Zusammenstellung von Datentypdefinitionen bereit',
@@ -104,6 +106,7 @@ $messages['de'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki-Titel',
 	'datatypes-type-unknown' => 'Nicht angegeben',
 	'datatypes-type-boolean' => 'Wahrheitswert',
+	'datatypes-type-geo-coordinate' => 'Geografische Koordinate',
 );
 
 /** Zazaki (Zazaki)
@@ -179,6 +182,7 @@ $messages['fr'] = array(
 	'datatypes-type-mediawiki-title' => 'Titre MediaWiki',
 	'datatypes-type-unknown' => 'Non spécifié',
 	'datatypes-type-boolean' => 'Booléen',
+	'datatypes-type-geo-coordinate' => 'Coordonnées géographiques',
 );
 
 /** Galician (galego)
@@ -253,6 +257,7 @@ $messages['ja'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki ページ名',
 	'datatypes-type-unknown' => '未指定',
 	'datatypes-type-boolean' => 'ブール値',
+	'datatypes-type-geo-coordinate' => '緯度経度',
 );
 
 /** Korean (한국어)
@@ -268,6 +273,7 @@ $messages['ko'] = array(
 	'datatypes-type-mediawiki-title' => '미디어위키 제목',
 	'datatypes-type-unknown' => '지정되지 않음',
 	'datatypes-type-boolean' => '부울',
+	'datatypes-type-geo-coordinate' => '지리 좌표',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
@@ -311,6 +317,7 @@ $messages['ms'] = array(
 	'datatypes-type-mediawiki-title' => 'Tajuk MediaWiki',
 	'datatypes-type-unknown' => 'Tidak ditentukan',
 	'datatypes-type-boolean' => 'Boolean',
+	'datatypes-type-geo-coordinate' => 'Koordinat geografi',
 );
 
 /** Dutch (Nederlands)
@@ -327,6 +334,7 @@ $messages['nl'] = array(
 	'datatypes-type-mediawiki-title' => 'MeidaWikipagina',
 	'datatypes-type-unknown' => 'Niet aangegeven',
 	'datatypes-type-boolean' => 'Booleaanse operator',
+	'datatypes-type-geo-coordinate' => 'Geografische coördinaat',
 );
 
 /** Pashto (پښتو)
@@ -369,6 +377,7 @@ $messages['uk'] = array(
 	'datatypes-type-mediawiki-title' => 'Заголовок MediaWiki',
 	'datatypes-type-unknown' => 'Не визначений',
 	'datatypes-type-boolean' => 'Булев',
+	'datatypes-type-geo-coordinate' => 'Географічні координати',
 );
 
 /** Vietnamese (Tiếng Việt)
@@ -384,4 +393,5 @@ $messages['vi'] = array(
 	'datatypes-type-mediawiki-title' => 'Tiêu đề MediaWiki',
 	'datatypes-type-unknown' => 'Không xác định',
 	'datatypes-type-boolean' => 'Luận lý',
+	'datatypes-type-geo-coordinate' => 'Tọa độ địa lý',
 );
