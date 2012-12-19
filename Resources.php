@@ -78,7 +78,8 @@ return call_user_func( function() {
 
 		'dataTypes.dataTypesModule' => $moduleTemplate + array(
 			'class' => 'DataTypes\DataTypesModule',
-		)
+		),
+
 	);
 
 } );
