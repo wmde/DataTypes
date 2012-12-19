@@ -198,6 +198,7 @@ $messages['gl'] = array(
 	'datatypes-type-mediawiki-title' => 'Título de MediaWiki',
 	'datatypes-type-unknown' => 'Non especificado',
 	'datatypes-type-boolean' => 'Booleano',
+	'datatypes-type-geo-coordinate' => 'Coordenada xeográfica',
 );
 
 /** Hebrew (עברית)
