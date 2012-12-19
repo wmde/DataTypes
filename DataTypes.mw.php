@@ -39,7 +39,10 @@ $wgExtensionCredits['datavalues'][] = array(
 	'path' => __FILE__,
 	'name' => 'DataTypes',
 	'version' => DataTypes_VERSION,
-	'author' => array( '[https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw Jeroen De Dauw]' ),
+	'author' => array(
+		'[https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw Jeroen De Dauw]',
+		'[https://www.mediawiki.org/wiki/User:Danwe Daniel Werner]'
+	),
 	'url' => 'https://www.mediawiki.org/wiki/Extension:DataTypes',
 	'descriptionmsg' => 'datatypes-desc',
 );
