@@ -244,6 +244,7 @@ $messages['it'] = array(
 	'datatypes-type-mediawiki-title' => 'Titolo MediaWiki',
 	'datatypes-type-unknown' => 'Non specificato',
 	'datatypes-type-boolean' => 'Booleano',
+	'datatypes-type-geo-coordinate' => 'Coordinate geografiche',
 );
 
 /** Japanese (日本語)
