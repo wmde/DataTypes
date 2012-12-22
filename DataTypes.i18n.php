@@ -74,6 +74,7 @@ $messages['ast'] = array(
 	'datatypes-type-mediawiki-title' => 'Títulu de MediaWiki',
 	'datatypes-type-unknown' => 'No especificáu',
 	'datatypes-type-boolean' => 'Booleanu',
+	'datatypes-type-geo-coordinate' => 'Coordenada xeográfica',
 );
 
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
@@ -138,6 +139,16 @@ $messages['dsb'] = array(
 	'datatypes-type-mediawiki-title' => 'Titel MediaWiki',
 	'datatypes-type-unknown' => 'Njepódany',
 	'datatypes-type-boolean' => 'Boolean',
+	'datatypes-type-geo-coordinate' => 'Geografiska koordinata',
+);
+
+/** Greek (Ελληνικά)
+ * @author ZaDiak
+ */
+$messages['el'] = array(
+	'datatypes-type-number' => 'Αριθμός',
+	'datatypes-type-mediawiki-title' => 'Τίτλος MediaWiki',
+	'datatypes-type-unknown' => 'Αδιευκρίνιστο',
 );
 
 /** Spanish (español)
@@ -154,6 +165,26 @@ $messages['es'] = array(
 	'datatypes-type-mediawiki-title' => 'Título de MediaWiki',
 	'datatypes-type-unknown' => 'No especificado',
 	'datatypes-type-boolean' => 'Expresión Booleana',
+);
+
+/** Estonian (eesti)
+ * @author Avjoska
+ */
+$messages['et'] = array(
+	'datatypes-type-monolingual-text' => 'Ühekeelne tekst',
+	'datatypes-type-multilingual-text' => 'Mitmekeelne tekst',
+	'datatypes-type-number' => 'Number',
+	'datatypes-type-unknown' => 'Määratlemata',
+	'datatypes-type-geo-coordinate' => 'Geograafiline koordinaat',
+);
+
+/** Persian (فارسی)
+ * @author Mjbmr
+ */
+$messages['fa'] = array(
+	'datatypes-type-string' => 'رشته',
+	'datatypes-type-number' => 'عدد',
+	'datatypes-type-mediawiki-title' => 'عنوان مدیاویکی',
 );
 
 /** Finnish (suomi)
@@ -229,6 +260,21 @@ $messages['hsb'] = array(
 	'datatypes-type-mediawiki-title' => 'Titul MediaWiki',
 	'datatypes-type-unknown' => 'Njepodaty',
 	'datatypes-type-boolean' => 'Boolean',
+	'datatypes-type-geo-coordinate' => 'Geografiska koordinata',
+);
+
+/** Indonesian (Bahasa Indonesia)
+ * @author Farras
+ */
+$messages['id'] = array(
+	'datatypes-type-quantity' => 'Jumlah',
+	'datatypes-type-monolingual-text' => 'Teks monolingual',
+	'datatypes-type-multilingual-text' => 'Teks multilingual',
+	'datatypes-type-number' => 'Nomor',
+	'datatypes-type-mediawiki-title' => 'Judul MediaWiki',
+	'datatypes-type-unknown' => 'Tidak ditentukan',
+	'datatypes-type-boolean' => 'Boolean',
+	'datatypes-type-geo-coordinate' => 'Koordinat geografis',
 );
 
 /** Italian (italiano)
@@ -262,6 +308,17 @@ $messages['ja'] = array(
 	'datatypes-type-geo-coordinate' => '緯度経度',
 );
 
+/** Georgian (ქართული)
+ * @author David1010
+ */
+$messages['ka'] = array(
+	'datatypes-type-monolingual-text' => 'ერთენოვანი ტექსტი',
+	'datatypes-type-multilingual-text' => 'მრავალენოვანი ტექსტი',
+	'datatypes-type-number' => 'ნომერი',
+	'datatypes-type-mediawiki-title' => 'მედიავიკის სათაური',
+	'datatypes-type-unknown' => 'არ არის მითითებული',
+);
+
 /** Korean (한국어)
  * @author 아라
  */
@@ -288,6 +345,7 @@ $messages['lb'] = array(
 	'datatypes-type-number' => 'Zuel',
 	'datatypes-type-mediawiki-title' => 'MediaWiki-Titel',
 	'datatypes-type-unknown' => 'Net uginn',
+	'datatypes-type-geo-coordinate' => 'Geografesch Koordinaten',
 );
 
 /** Macedonian (македонски)
@@ -344,6 +402,29 @@ $messages['nl'] = array(
  */
 $messages['ps'] = array(
 	'datatypes-type-number' => 'شمېره',
+);
+
+/** Romanian (română)
+ * @author Firilacroco
+ * @author Stelistcristi
+ */
+$messages['ro'] = array(
+	'datatypes-type-string' => 'Șir',
+	'datatypes-type-quantity' => 'Cantitate',
+	'datatypes-type-number' => 'Număr',
+	'datatypes-type-mediawiki-title' => 'Titlu MediaWiki',
+	'datatypes-type-unknown' => 'Nespecificat',
+	'datatypes-type-boolean' => 'Adevărat/fals',
+	'datatypes-type-geo-coordinate' => 'Coordonate geografice',
+);
+
+/** Sinhala (සිංහල)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['si'] = array(
+	'datatypes-type-string' => 'තන්තුව',
+	'datatypes-type-quantity' => 'ප්‍රමාණය',
+	'datatypes-type-number' => 'අංකය',
 );
 
 /** Somali (Soomaaliga)
