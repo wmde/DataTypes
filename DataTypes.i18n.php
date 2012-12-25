@@ -301,6 +301,17 @@ $messages['hsb'] = array(
 	'datatypes-type-geo-coordinate' => 'Geografiska koordinata',
 );
 
+/** Hungarian (magyar)
+ * @author Dj
+ */
+$messages['hu'] = array(
+	'datatypes-type-number' => 'Szám',
+	'datatypes-type-mediawiki-title' => 'MediaWiki cím',
+	'datatypes-type-unknown' => 'Meghatározatlan',
+	'datatypes-type-boolean' => 'Logikai érték',
+	'datatypes-type-geo-coordinate' => 'Földrajzi koordináta',
+);
+
 /** Indonesian (Bahasa Indonesia)
  * @author Farras
  */
@@ -451,6 +462,22 @@ $messages['nl'] = array(
 	'datatypes-type-geo-coordinate' => 'Geografische coördinaat',
 );
 
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'datatypes-desc' => 'Colession ëd definission ëd sòrt ëd dat',
+	'datatypes-type-string' => 'Stringa',
+	'datatypes-type-quantity' => 'Quantità',
+	'datatypes-type-monolingual-text' => 'test monolenga',
+	'datatypes-type-multilingual-text' => 'test multilenga',
+	'datatypes-type-number' => 'Nùmer',
+	'datatypes-type-mediawiki-title' => 'Tìtol MediaWiki',
+	'datatypes-type-unknown' => 'Pa specificà',
+	'datatypes-type-boolean' => 'Boolean',
+	'datatypes-type-geo-coordinate' => 'Coordinà geogràfica',
+);
+
 /** Pashto (پښتو)
  * @author Ahmed-Najib-Biabani-Ibrahimkhel
  */
@@ -478,8 +505,13 @@ $messages['ro'] = array(
 $messages['si'] = array(
 	'datatypes-type-string' => 'තන්තුව',
 	'datatypes-type-quantity' => 'ප්‍රමාණය',
+	'datatypes-type-monolingual-text' => 'ඒකාශ්මය පාඨය',
+	'datatypes-type-multilingual-text' => 'බහු භාෂා පාඨය',
 	'datatypes-type-number' => 'අංකය',
+	'datatypes-type-mediawiki-title' => 'මාධ්‍යවිකි ශීර්ෂය',
 	'datatypes-type-unknown' => 'විශේෂණය නොකෙරූ',
+	'datatypes-type-boolean' => 'බූලියන්',
+	'datatypes-type-geo-coordinate' => 'භූගෝලීය ඛණ්ඩාංකය',
 );
 
 /** Somali (Soomaaliga)
