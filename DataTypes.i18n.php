@@ -209,6 +209,7 @@ $messages['es'] = array(
  * @author Avjoska
  */
 $messages['et'] = array(
+	'datatypes-type-quantity' => 'Kogus',
 	'datatypes-type-monolingual-text' => 'Ühekeelne tekst',
 	'datatypes-type-multilingual-text' => 'Mitmekeelne tekst',
 	'datatypes-type-number' => 'Number',
@@ -326,6 +327,13 @@ $messages['id'] = array(
 	'datatypes-type-unknown' => 'Tidak ditentukan',
 	'datatypes-type-boolean' => 'Boolean',
 	'datatypes-type-geo-coordinate' => 'Koordinat geografis',
+);
+
+/** Igbo (Igbo)
+ * @author Ukabia
+ */
+$messages['ig'] = array(
+	'datatypes-type-number' => 'Ọ́nụ́ọ̀gụ̀gụ̀',
 );
 
 /** Italian (italiano)
@@ -499,10 +507,27 @@ $messages['ro'] = array(
 	'datatypes-type-geo-coordinate' => 'Coordonate geografice',
 );
 
+/** Russian (русский)
+ * @author Ole Yves
+ */
+$messages['ru'] = array(
+	'datatypes-desc' => 'Коллекция определений типов данных',
+	'datatypes-type-string' => 'Строка',
+	'datatypes-type-quantity' => 'Количество',
+	'datatypes-type-monolingual-text' => 'Одноязычный текст',
+	'datatypes-type-multilingual-text' => 'Многоязычный текст',
+	'datatypes-type-number' => 'Номер',
+	'datatypes-type-mediawiki-title' => 'Заголовок MediaWiki',
+	'datatypes-type-unknown' => 'Не уточнено',
+	'datatypes-type-boolean' => 'Логическое значение',
+	'datatypes-type-geo-coordinate' => 'Географические координаты',
+);
+
 /** Sinhala (සිංහල)
  * @author පසිඳු කාවින්ද
  */
 $messages['si'] = array(
+	'datatypes-desc' => 'දත්ත වර්ග නිර්වචනවල එකතුවක්',
 	'datatypes-type-string' => 'තන්තුව',
 	'datatypes-type-quantity' => 'ප්‍රමාණය',
 	'datatypes-type-monolingual-text' => 'ඒකාශ්මය පාඨය',
@@ -534,6 +559,17 @@ $messages['sv'] = array(
 	'datatypes-type-unknown' => 'Ospecificerad',
 	'datatypes-type-boolean' => 'Boolesk',
 	'datatypes-type-geo-coordinate' => 'Geografisk koordinat',
+);
+
+/** Tamil (தமிழ்)
+ * @author Shanmugamp7
+ */
+$messages['ta'] = array(
+	'datatypes-type-monolingual-text' => 'ஒரு மொழி உரை',
+	'datatypes-type-multilingual-text' => 'பன்மொழி உரை',
+	'datatypes-type-number' => 'எண்',
+	'datatypes-type-mediawiki-title' => 'மீடியாவிக்கி தலைப்பு',
+	'datatypes-type-unknown' => 'குறிப்பிடப்படவில்லை',
 );
 
 /** Telugu (తెలుగు)
