@@ -382,7 +382,7 @@ $messages['ka'] = array(
  * @author 아라
  */
 $messages['ko'] = array(
-	'datatypes-desc' => '데이데이터 형식 정의의 모음집',
+	'datatypes-desc' => '데이터 형식 정의의 모음집',
 	'datatypes-type-string' => '문자열',
 	'datatypes-type-quantity' => '양',
 	'datatypes-type-monolingual-text' => '단일어 텍스트',
@@ -565,6 +565,7 @@ $messages['sv'] = array(
  * @author Shanmugamp7
  */
 $messages['ta'] = array(
+	'datatypes-type-quantity' => 'அளவு',
 	'datatypes-type-monolingual-text' => 'ஒரு மொழி உரை',
 	'datatypes-type-multilingual-text' => 'பன்மொழி உரை',
 	'datatypes-type-number' => 'எண்',
