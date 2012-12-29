@@ -306,6 +306,11 @@ $messages['hsb'] = array(
  * @author Dj
  */
 $messages['hu'] = array(
+	'datatypes-desc' => 'Adattípus definíciók gyűjteménye',
+	'datatypes-type-string' => 'Szöveg',
+	'datatypes-type-quantity' => 'Mennyiség',
+	'datatypes-type-monolingual-text' => 'Egynyelvű szöveg',
+	'datatypes-type-multilingual-text' => 'Többnyelvű szöveg',
 	'datatypes-type-number' => 'Szám',
 	'datatypes-type-mediawiki-title' => 'MediaWiki cím',
 	'datatypes-type-unknown' => 'Meghatározatlan',
@@ -615,4 +620,14 @@ $messages['vi'] = array(
 	'datatypes-type-unknown' => 'Không xác định',
 	'datatypes-type-boolean' => 'Luận lý',
 	'datatypes-type-geo-coordinate' => 'Tọa độ địa lý',
+);
+
+/** Simplified Chinese (中文（简体）‎)
+ * @author Dimension
+ */
+$messages['zh-hans'] = array(
+	'datatypes-type-monolingual-text' => '单语文本',
+	'datatypes-type-multilingual-text' => '多语文本',
+	'datatypes-type-mediawiki-title' => 'MediaWiki 标题',
+	'datatypes-type-boolean' => '布尔值',
 );
