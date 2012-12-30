@@ -109,6 +109,21 @@ $messages['bn'] = array(
 	'datatypes-type-number' => 'সংখ্যা',
 );
 
+/** Catalan (català)
+ * @author Arnaugir
+ */
+$messages['ca'] = array(
+	'datatypes-type-string' => 'Cadena',
+	'datatypes-type-quantity' => 'Quantitat',
+	'datatypes-type-monolingual-text' => 'Text monolingüe',
+	'datatypes-type-multilingual-text' => 'Text multilingüe',
+	'datatypes-type-number' => 'Nombre',
+	'datatypes-type-mediawiki-title' => 'Títol de MediaWiki',
+	'datatypes-type-unknown' => 'Sense especificar',
+	'datatypes-type-boolean' => 'Booleà',
+	'datatypes-type-geo-coordinate' => 'Coordenada geogràfica',
+);
+
 /** Danish (dansk)
  * @author Tjernobyl
  */
@@ -253,6 +268,18 @@ $messages['fr'] = array(
 	'datatypes-type-unknown' => 'Non spécifié',
 	'datatypes-type-boolean' => 'Booléen',
 	'datatypes-type-geo-coordinate' => 'Coordonnées géographiques',
+);
+
+/** Franco-Provençal (arpetan)
+ * @author ChrisPtDe
+ */
+$messages['frp'] = array(
+	'datatypes-type-string' => 'Chêna',
+	'datatypes-type-quantity' => 'Quantitât',
+	'datatypes-type-mediawiki-title' => 'Titro MediaWiki',
+	'datatypes-type-unknown' => 'Pas spècifiâ',
+	'datatypes-type-boolean' => 'Boolèen',
+	'datatypes-type-geo-coordinate' => 'Coordonâs g·eografiques',
 );
 
 /** Galician (galego)
