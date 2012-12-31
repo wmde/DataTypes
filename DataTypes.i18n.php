@@ -124,6 +124,21 @@ $messages['ca'] = array(
 	'datatypes-type-geo-coordinate' => 'Coordenada geogràfica',
 );
 
+/** Czech (česky)
+ * @author Vks
+ */
+$messages['cs'] = array(
+	'datatypes-type-string' => 'Řetězec',
+	'datatypes-type-quantity' => 'Množství',
+	'datatypes-type-monolingual-text' => 'Jednojazyčný text',
+	'datatypes-type-multilingual-text' => 'Vícejazyčný text',
+	'datatypes-type-number' => 'Číslo',
+	'datatypes-type-mediawiki-title' => 'Titulek MediaWiki',
+	'datatypes-type-unknown' => 'Neurčené',
+	'datatypes-type-boolean' => 'Logická hodnota',
+	'datatypes-type-geo-coordinate' => 'Zeměpisné souřadnice',
+);
+
 /** Danish (dansk)
  * @author Tjernobyl
  */
@@ -311,6 +326,15 @@ $messages['he'] = array(
 	'datatypes-type-mediawiki-title' => 'כותרת מדיה־ויקי',
 	'datatypes-type-unknown' => 'בלתי־מוגדר',
 	'datatypes-type-boolean' => 'בוליאני',
+);
+
+/** Hindi (हिन्दी)
+ * @author Ansumang
+ */
+$messages['hi'] = array(
+	'datatypes-type-string' => 'स्ट्रिंग',
+	'datatypes-type-quantity' => 'परिमाण',
+	'datatypes-type-number' => 'संख्या',
 );
 
 /** Upper Sorbian (hornjoserbsce)
@@ -502,6 +526,14 @@ $messages['nl'] = array(
 	'datatypes-type-geo-coordinate' => 'Geografische coördinaat',
 );
 
+/** Oriya (ଓଡ଼ିଆ)
+ * @author Ansumang
+ */
+$messages['or'] = array(
+	'datatypes-type-quantity' => 'ପରିମାଣ',
+	'datatypes-type-number' => 'ନମ୍ବର',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Dragonòt
  */
@@ -532,6 +564,7 @@ $messages['ps'] = array(
 $messages['ro'] = array(
 	'datatypes-type-string' => 'Șir',
 	'datatypes-type-quantity' => 'Cantitate',
+	'datatypes-type-multilingual-text' => 'Text multilingvistic',
 	'datatypes-type-number' => 'Număr',
 	'datatypes-type-mediawiki-title' => 'Titlu MediaWiki',
 	'datatypes-type-unknown' => 'Nespecificat',
@@ -579,6 +612,16 @@ $messages['so'] = array(
 	'datatypes-type-number' => 'Tiro',
 );
 
+/** Serbian (Cyrillic script) (српски (ћирилица)‎)
+ * @author Rancher
+ */
+$messages['sr-ec'] = array(
+	'datatypes-type-string' => 'Ниска',
+	'datatypes-type-quantity' => 'Количина',
+	'datatypes-type-monolingual-text' => 'Једнојезички текст',
+	'datatypes-type-multilingual-text' => 'Вишејезички текст',
+);
+
 /** Swedish (svenska)
  * @author WikiPhoenix
  */
@@ -615,6 +658,17 @@ $messages['te'] = array(
 	'datatypes-type-multilingual-text' => 'పలు భాషల పాఠ్యం',
 	'datatypes-type-number' => 'సంఖ్య',
 	'datatypes-type-mediawiki-title' => 'మీడియావికీ శీర్షిక',
+);
+
+/** Uyghur (Arabic script) (ئۇيغۇرچە)
+ * @author Sahran
+ */
+$messages['ug-arab'] = array(
+	'datatypes-type-string' => 'تېكىست',
+	'datatypes-type-quantity' => 'سانى',
+	'datatypes-type-number' => 'نومۇرى',
+	'datatypes-type-unknown' => 'بەلگىلەنمىگەن',
+	'datatypes-type-boolean' => 'بۇلىن',
 );
 
 /** Ukrainian (українська)
