@@ -197,12 +197,19 @@ $messages['dsb'] = array(
 );
 
 /** Greek (Ελληνικά)
+ * @author Glavkos
  * @author ZaDiak
  */
 $messages['el'] = array(
+	'datatypes-desc' => 'Συλλογή από τους ορισμούς τύπων δεδομένων',
+	'datatypes-type-string' => 'Συμβολοσειρά',
+	'datatypes-type-quantity' => 'Ποσότητα',
+	'datatypes-type-monolingual-text' => 'Μονόγλωσσο κείμενο',
+	'datatypes-type-multilingual-text' => 'Πολύγλωσσο κείμενο',
 	'datatypes-type-number' => 'Αριθμός',
 	'datatypes-type-mediawiki-title' => 'Τίτλος MediaWiki',
 	'datatypes-type-unknown' => 'Αδιευκρίνιστο',
+	'datatypes-type-boolean' => 'Δυαδική τιμή',
 );
 
 /** Esperanto (Esperanto)
@@ -448,6 +455,20 @@ $messages['ko'] = array(
 	'datatypes-type-unknown' => '지정되지 않음',
 	'datatypes-type-boolean' => '부울',
 	'datatypes-type-geo-coordinate' => '지리 좌표',
+);
+
+/** Colognian (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'datatypes-type-quantity' => 'Wäät',
+	'datatypes-type-monolingual-text' => 'Einschproocheje Täx',
+	'datatypes-type-multilingual-text' => 'Miehschproocheje Täx',
+	'datatypes-type-number' => 'Nommer',
+	'datatypes-type-mediawiki-title' => 'MediaWiki Tittel',
+	'datatypes-type-unknown' => 'Nit aanjejovve',
+	'datatypes-type-boolean' => 'Joh udder Nää',
+	'datatypes-type-geo-coordinate' => "Ko'odenaate om Jloobos",
 );
 
 /** Luxembourgish (Lëtzebuergesch)
