@@ -547,6 +547,22 @@ $messages['nl'] = array(
 	'datatypes-type-geo-coordinate' => 'Geografische coördinaat',
 );
 
+/** Norwegian Nynorsk (norsk (nynorsk)‎)
+ * @author Njardarlogar
+ */
+$messages['nn'] = array(
+	'datatypes-desc' => 'Samling av definisjonar på datatypar',
+	'datatypes-type-string' => 'Streng',
+	'datatypes-type-quantity' => 'Kvantitet',
+	'datatypes-type-monolingual-text' => 'Eittspråkleg tekst',
+	'datatypes-type-multilingual-text' => 'Mangspråkleg tekst',
+	'datatypes-type-number' => 'Tal',
+	'datatypes-type-mediawiki-title' => 'MediaWiki-tittel',
+	'datatypes-type-unknown' => 'Uspesifisert',
+	'datatypes-type-boolean' => 'Boolsk',
+	'datatypes-type-geo-coordinate' => 'Geografisk koordinat',
+);
+
 /** Oriya (ଓଡ଼ିଆ)
  * @author Ansumang
  */
