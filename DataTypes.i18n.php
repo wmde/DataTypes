@@ -198,10 +198,11 @@ $messages['dsb'] = array(
 
 /** Greek (Ελληνικά)
  * @author Glavkos
+ * @author Protnet
  * @author ZaDiak
  */
 $messages['el'] = array(
-	'datatypes-desc' => 'Συλλογή από τους ορισμούς τύπων δεδομένων',
+	'datatypes-desc' => 'Συλλογή από ορισμούς τύπων δεδομένων',
 	'datatypes-type-string' => 'Συμβολοσειρά',
 	'datatypes-type-quantity' => 'Ποσότητα',
 	'datatypes-type-monolingual-text' => 'Μονόγλωσσο κείμενο',
@@ -333,6 +334,7 @@ $messages['he'] = array(
 	'datatypes-type-mediawiki-title' => 'כותרת מדיה־ויקי',
 	'datatypes-type-unknown' => 'בלתי־מוגדר',
 	'datatypes-type-boolean' => 'בוליאני',
+	'datatypes-type-geo-coordinate' => 'נקודת ציון גאוגרפית',
 );
 
 /** Hindi (हिन्दी)
