@@ -339,11 +339,19 @@ $messages['he'] = array(
 
 /** Hindi (हिन्दी)
  * @author Ansumang
+ * @author Siddhartha Ghai
  */
 $messages['hi'] = array(
+	'datatypes-desc' => 'डेटा प्रकार परिभाषाओं का संग्रह',
 	'datatypes-type-string' => 'स्ट्रिंग',
 	'datatypes-type-quantity' => 'परिमाण',
+	'datatypes-type-monolingual-text' => 'एकभाषी पाठ',
+	'datatypes-type-multilingual-text' => 'बहुभाषी पाठ',
 	'datatypes-type-number' => 'संख्या',
+	'datatypes-type-mediawiki-title' => 'मीडियाविकि शीर्षक',
+	'datatypes-type-unknown' => 'अनिर्दिष्ट',
+	'datatypes-type-boolean' => 'बूलियन',
+	'datatypes-type-geo-coordinate' => 'भौगोलिक निर्देशांक',
 );
 
 /** Upper Sorbian (hornjoserbsce)
