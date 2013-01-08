@@ -100,7 +100,7 @@ class DataType {
 	}
 
 	/**
-	 * @see DataType::getId
+	 * Returns the identifier of this data type.
 	 *
 	 * @since 0.1
 	 *
@@ -111,7 +111,7 @@ class DataType {
 	}
 
 	/**
-	 * @see DataType::getDataValueType
+	 * Returns the type of the DataValue used by this data type.
 	 *
 	 * @since 0.1
 	 *
@@ -122,7 +122,9 @@ class DataType {
 	}
 
 	/**
-	 * @see DataType::getParser
+	 * Returns the ValueParser used by this data type.
+	 *
+	 * TODO: finish design and decide on the exact role of this and if we do not need multiple
 	 *
 	 * @since 0.1
 	 *
@@ -133,7 +135,9 @@ class DataType {
 	}
 
 	/**
-	 * @see DataType::getFormatter
+	 * Returns the ValueFormatter used by this data type.
+	 *
+	 * TODO: finish design and decide on the exact role of this and if we do not need multiple
 	 *
 	 * @since 0.1
 	 *
@@ -144,7 +148,7 @@ class DataType {
 	}
 
 	/**
-	 * @see DataType::getValidators
+	 * Returns the ValueValidators that are supported by this data type.
 	 *
 	 * @since 0.1
 	 *
@@ -155,7 +159,7 @@ class DataType {
 	}
 
 	/**
-	 * @see DataType::getLabel
+	 * Returns the label of the data type in the provided language or null if there is none.
 	 *
 	 * @since 0.1
 	 *
