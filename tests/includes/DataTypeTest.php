@@ -67,7 +67,11 @@ class DataTypeTest extends \MediaWikiTestCase {
 	 * @param DataType $type
 	 */
 	public function testGetParser( DataType $type ) {
-		$this->assertInstanceOf( 'ValueParsers\ValueParser', $type->getParser() );
+		$this->assertInternalType( 'array', $type->getParsers() );
+
+		foreach ( $type->getParsers() as $parser ) {
+			$this->assertInstanceOf( 'ValueParsers\ValueParser', $parser );
+		}
 	}
 
 	/**
@@ -75,8 +79,11 @@ class DataTypeTest extends \MediaWikiTestCase {
 	 * @param DataType $type
 	 */
 	public function testGetFormatter( DataType $type ) {
-		//$this->assertInstanceOf( 'ValueFormatter', $type->getFormatter() );
-		$this->assertTrue( true ); // TODO
+		$this->assertInternalType( 'array', $type->getFormatters() );
+
+		foreach ( $type->getFormatters() as $formatter ) {
+			$this->assertInstanceOf( 'ValueParsers\ValueFormatter', $formatter );
+		}
 	}
 
 	/**
