@@ -619,6 +619,16 @@ $messages['ro'] = array(
 	'datatypes-type-geo-coordinate' => 'Coordonate geografice',
 );
 
+/** tarandíne (tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'datatypes-type-string' => 'Stringhe',
+	'datatypes-type-quantity' => 'Quantitate',
+	'datatypes-type-number' => 'Numere',
+	'datatypes-type-boolean' => 'Buleane',
+);
+
 /** Russian (русский)
  * @author Ole Yves
  */
