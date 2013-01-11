@@ -26,7 +26,7 @@
 
 			PARENT.prototype._create.call( this );
 
-			this.element.on( 'suggesterresponse', function( event, response ) {
+			this.element.on( 'suggesterresponse suggesterclose', function( event, response ) {
 				self._updateValue();
 				self.$input.data( 'AutoExpandInput' ).expand();
 				self.$input.data( 'suggester' ).repositionMenu();
