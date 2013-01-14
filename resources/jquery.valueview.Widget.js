@@ -17,8 +17,10 @@
  * @since 0.1
  */
 $.valueview.Widget = dv.util.inherit( $.Widget, {
+	// TODO/FIXME: rename dataValueType and dataTypeId since their naming is rather confusing.
 	/**
-	 * Defines which type of DataValue can be handled by this 'valueview' widget.
+	 * Defines which type of DataValue can be handled by this 'valueview' widget. Should only be
+	 * set if the Widget is not just designed for values suitable for a certain data type.
 	 * @type String|null
 	 */
 	dataValueType: null,
@@ -133,6 +135,33 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 		this.element.removeData( 'valueview' );
 
 		return $.Widget.prototype.destroy.call( this );
+	},
+
+	/**
+	 * Returns whether the valueview can display the given data value object at all.
+	 * @since 0.1
+	 * @final
+	 *
+	 * @param {dv.DataValue|dt.DataType} indicator
+	 * @return boolean
+	 */
+	isSuitableFor: function( indicator ) {
+		var valueType;
+
+		if( indicator instanceof dv.DataValue ) {
+			valueType = indicator.getType();
+		}
+		else if( indicator instanceof dt.DataType ) {
+			valueType = indicator.getDataValueType();
+		}
+		else {
+			throw new Error( 'No sufficient indicator provided' );
+		}
+
+		// suitable if this widget can handle the right kind of data value or if it is designed to
+		// handle certain data types who also use the data value type of a given indicator.
+		return ( this.dataValueType && valueType === this.dataValueType )
+			|| ( this.dataTypeId && valueType === dt.getDataType( this.dataTypeId ).getDataValueType() );
 	},
 
 	/**
@@ -267,15 +296,9 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 	 * @param {dv.DataValue|null} value
 	 */
 	_setValue: function( value ) {
-		// unsuitable value if given value's type isn't the one the widget was made for (if any)
-		// AND if data type this widget is made for (if any) requires a different DataValue type
+		// check whether given value is actually suitable for the widget:
 		if( value !== null // null represents empty value
-			&& ( !( value instanceof dv.DataValue )
-				|| (
-					   value.getType() !== this.dataValueType
-					&& value.getType() !== dt.getDataType( this.dataTypeId ).getDataValueType()
-				)
-			)
+			&& ( !( value instanceof dv.DataValue )	|| !this.isSuitableFor( value ) )
 		) {
 			throw new Error( 'Given value type is not compatible with what the view can handle' );
 		}
@@ -409,7 +432,6 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 		} );
 		// TODO: display some message if parsing failed due to bad API connection
 	}
-
 } );
 
 }( dataValues, dataTypes, jQuery ) );
