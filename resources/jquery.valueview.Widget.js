@@ -165,6 +165,21 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 	},
 
 	/**
+	 * Returns whether the valueview Widget is considered the best choice for displaying the given
+	 * data value object or more specifically, a data value object valid against a given data type
+	 * object.
+	 * @since 0.1
+	 * @final
+	 *
+	 * @param {dv.DataValue|dt.DataType} indicator
+	 * @return boolean
+	 */
+	isMostSuitableFor: function( indicator ) {
+		var bestView = $.valueview.chooseView( indicator );
+		return bestView !== null && ( this instanceof $.valueview[ bestView ] );
+	},
+
+	/**
 	 * When calling this, the view will transform into a form with input fields or advanced widgets
 	 * for editing the related data value.
 	 *
