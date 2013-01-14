@@ -58,6 +58,9 @@ $.valueview.PersistentDomWidget = dv.util.inherit( PARENT, {
 	 * @see jQuery.Widget.destroy
 	 */
 	destroy: function() {
+		if( !this.element.hasClass( 'persistentdomvalueview' ) ) {
+			return;
+		}
 		this.element.removeClass( 'persistentdomvalueview' );
 		this._formatAsStaticValue();
 		return PARENT.prototype.destroy.call( this );
