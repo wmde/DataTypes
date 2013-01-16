@@ -160,11 +160,9 @@ $.valueview.LinkedSingleInputWidget = dv.util.inherit( PARENT, {
 	 * @see jQuery.valueview.Widget._getRawValue
 	 */
 	_getRawValue: function() {
-		if( this.$input ) {
-			return this.$input.val();
-		} else {
-			return this.$anchor.text();
-		}
+		return this.$input
+			? this.$input.val()
+			: this.$anchor.text();
 	}
 } );
 

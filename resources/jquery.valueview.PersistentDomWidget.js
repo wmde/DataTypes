@@ -59,10 +59,14 @@ $.valueview.PersistentDomWidget = dv.util.inherit( PARENT, {
 	 */
 	destroy: function() {
 		if( !this.element.hasClass( 'persistentdomvalueview' ) ) {
-			return;
+			return; // prevent against fail when calling destroy() several times
 		}
 		this.element.removeClass( 'persistentdomvalueview' );
-		this._formatAsStaticValue();
+		if( this.isInEditMode() ) {
+			// display value without edit interfaces, but don't call stopEditing() since we don't
+			// want to trigger the whole chain of events when destroying.
+			this._formatAsStaticValue();
+		}
 		return PARENT.prototype.destroy.call( this );
 	},
 
