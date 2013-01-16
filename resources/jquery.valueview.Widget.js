@@ -37,6 +37,13 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 	valueParser: null,
 
 	/**
+	 * One or more (separated by ' ') events which, when triggered on the Widget root, will trigger
+	 * the parsing of a new, raw value.
+	 * // TODO: decide if we really want to use 'eachchange' here and if so, move it from Wikibase
+	 */
+	updateValueEvents: 'eachchange',
+
+	/**
 	 * The DOM node, child of widget subject node, which holds all DOM nodes representing the value.
 	 * The child nodes of this node can change when switching between edit- and non-edit mode.
 	 * @type jQuery
@@ -113,10 +120,8 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 
 		var self = this;
 		// on each change by the user we have to create a DataValue Object from that
-		// TODO: decide if we really want to use 'eachchange' here and if so, move it from Wikibase
-		this.element.on( 'eachchange', function( event ) {
+		this.element.on( this.updateValueEvents, function( event ) {
 			self._updateValue();
-			// TODO: should we stop event propagation and trigger an 'eachchange' event after update?
 		} );
 	},
 
@@ -352,8 +357,10 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 	 * Will return a value which can then be fed to the value parser to create a DataValue. This
 	 * function will basically access the input elements (widgets) currently representing the value
 	 * and return their current values as something the parser will understand.
+	 * If null is returned, this implies that there is not yet sufficient data to provide the parser
+	 * with.
 	 *
-	 * @return {*}
+	 * @return *|null
 	 */
 	rawValue: function() {
 		// TODO: would it make sense to overload this function and provide a setter as well?
@@ -366,7 +373,7 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 	 * @since 0.1
 	 * @abstract
 	 *
-	 * @return {*}
+	 * @return *|null
 	 */
 	_getRawValue: dv.util.abstractMember,
 
@@ -423,6 +430,11 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 		var self = this,
 			rawValue = this.rawValue();
 
+		if( rawValue === null ) {
+			this.__lastUpdateValue = undefined;
+			this._value = null;
+		}
+
 		this.__lastUpdateValue = rawValue;
 
 		this.valueParser.parse(
@@ -440,9 +452,9 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 				// ignore all responses which might come back late.
 				// Another reason for this could be something like "a", "ab", "a", where the first
 				// response comes back and the following two can be ignored.
-				// TODO: this will only work if the raw value is a string or other basic type,
-				//       if otherwise, we had to implement some equal function for the raw values
 				self.__lastUpdateValue = undefined;
+				// NOTE: this will only work if the raw value is a string or other basic type,
+				//       if otherwise, we had to implement some equal function for the raw values
 			}
 		} );
 		// TODO: display some message if parsing failed due to bad API connection
