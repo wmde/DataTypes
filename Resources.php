@@ -54,10 +54,11 @@ return call_user_func( function() {
 				'jquery.valueview.LinkedSingleInputWidget.js'
 			),
 			'dependencies' => array(
-				'jquery.ui.widget',
 				'dataTypes',
 				'dataValues.util',
 				'dataValues.values',
+				'jquery.eachchange',
+				'jquery.ui.widget',
 				'valueParsers.parsers'
 			),
 			'styles' => array(
