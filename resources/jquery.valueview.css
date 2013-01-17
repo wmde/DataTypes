@@ -9,6 +9,12 @@
  * @author Daniel Werner < danweetz@web.de >
  */
 
+.valueview-disabled input,
+.valueview-disabled textarea {
+	background-color: #F0F0F0 !important;
+	color: #565656;
+}
+
 .valueview .valueview-input {
 	font-family: inherit;
 	font-size: inherit;

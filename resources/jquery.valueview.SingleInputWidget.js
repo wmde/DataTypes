@@ -35,6 +35,16 @@ $.valueview.SingleInputWidget = dv.util.inherit( PARENT, {
 	} ),
 
 	/**
+	 * @see jQuery.valueview.PersistentDomWidget.destroy
+	 */
+	destroy: function() {
+		if ( this.$input ) {
+			this.$input.removeClass( 'valueview-disabled' );
+		}
+		PARENT.prototype.destroy.call( this );
+	},
+
+	/**
 	 * @see jQuery.valueview.PersistentDomWidget._buildValueDom
 	 */
 	_buildValueDom: function() {
@@ -87,6 +97,28 @@ $.valueview.SingleInputWidget = dv.util.inherit( PARENT, {
 	 */
 	_displayValue: function( value ) {
 		this.$input.val( value.getValue() );
+	},
+
+	/**
+	 * @see jQuery.valueview.Widget.disable
+	 */
+	disable: function() {
+		if ( !this.$input ) {
+			return; // no point in disabling when there is nothing to disable
+		}
+		PARENT.prototype.disable.call( this );
+		this.$input.prop( 'disabled', true );
+	},
+
+	/**
+	 * @see jQuery.valueview.Widget.enable
+	 */
+	enable: function() {
+		if ( !this.$input ) {
+			return; // no point in enabling when there is nothing to enable
+		}
+		PARENT.prototype.enable.call( this );
+		this.$input.prop( 'disabled', false );
 	},
 
 	/**

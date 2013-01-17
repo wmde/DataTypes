@@ -330,6 +330,22 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 	},
 
 	/**
+	 * Disables the widget.
+	 * @since 0.1
+	 */
+	disable: function() {
+		this.element.addClass( this.widgetBaseClass + '-disabled' );
+	},
+
+	/**
+	 * Enables the widget.
+	 * @since 0.1
+	 */
+	enable: function() {
+		this.element.removeClass( this.widgetBaseClass + '-disabled' );
+	},
+
+	/**
 	 * Focuses the widget.
 	 * @since 0.1
 	 * @abstract
