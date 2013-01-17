@@ -15,6 +15,9 @@
  * @abstract
  * @extends jQuery.Widget
  * @since 0.1
+ *
+ * @event change: Triggered when the widget's value is updated.
+ *        (1) {jQuery.event} event
  */
 $.valueview.Widget = dv.util.inherit( $.Widget, {
 	// TODO/FIXME: rename dataValueType and dataTypeId since their naming is rather confusing.
@@ -121,6 +124,7 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 		var self = this;
 		// on each change by the user we have to create a DataValue Object from that
 		this.element.on( this.updateValueEvents, function( event ) {
+			self._trigger( 'change' );
 			self._updateValue();
 		} );
 	},
