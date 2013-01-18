@@ -254,6 +254,7 @@
 		$.widget( 'valueview.' + name, base, $.extend( prototype, {
 			widgetName: bridgeName,
 			widgetBaseClass: 'valueview',
+			widgetEventPrefix: 'valueview',
 			instanceViewName: name // for knowing view's name
 		} ) );
 
