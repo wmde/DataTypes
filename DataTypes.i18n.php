@@ -680,12 +680,15 @@ $messages['sr-ec'] = array(
 );
 
 /** Swedish (svenska)
+ * @author Lokal Profil
  * @author WikiPhoenix
  */
 $messages['sv'] = array(
 	'datatypes-desc' => 'Insamling av datatypsdefinitioner',
 	'datatypes-type-string' => 'Sträng',
 	'datatypes-type-quantity' => 'Kvantitet',
+	'datatypes-type-monolingual-text' => 'Enspråkig text',
+	'datatypes-type-multilingual-text' => 'Flerspråkig text',
 	'datatypes-type-number' => 'Nummer',
 	'datatypes-type-mediawiki-title' => 'MediaWiki-titel',
 	'datatypes-type-unknown' => 'Ospecificerad',
