@@ -765,10 +765,16 @@ $messages['vi'] = array(
 
 /** Simplified Chinese (中文（简体）‎)
  * @author Dimension
+ * @author Yfdyh000
  */
 $messages['zh-hans'] = array(
+	'datatypes-desc' => '数据类型定义的集合',
+	'datatypes-type-string' => '字符串',
 	'datatypes-type-monolingual-text' => '单语文本',
 	'datatypes-type-multilingual-text' => '多语文本',
+	'datatypes-type-number' => '数值',
 	'datatypes-type-mediawiki-title' => 'MediaWiki 标题',
+	'datatypes-type-unknown' => '未指定',
 	'datatypes-type-boolean' => '布尔值',
+	'datatypes-type-geo-coordinate' => '地理坐标',
 );
