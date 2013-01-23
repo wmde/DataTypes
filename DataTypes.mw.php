@@ -36,7 +36,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 global $wgExtensionCredits, $wgExtensionMessagesFiles, $wgAutoloadClasses, $wgHooks, $wgResourceModules;
 
 $wgExtensionCredits['datavalues'][] = array(
-	'path' => __FILE__,
+	'path' => __DIR__,
 	'name' => 'DataTypes',
 	'version' => DataTypes_VERSION,
 	'author' => array(
