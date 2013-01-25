@@ -81,6 +81,15 @@ return call_user_func( function() {
 			'class' => 'DataTypes\DataTypesModule',
 		),
 
+		'jquery.eachchange' => $moduleTemplate + array(
+			'scripts' => array(
+				'jquery.eachchange.js'
+			),
+			'dependencies' => array(
+				'jquery.client'
+			)
+		),
+
 	);
 
 } );
