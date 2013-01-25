@@ -1,6 +1,5 @@
 /**
- * QUnit tests for eachchange jQuery plugin
- * @see https://www.mediawiki.org/wiki/Extension:Wikibase
+ * QUnit tests for 'eachchange' jQuery plugin
  *
  * @since 0.1
  * @file
@@ -9,27 +8,29 @@
  * @licence GNU GPL v2+
  * @author Daniel Werner
  */
-( function( $, QUnit, undefined ) {
+( function( $, QUnit ) {
 	'use strict';
 
-	QUnit.module( 'jquery.eachchange', QUnit.newWbEnvironment( {
+	// some helper functions for the tests:
+	var i = 0,
+		iIncr = function() {
+			i++;
+		},
+		iReset = function() {
+			i = 0;
+		},
+		iTriggerTest = function( subject, expected, description ) {
+			subject.filter( 'input' ).trigger( 'eachchange' );
+			QUnit.assert.equal(
+				i,
+				expected,
+				description
+			);
+		};
+
+	QUnit.module( 'jquery.eachchange', QUnit.newMwEnvironment( {
 		setup: function() {
-			var self = this;
-			this.i = 0;
-			this.iIncr = function() {
-				self.i++;
-			};
-			this.iReset = function() {
-				self.i = 0;
-			};
-			this.iTriggerTest = function( subject, expected, description ) {
-				subject.filter( 'input' ).trigger( 'eachchange' );
-				QUnit.assert.equal(
-					self.i,
-					expected,
-					description
-				);
-			}
+			iReset();
 		},
 		teardown: function() {
 			$( '.test_eachchange' ).remove();
@@ -45,23 +46,23 @@
 		} ).add( $( '<div/>', { 'class': 'test_eachchange' } ) ); // should always be ignored, otherwise some tests will fail.
 
 		assert.equal(
-			subject.eachchange( this.iIncr ),
+			subject.eachchange( iIncr ),
 			subject,
 			'"eachchange" initialized, returns the original jQuery object'
 		);
 
-		subject.eachchange( this.iIncr ); // assign second time
+		subject.eachchange( iIncr ); // assign second time
 
-		this.iTriggerTest(
+		iTriggerTest(
 			subject,
 			2,
 			'"eachchange" triggered, eachchange() was used twice on same object but should only be triggered once each.'
 		);
 
-		this.iReset();
-		subject.on( 'eachchange', this.iIncr );
+		iReset();
+		subject.on( 'eachchange', iIncr );
 
-		this.iTriggerTest(
+		iTriggerTest(
 			subject,
 			3,
 			'"eachchange" added with jQuery.on(), should trigger three times now.'
@@ -83,12 +84,12 @@
 		} ) ); // should always be ignored, otherwise some tests will fail.
 
 		assert.equal(
-			subject.eachchange( this.iIncr ),
+			subject.eachchange( iIncr ),
 			subject,
 			'"eachchange" initialized, returns the original jQuery object'
 		);
 
-		this.iTriggerTest(
+		iTriggerTest(
 			subject,
 			2,
 			'"eachchange" triggered, eachchange() was used on two objects at the same time.'
