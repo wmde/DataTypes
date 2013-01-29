@@ -453,6 +453,7 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 		if( rawValue === null ) {
 			this.__lastUpdateValue = undefined;
 			this._value = null;
+			return;
 		}
 
 		this.__lastUpdateValue = rawValue;
@@ -465,7 +466,7 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 				return;
 			}
 
-			self._value = parsedValue;
+			self._value = parsedValue; // NOTE: can be null!
 
 			if( self.__lastUpdateValue === rawValue ) {
 				// this is the response for the latest update! by setting this to undefined, we will
@@ -476,6 +477,8 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 				// NOTE: this will only work if the raw value is a string or other basic type,
 				//       if otherwise, we had to implement some equal function for the raw values
 			}
+		} ).fail( function( error ) {
+			self._value = null;
 		} );
 		// TODO: display some message if parsing failed due to bad API connection
 	}
