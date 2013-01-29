@@ -65,7 +65,18 @@
 			} );
 
 			return $input;
+		},
+
+		/**
+		 * @see jQuery.valueview.Widget._getRawValue
+		 */
+		_getRawValue: function() {
+			return this.$input
+				// TODO: Should use validator for checking input.
+				? ( $.trim( this.$input.val() ) !== '' ) ? this.$input.val() : null
+				: this.$anchor.text();
 		}
+
 	} );
 
 }( mediaWiki, dataValues, valueParsers, dataTypes, jQuery ) );
