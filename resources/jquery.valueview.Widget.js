@@ -18,6 +18,12 @@
  *
  * @event change: Triggered when the widget's value is updated.
  *        (1) {jQuery.event} event
+ *
+ * @event parse: Triggered before the value gets parsed.
+ *       (1) {jQuery.event} event
+ *
+ * @event afterparse: Triggered after the value has been parsed.
+ *       (1) {jQuery.event} event
  */
 $.valueview.Widget = dv.util.inherit( $.Widget, {
 	// TODO/FIXME: rename dataValueType and dataTypeId since their naming is rather confusing.
@@ -450,9 +456,12 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 		var self = this,
 			rawValue = this.rawValue();
 
+		this._trigger( 'parse' );
+
 		if( rawValue === null ) {
 			this.__lastUpdateValue = undefined;
 			this._value = null;
+			self._trigger( 'afterparse' );
 			return;
 		}
 
@@ -477,10 +486,12 @@ $.valueview.Widget = dv.util.inherit( $.Widget, {
 				// NOTE: this will only work if the raw value is a string or other basic type,
 				//       if otherwise, we had to implement some equal function for the raw values
 			}
-		} ).fail( function( error ) {
+		} ).fail( function( error, details ) {
+			// TODO: display some message if parsing failed due to bad API connection
 			self._value = null;
+		} ).always( function() {
+			self._trigger( 'afterparse' );
 		} );
-		// TODO: display some message if parsing failed due to bad API connection
 	}
 } );
 
