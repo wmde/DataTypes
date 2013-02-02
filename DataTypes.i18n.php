@@ -444,11 +444,14 @@ $messages['ja'] = array(
  * @author David1010
  */
 $messages['ka'] = array(
+	'datatypes-type-quantity' => 'რაოდენობა',
 	'datatypes-type-monolingual-text' => 'ერთენოვანი ტექსტი',
 	'datatypes-type-multilingual-text' => 'მრავალენოვანი ტექსტი',
 	'datatypes-type-number' => 'ნომერი',
 	'datatypes-type-mediawiki-title' => 'მედიავიკის სათაური',
 	'datatypes-type-unknown' => 'არ არის მითითებული',
+	'datatypes-type-boolean' => 'ლოგიკური მნიშვნელობა',
+	'datatypes-type-geo-coordinate' => 'გეოგრაფიული კოორდინატი',
 );
 
 /** Korean (한국어)
