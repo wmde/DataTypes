@@ -40,7 +40,7 @@
 			if( value === null ) {
 				return null;
 			}
-			return 'http://commons.wikimedia.org/wiki/File:'
+			return location.protocol + '//commons.wikimedia.org/wiki/File:'
 				+ mw.util.wikiUrlencode( value.getValue() );
 		},
 
@@ -51,7 +51,7 @@
 			var $input = PARENT.prototype._buildInputDom.call( this );
 			$input.suggester( {
 				ajax: {
-					url: 'http://commons.wikimedia.org/w/api.php',
+					url: location.protocol + '//commons.wikimedia.org/w/api.php',
 					params: {
 						action: 'opensearch',
 						namespace: 6
