@@ -44,6 +44,7 @@ $messages['en'] = array(
 	'datatypes-type-unknown' => 'Unspecified',
 	'datatypes-type-boolean' => 'Boolean',
 	'datatypes-type-geo-coordinate' => 'Geographical coordinate',
+	'datatypes-type-time' => 'Time',
 );
 
 /** Message documentation (Message documentation)

@@ -76,6 +76,9 @@ $wgDataTypes = array(
 	'multilingual-text' => array(
 		'datavalue' => 'multilingualtext',
 	),
+	'time' => array(
+		'datavalue' => 'time',
+	),
 
 //	'geo' => array(
 //		'datavalue' => 'geo-dv',
