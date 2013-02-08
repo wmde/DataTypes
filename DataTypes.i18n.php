@@ -163,6 +163,7 @@ $messages['de'] = array(
 	'datatypes-type-unknown' => 'Nicht angegeben',
 	'datatypes-type-boolean' => 'Wahrheitswert',
 	'datatypes-type-geo-coordinate' => 'Geografische Koordinate',
+	'datatypes-type-time' => 'Zeit',
 );
 
 /** Zazaki (Zazaki)
