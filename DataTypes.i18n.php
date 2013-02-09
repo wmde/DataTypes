@@ -61,6 +61,7 @@ $messages['qqq'] = array(
 	'datatypes-type-unknown' => 'The name of a data type',
 	'datatypes-type-boolean' => 'The name of a data type',
 	'datatypes-type-geo-coordinate' => 'The name of a data type',
+	'datatypes-type-time' => '{{Identical|Time}}',
 );
 
 /** Asturian (asturianu)
@@ -337,6 +338,7 @@ $messages['he'] = array(
 	'datatypes-type-unknown' => 'בלתי־מוגדר',
 	'datatypes-type-boolean' => 'בוליאני',
 	'datatypes-type-geo-coordinate' => 'נקודת ציון גאוגרפית',
+	'datatypes-type-time' => 'זמן',
 );
 
 /** Hindi (हिन्दी)
@@ -440,6 +442,7 @@ $messages['ja'] = array(
 	'datatypes-type-unknown' => '未指定',
 	'datatypes-type-boolean' => 'ブール値',
 	'datatypes-type-geo-coordinate' => '緯度経度',
+	'datatypes-type-time' => '時刻',
 );
 
 /** Georgian (ქართული)
@@ -470,6 +473,7 @@ $messages['ko'] = array(
 	'datatypes-type-unknown' => '지정되지 않음',
 	'datatypes-type-boolean' => '부울',
 	'datatypes-type-geo-coordinate' => '지리 좌표',
+	'datatypes-type-time' => '시간',
 );
 
 /** Colognian (Ripoarisch)
@@ -520,6 +524,7 @@ $messages['mk'] = array(
 	'datatypes-type-unknown' => 'Неукажано',
 	'datatypes-type-boolean' => 'Булов',
 	'datatypes-type-geo-coordinate' => 'Географска координата',
+	'datatypes-type-time' => 'Време',
 );
 
 /** Malay (Bahasa Melayu)
