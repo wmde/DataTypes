@@ -565,6 +565,7 @@ $messages['nl'] = array(
 	'datatypes-type-unknown' => 'Niet aangegeven',
 	'datatypes-type-boolean' => 'Booleaanse operator',
 	'datatypes-type-geo-coordinate' => 'Geografische coördinaat',
+	'datatypes-type-time' => 'Tijd',
 );
 
 /** Norwegian Nynorsk (norsk (nynorsk)‎)
@@ -775,11 +776,13 @@ $messages['vi'] = array(
 
 /** Simplified Chinese (中文（简体）‎)
  * @author Dimension
+ * @author Hydra
  * @author Yfdyh000
  */
 $messages['zh-hans'] = array(
 	'datatypes-desc' => '数据类型定义的集合',
 	'datatypes-type-string' => '字符串',
+	'datatypes-type-quantity' => '数量',
 	'datatypes-type-monolingual-text' => '单语文本',
 	'datatypes-type-multilingual-text' => '多语文本',
 	'datatypes-type-number' => '数值',
@@ -787,4 +790,5 @@ $messages['zh-hans'] = array(
 	'datatypes-type-unknown' => '未指定',
 	'datatypes-type-boolean' => '布尔值',
 	'datatypes-type-geo-coordinate' => '地理坐标',
+	'datatypes-type-time' => '时间',
 );
