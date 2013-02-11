@@ -78,6 +78,7 @@ $messages['ast'] = array(
 	'datatypes-type-unknown' => 'No especificáu',
 	'datatypes-type-boolean' => 'Booleanu',
 	'datatypes-type-geo-coordinate' => 'Coordenada xeográfica',
+	'datatypes-type-time' => 'Hora',
 );
 
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
@@ -294,6 +295,7 @@ $messages['fr'] = array(
 	'datatypes-type-unknown' => 'Non spécifié',
 	'datatypes-type-boolean' => 'Booléen',
 	'datatypes-type-geo-coordinate' => 'Coordonnées géographiques',
+	'datatypes-type-time' => 'Heure',
 );
 
 /** Franco-Provençal (arpetan)
@@ -427,6 +429,7 @@ $messages['it'] = array(
 	'datatypes-type-unknown' => 'Non specificato',
 	'datatypes-type-boolean' => 'Booleano',
 	'datatypes-type-geo-coordinate' => 'Coordinate geografiche',
+	'datatypes-type-time' => 'Ora',
 );
 
 /** Japanese (日本語)
