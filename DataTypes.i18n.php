@@ -324,6 +324,7 @@ $messages['gl'] = array(
 	'datatypes-type-unknown' => 'Non especificado',
 	'datatypes-type-boolean' => 'Booleano',
 	'datatypes-type-geo-coordinate' => 'Coordenada xeográfica',
+	'datatypes-type-time' => 'Hora',
 );
 
 /** Hebrew (עברית)
@@ -640,7 +641,9 @@ $messages['roa-tara'] = array(
 	'datatypes-type-string' => 'Stringhe',
 	'datatypes-type-quantity' => 'Quantitate',
 	'datatypes-type-number' => 'Numere',
+	'datatypes-type-mediawiki-title' => 'Titole de MediaUicchi',
 	'datatypes-type-boolean' => 'Buleane',
+	'datatypes-type-time' => 'Orarie',
 );
 
 /** Russian (русский)
