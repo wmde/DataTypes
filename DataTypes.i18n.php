@@ -198,6 +198,7 @@ $messages['dsb'] = array(
 	'datatypes-type-unknown' => 'Njepódany',
 	'datatypes-type-boolean' => 'Boolean',
 	'datatypes-type-geo-coordinate' => 'Geografiska koordinata',
+	'datatypes-type-time' => 'Cas',
 );
 
 /** Greek (Ελληνικά)
@@ -375,6 +376,7 @@ $messages['hsb'] = array(
 	'datatypes-type-unknown' => 'Njepodaty',
 	'datatypes-type-boolean' => 'Boolean',
 	'datatypes-type-geo-coordinate' => 'Geografiska koordinata',
+	'datatypes-type-time' => 'Čas',
 );
 
 /** Hungarian (magyar)
@@ -778,6 +780,7 @@ $messages['vi'] = array(
 	'datatypes-type-unknown' => 'Không xác định',
 	'datatypes-type-boolean' => 'Luận lý',
 	'datatypes-type-geo-coordinate' => 'Tọa độ địa lý',
+	'datatypes-type-time' => 'Thời điểm',
 );
 
 /** Simplified Chinese (中文（简体）‎)
