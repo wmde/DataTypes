@@ -455,6 +455,7 @@ $messages['ja'] = array(
  * @author David1010
  */
 $messages['ka'] = array(
+	'datatypes-type-string' => 'ველი',
 	'datatypes-type-quantity' => 'რაოდენობა',
 	'datatypes-type-monolingual-text' => 'ერთენოვანი ტექსტი',
 	'datatypes-type-multilingual-text' => 'მრავალენოვანი ტექსტი',
@@ -463,6 +464,7 @@ $messages['ka'] = array(
 	'datatypes-type-unknown' => 'არ არის მითითებული',
 	'datatypes-type-boolean' => 'ლოგიკური მნიშვნელობა',
 	'datatypes-type-geo-coordinate' => 'გეოგრაფიული კოორდინატი',
+	'datatypes-type-time' => 'დრო',
 );
 
 /** Korean (한국어)
@@ -547,6 +549,7 @@ $messages['ms'] = array(
 	'datatypes-type-unknown' => 'Tidak ditentukan',
 	'datatypes-type-boolean' => 'Boolean',
 	'datatypes-type-geo-coordinate' => 'Koordinat geografi',
+	'datatypes-type-time' => 'Waktu',
 );
 
 /** Maltese (Malti)
