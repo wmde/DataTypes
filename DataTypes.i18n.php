@@ -702,6 +702,7 @@ $messages['sr-ec'] = array(
 );
 
 /** Swedish (svenska)
+ * @author Ainali
  * @author Lokal Profil
  * @author WikiPhoenix
  */
@@ -716,6 +717,7 @@ $messages['sv'] = array(
 	'datatypes-type-unknown' => 'Ospecificerad',
 	'datatypes-type-boolean' => 'Boolesk',
 	'datatypes-type-geo-coordinate' => 'Geografisk koordinat',
+	'datatypes-type-time' => 'Tid',
 );
 
 /** Tamil (தமிழ்)
