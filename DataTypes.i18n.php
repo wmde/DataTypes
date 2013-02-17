@@ -559,6 +559,23 @@ $messages['mt'] = array(
 	'datatypes-type-number' => 'Numru',
 );
 
+/** Norwegian Bokmål (norsk bokmål)
+ * @author Jeblad
+ */
+$messages['nb'] = array(
+	'datatypes-desc' => 'Samling av datatypedefinisjoner',
+	'datatypes-type-string' => 'Streng',
+	'datatypes-type-quantity' => 'Mengde',
+	'datatypes-type-monolingual-text' => 'Enspråklig tekst',
+	'datatypes-type-multilingual-text' => 'Flerspråklig tekst',
+	'datatypes-type-number' => 'Tall',
+	'datatypes-type-mediawiki-title' => 'Mediawiki-tittel',
+	'datatypes-type-unknown' => 'Uspesifisert',
+	'datatypes-type-boolean' => 'Boolsk verdi',
+	'datatypes-type-geo-coordinate' => 'Geografisk koordinat',
+	'datatypes-type-time' => 'Tid',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  * @author Wiki13
