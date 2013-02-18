@@ -64,6 +64,23 @@ $messages['qqq'] = array(
 	'datatypes-type-time' => '{{Identical|Time}}',
 );
 
+/** Arabic (العربية)
+ * @author Antime
+ */
+$messages['ar'] = array(
+	'datatypes-desc' => 'مجموعة تعريفات نوع البيانات',
+	'datatypes-type-string' => 'السلسلة',
+	'datatypes-type-quantity' => 'الكمية',
+	'datatypes-type-monolingual-text' => 'النص الأصلي',
+	'datatypes-type-multilingual-text' => 'نص متعدد اللغات',
+	'datatypes-type-number' => 'عدد',
+	'datatypes-type-mediawiki-title' => 'عنوان الميدياويكي',
+	'datatypes-type-unknown' => 'غير محدد',
+	'datatypes-type-boolean' => 'قيمة منطقية',
+	'datatypes-type-geo-coordinate' => 'الإحداثيات الجغرافية',
+	'datatypes-type-time' => 'وقت',
+);
+
 /** Asturian (asturianu)
  * @author Xuacu
  */
@@ -110,6 +127,14 @@ $messages['bg'] = array(
 $messages['bn'] = array(
 	'datatypes-type-quantity' => 'পরিমাণ',
 	'datatypes-type-number' => 'সংখ্যা',
+);
+
+/** Breton (brezhoneg)
+ * @author Fohanno
+ */
+$messages['br'] = array(
+	'datatypes-type-string' => 'Neudennad',
+	'datatypes-type-quantity' => 'Kementad',
 );
 
 /** Catalan (català)
@@ -261,12 +286,21 @@ $messages['et'] = array(
 );
 
 /** Persian (فارسی)
+ * @author Calak
  * @author Mjbmr
  */
 $messages['fa'] = array(
+	'datatypes-desc' => 'مجموعهای از تعاریف نوع داده',
 	'datatypes-type-string' => 'رشته',
+	'datatypes-type-quantity' => 'مقدار',
+	'datatypes-type-monolingual-text' => 'متن معدودی',
+	'datatypes-type-multilingual-text' => 'متن چندزبانه',
 	'datatypes-type-number' => 'عدد',
 	'datatypes-type-mediawiki-title' => 'عنوان مدیاویکی',
+	'datatypes-type-unknown' => 'مشخصنشده',
+	'datatypes-type-boolean' => 'بولی',
+	'datatypes-type-geo-coordinate' => 'مختصات جغرافیایی',
+	'datatypes-type-time' => 'زمان',
 );
 
 /** Finnish (suomi)
