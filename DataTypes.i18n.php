@@ -66,19 +66,20 @@ $messages['qqq'] = array(
 
 /** Arabic (العربية)
  * @author Antime
+ * @author Tarawneh
  */
 $messages['ar'] = array(
-	'datatypes-desc' => 'مجموعة تعريفات نوع البيانات',
-	'datatypes-type-string' => 'السلسلة',
-	'datatypes-type-quantity' => 'الكمية',
-	'datatypes-type-monolingual-text' => 'النص الأصلي',
+	'datatypes-desc' => 'مجموعة من تعريفات انواع البيانات',
+	'datatypes-type-string' => 'نص',
+	'datatypes-type-quantity' => 'كمية',
+	'datatypes-type-monolingual-text' => 'نص أحادي اللغة',
 	'datatypes-type-multilingual-text' => 'نص متعدد اللغات',
-	'datatypes-type-number' => 'عدد',
+	'datatypes-type-number' => 'رقم',
 	'datatypes-type-mediawiki-title' => 'عنوان الميدياويكي',
 	'datatypes-type-unknown' => 'غير محدد',
 	'datatypes-type-boolean' => 'قيمة منطقية',
-	'datatypes-type-geo-coordinate' => 'الإحداثيات الجغرافية',
-	'datatypes-type-time' => 'وقت',
+	'datatypes-type-geo-coordinate' => 'إحداثيات جغرافية',
+	'datatypes-type-time' => 'زمن',
 );
 
 /** Asturian (asturianu)
@@ -112,6 +113,7 @@ $messages['be-tarask'] = array(
 	'datatypes-type-unknown' => 'Не пазначаны',
 	'datatypes-type-boolean' => 'Булевы',
 	'datatypes-type-geo-coordinate' => 'Геаграфічныя каардынаты',
+	'datatypes-type-time' => 'Час',
 );
 
 /** Bulgarian (български)
@@ -820,6 +822,7 @@ $messages['uk'] = array(
 	'datatypes-type-unknown' => 'Не визначений',
 	'datatypes-type-boolean' => 'Булев',
 	'datatypes-type-geo-coordinate' => 'Географічні координати',
+	'datatypes-type-time' => 'Час',
 );
 
 /** Vietnamese (Tiếng Việt)
