@@ -96,7 +96,8 @@ $.valueview.SingleInputWidget = dv.util.inherit( PARENT, {
 	 * @see jQuery.valueview.Widget._displayValue
 	 */
 	_displayValue: function( value ) {
-		this.$input.val( value.getValue() );
+		var textValue = value === null ? '' : value.getValue();
+		this.$input.val( textValue );
 	},
 
 	/**
