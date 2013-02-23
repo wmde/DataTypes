@@ -277,14 +277,19 @@ $messages['es'] = array(
 
 /** Estonian (eesti)
  * @author Avjoska
+ * @author Pikne
  */
 $messages['et'] = array(
+	'datatypes-desc' => 'Andmetüübi määratluste kogu',
+	'datatypes-type-string' => 'Sõne',
 	'datatypes-type-quantity' => 'Kogus',
 	'datatypes-type-monolingual-text' => 'Ühekeelne tekst',
 	'datatypes-type-multilingual-text' => 'Mitmekeelne tekst',
 	'datatypes-type-number' => 'Number',
+	'datatypes-type-mediawiki-title' => 'MediaWiki pealkiri',
 	'datatypes-type-unknown' => 'Määratlemata',
 	'datatypes-type-geo-coordinate' => 'Geograafiline koordinaat',
+	'datatypes-type-time' => 'Aeg',
 );
 
 /** Persian (فارسی)
