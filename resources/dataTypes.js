@@ -15,7 +15,7 @@
  * @since 0.1
  * @type Object
  */
-var dataTypes = new ( function( $, mw, undefined ) {
+var dataTypes = new ( function Dt( $, mw ) {
 	'use strict';
 
 	// TODO: the whole structure of this is a little weird, perhaps there should be a
@@ -37,7 +37,7 @@ var dataTypes = new ( function( $, mw, undefined ) {
 	 * @param {Object} formatter
 	 * @param {Object} validators
 	 */
-	dt.DataType = function( typeId, dataValueType, parser, formatter, validators ) {
+	dt.DataType = function DtDataType( typeId, dataValueType, parser, formatter, validators ) {
 		if( dataValueType === undefined ) {
 			throw new Error( 'All arguments must be provided for creating a new DataType object' );
 		}
