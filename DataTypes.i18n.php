@@ -701,11 +701,16 @@ $messages['ro'] = array(
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
+	'datatypes-desc' => 'Raccolte de definiziune de tipe de date',
 	'datatypes-type-string' => 'Stringhe',
 	'datatypes-type-quantity' => 'Quantitate',
+	'datatypes-type-monolingual-text' => "Teste cu 'na lènghe",
+	'datatypes-type-multilingual-text' => 'Teste cu cchiù lènghe',
 	'datatypes-type-number' => 'Numere',
 	'datatypes-type-mediawiki-title' => 'Titole de MediaUicchi',
+	'datatypes-type-unknown' => 'Non specificate',
 	'datatypes-type-boolean' => 'Buleane',
+	'datatypes-type-geo-coordinate' => 'Coordinate sciugrafeche',
 	'datatypes-type-time' => 'Orarie',
 );
 
