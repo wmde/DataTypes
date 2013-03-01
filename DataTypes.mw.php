@@ -121,7 +121,7 @@ $wgHooks['ResourceLoaderTestModules'][] = function ( array &$testModules, \Resou
 
 	$testModules['qunit']['dataTypes.jquery.eachchange.tests'] = $moduleTemplate + array(
 		'scripts' => array(
-			'tests/qunit/jquery.eachchange.tests.js',
+			'tests/qunit/jquery/jquery.eachchange.tests.js',
 		),
 		'dependencies' => array(
 			'jquery.eachchange',
