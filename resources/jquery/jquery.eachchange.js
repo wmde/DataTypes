@@ -59,7 +59,7 @@
 		};
 
 		// works for text input fields and textarea only:
-		this.filter( 'input:text, textarea' ).each( function() {
+		this.filter( 'input, textarea' ).each( function() {
 			var input = $( this );
 
 			monitorEachChange( input );

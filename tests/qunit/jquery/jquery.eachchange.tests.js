@@ -37,6 +37,33 @@
 		}
 	} ) );
 
+	QUnit.test(
+		'Initialization',
+		function( assert ) {
+			var $input = $( '<input/>', { 'class': 'test_eachchange', type: 'text' } ),
+				$inputNoType = $( '<input/>', { 'class': 'test_eachchange' } ),
+				$textarea = $( '<textarea/>', { 'class': 'test_eachchange' } );
+
+			assert.equal(
+				$input.eachchange( iIncr ),
+				$input,
+				'Initialized "eachchange" on a text input element.'
+			);
+
+			assert.equal(
+				$inputNoType.eachchange( iIncr ),
+				$inputNoType,
+				'Initialized "eachchange" on an input element that has no "type" attribute.'
+			);
+
+			assert.equal(
+				$textarea.eachchange( iIncr ),
+				$textarea,
+				'Initialized "eachchange" on a textarea.'
+			);
+		}
+	);
+
 	QUnit.test( 'jQuery.eachchange() basics', function( assert ) {
 		var subject = $( '<input/>', {
 			'class': 'test_eachchange',
