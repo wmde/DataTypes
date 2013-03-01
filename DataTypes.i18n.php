@@ -61,7 +61,8 @@ $messages['qqq'] = array(
 	'datatypes-type-unknown' => 'The name of a data type',
 	'datatypes-type-boolean' => 'The name of a data type',
 	'datatypes-type-geo-coordinate' => 'The name of a data type',
-	'datatypes-type-time' => '{{Identical|Time}}',
+	'datatypes-type-time' => 'The name of a data type.
+{{Identical|Time}}',
 );
 
 /** Arabic (العربية)
@@ -155,6 +156,7 @@ $messages['ca'] = array(
 );
 
 /** Czech (česky)
+ * @author Reaperman
  * @author Vks
  */
 $messages['cs'] = array(
@@ -167,6 +169,7 @@ $messages['cs'] = array(
 	'datatypes-type-unknown' => 'Neurčené',
 	'datatypes-type-boolean' => 'Logická hodnota',
 	'datatypes-type-geo-coordinate' => 'Zeměpisné souřadnice',
+	'datatypes-type-time' => 'Čas',
 );
 
 /** Danish (dansk)
@@ -477,11 +480,13 @@ $messages['it'] = array(
 );
 
 /** Japanese (日本語)
+ * @author Fryed-peach
  * @author Shirayuki
  */
 $messages['ja'] = array(
 	'datatypes-desc' => 'データ型の定義のコレクション',
 	'datatypes-type-string' => '文字列',
+	'datatypes-type-quantity' => '数量',
 	'datatypes-type-monolingual-text' => '単一言語のテキスト',
 	'datatypes-type-multilingual-text' => '多言語のテキスト',
 	'datatypes-type-number' => '数値',
