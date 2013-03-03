@@ -38,9 +38,14 @@ var dataTypes = new ( function Dt( $, mw ) {
 	 * @param {Object} validators
 	 */
 	dt.DataType = function DtDataType( typeId, dataValueType, parser, formatter, validators ) {
+		// TODO: enforce the requirement or remove it after we implemented and use all of the parts
 		if( dataValueType === undefined ) {
 			throw new Error( 'All arguments must be provided for creating a new DataType object' );
 		}
+		if( !typeId || typeof typeId !== 'string' ) {
+			throw new Error( 'A dataType.DataType\'s ID has to be a string' );
+		}
+
 		this._typeId = typeId;
 		this._dataValueType = dataValueType;
 		this._parser = parser;
@@ -122,6 +127,9 @@ var dataTypes = new ( function Dt( $, mw ) {
 	 * @return {dt.DataType|null} Null if the data type is not known.
 	 */
 	this.getDataType = function( dataTypeId ) {
+		if( !dataTypeId || typeof dataTypeId !== 'string' ) {
+			throw new Error( 'The ID given to identify a data type needs to be a string' );
+		}
 		return dts[ dataTypeId ] || null;
 	};
 
