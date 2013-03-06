@@ -555,6 +555,7 @@ $messages['lb'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki-Titel',
 	'datatypes-type-unknown' => 'Net uginn',
 	'datatypes-type-geo-coordinate' => 'Geografesch Koordinaten',
+	'datatypes-type-time' => 'Zäit',
 );
 
 /** Lithuanian (lietuvių)
