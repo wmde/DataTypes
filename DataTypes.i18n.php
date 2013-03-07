@@ -52,10 +52,14 @@ $messages['en'] = array(
  */
 $messages['qqq'] = array(
 	'datatypes-desc' => '{{desc|name=Data Types|url=http://www.mediawiki.org/wiki/Extension:DataTypes}}',
-	'datatypes-type-string' => 'The name of a data type',
-	'datatypes-type-quantity' => 'The name of a data type',
-	'datatypes-type-monolingual-text' => 'The name of a data type',
-	'datatypes-type-multilingual-text' => 'The name of a data type',
+	'datatypes-type-string' => 'The name of a data type.
+{{Identical|String}}',
+	'datatypes-type-quantity' => 'The name of a data type.
+{{Identical|Quantity}}',
+	'datatypes-type-monolingual-text' => 'The name of a data type.
+{{Identical|Monolingual text}}',
+	'datatypes-type-multilingual-text' => 'The name of a data type.
+{{Identical|Multilingual text}}',
 	'datatypes-type-number' => 'The name of a data type',
 	'datatypes-type-mediawiki-title' => 'The name of a data type',
 	'datatypes-type-unknown' => 'The name of a data type',
