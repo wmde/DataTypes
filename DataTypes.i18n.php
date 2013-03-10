@@ -159,6 +159,14 @@ $messages['ca'] = array(
 	'datatypes-type-geo-coordinate' => 'Coordenada geogràfica',
 );
 
+/** Sorani Kurdish (کوردی)
+ * @author Calak
+ */
+$messages['ckb'] = array(
+	'datatypes-type-string' => 'زنجیرەنووسە',
+	'datatypes-type-time' => 'کات',
+);
+
 /** Czech (česky)
  * @author Reaperman
  * @author Vks
@@ -319,6 +327,7 @@ $messages['fa'] = array(
 
 /** Finnish (suomi)
  * @author Nedergard
+ * @author Stryn
  */
 $messages['fi'] = array(
 	'datatypes-type-string' => 'Merkkijono',
@@ -328,6 +337,8 @@ $messages['fi'] = array(
 	'datatypes-type-number' => 'Numero',
 	'datatypes-type-mediawiki-title' => 'MediaWiki-otsikko',
 	'datatypes-type-unknown' => 'Määrittelemätön',
+	'datatypes-type-geo-coordinate' => 'Maantieteellinen koordinaatti',
+	'datatypes-type-time' => 'Aika',
 );
 
 /** French (français)
@@ -464,6 +475,23 @@ $messages['id'] = array(
  */
 $messages['ig'] = array(
 	'datatypes-type-number' => 'Ọ́nụ́ọ̀gụ̀gụ̀',
+);
+
+/** Iloko (Ilokano)
+ * @author Lam-ang
+ */
+$messages['ilo'] = array(
+	'datatypes-desc' => 'Urnong dagiti panangilawlawag iti kita ti datos',
+	'datatypes-type-string' => 'Kuerdas',
+	'datatypes-type-quantity' => 'Kaadu',
+	'datatypes-type-monolingual-text' => 'Testo ti maymaysa pagsasao',
+	'datatypes-type-multilingual-text' => 'Adu a pagsasao a testo',
+	'datatypes-type-number' => 'Numero',
+	'datatypes-type-mediawiki-title' => 'Titulo ti MediaWiki',
+	'datatypes-type-unknown' => 'Di naibagbaga',
+	'datatypes-type-boolean' => 'Boolean',
+	'datatypes-type-geo-coordinate' => 'Heograpiko a nagsasabtan',
+	'datatypes-type-time' => 'Oras',
 );
 
 /** Italian (italiano)
@@ -667,6 +695,23 @@ $messages['nn'] = array(
 $messages['or'] = array(
 	'datatypes-type-quantity' => 'ପରିମାଣ',
 	'datatypes-type-number' => 'ନମ୍ବର',
+);
+
+/** Polish (polski)
+ * @author WTM
+ */
+$messages['pl'] = array(
+	'datatypes-desc' => 'Zbiór definicji typów danych',
+	'datatypes-type-string' => 'Łańcuch',
+	'datatypes-type-quantity' => 'Ilość',
+	'datatypes-type-monolingual-text' => 'Tekst jednojęzyczny',
+	'datatypes-type-multilingual-text' => 'Tekst wielojęzyczny',
+	'datatypes-type-number' => 'Liczba',
+	'datatypes-type-mediawiki-title' => 'Tytuł MediaWiki',
+	'datatypes-type-unknown' => 'Nieokreślone',
+	'datatypes-type-boolean' => 'Wartość logiczna',
+	'datatypes-type-geo-coordinate' => 'Współrzędne geograficzne',
+	'datatypes-type-time' => 'Czas',
 );
 
 /** Piedmontese (Piemontèis)
