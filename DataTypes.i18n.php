@@ -142,6 +142,8 @@ $messages['bn'] = array(
 $messages['br'] = array(
 	'datatypes-type-string' => 'Neudennad',
 	'datatypes-type-quantity' => 'Kementad',
+	'datatypes-type-monolingual-text' => 'Testenn unyezhek',
+	'datatypes-type-multilingual-text' => 'Testenn liesyezhek',
 );
 
 /** Catalan (català)
