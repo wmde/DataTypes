@@ -510,7 +510,7 @@ $messages['it'] = array(
 	'datatypes-type-unknown' => 'Non specificato',
 	'datatypes-type-boolean' => 'Booleano',
 	'datatypes-type-geo-coordinate' => 'Coordinate geografiche',
-	'datatypes-type-time' => 'Ora',
+	'datatypes-type-time' => 'Data e ora',
 );
 
 /** Japanese (日本語)
