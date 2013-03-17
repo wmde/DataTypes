@@ -377,7 +377,7 @@ $messages['frp'] = array(
  */
 $messages['gl'] = array(
 	'datatypes-desc' => 'Colección de definicións de tipos de datos',
-	'datatypes-type-string' => 'Cadea',
+	'datatypes-type-string' => 'Cadea de caracteres',
 	'datatypes-type-quantity' => 'Cantidade',
 	'datatypes-type-monolingual-text' => 'Texto monolingüe',
 	'datatypes-type-multilingual-text' => 'Texto multilingüe',
