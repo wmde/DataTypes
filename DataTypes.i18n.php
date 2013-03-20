@@ -186,6 +186,13 @@ $messages['cs'] = array(
 	'datatypes-type-time' => 'Čas',
 );
 
+/** Welsh (Cymraeg)
+ * @author Lloffiwr
+ */
+$messages['cy'] = array(
+	'datatypes-type-time' => 'Amser',
+);
+
 /** Danish (dansk)
  * @author Tjernobyl
  */
