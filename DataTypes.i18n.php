@@ -779,6 +779,7 @@ $messages['roa-tara'] = array(
 );
 
 /** Russian (русский)
+ * @author Ignatus
  * @author Ole Yves
  */
 $messages['ru'] = array(
@@ -792,6 +793,7 @@ $messages['ru'] = array(
 	'datatypes-type-unknown' => 'Не уточнено',
 	'datatypes-type-boolean' => 'Логическое значение',
 	'datatypes-type-geo-coordinate' => 'Географические координаты',
+	'datatypes-type-time' => 'Время',
 );
 
 /** Sinhala (සිංහල)
