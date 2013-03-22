@@ -12,11 +12,35 @@
  * @example $( 'input' ).eachchange( function( event, oldValue ) { ... } );
  *
  * @dependency jquery.client
- *
- * @TODO: Take care of context related changes via mouse (paste, drag, delete) and DOM
  */
 ( function( $, undefined ) {
 	'use strict';
+
+	/**
+	 * Returns a string to be used for detecting any instant changes of an input box. In general,
+	 * this should be just 'input' in recent browsers.
+	 *
+	 * @return {string} event(s)
+	 */
+	function getInputEvent() {
+		// IE (at least <= version 9) does not trigger input event when pressing backspace
+		// (version <= 8 does not support input event at all anyway)
+		if ( $.client.profile().name === 'msie' && $.client.profile().versionNumber >= 9 ) {
+			return 'input keyup';
+		}
+
+		var fallbackEvents = 'keyup keydown blur cut paste mousedown mouseup mouseout',
+			$input = $( '<input/>' ),
+			supported = 'oninput' in $input[0];
+
+		return ( supported ) ? 'input' : fallbackEvents;
+	}
+
+	/**
+	 * String containing all the events needed to detect any change of the input of an element.
+	 * @type {string}
+	 */
+	var inputEvents = getInputEvent();
 
 	$.fn.eachchange = function( fn ) {
 		var monitoredInputs = $();
@@ -35,7 +59,7 @@
 
 			var oldVal = input.val(); // old val to compare new one with
 			input
-			.on( $.getInputEvent(), function( e ) {
+			.on( inputEvents, function( e ) {
 				/*
 				 * NOTE: we use 'keyup' here as well, so when holding backspace the thing still gets
 				 *       triggered. Also, for some reason in some browsers 'keydown' isn't triggered
@@ -70,28 +94,6 @@
 		} );
 
 		return this; // return jQuery object
-	};
-
-	/**
-	 * Returns a string to be used for detecting any instant changes of an input box. In general, this
-	 * should be just 'input' in recent browsers.
-	 *
-	 * @return {String} events
-	 */
-	$.getInputEvent = function() {
-		var fallbackEvents = 'keyup keydown blur cut paste mousedown mouseup mouseout';
-
-		// IE (at least <= version 9) does not trigger input event when pressing backspace
-		// (version <= 8 does not support input event at all anyway)
-		if ( $.client.profile().name === 'msie' && $.client.profile().versionNumber >= 9 ) {
-			return 'input keyup';
-		}
-
-		var $input = $( '<input/>' );
-		var supported = 'oninput' in $input[0];
-		$input.remove();
-
-		return ( supported ) ? 'input' : fallbackEvents;
 	};
 
 }( jQuery ) );
