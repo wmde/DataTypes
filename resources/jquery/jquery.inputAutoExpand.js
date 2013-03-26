@@ -287,7 +287,7 @@
 		return instances;
 	};
 
-	AutoExpandInput.prototype = {
+	$.extend( AutoExpandInput.prototype, {
 		/**
 		 * sets the input boxes width to fit the boxes content.
 		 *
@@ -549,6 +549,6 @@
 			this.expand();
 		}
 
-	};
+	} );
 
 }( jQuery ) );

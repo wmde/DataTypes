@@ -37,7 +37,7 @@ var dataTypes = new ( function Dt( $, mw ) {
 	 * @param {Object} formatter
 	 * @param {Object} validators
 	 */
-	dt.DataType = function DtDataType( typeId, dataValueType, parser, formatter, validators ) {
+	var SELF = dt.DataType = function DtDataType( typeId, dataValueType, parser, formatter, validators ) {
 		// TODO: enforce the requirement or remove it after we implemented and use all of the parts
 		if( dataValueType === undefined ) {
 			throw new Error( 'All arguments must be provided for creating a new DataType object' );
@@ -52,7 +52,8 @@ var dataTypes = new ( function Dt( $, mw ) {
 		this._formatter = formatter;
 		this._validators = validators;
 	};
-	dt.DataType.prototype = {
+
+	$.extend( SELF.prototype, {
 		/**
 		 * Returns the data type's identifier.
 		 * @since 0.1
@@ -94,7 +95,7 @@ var dataTypes = new ( function Dt( $, mw ) {
 		getLabel: function() {
 			return mw.message( 'datatypes-type-' + this.getId() );
 		}
-	};
+	} );
 
 	/**
 	 * Creates a new DataType object from a given JSON structure.
@@ -104,9 +105,9 @@ var dataTypes = new ( function Dt( $, mw ) {
 	 * @param {Object} json JSON structure containing data type info
 	 * @return {dt.DataType} DataType object
 	 */
-	dt.DataType.newFromJSON = function( typeId, json ) {
+	SELF.newFromJSON = function( typeId, json ) {
 		// TODO: inmplement parser, formatter and validators parameters
-		return new dt.DataType( typeId, json.dataValueType );
+		return new SELF( typeId, json.dataValueType );
 	};
 
 
@@ -116,7 +117,7 @@ var dataTypes = new ( function Dt( $, mw ) {
 	var dts = {};
 
 	$.each( mw.config.get( 'wbDataTypes' ) || {}, function( dtTypeId, dtDefinition ) {
-		dts[ dtTypeId ] = dt.DataType.newFromJSON( dtTypeId, dtDefinition );
+		dts[ dtTypeId ] = SELF.newFromJSON( dtTypeId, dtDefinition );
 	} );
 
 	/**
