@@ -664,6 +664,14 @@ $messages['nb'] = array(
 	'datatypes-type-time' => 'Tid',
 );
 
+/** Low German (Plattdüütsch)
+ * @author Joachim Mos
+ */
+$messages['nds'] = array(
+	'datatypes-type-boolean' => 'Boolean',
+	'datatypes-type-time' => 'Tied',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  * @author Wiki13
@@ -744,6 +752,23 @@ $messages['pms'] = array(
  */
 $messages['ps'] = array(
 	'datatypes-type-number' => 'شمېره',
+);
+
+/** Portuguese (português)
+ * @author Alchimista
+ */
+$messages['pt'] = array(
+	'datatypes-desc' => 'Colecção de definições de tipo de dados',
+	'datatypes-type-string' => 'String',
+	'datatypes-type-quantity' => 'Quantidade',
+	'datatypes-type-monolingual-text' => 'Texto monolingue',
+	'datatypes-type-multilingual-text' => 'Texto multilíngua',
+	'datatypes-type-number' => 'Número',
+	'datatypes-type-mediawiki-title' => 'Título do MediaWiki',
+	'datatypes-type-unknown' => 'Não Especificado',
+	'datatypes-type-boolean' => 'Booleano',
+	'datatypes-type-geo-coordinate' => 'Coordenada geográfica',
+	'datatypes-type-time' => 'Tempo',
 );
 
 /** Romanian (română)
