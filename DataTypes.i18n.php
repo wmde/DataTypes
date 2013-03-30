@@ -286,10 +286,11 @@ $messages['eo'] = array(
 /** Spanish (español)
  * @author Armando-Martin
  * @author Minh Nguyen
+ * @author Vivaelcelta
  */
 $messages['es'] = array(
 	'datatypes-desc' => 'Colección de definiciones de tipos de datos',
-	'datatypes-type-string' => 'Cadena',
+	'datatypes-type-string' => 'Cadena de caracteres',
 	'datatypes-type-quantity' => 'Cantidad',
 	'datatypes-type-monolingual-text' => 'Texto monolingüe',
 	'datatypes-type-multilingual-text' => 'Texto multilingüe',
