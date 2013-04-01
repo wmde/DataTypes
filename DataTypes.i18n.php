@@ -773,6 +773,23 @@ $messages['pt'] = array(
 	'datatypes-type-time' => 'Tempo',
 );
 
+/** Brazilian Portuguese (português do Brasil)
+ * @author Jaideraf
+ */
+$messages['pt-br'] = array(
+	'datatypes-desc' => 'Coleção de definições de tipo de dados',
+	'datatypes-type-string' => 'String',
+	'datatypes-type-quantity' => 'Quantidade',
+	'datatypes-type-monolingual-text' => 'Texto monolingue',
+	'datatypes-type-multilingual-text' => 'Texto multilíngue',
+	'datatypes-type-number' => 'Número',
+	'datatypes-type-mediawiki-title' => 'Título do MediaWiki',
+	'datatypes-type-unknown' => 'Não especificado',
+	'datatypes-type-boolean' => 'Booleano',
+	'datatypes-type-geo-coordinate' => 'Coordenada geográfica',
+	'datatypes-type-time' => 'Tempo',
+);
+
 /** Romanian (română)
  * @author Firilacroco
  * @author Stelistcristi
