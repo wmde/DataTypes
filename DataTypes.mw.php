@@ -105,35 +105,16 @@ Message::registerTextFunction( function() {
  */
 $wgHooks['ResourceLoaderTestModules'][] = function ( array &$testModules, \ResourceLoader &$resourceLoader ) {
 	$moduleTemplate = array(
-		'localBasePath' => __DIR__,
-		'remoteExtPath' => 'DataValues/DataTypes',
+		'localBasePath' => __DIR__ . '/tests/qunit',
+		'remoteExtPath' => 'DataValues/DataTypes/tests/qunit',
 	);
 
-	$testModules['qunit']['dataTypes.jquery.valueview.tests'] = $moduleTemplate + array(
+	$testModules['qunit']['jquery.dataTypes.tests'] = $moduleTemplate + array(
 		'scripts' => array(
-			'tests/qunit/dataTypes.tests.js',
-			'tests/qunit/jquery.valueview.tests.js'
+			'dataTypes.tests.js',
 		),
 		'dependencies' => array(
-			'dataTypes.jquery.valueview',
-		),
-	);
-
-	$testModules['qunit']['dataTypes.jquery.eachchange.tests'] = $moduleTemplate + array(
-		'scripts' => array(
-			'tests/qunit/jquery/jquery.eachchange.tests.js',
-		),
-		'dependencies' => array(
-			'jquery.eachchange',
-		),
-	);
-
-	$testModules['qunit']['dataTypes.jquery.inputAutoExpand.tests'] = $moduleTemplate + array(
-		'scripts' => array(
-			'tests/qunit/jquery/jquery.inputAutoExpand.tests.js',
-		),
-		'dependencies' => array(
-			'jquery.inputAutoExpand',
+			'dataTypes',
 		),
 	);
 

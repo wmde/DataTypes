@@ -24,7 +24,7 @@
  * @ingroup DataTypes
  *
  * @licence GNU GPL v2+
- * @author Daniel Werner
+ * @author Daniel Werner < daniel.werner@wikimedia.de >
  *
  * @codeCoverageIgnoreStart
  */
@@ -45,58 +45,8 @@ return call_user_func( function() {
 			),
 		),
 
-		'dataTypes.jquery.valueview' => $moduleTemplate + array(
-			'scripts' => array(
-				'jquery.valueview.js',
-				'jquery.valueview.Widget.js',
-				'jquery.valueview.PersistentDomWidget.js',
-				'jquery.valueview.SingleInputWidget.js',
-				'jquery.valueview.LinkedSingleInputWidget.js'
-			),
-			'dependencies' => array(
-				'dataTypes',
-				'dataValues.util',
-				'dataValues.values',
-				'jquery.eachchange',
-				'jquery.ui.widget',
-				'valueParsers.parsers'
-			),
-			'styles' => array(
-				'jquery.valueview.css',
-			),
-		),
-
-		'dataTypes.jquery.valueview.views' => $moduleTemplate + array(
-			'scripts' => array(
-				'views/string.js',
-				'views/commonsMedia.js',
-			),
-			'dependencies' => array(
-				'dataTypes.jquery.valueview',
-				'jquery.eachchange'
-			),
-		),
-
 		'dataTypes.dataTypesModule' => $moduleTemplate + array(
 			'class' => 'DataTypes\DataTypesModule',
-		),
-
-		'jquery.eachchange' => $moduleTemplate + array(
-			'scripts' => array(
-				'jquery/jquery.eachchange.js'
-			),
-			'dependencies' => array(
-				'jquery.client'
-			)
-		),
-
-		'jquery.inputAutoExpand' => $moduleTemplate + array(
-			'scripts' => array(
-				'jquery/jquery.inputAutoExpand.js',
-			),
-			'dependencies' => array(
-				'jquery.eachchange'
-			)
 		),
 	);
 
