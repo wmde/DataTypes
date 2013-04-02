@@ -577,6 +577,8 @@ $messages['ko'] = array(
  * @author Purodha
  */
 $messages['ksh'] = array(
+	'datatypes-desc' => 'En Versammlong vun Aate vun Daate iehr Defenizjuhne.',
+	'datatypes-type-string' => 'En ZeischeKätt',
 	'datatypes-type-quantity' => 'Wäät',
 	'datatypes-type-monolingual-text' => 'Einschproocheje Täx',
 	'datatypes-type-multilingual-text' => 'Miehschproocheje Täx',
@@ -585,6 +587,7 @@ $messages['ksh'] = array(
 	'datatypes-type-unknown' => 'Nit aanjejovve',
 	'datatypes-type-boolean' => 'Joh udder Nää',
 	'datatypes-type-geo-coordinate' => "Ko'odenaate om Jloobos",
+	'datatypes-type-time' => 'En Uhrzick',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
