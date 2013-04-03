@@ -170,10 +170,12 @@ $messages['ckb'] = array(
 );
 
 /** Czech (česky)
+ * @author Mormegil
  * @author Reaperman
  * @author Vks
  */
 $messages['cs'] = array(
+	'datatypes-desc' => 'Soubor definic datových typů',
 	'datatypes-type-string' => 'Řetězec',
 	'datatypes-type-quantity' => 'Množství',
 	'datatypes-type-monolingual-text' => 'Jednojazyčný text',
@@ -190,6 +192,16 @@ $messages['cs'] = array(
  * @author Lloffiwr
  */
 $messages['cy'] = array(
+	'datatypes-desc' => 'Casgliad o ddiffiniadau o fathau o ddata',
+	'datatypes-type-string' => 'Llinyn',
+	'datatypes-type-quantity' => 'Mesur',
+	'datatypes-type-monolingual-text' => 'Testun unieithog',
+	'datatypes-type-multilingual-text' => 'Testun amlieithog',
+	'datatypes-type-number' => 'Rhif',
+	'datatypes-type-mediawiki-title' => 'Teitl yn MediaWiki',
+	'datatypes-type-unknown' => 'Heb ei nodi',
+	'datatypes-type-boolean' => 'Boole',
+	'datatypes-type-geo-coordinate' => 'Cyfesuryn daearyddol',
 	'datatypes-type-time' => 'Amser',
 );
 
