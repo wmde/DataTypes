@@ -1,8 +1,9 @@
 <?php
 
 namespace DataTypes\Test;
-use DataTypes\DataTypeFactory;
+
 use DataTypes\DataType;
+use DataTypes\DataTypeFactory;
 
 /**
  * Unit tests for the TypeFactory class.

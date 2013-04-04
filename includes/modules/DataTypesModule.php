@@ -1,8 +1,9 @@
 <?php
 
 namespace DataTypes;
-use ResourceLoaderModule;
+
 use ResourceLoaderContext;
+use ResourceLoaderModule;
 
 /**
  * @since 0.1

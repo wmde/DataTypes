@@ -1,7 +1,9 @@
 <?php
 
 namespace DataTypes\Test;
-use DataTypes\DataTypeFactory, DataTypes\DataType;
+
+use DataTypes\DataType;
+use DataTypes\DataTypeFactory;
 
 /**
  * Unit tests for DataType implementations.

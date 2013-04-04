@@ -1,6 +1,7 @@
 <?php
 
 namespace DataTypes;
+
 use InvalidArgumentException;
 
 /**

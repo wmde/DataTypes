@@ -1,9 +1,10 @@
 <?php
 
 namespace DataTypes;
+
 use InvalidArgumentException;
-use ValueParsers\ValueParser;
 use ValueFormatters\ValueFormatter;
+use ValueParsers\ValueParser;
 use ValueValidators\ValueValidator;
 
 /**
