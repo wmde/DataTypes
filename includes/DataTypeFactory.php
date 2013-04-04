@@ -42,8 +42,6 @@ class DataTypeFactory {
 	protected $types = array();
 
 	/**
-	 * Constructor.
-	 *
 	 * @since 0.1
 	 */
 	public function __construct( array $dataTypes = array() ) {
