@@ -10,9 +10,9 @@ DataTypes requires:
 
 * PHP 5.3 or above
 * DataValues
-* ValueFormatter
-* ValueParser
-* ValueValidator
+* ValueFormatters
+* ValueParsers
+* ValueValidators
 
 == Download ==
 
