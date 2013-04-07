@@ -350,9 +350,11 @@ $messages['fa'] = array(
 
 /** Finnish (suomi)
  * @author Nedergard
+ * @author Silvonen
  * @author Stryn
  */
 $messages['fi'] = array(
+	'datatypes-desc' => 'Kokoelma tietotyyppimäärittelyjä',
 	'datatypes-type-string' => 'Merkkijono',
 	'datatypes-type-quantity' => 'Määrä',
 	'datatypes-type-monolingual-text' => 'Yksikielinen teksti',
@@ -360,6 +362,7 @@ $messages['fi'] = array(
 	'datatypes-type-number' => 'Numero',
 	'datatypes-type-mediawiki-title' => 'MediaWiki-otsikko',
 	'datatypes-type-unknown' => 'Määrittelemätön',
+	'datatypes-type-boolean' => 'Totuusarvo',
 	'datatypes-type-geo-coordinate' => 'Maantieteellinen koordinaatti',
 	'datatypes-type-time' => 'Aika',
 );
