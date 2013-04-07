@@ -30,7 +30,7 @@ use InvalidArgumentException;
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-class DataTypeFactory {
+final class DataTypeFactory {
 
 	/**
 	 * Maps type id to DataType.
@@ -48,8 +48,34 @@ class DataTypeFactory {
 	 */
 	public function __construct( array $dataTypes = array() ) {
 		foreach ( $dataTypes as $typeId => $typeData ) {
-			$this->types[$typeId] = $this->newType( $typeId, $typeData );
+			$this->registerDataType( $this->newType( $typeId, $typeData ) );
 		}
+	}
+
+	/**
+	 * @since 0.1
+	 *
+	 * @param DataType[] $dataTypes
+	 *
+	 * @return DataTypeFactory
+	 */
+	public static function newFromTypes( array $dataTypes ) {
+		$factory = new self();
+
+		foreach ( $dataTypes as $dataType ) {
+			$factory->registerDataType( $dataType );
+		}
+
+		return $factory;
+	}
+
+	/**
+	 * @since 0.1
+	 *
+	 * @param DataType $dataType
+	 */
+	public function registerDataType( DataType $dataType ) {
+		$this->types[$dataType->getId()] = $dataType;
 	}
 
 	/**
