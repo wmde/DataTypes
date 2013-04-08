@@ -84,7 +84,7 @@ class DataTypeTest extends \MediaWikiTestCase {
 		$this->assertInternalType( 'array', $type->getFormatters() );
 
 		foreach ( $type->getFormatters() as $formatter ) {
-			$this->assertInstanceOf( 'ValueParsers\ValueFormatter', $formatter );
+			$this->assertInstanceOf( 'ValueFormatters\ValueFormatter', $formatter );
 		}
 	}
 

@@ -103,9 +103,17 @@ final class DataTypeFactory {
 			$parser = new $parser();
 		}
 
-//		$formatter = array_key_exists( 'formatter', $typeData ) ? $typeData['formatter'] : 'NullFormatter';
-//		$formatter = new $formatter();
-		$formatters = array(); // TODO
+		$formatters = array();
+
+		if ( array_key_exists( 'formatter', $typeData ) ) {
+			$formatter = $typeData['formatter'];
+
+			if ( is_string( $formatter ) ) {
+				$formatter = new $formatter();
+			}
+
+			$formatters[] = $formatter;
+		}
 
 		if ( array_key_exists( 'validators', $typeData ) ) {
 			$validators = is_array( $typeData['validators'] ) ? $typeData['validators'] : array( $typeData['validators'] );
