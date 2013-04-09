@@ -70,10 +70,7 @@ class DataTypeTest extends \MediaWikiTestCase {
 	 */
 	public function testGetParser( DataType $type ) {
 		$this->assertInternalType( 'array', $type->getParsers() );
-
-		foreach ( $type->getParsers() as $parser ) {
-			$this->assertInstanceOf( 'ValueParsers\ValueParser', $parser );
-		}
+		$this->assertContainsOnlyInstancesOf( 'ValueParsers\ValueParser', $type->getParsers() );
 	}
 
 	/**
@@ -82,10 +79,7 @@ class DataTypeTest extends \MediaWikiTestCase {
 	 */
 	public function testGetFormatter( DataType $type ) {
 		$this->assertInternalType( 'array', $type->getFormatters() );
-
-		foreach ( $type->getFormatters() as $formatter ) {
-			$this->assertInstanceOf( 'ValueFormatters\ValueFormatter', $formatter );
-		}
+		$this->assertContainsOnlyInstancesOf( 'ValueFormatters\ValueFormatter', $type->getFormatters() );
 	}
 
 	/**
@@ -94,10 +88,7 @@ class DataTypeTest extends \MediaWikiTestCase {
 	 */
 	public function testGetValidators( DataType $type ) {
 		$this->assertInternalType( 'array', $type->getValidators() );
-
-		foreach ( $type->getValidators() as $validator ) {
-			$this->assertInstanceOf( 'ValueValidators\ValueValidator', $validator );
-		}
+		$this->assertContainsOnlyInstancesOf( 'ValueValidators\ValueValidator', $type->getValidators() );
 	}
 
 	/**
