@@ -643,6 +643,20 @@ $messages['mk'] = array(
 	'datatypes-type-time' => 'Време',
 );
 
+/** Malayalam (മലയാളം)
+ * @author Praveenp
+ */
+$messages['ml'] = array(
+	'datatypes-type-quantity' => 'അളവ്',
+	'datatypes-type-monolingual-text' => 'ഒറ്റഭാഷയിലുള്ള എഴുത്ത്',
+	'datatypes-type-multilingual-text' => 'ബഹുഭാഷാ എഴുത്ത്',
+	'datatypes-type-number' => 'സംഖ്യ',
+	'datatypes-type-mediawiki-title' => 'മീഡിയവിക്കി തലക്കെട്ട്',
+	'datatypes-type-unknown' => 'വ്യക്തമാക്കാത്തവ',
+	'datatypes-type-geo-coordinate' => 'ഭൗമനിർദ്ദേശാങ്കങ്ങൾ',
+	'datatypes-type-time' => 'സമയം',
+);
+
 /** Malay (Bahasa Melayu)
  * @author Anakmalaysia
  */
