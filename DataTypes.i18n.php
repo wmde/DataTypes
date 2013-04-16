@@ -206,11 +206,21 @@ $messages['cy'] = array(
 );
 
 /** Danish (dansk)
+ * @author Byrial
  * @author Tjernobyl
  */
 $messages['da'] = array(
-	'datatypes-type-number' => 'Nummer',
+	'datatypes-desc' => 'Samling af datatypedefinitioner',
+	'datatypes-type-string' => 'Streng',
+	'datatypes-type-quantity' => 'Kvantitet',
+	'datatypes-type-monolingual-text' => 'Tekst på ét sprog',
+	'datatypes-type-multilingual-text' => 'Tekst på flere sprog',
+	'datatypes-type-number' => 'Tal',
+	'datatypes-type-mediawiki-title' => 'MediaWiki-titel',
+	'datatypes-type-unknown' => 'Uspecificeret',
+	'datatypes-type-boolean' => 'Boolesk',
 	'datatypes-type-geo-coordinate' => 'Geografisk koordinat',
+	'datatypes-type-time' => 'Tid',
 );
 
 /** German (Deutsch)
