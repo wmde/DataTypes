@@ -148,6 +148,7 @@ $messages['br'] = array(
 
 /** Catalan (català)
  * @author Arnaugir
+ * @author Pitort
  */
 $messages['ca'] = array(
 	'datatypes-type-string' => 'Cadena',
@@ -159,6 +160,7 @@ $messages['ca'] = array(
 	'datatypes-type-unknown' => 'Sense especificar',
 	'datatypes-type-boolean' => 'Booleà',
 	'datatypes-type-geo-coordinate' => 'Coordenada geogràfica',
+	'datatypes-type-time' => 'Hora',
 );
 
 /** Sorani Kurdish (کوردی)
