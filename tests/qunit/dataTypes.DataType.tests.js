@@ -9,7 +9,7 @@
  * @author Daniel Werner < daniel.werner@wikimedia.de >
  */
 
-( function( dt, $, QUnit ) {
+( function( dt, dv, $, QUnit ) {
 	'use strict';
 
 	var DataType = dt.DataType;
@@ -22,9 +22,9 @@
 			constructorParams: [ 'foo', 'string' ],
 			valueType: 'string'
 		}, {
-			title: 'another simple datatype',
-			constructorParams: [ 'bar', 'bool' ],
-			valueType: 'bool'
+			title: 'DataType constructed with DataValue as 2nd argument',
+			constructorParams: [ 'bar', dv.BoolValue ],
+			valueType: dv.BoolValue.TYPE
 		}
 	];
 
@@ -76,6 +76,12 @@
 		}, {
 			title: 'missing data value type',
 			constructorParams: [ 'foo' ]
+		}, {
+			title: 'wrong type for data value type',
+			constructorParams: [ 'foo', {} ]
+		}, {
+			title: 'wrong type for ID',
+			constructorParams: [ null, 'xxx' ]
 		}
 	] )
 		.test( 'invalid construtor arguments', function( params, assert ) {
@@ -87,4 +93,4 @@
 			);
 		} );
 
-}( dataTypes, jQuery, QUnit ) );
+}( dataTypes, dataValues, jQuery, QUnit ) );

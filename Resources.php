@@ -40,7 +40,7 @@ return call_user_func( function() {
 			'scripts' => 'dataTypes.js', // also contains dataType.DataType constructor
 			'dependencies' => array(
 				'dataTypes.dataTypesModule',
-				'dataValues',
+				'dataValues.DataValue',
 				'valueParsers'
 			),
 		),

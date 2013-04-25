@@ -15,7 +15,7 @@
  * @since 0.1
  * @type Object
  */
-var dataTypes = new ( function Dt( $, mw ) {
+var dataTypes = new ( function Dt( $, mw, DataValue ) {
 	'use strict';
 
 	// TODO: the whole structure of this is a little weird, perhaps there should be a
@@ -32,18 +32,22 @@ var dataTypes = new ( function Dt( $, mw ) {
 	 * @since 0.1
 	 *
 	 * @param {String} typeId
-	 * @param {String} dataValueType
-	 * @param {vp.Parser} parser
+	 * @param {String|Function} dataValueType Can be a DataValue constructor whose type will then be taken.
+	 * @param {vp.ValueParser} parser
 	 * @param {Object} formatter
 	 * @param {Object} validators
 	 */
 	var SELF = dt.DataType = function DtDataType( typeId, dataValueType, parser, formatter, validators ) {
-		// TODO: enforce the requirement or remove it after we implemented and use all of the parts
-		if( dataValueType === undefined ) {
-			throw new Error( 'All arguments must be provided for creating a new DataType object' );
+		if( dataValueType && dataValueType.prototype instanceof DataValue
+		) { // DataValue constructor
+			dataValueType = dataValueType.TYPE;
 		}
+		if( typeof dataValueType !== 'string' ) {
+			throw new Error( 'A data value type has to be given in form of a string or DataValue constructor' );
+		}
+
 		if( !typeId || typeof typeId !== 'string' ) {
-			throw new Error( 'A dataType.DataType\'s ID has to be a string' );
+			throw new Error( 'A data type\'s ID has to be a string' );
 		}
 
 		this._typeId = typeId;
@@ -78,7 +82,7 @@ var dataTypes = new ( function Dt( $, mw ) {
 		 * Returns the ValueParser used by this data type.
 		 * @since 0.1
 		 *
-		 * @return dv.ValueParser
+		 * @return vp.ValueParser
 		 */
 		getParser: function() {
 			return this._parser;
@@ -180,6 +184,6 @@ var dataTypes = new ( function Dt( $, mw ) {
 		dts[ dataType.getId() ] = dataType;
 	};
 
-} )( jQuery, mediaWiki );
+} )( jQuery, mediaWiki, dataValues.DataValue );
 
 window.dataTypes = dataTypes; // global alias
