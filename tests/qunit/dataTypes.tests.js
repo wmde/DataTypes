@@ -1,6 +1,5 @@
 /**
- * QUnit tests for DataTypes data type store/factory
- * @see https://www.mediawiki.org/wiki/Extension:Wikibase
+ * QUnit tests for DataTypes's dataType store/factory (global dataType object).
  *
  * @since 0.1
  * @file
@@ -10,10 +9,10 @@
  * @author H. Snater < mediawiki@snater.com >
  */
 
-( function( mw, dt, dv, $, QUnit, undefined ) {
+( function( dt, dv, $, QUnit ) {
 	'use strict';
 
-	QUnit.module( 'dataTypes.tests', QUnit.newMwEnvironment() );
+	QUnit.module( 'dataTypes.tests' );
 
 	QUnit.test( 'Test initializing a DataType object', function( assert ) {
 		// create new data type for testing and register it:
@@ -38,4 +37,4 @@
 		);
 	} );
 
-}( mediaWiki, dataTypes, dataValues, jQuery, QUnit ) );
+}( dataTypes, dataValues, jQuery, QUnit ) );
