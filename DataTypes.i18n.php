@@ -959,6 +959,7 @@ $messages['te'] = array(
 	'datatypes-type-multilingual-text' => 'పలు భాషల పాఠ్యం',
 	'datatypes-type-number' => 'సంఖ్య',
 	'datatypes-type-mediawiki-title' => 'మీడియావికీ శీర్షిక',
+	'datatypes-type-time' => 'సమయం',
 );
 
 /** Uyghur (Arabic script) (ئۇيغۇرچە)
