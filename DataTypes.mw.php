@@ -124,7 +124,8 @@ $wgHooks['ResourceLoaderTestModules'][] = function ( array &$testModules, \Resou
 		),
 		'dependencies' => array(
 			'dataTypes',
-			'qunit.parameterize'
+			'dataValues.values',
+			'qunit.parameterize',
 		),
 	);
 
