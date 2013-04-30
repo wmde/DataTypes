@@ -68,15 +68,6 @@ class DataTypeTest extends \MediaWikiTestCase {
 	 * @dataProvider instanceProvider
 	 * @param DataType $type
 	 */
-	public function testGetParser( DataType $type ) {
-		$this->assertInternalType( 'array', $type->getParsers() );
-		$this->assertContainsOnlyInstancesOf( 'ValueParsers\ValueParser', $type->getParsers() );
-	}
-
-	/**
-	 * @dataProvider instanceProvider
-	 * @param DataType $type
-	 */
 	public function testGetFormatter( DataType $type ) {
 		$this->assertInternalType( 'array', $type->getFormatters() );
 		$this->assertContainsOnlyInstancesOf( 'ValueFormatters\ValueFormatter', $type->getFormatters() );

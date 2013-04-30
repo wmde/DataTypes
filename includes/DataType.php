@@ -54,15 +54,6 @@ class DataType {
 	protected $dataValueType;
 
 	/**
-	 * The ValueParser used by this data type.
-	 *
-	 * @since 0.1
-	 *
-	 * @var ValueParser[]
-	 */
-	protected $parsers;
-
-	/**
 	 * The ValueFormatter used by this data type.
 	 *
 	 * @since 0.1
@@ -88,7 +79,7 @@ class DataType {
 	 *
 	 * @param string $typeId
 	 * @param string $dataValueType
-	 * @param ValueParser[] $parsers
+	 * @param ValueParser[] $parsers // TODO: remove
 	 * @param ValueFormatter[] $formatters
 	 * @param ValueValidator[] $validators
 	 *
@@ -105,7 +96,6 @@ class DataType {
 
 		$this->typeId = $typeId;
 		$this->dataValueType = $dataValueType;
-		$this->parsers = $parsers;
 		$this->formatters = $formatters;
 		$this->validators = $validators;
 	}
@@ -130,19 +120,6 @@ class DataType {
 	 */
 	public function getDataValueType() {
 		return $this->dataValueType;
-	}
-
-	/**
-	 * Returns the ValueParser used by this data type.
-	 *
-	 * TODO: finish design and decide on the exact role of this and if we do not need multiple
-	 *
-	 * @since 0.1
-	 *
-	 * @return ValueParser[]
-	 */
-	public function getParsers() {
-		return $this->parsers;
 	}
 
 	/**
