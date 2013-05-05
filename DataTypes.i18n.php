@@ -323,6 +323,8 @@ $messages['es'] = array(
 	'datatypes-type-mediawiki-title' => 'Título de MediaWiki',
 	'datatypes-type-unknown' => 'No especificado',
 	'datatypes-type-boolean' => 'Expresión Booleana',
+	'datatypes-type-geo-coordinate' => 'Coordenadas geográficas',
+	'datatypes-type-time' => 'Hora',
 );
 
 /** Estonian (eesti)
