@@ -46,14 +46,6 @@
 
 namespace DataTypes;
 
-if ( !defined( 'DATAVALUES' ) && !defined( 'MEDIAWIKI' ) ) {
-	die( 'Not an entry point.' );
-}
-
-if ( !defined( 'DATAVALUES' ) ) {
-	define( 'DATAVALUES', true );
-}
-
 define( 'DataTypes_VERSION', '0.1 alpha' );
 
 global $wgDataTypes;
