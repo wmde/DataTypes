@@ -34,7 +34,7 @@ use DataTypes\DataTypeFactory;
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-class DataTypeTest extends \MediaWikiTestCase {
+class DataTypeTest extends \PHPUnit_Framework_TestCase {
 
 	/**
 	 * @return DataType[]
@@ -45,7 +45,13 @@ class DataTypeTest extends \MediaWikiTestCase {
 	}
 
 	public function instanceProvider() {
-		return $this->arrayWrap( $this->getInstances() );
+		$argLists = array();
+
+		foreach ( $this->getInstances() as $instance ) {
+			$argLists[] = array( $instance );
+		}
+
+		return $argLists;
 	}
 
 	/**
@@ -89,11 +95,7 @@ class DataTypeTest extends \MediaWikiTestCase {
 	public function testGetLabel( DataType $type ) {
 		foreach ( array( 'en', 'de', 'nl', 'o_O' ) as $langCode ) {
 			$actual = $type->getLabel( $langCode );
-			$this->assertTypeOrValue( 'string', $actual, null );
-
-			$expected = wfMessage( 'datatypes-type-' . $type->getId() )->inLanguage( $langCode )->text();
-
-			$this->assertEquals( $expected, $actual );
+			$this->assertTrue( $actual === null || is_string( $actual ) );
 		}
 	}
 

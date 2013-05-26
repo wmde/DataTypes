@@ -34,7 +34,7 @@ use DataTypes\DataTypeFactory;
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-class DataTypeFactoryTest extends \MediaWikiTestCase {
+class DataTypeFactoryTest extends \PHPUnit_Framework_TestCase {
 
 	/**
 	 * @var null|DataTypeFactory
@@ -60,7 +60,7 @@ class DataTypeFactoryTest extends \MediaWikiTestCase {
 			$this->assertInternalType( 'string', $id );
 		}
 
-		$this->assertArrayEquals( array_unique( $ids ), $ids );
+		$this->assertEquals( array_unique( $ids ), $ids );
 	}
 
 	public function testGetType() {
@@ -76,14 +76,18 @@ class DataTypeFactoryTest extends \MediaWikiTestCase {
 	public function testGetTypes() {
 		$factory = $this->getInstance();
 
-		$this->assertArrayEquals(
-			$factory->getTypeIds(),
-			array_map(
-				function( DataType $type ) {
-					return $type->getId();
-				},
-				$factory->getTypes()
-			)
+		$expectedIds = array_map(
+			function( DataType $type ) {
+				return $type->getId();
+			},
+			$factory->getTypes()
+		);
+
+		$expectedIds = array_values( $expectedIds );
+
+		$this->assertEquals(
+			$expectedIds,
+			$factory->getTypeIds()
 		);
 	}
 
