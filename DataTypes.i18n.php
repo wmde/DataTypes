@@ -1027,3 +1027,13 @@ $messages['zh-hans'] = array(
 	'datatypes-type-geo-coordinate' => '地理坐标',
 	'datatypes-type-time' => '时间',
 );
+
+/** Traditional Chinese (中文（繁體）‎)
+ * @author Simon Shek
+ */
+$messages['zh-hant'] = array(
+	'datatypes-type-mediawiki-title' => 'MediaWiki 標題',
+	'datatypes-type-unknown' => '未指定',
+	'datatypes-type-geo-coordinate' => '地理座標',
+	'datatypes-type-time' => '時間',
+);
