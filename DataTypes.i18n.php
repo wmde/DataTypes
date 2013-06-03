@@ -383,6 +383,7 @@ $messages['fi'] = array(
 
 /** French (français)
  * @author Gomoko
+ * @author Zolo
  */
 $messages['fr'] = array(
 	'datatypes-desc' => 'Collection de définitions de types de donnée',
@@ -395,7 +396,7 @@ $messages['fr'] = array(
 	'datatypes-type-unknown' => 'Non spécifié',
 	'datatypes-type-boolean' => 'Booléen',
 	'datatypes-type-geo-coordinate' => 'Coordonnées géographiques',
-	'datatypes-type-time' => 'Heure',
+	'datatypes-type-time' => 'Date',
 );
 
 /** Franco-Provençal (arpetan)
@@ -1029,11 +1030,19 @@ $messages['zh-hans'] = array(
 );
 
 /** Traditional Chinese (中文（繁體）‎)
+ * @author Justincheng12345
  * @author Simon Shek
  */
 $messages['zh-hant'] = array(
+	'datatypes-desc' => '資料類型定義的集合',
+	'datatypes-type-string' => '字串',
+	'datatypes-type-quantity' => '數量',
+	'datatypes-type-monolingual-text' => '單語言文字',
+	'datatypes-type-multilingual-text' => '多語言文字',
+	'datatypes-type-number' => '數字',
 	'datatypes-type-mediawiki-title' => 'MediaWiki 標題',
 	'datatypes-type-unknown' => '未指定',
+	'datatypes-type-boolean' => '布爾',
 	'datatypes-type-geo-coordinate' => '地理座標',
 	'datatypes-type-time' => '時間',
 );
