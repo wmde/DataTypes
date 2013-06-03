@@ -739,7 +739,7 @@ $messages['nl'] = array(
 	'datatypes-type-time' => 'Tijd',
 );
 
-/** Norwegian Nynorsk (norsk (nynorsk)‎)
+/** Norwegian Nynorsk (norsk nynorsk)
  * @author Njardarlogar
  */
 $messages['nn'] = array(
@@ -755,7 +755,7 @@ $messages['nn'] = array(
 	'datatypes-type-geo-coordinate' => 'Geografisk koordinat',
 );
 
-/** Oriya (ଓଡ଼ିଆ)
+/** Oriya (ଓଡ଼ିଆ)
  * @author Ansumang
  */
 $messages['or'] = array(
