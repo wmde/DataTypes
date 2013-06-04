@@ -69,8 +69,14 @@ class DataTypeFactoryTest extends \PHPUnit_Framework_TestCase {
 		foreach ( $factory->getTypeIds() as $id ) {
 			$this->assertInstanceOf( 'DataTypes\DataType', $factory->getType( $id ) );
 		}
+	}
 
-		$this->assertInternalType( 'null', $factory->getType( "I'm in your tests, being rather silly ~=[,,_,,]:3" ) );
+	public function testGetUnknownType() {
+		$factory = $this->getInstance();
+
+		$this->setExpectedException( 'OutOfBoundsException' );
+
+		$factory->getType( "I'm in your tests, being rather silly ~=[,,_,,]:3" );
 	}
 
 	public function testGetTypes() {

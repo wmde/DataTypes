@@ -3,6 +3,7 @@
 namespace DataTypes;
 
 use InvalidArgumentException;
+use OutOfBoundsException;
 
 /**
  * Factory for creating data types.
@@ -142,7 +143,7 @@ final class DataTypeFactory {
 	 *
 	 * @since 0.1
 	 *
-	 * @return array of $typeId
+	 * @return string[] $typeId
 	 */
 	public function getTypeIds() {
 		return array_keys( $this->types );
@@ -156,10 +157,15 @@ final class DataTypeFactory {
 	 *
 	 * @param string $typeId
 	 *
-	 * @return DataType|null
+	 * @return DataType
+	 * @throws OutOfBoundsException
 	 */
 	public function getType( $typeId ) {
-		return array_key_exists( $typeId, $this->types ) ? $this->types[$typeId] : null;
+		if ( array_key_exists( $typeId, $this->types ) ) {
+			return $this->types[$typeId];
+		}
+
+		throw new OutOfBoundsException( "Cannot obtain non-registered type id '$typeId'" );
 	}
 
 	/**
