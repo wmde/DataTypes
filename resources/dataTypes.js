@@ -15,7 +15,7 @@
  * @since 0.1
  * @type Object
  */
-var dataTypes = new ( function Dt( $, mw, DataValue ) {
+this.dataTypes = new ( function Dt( $, mw, DataValue ) {
 	'use strict';
 
 	// TODO: the whole structure of this is a little weird, perhaps there should be a
