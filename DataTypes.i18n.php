@@ -43,7 +43,7 @@ $messages['en'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki title',
 	'datatypes-type-unknown' => 'Unspecified',
 	'datatypes-type-boolean' => 'Boolean',
-	'datatypes-type-geo-coordinate' => 'Geographical coordinate',
+	'datatypes-type-globe-coordinate' => 'Globe coordinate',
 	'datatypes-type-time' => 'Time',
 );
 
@@ -64,7 +64,7 @@ $messages['qqq'] = array(
 	'datatypes-type-mediawiki-title' => 'The name of a data type',
 	'datatypes-type-unknown' => 'The name of a data type',
 	'datatypes-type-boolean' => 'The name of a data type',
-	'datatypes-type-geo-coordinate' => 'The name of a data type',
+	'datatypes-type-globe-coordinate' => 'The name of a data type',
 	'datatypes-type-time' => 'The name of a data type.
 {{Identical|Time}}',
 );
@@ -83,7 +83,7 @@ $messages['ar'] = array(
 	'datatypes-type-mediawiki-title' => 'عنوان الميدياويكي',
 	'datatypes-type-unknown' => 'غير محدد',
 	'datatypes-type-boolean' => 'قيمة منطقية',
-	'datatypes-type-geo-coordinate' => 'إحداثيات جغرافية',
+	'datatypes-type-globe-coordinate' => 'إحداثيات جغرافية',
 	'datatypes-type-time' => 'زمن',
 );
 
@@ -100,7 +100,7 @@ $messages['ast'] = array(
 	'datatypes-type-mediawiki-title' => 'Títulu de MediaWiki',
 	'datatypes-type-unknown' => 'No especificáu',
 	'datatypes-type-boolean' => 'Booleanu',
-	'datatypes-type-geo-coordinate' => 'Coordenada xeográfica',
+	'datatypes-type-globe-coordinate' => 'Coordenada xeográfica',
 	'datatypes-type-time' => 'Hora',
 );
 
@@ -117,7 +117,7 @@ $messages['be-tarask'] = array(
 	'datatypes-type-mediawiki-title' => 'Загаловак MediaWiki',
 	'datatypes-type-unknown' => 'Не пазначаны',
 	'datatypes-type-boolean' => 'Булевы',
-	'datatypes-type-geo-coordinate' => 'Геаграфічныя каардынаты',
+	'datatypes-type-globe-coordinate' => 'Геаграфічныя каардынаты',
 	'datatypes-type-time' => 'Час',
 );
 
@@ -159,7 +159,7 @@ $messages['ca'] = array(
 	'datatypes-type-mediawiki-title' => 'Títol de MediaWiki',
 	'datatypes-type-unknown' => 'Sense especificar',
 	'datatypes-type-boolean' => 'Booleà',
-	'datatypes-type-geo-coordinate' => 'Coordenada geogràfica',
+	'datatypes-type-globe-coordinate' => 'Coordenada geogràfica',
 	'datatypes-type-time' => 'Hora',
 );
 
@@ -186,7 +186,7 @@ $messages['cs'] = array(
 	'datatypes-type-mediawiki-title' => 'Titulek MediaWiki',
 	'datatypes-type-unknown' => 'Neurčené',
 	'datatypes-type-boolean' => 'Logická hodnota',
-	'datatypes-type-geo-coordinate' => 'Zeměpisné souřadnice',
+	'datatypes-type-globe-coordinate' => 'Zeměpisné souřadnice',
 	'datatypes-type-time' => 'Čas',
 );
 
@@ -203,7 +203,7 @@ $messages['cy'] = array(
 	'datatypes-type-mediawiki-title' => 'Teitl yn MediaWiki',
 	'datatypes-type-unknown' => 'Heb ei nodi',
 	'datatypes-type-boolean' => 'Boole',
-	'datatypes-type-geo-coordinate' => 'Cyfesuryn daearyddol',
+	'datatypes-type-globe-coordinate' => 'Cyfesuryn daearyddol',
 	'datatypes-type-time' => 'Amser',
 );
 
@@ -221,7 +221,7 @@ $messages['da'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki-titel',
 	'datatypes-type-unknown' => 'Uspecificeret',
 	'datatypes-type-boolean' => 'Boolesk',
-	'datatypes-type-geo-coordinate' => 'Geografisk koordinat',
+	'datatypes-type-globe-coordinate' => 'Geografisk koordinat',
 	'datatypes-type-time' => 'Tid',
 );
 
@@ -239,7 +239,7 @@ $messages['de'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki-Titel',
 	'datatypes-type-unknown' => 'Nicht angegeben',
 	'datatypes-type-boolean' => 'Wahrheitswert',
-	'datatypes-type-geo-coordinate' => 'Geografische Koordinate',
+	'datatypes-type-globe-coordinate' => 'Geografische Koordinate',
 	'datatypes-type-time' => 'Zeit',
 );
 
@@ -272,7 +272,7 @@ $messages['dsb'] = array(
 	'datatypes-type-mediawiki-title' => 'Titel MediaWiki',
 	'datatypes-type-unknown' => 'Njepódany',
 	'datatypes-type-boolean' => 'Boolean',
-	'datatypes-type-geo-coordinate' => 'Geografiska koordinata',
+	'datatypes-type-globe-coordinate' => 'Geografiska koordinata',
 	'datatypes-type-time' => 'Cas',
 );
 
@@ -323,7 +323,7 @@ $messages['es'] = array(
 	'datatypes-type-mediawiki-title' => 'Título de MediaWiki',
 	'datatypes-type-unknown' => 'No especificado',
 	'datatypes-type-boolean' => 'Expresión Booleana',
-	'datatypes-type-geo-coordinate' => 'Coordenadas geográficas',
+	'datatypes-type-globe-coordinate' => 'Coordenadas geográficas',
 	'datatypes-type-time' => 'Hora',
 );
 
@@ -340,7 +340,7 @@ $messages['et'] = array(
 	'datatypes-type-number' => 'Number',
 	'datatypes-type-mediawiki-title' => 'MediaWiki pealkiri',
 	'datatypes-type-unknown' => 'Määratlemata',
-	'datatypes-type-geo-coordinate' => 'Geograafiline koordinaat',
+	'datatypes-type-globe-coordinate' => 'Geograafiline koordinaat',
 	'datatypes-type-time' => 'Aeg',
 );
 
@@ -358,7 +358,7 @@ $messages['fa'] = array(
 	'datatypes-type-mediawiki-title' => 'عنوان مدیاویکی',
 	'datatypes-type-unknown' => 'مشخصنشده',
 	'datatypes-type-boolean' => 'بولی',
-	'datatypes-type-geo-coordinate' => 'مختصات جغرافیایی',
+	'datatypes-type-globe-coordinate' => 'مختصات جغرافیایی',
 	'datatypes-type-time' => 'زمان',
 );
 
@@ -377,7 +377,7 @@ $messages['fi'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki-otsikko',
 	'datatypes-type-unknown' => 'Määrittelemätön',
 	'datatypes-type-boolean' => 'Totuusarvo',
-	'datatypes-type-geo-coordinate' => 'Maantieteellinen koordinaatti',
+	'datatypes-type-globe-coordinate' => 'Maantieteellinen koordinaatti',
 	'datatypes-type-time' => 'Aika',
 );
 
@@ -395,7 +395,7 @@ $messages['fr'] = array(
 	'datatypes-type-mediawiki-title' => 'Titre MediaWiki',
 	'datatypes-type-unknown' => 'Non spécifié',
 	'datatypes-type-boolean' => 'Booléen',
-	'datatypes-type-geo-coordinate' => 'Coordonnées géographiques',
+	'datatypes-type-globe-coordinate' => 'Coordonnées géographiques',
 	'datatypes-type-time' => 'Date',
 );
 
@@ -408,7 +408,7 @@ $messages['frp'] = array(
 	'datatypes-type-mediawiki-title' => 'Titro MediaWiki',
 	'datatypes-type-unknown' => 'Pas spècifiâ',
 	'datatypes-type-boolean' => 'Boolèen',
-	'datatypes-type-geo-coordinate' => 'Coordonâs g·eografiques',
+	'datatypes-type-globe-coordinate' => 'Coordonâs g·eografiques',
 );
 
 /** Galician (galego)
@@ -424,7 +424,7 @@ $messages['gl'] = array(
 	'datatypes-type-mediawiki-title' => 'Título de MediaWiki',
 	'datatypes-type-unknown' => 'Non especificado',
 	'datatypes-type-boolean' => 'Booleano',
-	'datatypes-type-geo-coordinate' => 'Coordenada xeográfica',
+	'datatypes-type-globe-coordinate' => 'Coordenada xeográfica',
 	'datatypes-type-time' => 'Hora',
 );
 
@@ -441,7 +441,7 @@ $messages['he'] = array(
 	'datatypes-type-mediawiki-title' => 'כותרת מדיה־ויקי',
 	'datatypes-type-unknown' => 'בלתי־מוגדר',
 	'datatypes-type-boolean' => 'בוליאני',
-	'datatypes-type-geo-coordinate' => 'נקודת ציון גאוגרפית',
+	'datatypes-type-globe-coordinate' => 'נקודת ציון גאוגרפית',
 	'datatypes-type-time' => 'זמן',
 );
 
@@ -459,7 +459,7 @@ $messages['hi'] = array(
 	'datatypes-type-mediawiki-title' => 'मीडियाविकि शीर्षक',
 	'datatypes-type-unknown' => 'अनिर्दिष्ट',
 	'datatypes-type-boolean' => 'बूलियन',
-	'datatypes-type-geo-coordinate' => 'भौगोलिक निर्देशांक',
+	'datatypes-type-globe-coordinate' => 'भौगोलिक निर्देशांक',
 );
 
 /** Upper Sorbian (hornjoserbsce)
@@ -475,7 +475,7 @@ $messages['hsb'] = array(
 	'datatypes-type-mediawiki-title' => 'Titul MediaWiki',
 	'datatypes-type-unknown' => 'Njepodaty',
 	'datatypes-type-boolean' => 'Boolean',
-	'datatypes-type-geo-coordinate' => 'Geografiska koordinata',
+	'datatypes-type-globe-coordinate' => 'Geografiska koordinata',
 	'datatypes-type-time' => 'Čas',
 );
 
@@ -492,7 +492,7 @@ $messages['hu'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki cím',
 	'datatypes-type-unknown' => 'Meghatározatlan',
 	'datatypes-type-boolean' => 'Logikai érték',
-	'datatypes-type-geo-coordinate' => 'Földrajzi koordináta',
+	'datatypes-type-globe-coordinate' => 'Földrajzi koordináta',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -508,7 +508,7 @@ $messages['id'] = array(
 	'datatypes-type-mediawiki-title' => 'Judul MediaWiki',
 	'datatypes-type-unknown' => 'Tidak ditentukan',
 	'datatypes-type-boolean' => 'Boolean',
-	'datatypes-type-geo-coordinate' => 'Koordinat geografis',
+	'datatypes-type-globe-coordinate' => 'Koordinat geografis',
 );
 
 /** Igbo (Igbo)
@@ -531,7 +531,7 @@ $messages['ilo'] = array(
 	'datatypes-type-mediawiki-title' => 'Titulo ti MediaWiki',
 	'datatypes-type-unknown' => 'Di naibagbaga',
 	'datatypes-type-boolean' => 'Boolean',
-	'datatypes-type-geo-coordinate' => 'Heograpiko a nagsasabtan',
+	'datatypes-type-globe-coordinate' => 'Heograpiko a nagsasabtan',
 	'datatypes-type-time' => 'Oras',
 );
 
@@ -548,7 +548,7 @@ $messages['it'] = array(
 	'datatypes-type-mediawiki-title' => 'Titolo MediaWiki',
 	'datatypes-type-unknown' => 'Non specificato',
 	'datatypes-type-boolean' => 'Booleano',
-	'datatypes-type-geo-coordinate' => 'Coordinate geografiche',
+	'datatypes-type-globe-coordinate' => 'Coordinate geografiche',
 	'datatypes-type-time' => 'Data e ora',
 );
 
@@ -566,7 +566,7 @@ $messages['ja'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki ページ名',
 	'datatypes-type-unknown' => '未指定',
 	'datatypes-type-boolean' => 'ブール値',
-	'datatypes-type-geo-coordinate' => '緯度経度',
+	'datatypes-type-globe-coordinate' => '緯度経度',
 	'datatypes-type-time' => '時刻',
 );
 
@@ -582,7 +582,7 @@ $messages['ka'] = array(
 	'datatypes-type-mediawiki-title' => 'მედიავიკის სათაური',
 	'datatypes-type-unknown' => 'არ არის მითითებული',
 	'datatypes-type-boolean' => 'ლოგიკური მნიშვნელობა',
-	'datatypes-type-geo-coordinate' => 'გეოგრაფიული კოორდინატი',
+	'datatypes-type-globe-coordinate' => 'გეოგრაფიული კოორდინატი',
 	'datatypes-type-time' => 'დრო',
 );
 
@@ -599,7 +599,7 @@ $messages['ko'] = array(
 	'datatypes-type-mediawiki-title' => '미디어위키 제목',
 	'datatypes-type-unknown' => '지정되지 않음',
 	'datatypes-type-boolean' => '부울',
-	'datatypes-type-geo-coordinate' => '지리 좌표',
+	'datatypes-type-globe-coordinate' => '지리 좌표',
 	'datatypes-type-time' => '시간',
 );
 
@@ -616,7 +616,7 @@ $messages['ksh'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki Tittel',
 	'datatypes-type-unknown' => 'Nit aanjejovve',
 	'datatypes-type-boolean' => 'Joh udder Nää',
-	'datatypes-type-geo-coordinate' => "Ko'odenaate om Jloobos",
+	'datatypes-type-globe-coordinate' => "Ko'odenaate om Jloobos",
 	'datatypes-type-time' => 'En Uhrzick',
 );
 
@@ -630,7 +630,7 @@ $messages['lb'] = array(
 	'datatypes-type-number' => 'Zuel',
 	'datatypes-type-mediawiki-title' => 'MediaWiki-Titel',
 	'datatypes-type-unknown' => 'Net uginn',
-	'datatypes-type-geo-coordinate' => 'Geografesch Koordinaten',
+	'datatypes-type-globe-coordinate' => 'Geografesch Koordinaten',
 	'datatypes-type-time' => 'Zäit',
 );
 
@@ -654,7 +654,7 @@ $messages['mk'] = array(
 	'datatypes-type-mediawiki-title' => 'МедијаВики-наслов',
 	'datatypes-type-unknown' => 'Неукажано',
 	'datatypes-type-boolean' => 'Булов',
-	'datatypes-type-geo-coordinate' => 'Географска координата',
+	'datatypes-type-globe-coordinate' => 'Географска координата',
 	'datatypes-type-time' => 'Време',
 );
 
@@ -668,7 +668,7 @@ $messages['ml'] = array(
 	'datatypes-type-number' => 'സംഖ്യ',
 	'datatypes-type-mediawiki-title' => 'മീഡിയവിക്കി തലക്കെട്ട്',
 	'datatypes-type-unknown' => 'വ്യക്തമാക്കാത്തവ',
-	'datatypes-type-geo-coordinate' => 'ഭൗമനിർദ്ദേശാങ്കങ്ങൾ',
+	'datatypes-type-globe-coordinate' => 'ഭൗമനിർദ്ദേശാങ്കങ്ങൾ',
 	'datatypes-type-time' => 'സമയം',
 );
 
@@ -685,7 +685,7 @@ $messages['ms'] = array(
 	'datatypes-type-mediawiki-title' => 'Tajuk MediaWiki',
 	'datatypes-type-unknown' => 'Tidak ditentukan',
 	'datatypes-type-boolean' => 'Boolean',
-	'datatypes-type-geo-coordinate' => 'Koordinat geografi',
+	'datatypes-type-globe-coordinate' => 'Koordinat geografi',
 	'datatypes-type-time' => 'Waktu',
 );
 
@@ -709,7 +709,7 @@ $messages['nb'] = array(
 	'datatypes-type-mediawiki-title' => 'Mediawiki-tittel',
 	'datatypes-type-unknown' => 'Uspesifisert',
 	'datatypes-type-boolean' => 'Boolsk verdi',
-	'datatypes-type-geo-coordinate' => 'Geografisk koordinat',
+	'datatypes-type-globe-coordinate' => 'Geografisk koordinat',
 	'datatypes-type-time' => 'Tid',
 );
 
@@ -735,7 +735,7 @@ $messages['nl'] = array(
 	'datatypes-type-mediawiki-title' => 'MeidaWikipagina',
 	'datatypes-type-unknown' => 'Niet opgegeven',
 	'datatypes-type-boolean' => 'Booleaanse operator',
-	'datatypes-type-geo-coordinate' => 'Geografische coördinaat',
+	'datatypes-type-globe-coordinate' => 'Geografische coördinaat',
 	'datatypes-type-time' => 'Tijd',
 );
 
@@ -752,7 +752,7 @@ $messages['nn'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki-tittel',
 	'datatypes-type-unknown' => 'Uspesifisert',
 	'datatypes-type-boolean' => 'Boolsk',
-	'datatypes-type-geo-coordinate' => 'Geografisk koordinat',
+	'datatypes-type-globe-coordinate' => 'Geografisk koordinat',
 );
 
 /** Oriya (ଓଡ଼ିଆ)
@@ -776,7 +776,7 @@ $messages['pl'] = array(
 	'datatypes-type-mediawiki-title' => 'Tytuł MediaWiki',
 	'datatypes-type-unknown' => 'Nieokreślone',
 	'datatypes-type-boolean' => 'Wartość logiczna',
-	'datatypes-type-geo-coordinate' => 'Współrzędne geograficzne',
+	'datatypes-type-globe-coordinate' => 'Współrzędne geograficzne',
 	'datatypes-type-time' => 'Czas',
 );
 
@@ -793,7 +793,7 @@ $messages['pms'] = array(
 	'datatypes-type-mediawiki-title' => 'Tìtol MediaWiki',
 	'datatypes-type-unknown' => 'Pa specificà',
 	'datatypes-type-boolean' => 'Boolean',
-	'datatypes-type-geo-coordinate' => 'Coordinà geogràfica',
+	'datatypes-type-globe-coordinate' => 'Coordinà geogràfica',
 );
 
 /** Pashto (پښتو)
@@ -816,7 +816,7 @@ $messages['pt'] = array(
 	'datatypes-type-mediawiki-title' => 'Título do MediaWiki',
 	'datatypes-type-unknown' => 'Não Especificado',
 	'datatypes-type-boolean' => 'Booleano',
-	'datatypes-type-geo-coordinate' => 'Coordenada geográfica',
+	'datatypes-type-globe-coordinate' => 'Coordenada geográfica',
 	'datatypes-type-time' => 'Tempo',
 );
 
@@ -833,7 +833,7 @@ $messages['pt-br'] = array(
 	'datatypes-type-mediawiki-title' => 'Título do MediaWiki',
 	'datatypes-type-unknown' => 'Não especificado',
 	'datatypes-type-boolean' => 'Booleano',
-	'datatypes-type-geo-coordinate' => 'Coordenada geográfica',
+	'datatypes-type-globe-coordinate' => 'Coordenada geográfica',
 	'datatypes-type-time' => 'Tempo',
 );
 
@@ -849,7 +849,7 @@ $messages['ro'] = array(
 	'datatypes-type-mediawiki-title' => 'Titlu MediaWiki',
 	'datatypes-type-unknown' => 'Nespecificat',
 	'datatypes-type-boolean' => 'Adevărat/fals',
-	'datatypes-type-geo-coordinate' => 'Coordonate geografice',
+	'datatypes-type-globe-coordinate' => 'Coordonate geografice',
 );
 
 /** tarandíne (tarandíne)
@@ -865,7 +865,7 @@ $messages['roa-tara'] = array(
 	'datatypes-type-mediawiki-title' => 'Titole de MediaUicchi',
 	'datatypes-type-unknown' => 'Non specificate',
 	'datatypes-type-boolean' => 'Buleane',
-	'datatypes-type-geo-coordinate' => 'Coordinate sciugrafeche',
+	'datatypes-type-globe-coordinate' => 'Coordinate sciugrafeche',
 	'datatypes-type-time' => 'Orarie',
 );
 
@@ -883,7 +883,7 @@ $messages['ru'] = array(
 	'datatypes-type-mediawiki-title' => 'Заголовок MediaWiki',
 	'datatypes-type-unknown' => 'Не уточнено',
 	'datatypes-type-boolean' => 'Логическое значение',
-	'datatypes-type-geo-coordinate' => 'Географические координаты',
+	'datatypes-type-globe-coordinate' => 'Географические координаты',
 	'datatypes-type-time' => 'Время',
 );
 
@@ -900,7 +900,7 @@ $messages['si'] = array(
 	'datatypes-type-mediawiki-title' => 'මාධ්‍යවිකි ශීර්ෂය',
 	'datatypes-type-unknown' => 'විශේෂණය නොකෙරූ',
 	'datatypes-type-boolean' => 'බූලියන්',
-	'datatypes-type-geo-coordinate' => 'භූගෝලීය ඛණ්ඩාංකය',
+	'datatypes-type-globe-coordinate' => 'භූගෝලීය ඛණ්ඩාංකය',
 );
 
 /** Somali (Soomaaliga)
@@ -936,7 +936,7 @@ $messages['sv'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki-titel',
 	'datatypes-type-unknown' => 'Ospecificerad',
 	'datatypes-type-boolean' => 'Boolesk',
-	'datatypes-type-geo-coordinate' => 'Geografisk koordinat',
+	'datatypes-type-globe-coordinate' => 'Geografisk koordinat',
 	'datatypes-type-time' => 'Tid',
 );
 
@@ -989,7 +989,7 @@ $messages['uk'] = array(
 	'datatypes-type-mediawiki-title' => 'Заголовок MediaWiki',
 	'datatypes-type-unknown' => 'Не визначений',
 	'datatypes-type-boolean' => 'Булев',
-	'datatypes-type-geo-coordinate' => 'Географічні координати',
+	'datatypes-type-globe-coordinate' => 'Географічні координати',
 	'datatypes-type-time' => 'Час',
 );
 
@@ -1006,7 +1006,7 @@ $messages['vi'] = array(
 	'datatypes-type-mediawiki-title' => 'Tiêu đề MediaWiki',
 	'datatypes-type-unknown' => 'Không xác định',
 	'datatypes-type-boolean' => 'Luận lý',
-	'datatypes-type-geo-coordinate' => 'Tọa độ địa lý',
+	'datatypes-type-globe-coordinate' => 'Tọa độ địa lý',
 	'datatypes-type-time' => 'Thời điểm',
 );
 
@@ -1025,7 +1025,7 @@ $messages['zh-hans'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki 标题',
 	'datatypes-type-unknown' => '未指定',
 	'datatypes-type-boolean' => '布尔值',
-	'datatypes-type-geo-coordinate' => '地理坐标',
+	'datatypes-type-globe-coordinate' => '地理坐标',
 	'datatypes-type-time' => '时间',
 );
 
@@ -1043,6 +1043,6 @@ $messages['zh-hant'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki 標題',
 	'datatypes-type-unknown' => '未指定',
 	'datatypes-type-boolean' => '布爾',
-	'datatypes-type-geo-coordinate' => '地理座標',
+	'datatypes-type-globe-coordinate' => '地理座標',
 	'datatypes-type-time' => '時間',
 );

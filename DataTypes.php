@@ -56,8 +56,8 @@ $wgDataTypes = array(
 	'string' => array(
 		'datavalue' => 'string',
 	),
-	'geo-coordinate' => array(
-		'datavalue' => 'geocoordinate',
+	'globe-coordinate' => array(
+		'datavalue' => 'globecoordinate',
 	),
 	'quantity' => array(
 		'datavalue' => 'quantity',
