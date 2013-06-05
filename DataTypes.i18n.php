@@ -43,7 +43,7 @@ $messages['en'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki title',
 	'datatypes-type-unknown' => 'Unspecified',
 	'datatypes-type-boolean' => 'Boolean',
-	'datatypes-type-globe-coordinate' => 'Globe coordinate',
+	'datatypes-type-globe-coordinate' => 'Geographic coordinate',
 	'datatypes-type-time' => 'Time',
 );
 
