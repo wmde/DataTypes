@@ -52,10 +52,8 @@ $wgExtensionMessagesFiles['DataTypes'] = __DIR__ . '/DataTypes.i18n.php';
 // modules
 $wgAutoloadClasses['DataTypes\DataTypesModule'] = __DIR__ . '/' . 'includes/modules/DataTypesModule.php';
 
-foreach ( include( __DIR__ . '/DataTypes.classes.php' ) as $class => $file ) {
-	if ( !array_key_exists( $class, $GLOBALS['wgAutoloadLocalClasses'] ) ) {
-		$wgAutoloadClasses[$class] = __DIR__ . '/' . $file;
-	}
+if ( defined( 'MW_PHPUNIT_TEST' ) ) {
+	require_once __DIR__ . '/tests/testLoader.php';
 }
 
 /**

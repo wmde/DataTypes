@@ -15,3 +15,5 @@
 require_once( __DIR__ . '/../DataTypes.php' );
 
 \DataTypes\Message::registerTextFunction( function() { return ''; } );
+
+require_once( __DIR__ . '/testLoader.php' );
