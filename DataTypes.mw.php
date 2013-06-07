@@ -70,14 +70,15 @@ foreach ( include( __DIR__ . '/DataTypes.classes.php' ) as $class => $file ) {
  */
 $wgHooks['UnitTestsList'][] = function( array &$files ) {
 	// @codeCoverageIgnoreStart
-	$testFiles = array(
-		'includes/DataType',
+	$directoryIterator = new \RecursiveDirectoryIterator( __DIR__ . '/tests/phpunit/' );
 
-		'includes/DataTypeFactory',
-	);
-
-	foreach ( $testFiles as $file ) {
-		$files[] = __DIR__ . '/tests/' . $file . 'Test.php';
+	/**
+	 * @var \SplFileInfo $fileInfo
+	 */
+	foreach ( new \RecursiveIteratorIterator( $directoryIterator ) as $fileInfo ) {
+		if ( substr( $fileInfo->getFilename(), -8 ) === 'Test.php' ) {
+			$files[] = $fileInfo->getPathname();
+		}
 	}
 
 	return true;
