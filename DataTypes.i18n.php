@@ -425,7 +425,7 @@ $messages['gl'] = array(
 	'datatypes-type-unknown' => 'Non especificado',
 	'datatypes-type-boolean' => 'Booleano',
 	'datatypes-type-globe-coordinate' => 'Coordenada xeográfica',
-	'datatypes-type-time' => 'Data',
+	'datatypes-type-time' => 'Hora',
 );
 
 /** Hebrew (עברית)
