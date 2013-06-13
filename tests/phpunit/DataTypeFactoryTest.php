@@ -45,8 +45,31 @@ class DataTypeFactoryTest extends \PHPUnit_Framework_TestCase {
 	 * @return DataTypeFactory
 	 */
 	protected function getInstance() {
+		static $typeSpecs = array(
+			'commonsMedia' => array(
+				'datavalue' => 'string',
+			),
+			'string' => array(
+				'datavalue' => 'string',
+			),
+			'globe-coordinate' => array(
+				'datavalue' => 'globecoordinate',
+			),
+			'quantity' => array(
+				'datavalue' => 'quantity',
+			),
+			'monolingual-text' => array(
+				'datavalue' => 'monolingualtext',
+			),
+			'multilingual-text' => array(
+				'datavalue' => 'multilingualtext',
+			),
+			'time' => array(
+				'datavalue' => 'time',
+			) );
+
 		if ( $this->instance === null ) {
-			$this->instance = new DataTypeFactory( $GLOBALS['wgDataTypes'] );
+			$this->instance = new DataTypeFactory( $typeSpecs );
 		}
 
 		return $this->instance;
@@ -97,4 +120,55 @@ class DataTypeFactoryTest extends \PHPUnit_Framework_TestCase {
 		);
 	}
 
+	public static function provideDataTypeBuilder() {
+		return array(
+			array( // #0
+				'old-school',
+				array( 'datavalue' => 'oldschool' ),
+				'oldschool',
+				'old style spec'
+			),
+			array( // #1
+				'new-school',
+				new DataType( 'new-school', 'newschool', array(), array(), array() ),
+				'newschool',
+				'DataValue object'
+			),
+			array( // #2
+				'new-school',
+				array( '\DataTypes\Test\DummyType', '__construct' ),
+				'dummy',
+				'constructor'
+			),
+			array( // #3
+				'new-school',
+				array( '\DataTypes\Test\DummyType', 'newDummy' ),
+				'dummy',
+				'callable'
+			),
+		);
+	}
+
+	/**
+	 * @dataProvider provideDataTypeBuilder
+	 */
+	public function testDataTypeBuilder( $id, $builderSpec, $expected, $message ) {
+		$factory = new DataTypeFactory( array( $id => $builderSpec ) );
+
+		$type = $factory->getType( $id );
+
+		$this->assertEquals( $id, $type->getId(), $message );
+		$this->assertEquals( $expected, $type->getDataValueType(), $message );
+	}
+
+}
+
+class DummyType extends DataType {
+	public function __construct( $typeId, $dataValueType = 'dummy' ) {
+		parent::__construct( $typeId, $dataValueType, array(), array(), array() );
+	}
+
+	public static function newDummy( $typeId ) {
+		return new DummyType( $typeId );
+	}
 }
