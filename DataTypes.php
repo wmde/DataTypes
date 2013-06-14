@@ -46,6 +46,11 @@
 
 namespace DataTypes;
 
+if ( defined( 'DataTypes_VERSION' ) ) {
+	// Do not initialize more then once.
+	return;
+}
+
 define( 'DataTypes_VERSION', '0.1 alpha' );
 
 global $wgDataTypes;
