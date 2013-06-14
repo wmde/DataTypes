@@ -625,6 +625,8 @@ $messages['ksh'] = array(
  * @author Robby
  */
 $messages['lb'] = array(
+	'datatypes-desc' => 'Kollektioun vun Definitioune vun Datentypen',
+	'datatypes-type-string' => 'Zeecheketten',
 	'datatypes-type-quantity' => 'Quantitéit',
 	'datatypes-type-monolingual-text' => 'Text an enger Sprooch',
 	'datatypes-type-multilingual-text' => 'Text a méi Sproochen',
@@ -925,10 +927,11 @@ $messages['sr-ec'] = array(
 /** Swedish (svenska)
  * @author Ainali
  * @author Lokal Profil
+ * @author Rotsee
  * @author WikiPhoenix
  */
 $messages['sv'] = array(
-	'datatypes-desc' => 'Insamling av datatypsdefinitioner',
+	'datatypes-desc' => 'Samling av definitioner av olika datatyper',
 	'datatypes-type-string' => 'Sträng',
 	'datatypes-type-quantity' => 'Kvantitet',
 	'datatypes-type-monolingual-text' => 'Enspråkig text',
