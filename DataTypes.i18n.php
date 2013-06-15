@@ -700,20 +700,21 @@ $messages['mt'] = array(
 );
 
 /** Norwegian Bokmål (norsk bokmål)
+ * @author Danmichaelo
  * @author Jeblad
  */
 $messages['nb'] = array(
 	'datatypes-desc' => 'Samling av datatypedefinisjoner',
-	'datatypes-type-string' => 'Streng',
-	'datatypes-type-quantity' => 'Mengde',
-	'datatypes-type-monolingual-text' => 'Enspråklig tekst',
-	'datatypes-type-multilingual-text' => 'Flerspråklig tekst',
-	'datatypes-type-number' => 'Tall',
-	'datatypes-type-mediawiki-title' => 'Mediawiki-tittel',
-	'datatypes-type-unknown' => 'Uspesifisert',
-	'datatypes-type-boolean' => 'Boolsk verdi',
-	'datatypes-type-globe-coordinate' => 'Geografisk koordinat',
-	'datatypes-type-time' => 'Tid',
+	'datatypes-type-string' => 'streng',
+	'datatypes-type-quantity' => 'mengde',
+	'datatypes-type-monolingual-text' => 'enspråklig tekst',
+	'datatypes-type-multilingual-text' => 'flerspråklig tekst',
+	'datatypes-type-number' => 'tall',
+	'datatypes-type-mediawiki-title' => 'MediaWiki-tittel',
+	'datatypes-type-unknown' => 'uspesifisert',
+	'datatypes-type-boolean' => 'boolsk verdi',
+	'datatypes-type-globe-coordinate' => 'geografisk koordinat',
+	'datatypes-type-time' => 'tid',
 );
 
 /** Low German (Plattdüütsch)
