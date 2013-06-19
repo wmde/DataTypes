@@ -4,15 +4,23 @@ namespace DataTypes;
 
 use ResourceLoaderContext;
 use ResourceLoaderModule;
+use Exception;
 
 /**
+ * Resource loader module for defining resources that will create a MW config var in JavaScript
+ * holding information about all data types known to a given DataTypeFactory.
+ *
+ * The resource definition requires the following additional keys:
+ * - (string) datatypesconfigvarname: Name of the "mw.config.get( '...' )" config variable.
+ * - (Function|DataTypeFactory) datatypefactory: Provider for the data types. Can be a callback
+ *   returning a DataTypeFactory instance.
+ *
  * @since 0.1
  *
  * @file
  * @ingroup Wikibase
  *
  * @licence GNU GPL v2+
- * @author H. Snater < mediawiki@snater.com >
  * @author Daniel Werner < daniel.werner@wikimedia.de >
  */
 class DataTypesModule extends ResourceLoaderModule {
@@ -20,11 +28,103 @@ class DataTypesModule extends ResourceLoaderModule {
 	protected $dataTypes;
 
 	/**
-	 * @since 0.1
+	 * @var string
 	 */
-	public function __construct() {
-		$factory = new DataTypeFactory( $GLOBALS['wgDataTypes'] );
-		$this->dataTypes = $factory->getTypes();
+	protected $dataTypesConfigVarName;
+
+	/**
+	 * @var DataTypeFactory
+	 */
+	protected $dataTypeFactory;
+
+	/**
+	 * @since 0.1
+	 *
+	 * @param array $resourceDefinition
+	 */
+	public function __construct( array $resourceDefinition ) {
+		$this->dataTypesConfigVarName =
+			static::extractDataTypesConfigVarNameFromResourceDefinition( $resourceDefinition );
+
+		$this->dataTypeFactory =
+			static::extractDataTypeFactoryFromResourceDefinition( $resourceDefinition );
+
+		$dataTypeFactory = $this->getDataTypeFactory();
+		$this->dataTypes = $dataTypeFactory->getTypes();
+	}
+
+	/**
+	 * @since 0.1
+	 *
+	 * @param array $resourceDefinition
+	 * @return string
+	 *
+	 * @throws Exception If the given resource definition is not sufficient
+	 */
+	public static function extractDataTypesConfigVarNameFromResourceDefinition(
+		array $resourceDefinition
+	) {
+		$dataTypesConfigVarName = array_key_exists( 'datatypesconfigvarname', $resourceDefinition )
+			? $resourceDefinition['datatypesconfigvarname']
+			: null;
+
+
+		if( !is_string( $dataTypesConfigVarName ) || $dataTypesConfigVarName === '' ) {
+			throw new Exception( 'The "datatypesconfigvarname" value of the resource definition' +
+				' has to be a non-empty string value' );
+		}
+
+		return $dataTypesConfigVarName;
+	}
+
+	/**
+	 * @since 0.1
+	 *
+	 * @param array $resourceDefinition
+	 * @return DataTypeFactory
+	 *
+	 * @throws Exception If the given resource definition is not sufficient
+	 */
+	public static function extractDataTypeFactoryFromResourceDefinition(
+		array $resourceDefinition
+	) {
+		$dataTypeFactory = array_key_exists( 'datatypefactory', $resourceDefinition )
+			? $resourceDefinition['datatypefactory']
+			: null;
+
+		if( is_callable( $dataTypeFactory ) ) {
+			$dataTypeFactory = call_user_func( $dataTypeFactory );
+		}
+
+		if( !( $dataTypeFactory instanceof DataTypeFactory ) ) {
+			throw new Exception( 'The "datatypefactory" value of the resource definition has' +
+			 ' to be an instance of DataTypeFactory or a callback returning one' );
+		}
+
+		return $dataTypeFactory;
+	}
+
+	/**
+	 * Returns the name of the config var key under which the data type definition will be available
+	 * in JavaScript using "mw.config.get( '...' )"
+	 *
+	 * @since 0.1
+	 *
+	 * @return string
+	 */
+	public function getConfigVarName() {
+		return $this->dataTypesConfigVarName;
+	}
+
+	/**
+	 * Returns the data types factory providing the data type information.
+	 *
+	 * @since 0.1
+	 *
+	 * @return DataTypeFactory
+	 */
+	public function getDataTypeFactory() {
+		return $this->dataTypeFactory;
 	}
 
 	/**
@@ -39,13 +139,15 @@ class DataTypesModule extends ResourceLoaderModule {
 	 * @return string
 	 */
 	public function getScript( ResourceLoaderContext $context ) {
+		$configVarName = $this->getConfigVarName();
 		$typesJson = array();
 
 		foreach( $this->dataTypes as $dataType ) {
 			$typesJson[ $dataType->getId() ] = $dataType->toArray();
 		}
+		$typesJson = \FormatJson::encode( $typesJson );
 
-		return 'mediaWiki.config.set( "wbDataTypes", ' . \FormatJson::encode( $typesJson ) . ' );';
+		return "mediaWiki.config.set( '$configVarName', $typesJson );";
 	}
 
 	/**
