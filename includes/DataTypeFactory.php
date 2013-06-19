@@ -119,7 +119,8 @@ final class DataTypeFactory {
 	 *        - if $builderSpec as an associative array, newType( $typeId, $builderSpec )
 	 *                            is called for backwards compatibility
 	 *
-	 * @throws \InvalidArgumentException
+	 * @throws InvalidArgumentException
+	 * @throws RuntimeException
 	 * @return DataType
 	 */
 	protected function buildType( $typeId, $builderSpec ) {
