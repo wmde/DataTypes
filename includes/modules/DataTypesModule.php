@@ -1,7 +1,8 @@
 <?php
 
-namespace DataTypes;
+namespace DataTypes\Modules;
 
+use DataTypes\DataTypeFactory;
 use ResourceLoaderContext;
 use ResourceLoaderModule;
 use Exception;
@@ -99,8 +100,10 @@ class DataTypesModule extends ResourceLoaderModule {
 		}
 
 		if( !( $dataTypeFactory instanceof DataTypeFactory ) ) {
-			throw new Exception( 'The "datatypefactory" value of the resource definition has' +
-			 ' to be an instance of DataTypeFactory or a callback returning one' );
+			throw new Exception(
+				'The "datatypefactory" value of the resource definition has' .
+				' to be an instance of DataTypeFactory or a callback returning one'
+			);
 		}
 
 		return $dataTypeFactory;

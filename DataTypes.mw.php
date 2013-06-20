@@ -50,7 +50,8 @@ $wgExtensionCredits['datavalues'][] = array(
 $wgExtensionMessagesFiles['DataTypes'] = __DIR__ . '/DataTypes.i18n.php';
 
 // modules
-$wgAutoloadClasses['DataTypes\DataTypesModule'] = __DIR__ . '/' . 'includes/modules/DataTypesModule.php';
+$wgAutoloadClasses['DataTypes\Modules\DataTypesModule'] = __DIR__ . '/' . 'includes/modules/DataTypesModule.php';
+$wgAutoloadClasses['DataTypes\DataTypesModule'] = __DIR__ . '/' . 'includes/DataTypesModule.php';
 
 if ( defined( 'MW_PHPUNIT_TEST' ) ) {
 	require_once __DIR__ . '/tests/testLoader.php';
