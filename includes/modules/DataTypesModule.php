@@ -70,8 +70,10 @@ class DataTypesModule extends ResourceLoaderModule {
 
 
 		if( !is_string( $dataTypesConfigVarName ) || $dataTypesConfigVarName === '' ) {
-			throw new Exception( 'The "datatypesconfigvarname" value of the resource definition' +
-				' has to be a non-empty string value' );
+			throw new Exception(
+				'The "datatypesconfigvarname" value of the resource definition' .
+				' has to be a non-empty string value'
+			);
 		}
 
 		return $dataTypesConfigVarName;
