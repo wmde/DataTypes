@@ -46,12 +46,25 @@
 
 namespace DataTypes;
 
+use Exception;
+
 if ( defined( 'DataTypes_VERSION' ) ) {
 	// Do not initialize more then once.
 	return;
 }
 
 define( 'DataTypes_VERSION', '0.1 alpha' );
+
+// Attempt to include the DataValues lib if that hasn't been done yet.
+// This is the path the DataValues entry point will be at when loaded as MediaWiki extension.
+if ( !defined( 'DataValues_VERSION' ) && is_readable( __DIR__ . '/../DataValues/DataValues.php' ) ) {
+	include_once( __DIR__ . '/../DataValues/DataValues.php' );
+}
+
+// Only initialize the extension when all dependencies are present.
+if ( !defined( 'DataValues_VERSION' ) ) {
+	throw new Exception( 'You need to have the DataValues library loaded in order to use Ask' );
+}
 
 global $wgDataTypes;
 $wgDataTypes = array(
