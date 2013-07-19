@@ -33,7 +33,7 @@ use RuntimeException;
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  * @author Daniel Kinzler
  */
-final class DataTypeFactory {
+class DataTypeFactory {
 
 	/**
 	 * Maps type id to DataType.
