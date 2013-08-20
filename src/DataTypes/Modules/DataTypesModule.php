@@ -3,9 +3,9 @@
 namespace DataTypes\Modules;
 
 use DataTypes\DataTypeFactory;
+use Exception;
 use ResourceLoaderContext;
 use ResourceLoaderModule;
-use Exception;
 
 /**
  * Resource loader module for defining resources that will create a MW config var in JavaScript

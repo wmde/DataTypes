@@ -80,31 +80,28 @@ $wgDataTypes = array(
 	'time' => array(
 		'datavalue' => 'time',
 	),
-
-//	'geo' => array(
-//		'datavalue' => 'geo-dv',
-//		'parser' => 'geo-parser',
-//		'formatter' => 'geo-formatter',
-//	),
-//	'positive-number' => array(
-//		'datavalue' => 'numeric-dv',
-//		'parser' => 'numeric-parser',
-//		'formatter' => 'numeric-formatter',
-//		'validators' => array( $rangeValidator ),
-//	),
 );
 
 // @codeCoverageIgnoreStart
-
 spl_autoload_register( function ( $className ) {
-	static $classes = false;
+	$className = ltrim( $className, '\\' );
+	$fileName = '';
+	$namespace = '';
 
-	if ( $classes === false ) {
-		$classes = include( __DIR__ . '/' . 'DataTypes.classes.php' );
+	if ( $lastNsPos = strripos( $className, '\\') ) {
+		$namespace = substr( $className, 0, $lastNsPos );
+		$className = substr( $className, $lastNsPos + 1 );
+		$fileName  = str_replace( '\\', '/', $namespace ) . '/';
 	}
 
-	if ( array_key_exists( $className, $classes ) ) {
-		include_once __DIR__ . '/' . $classes[$className];
+	$fileName .= str_replace( '_', '/', $className ) . '.php';
+
+	$namespaceSegments = explode( '\\', $namespace );
+
+	if ( $namespaceSegments[0] === 'DataTypes' ) {
+		if ( count( $namespaceSegments ) === 1 || $namespaceSegments[1] !== 'Tests' ) {
+			require_once __DIR__ . '/src/' . $fileName;
+		}
 	}
 } );
 

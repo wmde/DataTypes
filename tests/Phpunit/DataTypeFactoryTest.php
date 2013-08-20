@@ -1,12 +1,12 @@
 <?php
 
-namespace DataTypes\Test;
+namespace DataTypes\Tests\Phpunit;
 
 use DataTypes\DataType;
 use DataTypes\DataTypeFactory;
 
 /**
- * Unit tests for the TypeFactory class.
+ * @covers DataTypes\DataTypeFactory
  *
  * @file
  * @since 0.1
@@ -18,6 +18,7 @@ use DataTypes\DataTypeFactory;
  *
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
+ * @author Daniel Kinzler
  */
 class DataTypeFactoryTest extends \PHPUnit_Framework_TestCase {
 
@@ -121,13 +122,13 @@ class DataTypeFactoryTest extends \PHPUnit_Framework_TestCase {
 			),
 			array( // #2
 				'new-school',
-				array( '\DataTypes\Test\DummyType', '__construct' ),
+				array( '\DataTypes\Tests\Phpunit\DummyType', '__construct' ),
 				'dummy',
 				'constructor'
 			),
 			array( // #3
 				'new-school',
-				array( '\DataTypes\Test\DummyType', 'newDummy' ),
+				array( '\DataTypes\Tests\Phpunit\DummyType', 'newDummy' ),
 				'dummy',
 				'callable'
 			),

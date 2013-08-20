@@ -1,9 +1,9 @@
 <?php
 
-namespace DataTypes\Test;
+namespace DataTypes\Tests\Modules;
 
-use DataTypes\DataTypesModule;
 use DataTypes\DataTypeFactory;
+use DataTypes\DataTypesModule;
 
 /**
  * @covers DataTypes\DataTypesModule

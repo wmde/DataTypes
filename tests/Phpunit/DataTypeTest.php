@@ -1,12 +1,12 @@
 <?php
 
-namespace DataTypes\Test;
+namespace DataTypes\Tests\Phpunit;
 
 use DataTypes\DataType;
 use DataTypes\DataTypeFactory;
 
 /**
- * Unit tests for DataType implementations.
+ * @covers DataTypes\DataType
  *
  * @file
  * @since 0.1
