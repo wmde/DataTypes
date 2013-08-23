@@ -1,7 +1,7 @@
 {
 	"name": "data-values/data-types",
 	"type": "library",
-	"description": "Contains a class with which a type of value can be defined",
+	"description": "PHP library defining the DataTypes\\DataType class of which instances represent a type of value, such as \"positive integer\" or \"percentage\".",
 	"keywords": [
 		"datavalues",
 		"datatypes"

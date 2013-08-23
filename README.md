@@ -1,6 +1,7 @@
 # DataTypes
 
-PHP library defining the DataTypes\DataType class.
+PHP library defining the DataTypes\DataType class of which instances represent a type of value,
+such as "positive integer" or "percentage".
 
 [![Build Status](https://secure.travis-ci.org/wikimedia/mediawiki-extensions-DataTypes.png?branch=master)](http://travis-ci.org/wikimedia/mediawiki-extensions-DataTypes)
 [![Coverage Status](https://coveralls.io/repos/wikimedia/mediawiki-extensions-DataTypes/badge.png?branch=master)](https://coveralls.io/r/wikimedia/mediawiki-extensions-DataTypes?branch=master)
