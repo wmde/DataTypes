@@ -51,7 +51,7 @@ if ( defined( 'MW_PHPUNIT_TEST' ) ) {
  */
 $wgHooks['UnitTestsList'][] = function( array &$files ) {
 	// @codeCoverageIgnoreStart
-	$directoryIterator = new \RecursiveDirectoryIterator( __DIR__ . '/tests/phpunit/' );
+	$directoryIterator = new \RecursiveDirectoryIterator( __DIR__ . '/tests/Phpunit/' );
 
 	/**
 	 * @var \SplFileInfo $fileInfo
