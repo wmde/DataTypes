@@ -17,7 +17,7 @@ return call_user_func( function() {
 
 	$moduleTemplate = array(
 		'localBasePath' => __DIR__ . '/resources',
-		'remoteExtPath' =>  'DataValues/DataTypes/resources',
+		'remoteExtPath' =>  'DataTypes/resources',
 	);
 
 	return array(

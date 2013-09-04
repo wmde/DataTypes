@@ -88,7 +88,7 @@ Message::registerTextFunction( function() {
 $wgHooks['ResourceLoaderTestModules'][] = function ( array &$testModules, \ResourceLoader &$resourceLoader ) {
 	$moduleTemplate = array(
 		'localBasePath' => __DIR__ . '/tests/qunit',
-		'remoteExtPath' => 'DataValues/DataTypes/tests/qunit',
+		'remoteExtPath' => 'DataTypes/tests/qunit',
 	);
 
 	$testModules['qunit']['dataTypes.tests'] = $moduleTemplate + array(
@@ -117,5 +117,5 @@ $wgHooks['ResourceLoaderTestModules'][] = function ( array &$testModules, \Resou
 // Resource Loader module registration
 $wgResourceModules = array_merge(
 	$wgResourceModules,
-	include( __DIR__ . '/Resources.php' )
+	include( __DIR__ . '/DataTypes.resources.php' )
 );
