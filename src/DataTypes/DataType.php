@@ -3,17 +3,10 @@
 namespace DataTypes;
 
 use InvalidArgumentException;
-use ValueFormatters\ValueFormatter;
-use ValueParsers\ValueParser;
 use ValueValidators\ValueValidator;
 
 /**
- * Interface for data types.
- *
  * @since 0.1
- *
- * @file
- * @ingroup DataTypes
  *
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
@@ -39,15 +32,6 @@ class DataType {
 	protected $dataValueType;
 
 	/**
-	 * The ValueFormatter used by this data type.
-	 *
-	 * @since 0.1
-	 *
-	 * @var ValueFormatter[]
-	 */
-	protected $formatters;
-
-	/**
 	 * The ValueValidator objects used by this data type.
 	 *
 	 * @since 0.1
@@ -57,20 +41,15 @@ class DataType {
 	protected $validators;
 
 	/**
-	 * Constructor.
-	 * Typically you should not construct such objects yourself but use the TypeFactory.
-	 *
 	 * @since 0.1
 	 *
 	 * @param string $typeId
 	 * @param string $dataValueType
-	 * @param ValueParser[] $parsers // TODO: remove
-	 * @param ValueFormatter[] $formatters
 	 * @param ValueValidator[] $validators
 	 *
 	 * @throws InvalidArgumentException
 	 */
-	public function __construct( $typeId, $dataValueType, array $parsers, array $formatters, array $validators ) {
+	public function __construct( $typeId, $dataValueType, array $validators ) {
 		if ( !is_string( $typeId ) ) {
 			throw new InvalidArgumentException( '$typeId must be a string' );
 		}
@@ -81,7 +60,6 @@ class DataType {
 
 		$this->typeId = $typeId;
 		$this->dataValueType = $dataValueType;
-		$this->formatters = $formatters;
 		$this->validators = $validators;
 	}
 
@@ -105,19 +83,6 @@ class DataType {
 	 */
 	public function getDataValueType() {
 		return $this->dataValueType;
-	}
-
-	/**
-	 * Returns the ValueFormatter used by this data type.
-	 *
-	 * TODO: finish design and decide on the exact role of this and if we do not need multiple
-	 *
-	 * @since 0.1
-	 *
-	 * @return ValueFormatter[]
-	 */
-	public function getFormatters() {
-		return $this->formatters;
 	}
 
 	/**

@@ -3,10 +3,10 @@
 namespace DataTypes\Tests\Modules;
 
 use DataTypes\DataTypeFactory;
-use DataTypes\DataTypesModule;
+use DataTypes\Modules\DataTypesModule;
 
 /**
- * @covers DataTypes\DataTypesModule
+ * @covers DataTypes\Modules\DataTypesModule
  *
  * @file
  * @since 0.1

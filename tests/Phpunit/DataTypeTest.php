@@ -59,15 +59,6 @@ class DataTypeTest extends \PHPUnit_Framework_TestCase {
 	 * @dataProvider instanceProvider
 	 * @param DataType $type
 	 */
-	public function testGetFormatter( DataType $type ) {
-		$this->assertInternalType( 'array', $type->getFormatters() );
-		$this->assertContainsOnlyInstancesOf( 'ValueFormatters\ValueFormatter', $type->getFormatters() );
-	}
-
-	/**
-	 * @dataProvider instanceProvider
-	 * @param DataType $type
-	 */
 	public function testGetValidators( DataType $type ) {
 		$this->assertInternalType( 'array', $type->getValidators() );
 		$this->assertContainsOnlyInstancesOf( 'ValueValidators\ValueValidator', $type->getValidators() );

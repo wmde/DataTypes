@@ -7,12 +7,11 @@ use OutOfBoundsException;
 use RuntimeException;
 
 /**
- * Factory for creating data types.
+ * @deprecated since 0.1
  *
- * @since 0.1
- *
- * @file
- * @ingroup DataTypes
+ * This class acts both as a DataType registry and a DataType deserializer,
+ * and it is doing a bad job at both tasks. Thus create a proper registry or
+ * deserializer when one is needed.
  *
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
@@ -81,7 +80,7 @@ class DataTypeFactory {
 	 * @param string $typeId
 	 * @param callable $builder A builder that takes $typeId and returns a DataType object
 	 *
-	 * @throws \InvalidArgumentException
+	 * @throws InvalidArgumentException
 	 */
 	public function registerBuilder( $typeId, $builder ) {
 		if ( !is_callable( $builder ) ) {
@@ -104,7 +103,7 @@ class DataTypeFactory {
 	 *        - if $builderSpec as an associative array, newType( $typeId, $builderSpec )
 	 *                            is called for backwards compatibility
 	 *
-	 * @throws \InvalidArgumentException
+	 * @throws InvalidArgumentException
 	 * @return DataType
 	 */
 	protected function buildType( $typeId, $builderSpec ) {
@@ -120,7 +119,6 @@ class DataTypeFactory {
 			$type = call_user_func( $builderSpec, $typeId );
 		} elseif ( is_array( $builderSpec ) ) {
 			//B/C mode
-			//TODO: start failing on this using wfWarn or wfDeprecated
 			$type = $this->newType( $typeId, $builderSpec );
 		} else {
 			throw new InvalidArgumentException( "Bad builder spec, expected a callable." );
@@ -152,29 +150,6 @@ class DataTypeFactory {
 			throw new InvalidArgumentException( 'Invalid datavalue type provided to DataTypeFactory' );
 		}
 
-		// TODO: use string ids for components once they have their own factories
-
-		// TODO: Get rid of this whole method, use callable builders instead.
-		//       Make a utility class that generates a builder based on an a spec array.
-
-		$parser = array_key_exists( 'parser', $typeData ) ? $typeData['parser'] : 'ValueParsers\NullParser';
-
-		if ( is_string( $parser ) ) {
-			$parser = new $parser();
-		}
-
-		$formatters = array();
-
-		if ( array_key_exists( 'formatter', $typeData ) ) {
-			$formatter = $typeData['formatter'];
-
-			if ( is_string( $formatter ) ) {
-				$formatter = new $formatter();
-			}
-
-			$formatters[] = $formatter;
-		}
-
 		if ( array_key_exists( 'validators', $typeData ) ) {
 			$validators = is_array( $typeData['validators'] ) ? $typeData['validators'] : array( $typeData['validators'] );
 		}
@@ -191,8 +166,6 @@ class DataTypeFactory {
 		return new DataType(
 			$typeId,
 			$typeData['datavalue'],
-			array( $parser ), // TODO
-			$formatters,
 			$validators
 		);
 	}

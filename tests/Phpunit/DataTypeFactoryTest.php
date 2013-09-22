@@ -116,7 +116,7 @@ class DataTypeFactoryTest extends \PHPUnit_Framework_TestCase {
 			),
 			array( // #1
 				'new-school',
-				new DataType( 'new-school', 'newschool', array(), array(), array() ),
+				new DataType( 'new-school', 'newschool', array() ),
 				'newschool',
 				'DataValue object'
 			),
