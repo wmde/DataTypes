@@ -22,13 +22,6 @@
  * @defgroup DataTypes DataTypes
  */
 
-/**
- * Tests part of the DataTypes extension.
- *
- * @defgroup DataTypesTests DataTypesTests
- * @ingroup DataTypes
- */
-
 namespace DataTypes;
 
 use Exception;

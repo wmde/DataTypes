@@ -58,9 +58,7 @@ for the [Wikidata project](https://wikidata.org/).
 
 ### 0.1 (under development)
 
-Initial release with these features:
-
-*
+Initial release.
 
 ## Links
 
