@@ -608,6 +608,7 @@ $messages['ksh'] = array(
 
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
+ * @author Soued031
  */
 $messages['lb'] = array(
 	'datatypes-desc' => 'Kollektioun vun Definitioune vun Datentypen',
@@ -618,7 +619,7 @@ $messages['lb'] = array(
 	'datatypes-type-number' => 'Zuel',
 	'datatypes-type-mediawiki-title' => 'MediaWiki-Titel',
 	'datatypes-type-unknown' => 'Net uginn',
-	'datatypes-type-globe-coordinate' => 'Geografesch Koordinaten',
+	'datatypes-type-globe-coordinate' => 'Geographesch Koordinaten',
 	'datatypes-type-time' => 'Zäit',
 );
 
