@@ -123,12 +123,19 @@ $messages['bn'] = array(
 
 /** Breton (brezhoneg)
  * @author Fohanno
+ * @author Y-M D
  */
 $messages['br'] = array(
 	'datatypes-type-string' => 'Neudennad',
 	'datatypes-type-quantity' => 'Kementad',
 	'datatypes-type-monolingual-text' => 'Testenn unyezhek',
 	'datatypes-type-multilingual-text' => 'Testenn liesyezhek',
+	'datatypes-type-number' => 'Niver',
+	'datatypes-type-mediawiki-title' => 'Titl MediaWiki',
+	'datatypes-type-unknown' => 'Anspisaet',
+	'datatypes-type-boolean' => 'Boulean',
+	'datatypes-type-globe-coordinate' => "Kenvuzulioù lec'hiañ",
+	'datatypes-type-time' => 'Deiziad',
 );
 
 /** Catalan (català)
@@ -147,6 +154,14 @@ $messages['ca'] = array(
 	'datatypes-type-boolean' => 'Booleà',
 	'datatypes-type-globe-coordinate' => 'Coordenada geogràfica',
 	'datatypes-type-time' => 'Data',
+);
+
+/** Chechen (нохчийн)
+ * @author Умар
+ */
+$messages['ce'] = array(
+	'datatypes-type-globe-coordinate' => 'Географин координаташ',
+	'datatypes-type-time' => 'Хан',
 );
 
 /** Sorani Kurdish (کوردی)
@@ -481,6 +496,23 @@ $messages['hu'] = array(
 	'datatypes-type-globe-coordinate' => 'Földrajzi koordináta',
 );
 
+/** Interlingua (interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'datatypes-desc' => 'Collection de definitiones de typos de datos',
+	'datatypes-type-string' => 'Catena de characteres',
+	'datatypes-type-quantity' => 'Quantitate',
+	'datatypes-type-monolingual-text' => 'Texto monolingue',
+	'datatypes-type-multilingual-text' => 'Texto multilingue',
+	'datatypes-type-number' => 'Numero',
+	'datatypes-type-mediawiki-title' => 'Titulo de MediaWiki',
+	'datatypes-type-unknown' => 'Non specificate',
+	'datatypes-type-boolean' => 'Boolean',
+	'datatypes-type-globe-coordinate' => 'Coordinata geographic',
+	'datatypes-type-time' => 'Hora',
+);
+
 /** Indonesian (Bahasa Indonesia)
  * @author Farras
  */
@@ -627,7 +659,11 @@ $messages['lb'] = array(
  * @author Eitvys200
  */
 $messages['lt'] = array(
+	'datatypes-type-quantity' => 'Kiekis',
 	'datatypes-type-number' => 'Numeris',
+	'datatypes-type-mediawiki-title' => 'MediaWiki pavadinimas',
+	'datatypes-type-unknown' => 'Nenurodyta',
+	'datatypes-type-time' => 'Laikas',
 );
 
 /** Macedonian (македонски)
@@ -745,6 +781,21 @@ $messages['nn'] = array(
 	'datatypes-type-globe-coordinate' => 'Geografisk koordinat',
 );
 
+/** Occitan (occitan)
+ * @author Cedric31
+ */
+$messages['oc'] = array(
+	'datatypes-type-string' => 'Cadena',
+	'datatypes-type-quantity' => 'Quantitat',
+	'datatypes-type-monolingual-text' => 'Tèxte monolingüe',
+	'datatypes-type-multilingual-text' => 'Tèxte multilingüe',
+	'datatypes-type-number' => 'Nombre',
+	'datatypes-type-mediawiki-title' => 'Títol MediaWiki',
+	'datatypes-type-unknown' => 'Pas especificat',
+	'datatypes-type-globe-coordinate' => 'Coordenadas geograficas',
+	'datatypes-type-time' => 'Data',
+);
+
 /** Oriya (ଓଡ଼ିଆ)
  * @author Ansumang
  */
@@ -795,9 +846,10 @@ $messages['ps'] = array(
 
 /** Portuguese (português)
  * @author Alchimista
+ * @author Luckas
  */
 $messages['pt'] = array(
-	'datatypes-desc' => 'Colecção de definições de tipo de dados',
+	'datatypes-desc' => 'Coleção de definições de tipos de dados',
 	'datatypes-type-string' => 'String',
 	'datatypes-type-quantity' => 'Quantidade',
 	'datatypes-type-monolingual-text' => 'Texto monolingue',
