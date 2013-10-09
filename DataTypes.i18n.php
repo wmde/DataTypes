@@ -240,7 +240,7 @@ $messages['de'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki-Titel',
 	'datatypes-type-unknown' => 'Nicht angegeben',
 	'datatypes-type-boolean' => 'Wahrheitswert',
-	'datatypes-type-globe-coordinate' => 'Geografische Koordinate',
+	'datatypes-type-globe-coordinate' => 'Geografische Koordinaten',
 	'datatypes-type-time' => 'Zeit',
 );
 
@@ -651,7 +651,7 @@ $messages['lb'] = array(
 	'datatypes-type-number' => 'Zuel',
 	'datatypes-type-mediawiki-title' => 'MediaWiki-Titel',
 	'datatypes-type-unknown' => 'Net uginn',
-	'datatypes-type-globe-coordinate' => 'Geographesch Koordinaten',
+	'datatypes-type-globe-coordinate' => 'Geographesch Koordinaten', # Fuzzy
 	'datatypes-type-time' => 'Zäit',
 );
 
