@@ -600,11 +600,12 @@ $messages['ka'] = array(
 	'datatypes-type-mediawiki-title' => 'მედიავიკის სათაური',
 	'datatypes-type-unknown' => 'არ არის მითითებული',
 	'datatypes-type-boolean' => 'ლოგიკური მნიშვნელობა',
-	'datatypes-type-globe-coordinate' => 'გეოგრაფიული კოორდინატი',
+	'datatypes-type-globe-coordinate' => 'გეოგრაფიული კოორდინატები',
 	'datatypes-type-time' => 'დრო',
 );
 
 /** Korean (한국어)
+ * @author Hym411
  * @author 아라
  */
 $messages['ko'] = array(
@@ -617,7 +618,7 @@ $messages['ko'] = array(
 	'datatypes-type-mediawiki-title' => '미디어위키 제목',
 	'datatypes-type-unknown' => '지정되지 않음',
 	'datatypes-type-boolean' => '부울',
-	'datatypes-type-globe-coordinate' => '지리 좌표',
+	'datatypes-type-globe-coordinate' => '지리적 좌표',
 	'datatypes-type-time' => '시간',
 );
 
@@ -679,7 +680,7 @@ $messages['mk'] = array(
 	'datatypes-type-mediawiki-title' => 'МедијаВики-наслов',
 	'datatypes-type-unknown' => 'Неукажано',
 	'datatypes-type-boolean' => 'Булов',
-	'datatypes-type-globe-coordinate' => 'Географска координата',
+	'datatypes-type-globe-coordinate' => 'Географски координати',
 	'datatypes-type-time' => 'Време',
 );
 
