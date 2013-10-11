@@ -425,7 +425,7 @@ $messages['gl'] = array(
 	'datatypes-type-mediawiki-title' => 'Título de MediaWiki',
 	'datatypes-type-unknown' => 'Non especificado',
 	'datatypes-type-boolean' => 'Booleano',
-	'datatypes-type-globe-coordinate' => 'Coordenada xeográfica',
+	'datatypes-type-globe-coordinate' => 'Coordenadas xeográficas',
 	'datatypes-type-time' => 'Hora',
 );
 
@@ -665,6 +665,13 @@ $messages['lt'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki pavadinimas',
 	'datatypes-type-unknown' => 'Nenurodyta',
 	'datatypes-type-time' => 'Laikas',
+);
+
+/** Latvian (latviešu)
+ * @author Papuass
+ */
+$messages['lv'] = array(
+	'datatypes-type-globe-coordinate' => 'Ģeogrāfiskās koordinātas',
 );
 
 /** Macedonian (македонски)
