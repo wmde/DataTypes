@@ -769,7 +769,7 @@ $messages['nl'] = array(
 	'datatypes-type-mediawiki-title' => 'MeidaWikipagina',
 	'datatypes-type-unknown' => 'Niet opgegeven',
 	'datatypes-type-boolean' => 'Booleaanse operator',
-	'datatypes-type-globe-coordinate' => 'Geografische coördinaat',
+	'datatypes-type-globe-coordinate' => 'Geografische coördinaten',
 	'datatypes-type-time' => 'Tijd',
 );
 
