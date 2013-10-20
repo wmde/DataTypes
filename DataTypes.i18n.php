@@ -203,25 +203,26 @@ $messages['cy'] = array(
 	'datatypes-type-mediawiki-title' => 'Teitl yn MediaWiki',
 	'datatypes-type-unknown' => 'Heb ei nodi',
 	'datatypes-type-boolean' => 'Boole',
-	'datatypes-type-globe-coordinate' => 'Cyfesuryn daearyddol',
+	'datatypes-type-globe-coordinate' => 'Cyfesurynnau daearyddol',
 	'datatypes-type-time' => 'Amser',
 );
 
 /** Danish (dansk)
  * @author Byrial
+ * @author Christian List
  * @author Tjernobyl
  */
 $messages['da'] = array(
 	'datatypes-desc' => 'Samling af datatypedefinitioner',
 	'datatypes-type-string' => 'Streng',
-	'datatypes-type-quantity' => 'Kvantitet',
+	'datatypes-type-quantity' => 'Mængde',
 	'datatypes-type-monolingual-text' => 'Tekst på ét sprog',
 	'datatypes-type-multilingual-text' => 'Tekst på flere sprog',
 	'datatypes-type-number' => 'Tal',
 	'datatypes-type-mediawiki-title' => 'MediaWiki-titel',
 	'datatypes-type-unknown' => 'Uspecificeret',
 	'datatypes-type-boolean' => 'Boolesk',
-	'datatypes-type-globe-coordinate' => 'Geografisk koordinat',
+	'datatypes-type-globe-coordinate' => 'Geografisk koordinat', # Fuzzy
 	'datatypes-type-time' => 'Tid',
 );
 
@@ -441,7 +442,7 @@ $messages['he'] = array(
 	'datatypes-type-mediawiki-title' => 'כותרת מדיה־ויקי',
 	'datatypes-type-unknown' => 'בלתי־מוגדר',
 	'datatypes-type-boolean' => 'בוליאני',
-	'datatypes-type-globe-coordinate' => 'נקודת ציון גאוגרפית',
+	'datatypes-type-globe-coordinate' => 'נקודת ציון גאוגרפית', # Fuzzy
 	'datatypes-type-time' => 'זמן',
 );
 
