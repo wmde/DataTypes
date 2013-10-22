@@ -84,7 +84,7 @@ $messages['ast'] = array(
 	'datatypes-type-mediawiki-title' => 'Títulu de MediaWiki',
 	'datatypes-type-unknown' => 'No especificáu',
 	'datatypes-type-boolean' => 'Booleanu',
-	'datatypes-type-globe-coordinate' => 'Coordenada xeográfica',
+	'datatypes-type-globe-coordinate' => 'Coordenaes xeográfiques',
 	'datatypes-type-time' => 'Hora',
 );
 
