@@ -509,7 +509,7 @@ $messages['ia'] = array(
 	'datatypes-type-mediawiki-title' => 'Titulo de MediaWiki',
 	'datatypes-type-unknown' => 'Non specificate',
 	'datatypes-type-boolean' => 'Boolean',
-	'datatypes-type-globe-coordinate' => 'Coordinata geographic',
+	'datatypes-type-globe-coordinate' => 'Coordinatas geographic',
 	'datatypes-type-time' => 'Hora',
 );
 
