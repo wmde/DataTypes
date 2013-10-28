@@ -800,6 +800,7 @@ $messages['oc'] = array(
 	'datatypes-type-number' => 'Nombre',
 	'datatypes-type-mediawiki-title' => 'Títol MediaWiki',
 	'datatypes-type-unknown' => 'Pas especificat',
+	'datatypes-type-boolean' => 'Boolean',
 	'datatypes-type-globe-coordinate' => 'Coordenadas geograficas',
 	'datatypes-type-time' => 'Data',
 );
