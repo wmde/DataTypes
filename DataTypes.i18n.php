@@ -44,7 +44,8 @@ $messages['qqq'] = array(
 {{Identical|Monolingual text}}',
 	'datatypes-type-multilingual-text' => 'The name of a data type.
 {{Identical|Multilingual text}}',
-	'datatypes-type-number' => 'The name of a data type',
+	'datatypes-type-number' => 'The name of a data type.
+{{Identical|Number}}',
 	'datatypes-type-mediawiki-title' => 'The name of a data type',
 	'datatypes-type-unknown' => 'The name of a data type',
 	'datatypes-type-boolean' => 'The name of a data type',
