@@ -477,7 +477,7 @@ $messages['hsb'] = array(
 	'datatypes-type-mediawiki-title' => 'Titul MediaWiki',
 	'datatypes-type-unknown' => 'Njepodaty',
 	'datatypes-type-boolean' => 'Boolean',
-	'datatypes-type-globe-coordinate' => 'Geografiska koordinata',
+	'datatypes-type-globe-coordinate' => 'Geografiske koordinaty',
 	'datatypes-type-time' => 'Čas',
 );
 
