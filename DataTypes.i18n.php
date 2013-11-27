@@ -876,6 +876,7 @@ $messages['pt'] = array(
 );
 
 /** Brazilian Portuguese (português do Brasil)
+ * @author Cainamarques
  * @author Jaideraf
  */
 $messages['pt-br'] = array(
@@ -888,7 +889,7 @@ $messages['pt-br'] = array(
 	'datatypes-type-mediawiki-title' => 'Título do MediaWiki',
 	'datatypes-type-unknown' => 'Não especificado',
 	'datatypes-type-boolean' => 'Booleano',
-	'datatypes-type-globe-coordinate' => 'Coordenada geográfica',
+	'datatypes-type-globe-coordinate' => 'Coordenadas geográfica',
 	'datatypes-type-time' => 'Tempo',
 );
 
