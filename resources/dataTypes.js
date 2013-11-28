@@ -1,10 +1,4 @@
 /**
- * JavaScript for 'DataTypes' extension
- * @see https://www.mediawiki.org/wiki/Extension:DataTypes
- *
- * @file
- * @ingroup DataTypes
- *
  * @licence GNU GPL v2+
  * @author Daniel Werner
  * @author H. Snater < mediawiki@snater.com >
@@ -31,19 +25,18 @@ this.dataTypes = new ( function Dt( $, mw, DataValue ) {
 	 * @abstract
 	 * @since 0.1
 	 *
-	 * @param {String} typeId
-	 * @param {String|Function} dataValueType Can be a DataValue constructor whose type will then be taken.
-	 * @param {vp.ValueParser} parser
-	 * @param {Object} formatter
-	 * @param {Object} validators
+	 * @param {string} typeId
+	 * @param {string|Function} dataValueType Instead of a string, may be a DataValue constructor to
+	 *        extract the type string from.
 	 */
-	var SELF = dt.DataType = function DtDataType( typeId, dataValueType, parser, formatter, validators ) {
-		if( dataValueType && dataValueType.prototype instanceof DataValue
-		) { // DataValue constructor
+	var SELF = dt.DataType = function DtDataType( typeId, dataValueType/*, validators */ ) {
+		if( dataValueType && dataValueType.prototype instanceof DataValue ) {
 			dataValueType = dataValueType.TYPE;
 		}
+
 		if( typeof dataValueType !== 'string' ) {
-			throw new Error( 'A data value type has to be given in form of a string or DataValue constructor' );
+			throw new Error( 'A data value type has to be given in form of a string or DataValue ' +
+				'constructor' );
 		}
 
 		if( !typeId || typeof typeId !== 'string' ) {
@@ -52,12 +45,22 @@ this.dataTypes = new ( function Dt( $, mw, DataValue ) {
 
 		this._typeId = typeId;
 		this._dataValueType = dataValueType;
-		this._parser = parser;
-		this._formatter = formatter;
-		this._validators = validators;
 	};
 
 	$.extend( SELF.prototype, {
+
+		/**
+		 * DataType identifier.
+		 * @type {string}
+		 */
+		_typeId: null,
+
+		/**
+		 * DataValue identifier.
+		 * @type {string}
+		 */
+		_dataValueType: null,
+
 		/**
 		 * Returns the data type's identifier.
 		 * @since 0.1
@@ -79,24 +82,13 @@ this.dataTypes = new ( function Dt( $, mw, DataValue ) {
 		},
 
 		/**
-		 * Returns the ValueParser used by this data type.
-		 * @since 0.1
-		 *
-		 * @return vp.ValueParser
-		 */
-		getParser: function() {
-			return this._parser;
-		},
-
-		// TODO: add other getters
-
-		/**
 		 * Returns the label of data type.
 		 * @since 0.1
 		 *
 		 * @return String
 		 */
 		getLabel: function() {
+			// FIXME: Remove MediaWiki dependency:
 			return mw.message( 'datatypes-type-' + this.getId() );
 		}
 	} );
@@ -110,7 +102,7 @@ this.dataTypes = new ( function Dt( $, mw, DataValue ) {
 	 * @return {dt.DataType} DataType object
 	 */
 	SELF.newFromJSON = function( typeId, json ) {
-		// TODO: inmplement parser, formatter and validators parameters
+		// TODO: Implement validators parameter:
 		return new SELF( typeId, json.dataValueType );
 	};
 
@@ -186,4 +178,3 @@ this.dataTypes = new ( function Dt( $, mw, DataValue ) {
 
 } )( jQuery, mediaWiki, dataValues.DataValue );
 
-window.dataTypes = dataTypes; // global alias
