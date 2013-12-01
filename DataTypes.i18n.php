@@ -139,6 +139,7 @@ $messages['br'] = array(
 );
 
 /** Catalan (català)
+ * @author Alvaro Vidal-Abarca
  * @author Arnaugir
  * @author Pitort
  * @author Vogone
@@ -152,7 +153,7 @@ $messages['ca'] = array(
 	'datatypes-type-mediawiki-title' => 'Títol de MediaWiki',
 	'datatypes-type-unknown' => 'Sense especificar',
 	'datatypes-type-boolean' => 'Booleà',
-	'datatypes-type-globe-coordinate' => 'Coordenada geogràfica',
+	'datatypes-type-globe-coordinate' => 'Coordenades geogràfiques',
 	'datatypes-type-time' => 'Data',
 );
 
