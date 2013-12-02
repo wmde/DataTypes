@@ -998,7 +998,7 @@ $messages['sv'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki-titel',
 	'datatypes-type-unknown' => 'Ospecificerad',
 	'datatypes-type-boolean' => 'Boolesk',
-	'datatypes-type-globe-coordinate' => 'Geografisk koordinat',
+	'datatypes-type-globe-coordinate' => 'Geografiska koordinater',
 	'datatypes-type-time' => 'Tid',
 );
 
