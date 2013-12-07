@@ -61,14 +61,14 @@ $messages['qqq'] = array(
 $messages['ar'] = array(
 	'datatypes-desc' => 'مجموعة من تعريفات انواع البيانات',
 	'datatypes-type-string' => 'نص',
-	'datatypes-type-quantity' => 'كمية',
+	'datatypes-type-quantity' => 'كمية', # Fuzzy
 	'datatypes-type-monolingual-text' => 'نص أحادي اللغة',
 	'datatypes-type-multilingual-text' => 'نص متعدد اللغات',
 	'datatypes-type-number' => 'رقم',
 	'datatypes-type-mediawiki-title' => 'عنوان الميدياويكي',
 	'datatypes-type-unknown' => 'غير محدد',
 	'datatypes-type-boolean' => 'قيمة منطقية',
-	'datatypes-type-globe-coordinate' => 'إحداثيات جغرافية',
+	'datatypes-type-globe-coordinate' => 'إحداثيات جغرافية', # Fuzzy
 	'datatypes-type-time' => 'زمن',
 );
 
@@ -95,14 +95,14 @@ $messages['ast'] = array(
 $messages['be-tarask'] = array(
 	'datatypes-desc' => 'Збор вызначэньняў тыпаў зьвестак',
 	'datatypes-type-string' => 'Радок',
-	'datatypes-type-quantity' => 'Колькасьць',
+	'datatypes-type-quantity' => 'Колькасьць', # Fuzzy
 	'datatypes-type-monolingual-text' => 'Аднамоўны тэкст',
 	'datatypes-type-multilingual-text' => 'Шматмоўны тэкст',
 	'datatypes-type-number' => 'Лік',
 	'datatypes-type-mediawiki-title' => 'Загаловак MediaWiki',
 	'datatypes-type-unknown' => 'Не пазначаны',
 	'datatypes-type-boolean' => 'Булевы',
-	'datatypes-type-globe-coordinate' => 'Геаграфічныя каардынаты',
+	'datatypes-type-globe-coordinate' => 'Геаграфічныя каардынаты', # Fuzzy
 	'datatypes-type-time' => 'Час',
 );
 
@@ -117,7 +117,7 @@ $messages['bg'] = array(
  * @author Bellayet
  */
 $messages['bn'] = array(
-	'datatypes-type-quantity' => 'পরিমাণ',
+	'datatypes-type-quantity' => 'পরিমাণ', # Fuzzy
 	'datatypes-type-number' => 'সংখ্যা',
 );
 
@@ -127,14 +127,14 @@ $messages['bn'] = array(
  */
 $messages['br'] = array(
 	'datatypes-type-string' => 'Neudennad',
-	'datatypes-type-quantity' => 'Kementad',
+	'datatypes-type-quantity' => 'Kementad', # Fuzzy
 	'datatypes-type-monolingual-text' => 'Testenn unyezhek',
 	'datatypes-type-multilingual-text' => 'Testenn liesyezhek',
 	'datatypes-type-number' => 'Niver',
 	'datatypes-type-mediawiki-title' => 'Titl MediaWiki',
 	'datatypes-type-unknown' => 'Anspisaet',
 	'datatypes-type-boolean' => 'Boulean',
-	'datatypes-type-globe-coordinate' => "Kenvuzulioù lec'hiañ",
+	'datatypes-type-globe-coordinate' => "Kenvuzulioù lec'hiañ", # Fuzzy
 	'datatypes-type-time' => 'Deiziad',
 );
 
@@ -161,7 +161,7 @@ $messages['ca'] = array(
  * @author Умар
  */
 $messages['ce'] = array(
-	'datatypes-type-globe-coordinate' => 'Географин координаташ',
+	'datatypes-type-globe-coordinate' => 'Географин координаташ', # Fuzzy
 	'datatypes-type-time' => 'Хан',
 );
 
@@ -173,7 +173,7 @@ $messages['ckb'] = array(
 	'datatypes-type-time' => 'کات',
 );
 
-/** Czech (česky)
+/** Czech (čeština)
  * @author Mormegil
  * @author Reaperman
  * @author Vks
@@ -248,6 +248,7 @@ $messages['de'] = array(
 
 /** Zazaki (Zazaki)
  * @author Erdemaslancan
+ * @author Marmase
  * @author Mirzali
  */
 $messages['diq'] = array(
@@ -260,6 +261,8 @@ $messages['diq'] = array(
 	'datatypes-type-mediawiki-title' => 'Sernamey MediaWiki',
 	'datatypes-type-unknown' => 'Nêvaciyayo',
 	'datatypes-type-boolean' => 'Boolean',
+	'datatypes-type-globe-coordinate' => 'Goğrafi koordinati',
+	'datatypes-type-time' => 'Zeman',
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -268,14 +271,14 @@ $messages['diq'] = array(
 $messages['dsb'] = array(
 	'datatypes-desc' => 'Zběrka definicijow datowych typow',
 	'datatypes-type-string' => 'Znamuškowy rjeśazk',
-	'datatypes-type-quantity' => 'Kopica',
+	'datatypes-type-quantity' => 'Kopica', # Fuzzy
 	'datatypes-type-monolingual-text' => 'Jadnorěcny tekst',
 	'datatypes-type-multilingual-text' => 'Wěcejrěcny tekst',
 	'datatypes-type-number' => 'Licba',
 	'datatypes-type-mediawiki-title' => 'Titel MediaWiki',
 	'datatypes-type-unknown' => 'Njepódany',
 	'datatypes-type-boolean' => 'Boolean',
-	'datatypes-type-globe-coordinate' => 'Geografiska koordinata',
+	'datatypes-type-globe-coordinate' => 'Geografiska koordinata', # Fuzzy
 	'datatypes-type-time' => 'Cas',
 );
 
@@ -287,7 +290,7 @@ $messages['dsb'] = array(
 $messages['el'] = array(
 	'datatypes-desc' => 'Συλλογή από ορισμούς τύπων δεδομένων',
 	'datatypes-type-string' => 'Συμβολοσειρά',
-	'datatypes-type-quantity' => 'Ποσότητα',
+	'datatypes-type-quantity' => 'Ποσότητα', # Fuzzy
 	'datatypes-type-monolingual-text' => 'Μονόγλωσσο κείμενο',
 	'datatypes-type-multilingual-text' => 'Πολύγλωσσο κείμενο',
 	'datatypes-type-number' => 'Αριθμός',
@@ -301,7 +304,7 @@ $messages['el'] = array(
  */
 $messages['eo'] = array(
 	'datatypes-type-string' => 'Bitĉeno',
-	'datatypes-type-quantity' => 'Kvanto',
+	'datatypes-type-quantity' => 'Kvanto', # Fuzzy
 	'datatypes-type-monolingual-text' => 'Unulingva teksto',
 	'datatypes-type-multilingual-text' => 'Multlingva teksto',
 	'datatypes-type-number' => 'Nombro',
@@ -343,7 +346,7 @@ $messages['et'] = array(
 	'datatypes-type-number' => 'Number',
 	'datatypes-type-mediawiki-title' => 'MediaWiki pealkiri',
 	'datatypes-type-unknown' => 'Määratlemata',
-	'datatypes-type-globe-coordinate' => 'Geograafiline koordinaat',
+	'datatypes-type-globe-coordinate' => 'Geograafiline koordinaat', # Fuzzy
 	'datatypes-type-time' => 'Aeg',
 );
 
@@ -354,7 +357,7 @@ $messages['et'] = array(
 $messages['fa'] = array(
 	'datatypes-desc' => 'مجموعهای از تعاریف نوع داده',
 	'datatypes-type-string' => 'رشته',
-	'datatypes-type-quantity' => 'مقدار',
+	'datatypes-type-quantity' => 'مقدار', # Fuzzy
 	'datatypes-type-monolingual-text' => 'متن معدودی',
 	'datatypes-type-multilingual-text' => 'متن چندزبانه',
 	'datatypes-type-number' => 'عدد',
@@ -373,14 +376,14 @@ $messages['fa'] = array(
 $messages['fi'] = array(
 	'datatypes-desc' => 'Kokoelma tietotyyppimäärittelyjä',
 	'datatypes-type-string' => 'Merkkijono',
-	'datatypes-type-quantity' => 'Määrä',
+	'datatypes-type-quantity' => 'Määrä', # Fuzzy
 	'datatypes-type-monolingual-text' => 'Yksikielinen teksti',
 	'datatypes-type-multilingual-text' => 'Monikielinen teksti',
 	'datatypes-type-number' => 'Numero',
 	'datatypes-type-mediawiki-title' => 'MediaWiki-otsikko',
 	'datatypes-type-unknown' => 'Määrittelemätön',
 	'datatypes-type-boolean' => 'Totuusarvo',
-	'datatypes-type-globe-coordinate' => 'Maantieteellinen koordinaatti',
+	'datatypes-type-globe-coordinate' => 'Maantieteellinen koordinaatti', # Fuzzy
 	'datatypes-type-time' => 'Aika',
 );
 
@@ -407,11 +410,11 @@ $messages['fr'] = array(
  */
 $messages['frp'] = array(
 	'datatypes-type-string' => 'Chêna',
-	'datatypes-type-quantity' => 'Quantitât',
+	'datatypes-type-quantity' => 'Quantitât', # Fuzzy
 	'datatypes-type-mediawiki-title' => 'Titro MediaWiki',
 	'datatypes-type-unknown' => 'Pas spècifiâ',
 	'datatypes-type-boolean' => 'Boolèen',
-	'datatypes-type-globe-coordinate' => 'Coordonâs g·eografiques',
+	'datatypes-type-globe-coordinate' => 'Coordonâs g·eografiques', # Fuzzy
 );
 
 /** Galician (galego)
@@ -420,7 +423,7 @@ $messages['frp'] = array(
 $messages['gl'] = array(
 	'datatypes-desc' => 'Colección de definicións de tipos de datos',
 	'datatypes-type-string' => 'Cadea de caracteres',
-	'datatypes-type-quantity' => 'Cantidade', # Fuzzy
+	'datatypes-type-quantity' => 'Cantidade',
 	'datatypes-type-monolingual-text' => 'Texto monolingüe',
 	'datatypes-type-multilingual-text' => 'Texto multilingüe',
 	'datatypes-type-number' => 'Número',
@@ -455,14 +458,14 @@ $messages['he'] = array(
 $messages['hi'] = array(
 	'datatypes-desc' => 'डेटा प्रकार परिभाषाओं का संग्रह',
 	'datatypes-type-string' => 'स्ट्रिंग',
-	'datatypes-type-quantity' => 'परिमाण',
+	'datatypes-type-quantity' => 'परिमाण', # Fuzzy
 	'datatypes-type-monolingual-text' => 'एकभाषी पाठ',
 	'datatypes-type-multilingual-text' => 'बहुभाषी पाठ',
 	'datatypes-type-number' => 'संख्या',
 	'datatypes-type-mediawiki-title' => 'मीडियाविकि शीर्षक',
 	'datatypes-type-unknown' => 'अनिर्दिष्ट',
 	'datatypes-type-boolean' => 'बूलियन',
-	'datatypes-type-globe-coordinate' => 'भौगोलिक निर्देशांक',
+	'datatypes-type-globe-coordinate' => 'भौगोलिक निर्देशांक', # Fuzzy
 );
 
 /** Upper Sorbian (hornjoserbsce)
@@ -488,14 +491,14 @@ $messages['hsb'] = array(
 $messages['hu'] = array(
 	'datatypes-desc' => 'Adattípus definíciók gyűjteménye',
 	'datatypes-type-string' => 'Szöveg',
-	'datatypes-type-quantity' => 'Mennyiség',
+	'datatypes-type-quantity' => 'Mennyiség', # Fuzzy
 	'datatypes-type-monolingual-text' => 'Egynyelvű szöveg',
 	'datatypes-type-multilingual-text' => 'Többnyelvű szöveg',
 	'datatypes-type-number' => 'Szám',
 	'datatypes-type-mediawiki-title' => 'MediaWiki cím',
 	'datatypes-type-unknown' => 'Meghatározatlan',
 	'datatypes-type-boolean' => 'Logikai érték',
-	'datatypes-type-globe-coordinate' => 'Földrajzi koordináta',
+	'datatypes-type-globe-coordinate' => 'Földrajzi koordináta', # Fuzzy
 );
 
 /** Interlingua (interlingua)
@@ -521,14 +524,14 @@ $messages['ia'] = array(
 $messages['id'] = array(
 	'datatypes-desc' => 'Koleksi definisi jenis data',
 	'datatypes-type-string' => 'String',
-	'datatypes-type-quantity' => 'Jumlah',
+	'datatypes-type-quantity' => 'Jumlah', # Fuzzy
 	'datatypes-type-monolingual-text' => 'Teks monolingual',
 	'datatypes-type-multilingual-text' => 'Teks multilingual',
 	'datatypes-type-number' => 'Nomor',
 	'datatypes-type-mediawiki-title' => 'Judul MediaWiki',
 	'datatypes-type-unknown' => 'Tidak ditentukan',
 	'datatypes-type-boolean' => 'Boolean',
-	'datatypes-type-globe-coordinate' => 'Koordinat geografis',
+	'datatypes-type-globe-coordinate' => 'Koordinat geografis', # Fuzzy
 );
 
 /** Igbo (Igbo)
@@ -544,14 +547,14 @@ $messages['ig'] = array(
 $messages['ilo'] = array(
 	'datatypes-desc' => 'Urnong dagiti panangilawlawag iti kita ti datos',
 	'datatypes-type-string' => 'Kuerdas',
-	'datatypes-type-quantity' => 'Kaadu',
+	'datatypes-type-quantity' => 'Kaadu', # Fuzzy
 	'datatypes-type-monolingual-text' => 'Testo ti maymaysa pagsasao',
 	'datatypes-type-multilingual-text' => 'Adu a pagsasao a testo',
 	'datatypes-type-number' => 'Numero',
 	'datatypes-type-mediawiki-title' => 'Titulo ti MediaWiki',
 	'datatypes-type-unknown' => 'Di naibagbaga',
 	'datatypes-type-boolean' => 'Boolean',
-	'datatypes-type-globe-coordinate' => 'Heograpiko a nagsasabtan',
+	'datatypes-type-globe-coordinate' => 'Heograpiko a nagsasabtan', # Fuzzy
 	'datatypes-type-time' => 'Oras',
 );
 
@@ -595,7 +598,7 @@ $messages['ja'] = array(
  */
 $messages['ka'] = array(
 	'datatypes-type-string' => 'ველი',
-	'datatypes-type-quantity' => 'რაოდენობა', # Fuzzy
+	'datatypes-type-quantity' => 'რაოდენობა',
 	'datatypes-type-monolingual-text' => 'ერთენოვანი ტექსტი',
 	'datatypes-type-multilingual-text' => 'მრავალენოვანი ტექსტი',
 	'datatypes-type-number' => 'ნომერი',
@@ -613,7 +616,7 @@ $messages['ka'] = array(
 $messages['ko'] = array(
 	'datatypes-desc' => '데이터 형식 정의의 모음집',
 	'datatypes-type-string' => '문자열',
-	'datatypes-type-quantity' => '양', # Fuzzy
+	'datatypes-type-quantity' => '양',
 	'datatypes-type-monolingual-text' => '단일 언어 텍스트',
 	'datatypes-type-multilingual-text' => '다언어 텍스트',
 	'datatypes-type-number' => '숫자',
@@ -630,14 +633,14 @@ $messages['ko'] = array(
 $messages['ksh'] = array(
 	'datatypes-desc' => 'En Versammlong vun Aate vun Daate iehr Defenizjuhne.',
 	'datatypes-type-string' => 'En ZeischeKätt',
-	'datatypes-type-quantity' => 'Wäät',
+	'datatypes-type-quantity' => 'Wäät', # Fuzzy
 	'datatypes-type-monolingual-text' => 'Einschproocheje Täx',
 	'datatypes-type-multilingual-text' => 'Miehschproocheje Täx',
 	'datatypes-type-number' => 'Nommer',
 	'datatypes-type-mediawiki-title' => 'MediaWiki Tittel',
 	'datatypes-type-unknown' => 'Nit aanjejovve',
 	'datatypes-type-boolean' => 'Joh udder Nää',
-	'datatypes-type-globe-coordinate' => "Ko'odenaate om Jloobos",
+	'datatypes-type-globe-coordinate' => "Ko'odenaate om Jloobos", # Fuzzy
 	'datatypes-type-time' => 'En Uhrzick',
 );
 
@@ -654,7 +657,7 @@ $messages['lb'] = array(
 	'datatypes-type-number' => 'Zuel',
 	'datatypes-type-mediawiki-title' => 'MediaWiki-Titel',
 	'datatypes-type-unknown' => 'Net uginn',
-	'datatypes-type-globe-coordinate' => 'Geographesch Koordinaten', # Fuzzy
+	'datatypes-type-globe-coordinate' => 'Geographesch Koordinaten',
 	'datatypes-type-time' => 'Zäit',
 );
 
@@ -662,7 +665,7 @@ $messages['lb'] = array(
  * @author Eitvys200
  */
 $messages['lt'] = array(
-	'datatypes-type-quantity' => 'Kiekis',
+	'datatypes-type-quantity' => 'Kiekis', # Fuzzy
 	'datatypes-type-number' => 'Numeris',
 	'datatypes-type-mediawiki-title' => 'MediaWiki pavadinimas',
 	'datatypes-type-unknown' => 'Nenurodyta',
@@ -682,7 +685,7 @@ $messages['lv'] = array(
 $messages['mk'] = array(
 	'datatypes-desc' => 'Збир дефиниции на податочни типови',
 	'datatypes-type-string' => 'Низа',
-	'datatypes-type-quantity' => 'Количина', # Fuzzy
+	'datatypes-type-quantity' => 'Количина',
 	'datatypes-type-monolingual-text' => 'Еднојазичен текст',
 	'datatypes-type-multilingual-text' => 'Повеќејазичен текст',
 	'datatypes-type-number' => 'Број',
@@ -716,14 +719,14 @@ $messages['ml'] = array(
 $messages['ms'] = array(
 	'datatypes-desc' => 'Koleksi definisi jenis data',
 	'datatypes-type-string' => 'Rentetan',
-	'datatypes-type-quantity' => 'Kuantiti',
+	'datatypes-type-quantity' => 'Kuantiti', # Fuzzy
 	'datatypes-type-monolingual-text' => 'Teks satu bahasa',
 	'datatypes-type-multilingual-text' => 'Teks berbilang bahasa',
 	'datatypes-type-number' => 'Nombor',
 	'datatypes-type-mediawiki-title' => 'Tajuk MediaWiki',
 	'datatypes-type-unknown' => 'Tidak ditentukan',
 	'datatypes-type-boolean' => 'Boolean',
-	'datatypes-type-globe-coordinate' => 'Koordinat geografi',
+	'datatypes-type-globe-coordinate' => 'Koordinat geografi', # Fuzzy
 	'datatypes-type-time' => 'Waktu',
 );
 
@@ -741,14 +744,14 @@ $messages['mt'] = array(
 $messages['nb'] = array(
 	'datatypes-desc' => 'Samling av datatypedefinisjoner',
 	'datatypes-type-string' => 'streng',
-	'datatypes-type-quantity' => 'mengde',
+	'datatypes-type-quantity' => 'mengde', # Fuzzy
 	'datatypes-type-monolingual-text' => 'enspråklig tekst',
 	'datatypes-type-multilingual-text' => 'flerspråklig tekst',
 	'datatypes-type-number' => 'tall',
 	'datatypes-type-mediawiki-title' => 'MediaWiki-tittel',
 	'datatypes-type-unknown' => 'uspesifisert',
 	'datatypes-type-boolean' => 'boolsk verdi',
-	'datatypes-type-globe-coordinate' => 'geografisk koordinat',
+	'datatypes-type-globe-coordinate' => 'geografisk koordinat', # Fuzzy
 	'datatypes-type-time' => 'tid',
 );
 
@@ -767,7 +770,7 @@ $messages['nds'] = array(
 $messages['nl'] = array(
 	'datatypes-desc' => 'Verameling gegevenstypedefinities',
 	'datatypes-type-string' => 'Tekenreeks',
-	'datatypes-type-quantity' => 'Hoeveelheid', # Fuzzy
+	'datatypes-type-quantity' => 'Hoeveelheid',
 	'datatypes-type-monolingual-text' => 'Enkeltalige tekst',
 	'datatypes-type-multilingual-text' => 'Meertalige tekst',
 	'datatypes-type-number' => 'Getal',
@@ -784,14 +787,14 @@ $messages['nl'] = array(
 $messages['nn'] = array(
 	'datatypes-desc' => 'Samling av definisjonar på datatypar',
 	'datatypes-type-string' => 'Streng',
-	'datatypes-type-quantity' => 'Kvantitet',
+	'datatypes-type-quantity' => 'Kvantitet', # Fuzzy
 	'datatypes-type-monolingual-text' => 'Eittspråkleg tekst',
 	'datatypes-type-multilingual-text' => 'Mangspråkleg tekst',
 	'datatypes-type-number' => 'Tal',
 	'datatypes-type-mediawiki-title' => 'MediaWiki-tittel',
 	'datatypes-type-unknown' => 'Uspesifisert',
 	'datatypes-type-boolean' => 'Boolsk',
-	'datatypes-type-globe-coordinate' => 'Geografisk koordinat',
+	'datatypes-type-globe-coordinate' => 'Geografisk koordinat', # Fuzzy
 );
 
 /** Occitan (occitan)
@@ -814,7 +817,7 @@ $messages['oc'] = array(
  * @author Ansumang
  */
 $messages['or'] = array(
-	'datatypes-type-quantity' => 'ପରିମାଣ',
+	'datatypes-type-quantity' => 'ପରିମାଣ', # Fuzzy
 	'datatypes-type-number' => 'ନମ୍ବର',
 );
 
@@ -824,7 +827,7 @@ $messages['or'] = array(
 $messages['pl'] = array(
 	'datatypes-desc' => 'Zbiór definicji typów danych',
 	'datatypes-type-string' => 'Łańcuch',
-	'datatypes-type-quantity' => 'Ilość',
+	'datatypes-type-quantity' => 'Ilość', # Fuzzy
 	'datatypes-type-monolingual-text' => 'Tekst jednojęzyczny',
 	'datatypes-type-multilingual-text' => 'Tekst wielojęzyczny',
 	'datatypes-type-number' => 'Liczba',
@@ -841,14 +844,14 @@ $messages['pl'] = array(
 $messages['pms'] = array(
 	'datatypes-desc' => 'Colession ëd definission ëd sòrt ëd dat',
 	'datatypes-type-string' => 'Stringa',
-	'datatypes-type-quantity' => 'Quantità',
+	'datatypes-type-quantity' => 'Quantità', # Fuzzy
 	'datatypes-type-monolingual-text' => 'test monolenga',
 	'datatypes-type-multilingual-text' => 'test multilenga',
 	'datatypes-type-number' => 'Nùmer',
 	'datatypes-type-mediawiki-title' => 'Tìtol MediaWiki',
 	'datatypes-type-unknown' => 'Pa specificà',
 	'datatypes-type-boolean' => 'Boolean',
-	'datatypes-type-globe-coordinate' => 'Coordinà geogràfica',
+	'datatypes-type-globe-coordinate' => 'Coordinà geogràfica', # Fuzzy
 );
 
 /** Pashto (پښتو)
@@ -865,14 +868,14 @@ $messages['ps'] = array(
 $messages['pt'] = array(
 	'datatypes-desc' => 'Coleção de definições de tipos de dados',
 	'datatypes-type-string' => 'String',
-	'datatypes-type-quantity' => 'Quantidade',
+	'datatypes-type-quantity' => 'Quantidade', # Fuzzy
 	'datatypes-type-monolingual-text' => 'Texto monolingue',
 	'datatypes-type-multilingual-text' => 'Texto multilíngua',
 	'datatypes-type-number' => 'Número',
 	'datatypes-type-mediawiki-title' => 'Título do MediaWiki',
 	'datatypes-type-unknown' => 'Não Especificado',
 	'datatypes-type-boolean' => 'Booleano',
-	'datatypes-type-globe-coordinate' => 'Coordenada geográfica',
+	'datatypes-type-globe-coordinate' => 'Coordenada geográfica', # Fuzzy
 	'datatypes-type-time' => 'Tempo',
 );
 
@@ -919,14 +922,14 @@ $messages['ro'] = array(
 $messages['roa-tara'] = array(
 	'datatypes-desc' => 'Raccolte de definiziune de tipe de date',
 	'datatypes-type-string' => 'Stringhe',
-	'datatypes-type-quantity' => 'Quantitate',
+	'datatypes-type-quantity' => 'Quantitate', # Fuzzy
 	'datatypes-type-monolingual-text' => "Teste cu 'na lènghe",
 	'datatypes-type-multilingual-text' => 'Teste cu cchiù lènghe',
 	'datatypes-type-number' => 'Numere',
 	'datatypes-type-mediawiki-title' => 'Titole de MediaUicchi',
 	'datatypes-type-unknown' => 'Non specificate',
 	'datatypes-type-boolean' => 'Buleane',
-	'datatypes-type-globe-coordinate' => 'Coordinate sciugrafeche',
+	'datatypes-type-globe-coordinate' => 'Coordinate sciugrafeche', # Fuzzy
 	'datatypes-type-time' => 'Orarie',
 );
 
@@ -954,21 +957,21 @@ $messages['ru'] = array(
 $messages['si'] = array(
 	'datatypes-desc' => 'දත්ත වර්ග නිර්වචනවල එකතුවක්',
 	'datatypes-type-string' => 'තන්තුව',
-	'datatypes-type-quantity' => 'ප්‍රමාණය',
+	'datatypes-type-quantity' => 'ප්‍රමාණය', # Fuzzy
 	'datatypes-type-monolingual-text' => 'ඒකාශ්මය පාඨය',
 	'datatypes-type-multilingual-text' => 'බහු භාෂා පාඨය',
 	'datatypes-type-number' => 'අංකය',
 	'datatypes-type-mediawiki-title' => 'මාධ්‍යවිකි ශීර්ෂය',
 	'datatypes-type-unknown' => 'විශේෂණය නොකෙරූ',
 	'datatypes-type-boolean' => 'බූලියන්',
-	'datatypes-type-globe-coordinate' => 'භූගෝලීය ඛණ්ඩාංකය',
+	'datatypes-type-globe-coordinate' => 'භූගෝලීය ඛණ්ඩාංකය', # Fuzzy
 );
 
 /** Somali (Soomaaliga)
  * @author Abshirdheere
  */
 $messages['so'] = array(
-	'datatypes-type-quantity' => 'Tayo',
+	'datatypes-type-quantity' => 'Tayo', # Fuzzy
 	'datatypes-type-number' => 'Tiro',
 );
 
@@ -977,7 +980,7 @@ $messages['so'] = array(
  */
 $messages['sr-ec'] = array(
 	'datatypes-type-string' => 'Ниска',
-	'datatypes-type-quantity' => 'Количина',
+	'datatypes-type-quantity' => 'Количина', # Fuzzy
 	'datatypes-type-monolingual-text' => 'Једнојезички текст',
 	'datatypes-type-multilingual-text' => 'Вишејезички текст',
 );
@@ -1006,7 +1009,7 @@ $messages['sv'] = array(
  * @author Shanmugamp7
  */
 $messages['ta'] = array(
-	'datatypes-type-quantity' => 'அளவு',
+	'datatypes-type-quantity' => 'அளவு', # Fuzzy
 	'datatypes-type-monolingual-text' => 'ஒரு மொழி உரை',
 	'datatypes-type-multilingual-text' => 'பன்மொழி உரை',
 	'datatypes-type-number' => 'எண்',
@@ -1019,7 +1022,7 @@ $messages['ta'] = array(
  */
 $messages['te'] = array(
 	'datatypes-type-string' => 'పదబంధం',
-	'datatypes-type-quantity' => 'రాశి',
+	'datatypes-type-quantity' => 'రాశి', # Fuzzy
 	'datatypes-type-monolingual-text' => 'ఏకభాషా పాఠ్యం',
 	'datatypes-type-multilingual-text' => 'పలు భాషల పాఠ్యం',
 	'datatypes-type-number' => 'సంఖ్య',
@@ -1032,7 +1035,7 @@ $messages['te'] = array(
  */
 $messages['ug-arab'] = array(
 	'datatypes-type-string' => 'تېكىست',
-	'datatypes-type-quantity' => 'سانى',
+	'datatypes-type-quantity' => 'سانى', # Fuzzy
 	'datatypes-type-number' => 'نومۇرى',
 	'datatypes-type-unknown' => 'بەلگىلەنمىگەن',
 	'datatypes-type-boolean' => 'بۇلىن',
@@ -1105,6 +1108,6 @@ $messages['zh-hant'] = array(
 	'datatypes-type-mediawiki-title' => 'MediaWiki 標題',
 	'datatypes-type-unknown' => '未指定',
 	'datatypes-type-boolean' => '布爾',
-	'datatypes-type-globe-coordinate' => '地理座標',
+	'datatypes-type-globe-coordinate' => '地理座標', # Fuzzy
 	'datatypes-type-time' => '時間',
 );
