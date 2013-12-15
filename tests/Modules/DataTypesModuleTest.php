@@ -8,14 +8,6 @@ use DataTypes\Modules\DataTypesModule;
 /**
  * @covers DataTypes\Modules\DataTypesModule
  *
- * @file
- * @since 0.1
- *
- * @ingroup DataTypesTest
- *
- * @group DataTypes
- * @group DataValueExtensions
- *
  * @licence GNU GPL v2+
  * @author Daniel Werner < daniel.werner@wikimedia.de >
  */

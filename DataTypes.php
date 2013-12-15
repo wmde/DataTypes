@@ -18,8 +18,7 @@ if ( defined( 'DataTypes_VERSION' ) ) {
 
 define( 'DataTypes_VERSION', '0.1' );
 
-global $wgDataTypes;
-$wgDataTypes = array(
+$GLOBALS['wgDataTypes'] = array(
 	'commonsMedia' => array(
 		'datavalue' => 'string',
 	),

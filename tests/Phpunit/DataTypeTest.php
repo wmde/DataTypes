@@ -8,14 +8,6 @@ use DataTypes\DataTypeFactory;
 /**
  * @covers DataTypes\DataType
  *
- * @file
- * @since 0.1
- *
- * @ingroup DataTypesTest
- *
- * @group DataTypes
- * @group DataValueExtensions
- *
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
