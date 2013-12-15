@@ -50,7 +50,7 @@ for the [Wikidata project](https://wikidata.org/).
 
 ## Release notes
 
-### 0.1 (under development)
+### 0.1 (2013-12-15)
 
 Initial release.
 
@@ -58,6 +58,5 @@ Initial release.
 
 * [DataTypes on Packagist](https://packagist.org/packages/data-values/data-types)
 * [DataTypes on Ohloh](https://www.ohloh.net/p/DataTypesPHP)
-* [DataTypes on MediaWiki.org](https://www.mediawiki.org/wiki/Extension:DataTypes)
 * [TravisCI build status](https://travis-ci.org/wmde/DataTypes)
-* [Latest version of the readme file](https://github.com/wmde/DataTypes/blob/master/README.md)
+* [DataTypes on ScrutinizerCI](https://scrutinizer-ci.com/g/wmde/DataTypes/)

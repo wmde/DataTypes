@@ -16,7 +16,7 @@ if ( defined( 'DataTypes_VERSION' ) ) {
 	return 1;
 }
 
-define( 'DataTypes_VERSION', '0.1 alpha' );
+define( 'DataTypes_VERSION', '0.1' );
 
 global $wgDataTypes;
 $wgDataTypes = array(
