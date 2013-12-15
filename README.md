@@ -4,7 +4,7 @@ PHP library defining the DataTypes\DataType class of which instances represent a
 such as "positive integer" or "percentage".
 
 [![Build Status](https://secure.travis-ci.org/wmde/DataTypes.png?branch=master)](http://travis-ci.org/wmde/DataTypes)
-[![Dependency Status](https://www.versioneye.com/package/php--data-values--data-types/badge.png)](https://www.versioneye.com/package/php--data-values--data-types)
+[![Dependency Status](https://www.versioneye.com/php/data-values:data-types/dev-master/badge.png)](https://www.versioneye.com/php/data-values:data-types/dev-master)
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/wmde/DataTypes/badges/quality-score.png?s=2405ce60c089e7454598ae50e235f001b68bd5cb)](https://scrutinizer-ci.com/g/wmde/DataTypes/)
 
 On [Packagist](https://packagist.org/packages/data-values/data-types):
