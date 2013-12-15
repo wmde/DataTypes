@@ -1,12 +1,8 @@
 <?php
+
 /**
  * Definition of 'DataTypes' resourceloader modules.
  * When included this returns an array with all modules introduced by the 'DataTypes' extension.
- *
- * @since 0.1
- *
- * @file
- * @ingroup DataTypes
  *
  * @licence GNU GPL v2+
  * @author Daniel Werner < daniel.werner@wikimedia.de >

@@ -1,12 +1,7 @@
 <?php
 
 /**
- * Internationalization file for the DataTypes extension.
- *
- * @since 0.1
- *
- * @file
- * @ingroup DataTypes
+ * Internationalization file for the DataTypes library.
  *
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
