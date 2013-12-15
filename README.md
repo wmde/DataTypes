@@ -3,8 +3,8 @@
 PHP library defining the DataTypes\DataType class of which instances represent a type of value,
 such as "positive integer" or "percentage".
 
-[![Build Status](https://secure.travis-ci.org/wikimedia/mediawiki-extensions-DataTypes.png?branch=master)](http://travis-ci.org/wikimedia/mediawiki-extensions-DataTypes)
-[![Coverage Status](https://coveralls.io/repos/wikimedia/mediawiki-extensions-DataTypes/badge.png?branch=master)](https://coveralls.io/r/wikimedia/mediawiki-extensions-DataTypes?branch=master)
+[![Build Status](https://secure.travis-ci.org/wmde/DataTypes.png?branch=master)](http://travis-ci.org/wmde/DataTypes)
+[![Coverage Status](https://coveralls.io/repos/wmde/DataTypes/badge.png?branch=master)](https://coveralls.io/r/wmde/DataTypes?branch=master)
 [![Dependency Status](https://www.versioneye.com/package/php--data-values--data-types/badge.png)](https://www.versioneye.com/package/php--data-values--data-types)
 
 On [Packagist](https://packagist.org/packages/data-values/data-types):
@@ -59,5 +59,5 @@ Initial release.
 * [DataTypes on Packagist](https://packagist.org/packages/data-values/data-types)
 * [DataTypes on Ohloh](https://www.ohloh.net/p/DataTypesPHP)
 * [DataTypes on MediaWiki.org](https://www.mediawiki.org/wiki/Extension:DataTypes)
-* [TravisCI build status](https://travis-ci.org/wikimedia/mediawiki-extensions-DataTypes)
-* [Latest version of the readme file](https://github.com/wikimedia/mediawiki-extensions-DataTypes/blob/master/README.md)
+* [TravisCI build status](https://travis-ci.org/wmde/DataTypes)
+* [Latest version of the readme file](https://github.com/wmde/DataTypes/blob/master/README.md)
