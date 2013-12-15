@@ -16,11 +16,6 @@ use ResourceLoaderModule;
  * - (Function|DataTypeFactory) datatypefactory: Provider for the data types. Can be a callback
  *   returning a DataTypeFactory instance.
  *
- * @since 0.1
- *
- * @file
- * @ingroup Wikibase
- *
  * @licence GNU GPL v2+
  * @author Daniel Werner < daniel.werner@wikimedia.de >
  */

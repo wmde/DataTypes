@@ -1,12 +1,7 @@
 <?php
 
 /**
- * MediaWiki setup for the DataTypes extension.
- *
- * @since 0.1
- *
- * @file
- * @ingroup DataTypes
+ * MediaWiki setup for the DataTypes library.
  *
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
@@ -18,9 +13,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
-global $wgExtensionCredits, $wgExtensionMessagesFiles, $wgHooks, $wgResourceModules;
-
-$wgExtensionCredits['datavalues'][] = array(
+$GLOBALS['wgExtensionCredits']['datavalues'][] = array(
 	'path' => __DIR__,
 	'name' => 'DataTypes',
 	'version' => DataTypes_VERSION,
@@ -33,38 +26,7 @@ $wgExtensionCredits['datavalues'][] = array(
 	'descriptionmsg' => 'datatypes-desc',
 );
 
-$wgExtensionMessagesFiles['DataTypes'] = __DIR__ . '/DataTypes.i18n.php';
-
-if ( defined( 'MW_PHPUNIT_TEST' ) ) {
-	require_once __DIR__ . '/tests/testLoader.php';
-}
-
-/**
- * Hook to add PHPUnit test cases.
- * @see https://www.mediawiki.org/wiki/Manual:Hooks/UnitTestsList
- *
- * @since 0.1
- *
- * @param array $files
- *
- * @return boolean
- */
-$wgHooks['UnitTestsList'][] = function( array &$files ) {
-	// @codeCoverageIgnoreStart
-	$directoryIterator = new \RecursiveDirectoryIterator( __DIR__ . '/tests/Phpunit/' );
-
-	/**
-	 * @var \SplFileInfo $fileInfo
-	 */
-	foreach ( new \RecursiveIteratorIterator( $directoryIterator ) as $fileInfo ) {
-		if ( substr( $fileInfo->getFilename(), -8 ) === 'Test.php' ) {
-			$files[] = $fileInfo->getPathname();
-		}
-	}
-
-	return true;
-	// @codeCoverageIgnoreEnd
-};
+$GLOBALS['wgExtensionMessagesFiles']['DataTypes'] = __DIR__ . '/DataTypes.i18n.php';
 
 Message::registerTextFunction( function() {
 	// @codeCoverageIgnoreStart
@@ -85,7 +47,7 @@ Message::registerTextFunction( function() {
  * @param \ResourceLoader &$resourceLoader
  * @return boolean
  */
-$wgHooks['ResourceLoaderTestModules'][] = function ( array &$testModules, \ResourceLoader &$resourceLoader ) {
+$GLOBALS['wgHooks']['ResourceLoaderTestModules'][] = function ( array &$testModules, \ResourceLoader &$resourceLoader ) {
 	$moduleTemplate = array(
 		'localBasePath' => __DIR__ . '/tests/qunit',
 		'remoteExtPath' => 'DataTypes/tests/qunit',
@@ -115,7 +77,7 @@ $wgHooks['ResourceLoaderTestModules'][] = function ( array &$testModules, \Resou
 };
 
 // Resource Loader module registration
-$wgResourceModules = array_merge(
-	$wgResourceModules,
+$GLOBALS['wgResourceModules'] = array_merge(
+	$GLOBALS['wgResourceModules'],
 	include( __DIR__ . '/DataTypes.resources.php' )
 );

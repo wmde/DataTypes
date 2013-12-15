@@ -11,12 +11,6 @@ On [Packagist](https://packagist.org/packages/data-values/data-types):
 [![Latest Stable Version](https://poser.pugx.org/data-values/data-types/version.png)](https://packagist.org/packages/data-values/data-types)
 [![Download count](https://poser.pugx.org/data-values/data-types/d/total.png)](https://packagist.org/packages/data-values/data-types)
 
-## Requirements
-
-* PHP 5.3 or later
-* [DataValues](https://www.mediawiki.org/wiki/Extension:DataValues) 0.1 or later
-* [DataValues](https://www.mediawiki.org/wiki/Extension:ValueValidators) 0.1 or later
-
 ## Installation
 
 You can use [Composer](http://getcomposer.org/) to download and install
