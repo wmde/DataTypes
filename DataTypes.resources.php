@@ -13,7 +13,7 @@ return call_user_func( function() {
 
 	$moduleTemplate = array(
 		'localBasePath' => __DIR__ . '/resources',
-		'remoteExtPath' =>  'DataTypes/resources',
+		'remoteExtPath' => '../vendor/data-values/data-types/resources',
 	);
 
 	return array(
