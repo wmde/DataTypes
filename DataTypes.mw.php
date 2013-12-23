@@ -50,7 +50,7 @@ Message::registerTextFunction( function() {
 $GLOBALS['wgHooks']['ResourceLoaderTestModules'][] = function ( array &$testModules, \ResourceLoader &$resourceLoader ) {
 	$moduleTemplate = array(
 		'localBasePath' => __DIR__ . '/tests/qunit',
-		'remoteExtPath' => 'DataTypes/tests/qunit',
+		'remoteExtPath' => '..' . substr( __DIR__, strlen( $GLOBALS['IP'] ) ) . '/tests/qunit',
 	);
 
 	$testModules['qunit']['dataTypes.tests'] = $moduleTemplate + array(
