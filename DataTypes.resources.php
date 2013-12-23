@@ -13,7 +13,7 @@ return call_user_func( function() {
 
 	$moduleTemplate = array(
 		'localBasePath' => __DIR__ . '/resources',
-		'remoteExtPath' => '../vendor/data-values/data-types/resources',
+		'remoteExtPath' => '..' . substr( __DIR__, strlen( $GLOBALS['IP'] ) ) . '/resources',
 	);
 
 	return array(
