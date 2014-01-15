@@ -2,8 +2,6 @@
  * QUnit tests for DataType construtor and instances.
  *
  * @since 0.1
- * @file
- * @ingroup DataTypes
  *
  * @licence GNU GPL v2+
  * @author Daniel Werner < daniel.werner@wikimedia.de >

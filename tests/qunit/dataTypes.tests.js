@@ -2,8 +2,6 @@
  * QUnit tests for DataTypes's dataType store/factory (global dataType object).
  *
  * @since 0.1
- * @file
- * @ingroup DataTypes
  *
  * @licence GNU GPL v2+
  * @author H. Snater < mediawiki@snater.com >
