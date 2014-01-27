@@ -48,9 +48,11 @@ Message::registerTextFunction( function() {
  * @return boolean
  */
 $GLOBALS['wgHooks']['ResourceLoaderTestModules'][] = function ( array &$testModules, \ResourceLoader &$resourceLoader ) {
+	$remoteExtPathParts = explode( DIRECTORY_SEPARATOR . 'extensions' . DIRECTORY_SEPARATOR , __DIR__, 2 );
+
 	$moduleTemplate = array(
 		'localBasePath' => __DIR__ . '/tests/qunit',
-		'remoteExtPath' => '..' . substr( __DIR__, strlen( $GLOBALS['IP'] ) ) . '/tests/qunit',
+		'remoteExtPath' => $remoteExtPathParts . '/tests/qunit',
 	);
 
 	$testModules['qunit']['dataTypes.tests'] = $moduleTemplate + array(
