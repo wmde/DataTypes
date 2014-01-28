@@ -52,7 +52,7 @@ $GLOBALS['wgHooks']['ResourceLoaderTestModules'][] = function ( array &$testModu
 
 	$moduleTemplate = array(
 		'localBasePath' => __DIR__ . '/tests/qunit',
-		'remoteExtPath' => $remoteExtPathParts . '/tests/qunit',
+		'remoteExtPath' => $remoteExtPathParts[1] . '/tests/qunit',
 	);
 
 	$testModules['qunit']['dataTypes.tests'] = $moduleTemplate + array(
