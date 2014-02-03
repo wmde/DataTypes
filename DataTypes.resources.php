@@ -1,16 +1,16 @@
 <?php
 
 /**
- * Definition of 'DataTypes' resourceloader modules.
- * When included this returns an array with all modules introduced by the 'DataTypes' extension.
+ * Definition of 'DataTypes' ResourceLoader modules.
  *
  * @licence GNU GPL v2+
  * @author Daniel Werner < daniel.werner@wikimedia.de >
+ * @author H. Snater < mediawiki@snater.com >
  *
  * @codeCoverageIgnoreStart
  */
 return call_user_func( function() {
-	$remoteExtPathParts = explode( DIRECTORY_SEPARATOR . 'extensions' . DIRECTORY_SEPARATOR , __DIR__, 2 );
+	$remoteExtPathParts = explode( DIRECTORY_SEPARATOR . 'extensions' . DIRECTORY_SEPARATOR, __DIR__, 2 );
 
 	$moduleTemplate = array(
 		'localBasePath' => __DIR__ . '/resources',
@@ -20,12 +20,7 @@ return call_user_func( function() {
 	return array(
 		'dataTypes' => $moduleTemplate + array(
 			'scripts' => 'dataTypes.js', // also contains dataType.DataType constructor
-			'dependencies' => array(
-				'dataValues.DataValue',
-				'valueParsers'
-			),
 		),
 	);
 
 } );
-// @codeCoverageIgnoreEnd

@@ -16,7 +16,7 @@ if ( defined( 'DataTypes_VERSION' ) ) {
 	return 1;
 }
 
-define( 'DataTypes_VERSION', '0.1.1' );
+define( 'DataTypes_VERSION', '0.2 alpha' );
 
 $GLOBALS['wgDataTypes'] = array(
 	'commonsMedia' => array(

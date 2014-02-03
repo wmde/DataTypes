@@ -1,28 +1,19 @@
 /**
- * QUnit tests for DataType construtor and instances.
- *
- * @since 0.1
- *
  * @licence GNU GPL v2+
  * @author Daniel Werner < daniel.werner@wikimedia.de >
  */
-
-( function( dt, dv, $, QUnit ) {
+( function( dt, $, QUnit ) {
 	'use strict';
 
 	var DataType = dt.DataType;
 
-	QUnit.module( 'dataTypes.DataType.tests' );
+	QUnit.module( 'dataTypes.DataType' );
 
 	var instanceDefinitions = [
 		{
 			title: 'simple DataType',
 			constructorParams: [ 'foo', 'string' ],
 			valueType: 'string'
-		}, {
-			title: 'DataType constructed with DataValue as 2nd argument',
-			constructorParams: [ 'bar', dv.BoolValue ],
-			valueType: dv.BoolValue.TYPE
 		}
 	];
 
@@ -91,4 +82,4 @@
 			);
 		} );
 
-}( dataTypes, dataValues, jQuery, QUnit ) );
+}( dataTypes, jQuery, QUnit ) );
