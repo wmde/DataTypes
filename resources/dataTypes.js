@@ -9,7 +9,7 @@
  * @since 0.1
  * @type Object
  */
-this.dataTypes = new ( function Dt( $, mw, DataValue ) {
+this.dataTypes = new ( function Dt( $ ) {
 	'use strict';
 
 	// TODO: the whole structure of this is a little weird, perhaps there should be a
@@ -25,25 +25,20 @@ this.dataTypes = new ( function Dt( $, mw, DataValue ) {
 	 * @abstract
 	 * @since 0.1
 	 *
-	 * @param {string} typeId
-	 * @param {string|Function} dataValueType Instead of a string, may be a DataValue constructor to
-	 *        extract the type string from.
+	 * @param {string} dataTypeId
+	 * @param {string} dataValueType
 	 */
-	var SELF = dt.DataType = function DtDataType( typeId, dataValueType/*, validators */ ) {
-		if( dataValueType && dataValueType.prototype instanceof DataValue ) {
-			dataValueType = dataValueType.TYPE;
-		}
-
+	var SELF = dt.DataType = function DtDataType( dataTypeId, dataValueType ) {
 		if( typeof dataValueType !== 'string' ) {
 			throw new Error( 'A data value type has to be given in form of a string or DataValue ' +
 				'constructor' );
 		}
 
-		if( !typeId || typeof typeId !== 'string' ) {
+		if( !dataTypeId || typeof dataTypeId !== 'string' ) {
 			throw new Error( 'A data type\'s ID has to be a string' );
 		}
 
-		this._typeId = typeId;
+		this._id = dataTypeId;
 		this._dataValueType = dataValueType;
 	};
 
@@ -53,7 +48,7 @@ this.dataTypes = new ( function Dt( $, mw, DataValue ) {
 		 * DataType identifier.
 		 * @type {string}
 		 */
-		_typeId: null,
+		_id: null,
 
 		/**
 		 * DataValue identifier.
@@ -65,31 +60,20 @@ this.dataTypes = new ( function Dt( $, mw, DataValue ) {
 		 * Returns the data type's identifier.
 		 * @since 0.1
 		 *
-		 * @return String
+		 * @return {string}
 		 */
 		getId: function() {
-			return this._typeId;
+			return this._id;
 		},
 
 		/**
 		 * Returns the DataValue used by this data type.
 		 * @since 0.1
 		 *
-		 * @return String
+		 * @return {string}
 		 */
 		getDataValueType: function() {
 			return this._dataValueType;
-		},
-
-		/**
-		 * Returns the label of data type.
-		 * @since 0.1
-		 *
-		 * @return String
-		 */
-		getLabel: function() {
-			// FIXME: Remove MediaWiki dependency:
-			return mw.message( 'datatypes-type-' + this.getId() );
 		}
 	} );
 
@@ -97,13 +81,13 @@ this.dataTypes = new ( function Dt( $, mw, DataValue ) {
 	 * Creates a new DataType object from a given JSON structure.
 	 * @since 0.1
 	 *
-	 * @param {String} typeId Data type id
-	 * @param {Object} json JSON structure containing data type info
-	 * @return {dt.DataType} DataType object
+	 * @param {string} dataTypeId
+	 * @param {Object} json
+	 * @return {dataTypes.DataType}
 	 */
-	SELF.newFromJSON = function( typeId, json ) {
+	SELF.newFromJSON = function( dataTypeId, json ) {
 		// TODO: Implement validators parameter:
-		return new SELF( typeId, json.dataValueType );
+		return new SELF( dataTypeId, json.dataValueType );
 	};
 
 
@@ -112,16 +96,12 @@ this.dataTypes = new ( function Dt( $, mw, DataValue ) {
 	 */
 	var dts = {};
 
-	$.each( mw.config.get( 'wbDataTypes' ) || {}, function( dtTypeId, dtDefinition ) {
-		dts[ dtTypeId ] = SELF.newFromJSON( dtTypeId, dtDefinition );
-	} );
-
 	/**
 	 * Returns the data type with a specific data type ID.
 	 * @since 0.1
 	 *
-	 * @param {String} dataTypeId
-	 * @return {dt.DataType|null} Null if the data type is not known.
+	 * @param {string} dataTypeId
+	 * @return {dataTypes.DataType|null} Null if the data type is not known.
 	 */
 	this.getDataType = function( dataTypeId ) {
 		if( !dataTypeId || typeof dataTypeId !== 'string' ) {
@@ -132,10 +112,9 @@ this.dataTypes = new ( function Dt( $, mw, DataValue ) {
 
 	/**
 	 * Returns the ids of the registered DataTypes.
-	 *
 	 * @since 0.1
 	 *
-	 * @return {String[]}
+	 * @return {string[]}
 	 */
 	this.getDataTypeIds = function() {
 		var keys = [];
@@ -153,21 +132,19 @@ this.dataTypes = new ( function Dt( $, mw, DataValue ) {
 	 * Returns if there is a DatType with the provided type.
 	 * @since 0.1
 	 *
-	 * @param {String} dataTypeId
-	 * @return {Boolean}
+	 * @param {string} dataTypeId
+	 * @return {boolean}
 	 */
 	this.hasDataType = function( dataTypeId ) {
 		return ( dts[dataTypeId] !== undefined );
 	};
 
 	/**
-	 * Registers a new data type.
-	 * If there is a data type with the same id, it will be overridden with the provided one.
-	 * // TODO/FIXME: not sure this behavior is a good idea
-	 *
+	 * Registers a new data type. A data type already registered for the id of the new data type
+	 * will be overwritten.
 	 * @since 0.1
 	 *
-	 * @param {dt.DataType} dataType
+	 * @param {dataTypes.DataType} dataType
 	 */
 	this.registerDataType = function( dataType ) {
 		if( !( dataType instanceof this.DataType ) ) {
@@ -176,5 +153,5 @@ this.dataTypes = new ( function Dt( $, mw, DataValue ) {
 		dts[ dataType.getId() ] = dataType;
 	};
 
-} )( jQuery, mediaWiki, dataValues.DataValue );
+} )( jQuery );
 

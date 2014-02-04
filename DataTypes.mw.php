@@ -70,7 +70,6 @@ $GLOBALS['wgHooks']['ResourceLoaderTestModules'][] = function ( array &$testModu
 		),
 		'dependencies' => array(
 			'dataTypes',
-			'dataValues.values',
 			'qunit.parameterize',
 		),
 	);

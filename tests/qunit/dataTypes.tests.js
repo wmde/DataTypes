@@ -1,16 +1,11 @@
 /**
- * QUnit tests for DataTypes's dataType store/factory (global dataType object).
- *
- * @since 0.1
- *
  * @licence GNU GPL v2+
  * @author H. Snater < mediawiki@snater.com >
  */
-
-( function( dt, dv, $, QUnit ) {
+( function( dt, $, QUnit ) {
 	'use strict';
 
-	QUnit.module( 'dataTypes.tests' );
+	QUnit.module( 'dataTypes' );
 
 	QUnit.test( 'Test initializing a DataType object', function( assert ) {
 		// create new data type for testing and register it:
@@ -35,4 +30,4 @@
 		);
 	} );
 
-}( dataTypes, dataValues, jQuery, QUnit ) );
+}( dataTypes, jQuery, QUnit ) );

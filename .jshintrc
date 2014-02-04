@@ -28,11 +28,8 @@
 
 	// Globals
 	"predef": [
-		"dataValues",
 		"dataTypes",
 		"jQuery",
-		"QUnit",
-		// TODO: Get rid of global mediaWiki dependency:
-		"mediaWiki", "mw"
+		"QUnit"
 	]
 }

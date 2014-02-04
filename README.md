@@ -50,6 +50,17 @@ for the [Wikidata project](https://wikidata.org/).
 
 ## Release notes
 
+### 0.2 (dev)
+
+#### Breaking changes
+
+* dataTypes.DataType JavaScript object may not be initialized providing a dataValues.DataValue object anymore.
+* Removed dataTypes.DataType.getLabel().
+
+#### Enhancements
+
+* Removed MediaWiki and DataValues dependencies from JavaScript code.
+
 ### 0.1.1 (2013-12-23)
 
 * Remove assumption about where the extension is installed in the resource loading paths.
