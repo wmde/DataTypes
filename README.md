@@ -22,11 +22,11 @@ the git repository and take care of loading yourself.
 To add this package as a local, per-project dependency to your project, simply add a
 dependency on `data-values/data-types` to your project's `composer.json` file.
 Here is a minimal example of a `composer.json` file that just defines a dependency on
-DataTypes 1.0:
+DataTypes 0.1.0:
 
     {
         "require": {
-            "data-values/data-types": "1.0.*"
+            "data-values/data-types": "0.1.*"
         }
     }
 
