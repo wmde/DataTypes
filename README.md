@@ -50,6 +50,10 @@ for the [Wikidata project](https://wikidata.org/).
 
 ## Release notes
 
+### 0.1.2 (2014-02-18)
+
+* Fixes to resource loader path registration
+
 ### 0.1.1 (2013-12-23)
 
 * Remove assumption about where the extension is installed in the resource loading paths.
