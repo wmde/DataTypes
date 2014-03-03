@@ -60,6 +60,7 @@ for the [Wikidata project](https://wikidata.org/).
 #### Enhancements
 
 * Removed MediaWiki and DataValues dependencies from JavaScript code.
+* Made code PSR-4 compliant
 
 ### 0.1.1 (2013-12-23)
 
