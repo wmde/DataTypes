@@ -28,7 +28,7 @@
 		"files" : [
 			"DataTypes.php"
 		],
-		"psr-0": {
+		"psr-4": {
 			"DataTypes\\": "src/"
 		}
 	}
