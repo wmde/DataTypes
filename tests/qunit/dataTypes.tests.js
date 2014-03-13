@@ -2,7 +2,7 @@
  * @licence GNU GPL v2+
  * @author H. Snater < mediawiki@snater.com >
  */
-( function( dt, $, QUnit ) {
+define( ['qunit', 'jquery', 'dataTypes/dataTypes'], function( QUnit, $, dt ) {
 	'use strict';
 
 	QUnit.module( 'dataTypes' );
@@ -30,4 +30,4 @@
 		);
 	} );
 
-}( dataTypes, jQuery, QUnit ) );
+} );

@@ -38,45 +38,6 @@ Message::registerTextFunction( function() {
 	// @codeCoverageIgnoreEnd
 } );
 
-/**
- * Hook to add QUnit test cases.
- * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderTestModules
- * @since 0.1
- *
- * @param array &$testModules
- * @param \ResourceLoader &$resourceLoader
- * @return boolean
- */
-$GLOBALS['wgHooks']['ResourceLoaderTestModules'][] = function ( array &$testModules, \ResourceLoader &$resourceLoader ) {
-	$remoteExtPathParts = explode( DIRECTORY_SEPARATOR . 'extensions' . DIRECTORY_SEPARATOR , __DIR__, 2 );
-
-	$moduleTemplate = array(
-		'localBasePath' => __DIR__ . '/tests/qunit',
-		'remoteExtPath' => $remoteExtPathParts[1] . '/tests/qunit',
-	);
-
-	$testModules['qunit']['dataTypes.tests'] = $moduleTemplate + array(
-		'scripts' => array(
-			'dataTypes.tests.js',
-		),
-		'dependencies' => array(
-			'dataTypes',
-		),
-	);
-
-	$testModules['qunit']['dataTypes.DataType.tests'] = $moduleTemplate + array(
-		'scripts' => array(
-			'dataTypes.DataType.tests.js',
-		),
-		'dependencies' => array(
-			'dataTypes',
-			'qunit.parameterize',
-		),
-	);
-
-	return true;
-};
-
 // Resource Loader module registration
 $GLOBALS['wgResourceModules'] = array_merge(
 	$GLOBALS['wgResourceModules'],

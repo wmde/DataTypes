@@ -1,12 +1,22 @@
 language: php
 
+env:
+  - QUNIT=false
+
 php:
   - 5.3
   - 5.4
   - 5.5
 
+matrix:
+  include:
+    - php: 5.5
+      env: QUNIT=true
+
 before_script:
   - composer install --prefer-source
+
+script: bash ./build/travis/script.sh
 
 notifications:
   email:

@@ -2,7 +2,7 @@
  * @licence GNU GPL v2+
  * @author Daniel Werner < daniel.werner@wikimedia.de >
  */
-( function( dt, $, QUnit ) {
+define( ['qunit', 'jquery', 'dataTypes/dataTypes', 'qunit.parameterize'], function( QUnit, $, dt ) {
 	'use strict';
 
 	var DataType = dt.DataType;
@@ -82,4 +82,4 @@
 			);
 		} );
 
-}( dataTypes, jQuery, QUnit ) );
+} );

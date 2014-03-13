@@ -61,6 +61,7 @@ for the [Wikidata project](https://wikidata.org/).
 
 * Removed MediaWiki and DataValues dependencies from JavaScript code.
 * Made code PSR-4 compliant
+* Removed ResourceLoader dependency of QUnit tests.
 
 ### 0.1.1 (2013-12-23)
 

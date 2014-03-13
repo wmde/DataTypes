@@ -30,6 +30,10 @@
 	"predef": [
 		"dataTypes",
 		"jQuery",
-		"QUnit"
+		"QUnit",
+		// require.js globals:
+		"require",
+		"requirejs",
+		"define"
 	]
 }
