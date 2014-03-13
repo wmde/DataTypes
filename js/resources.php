@@ -15,13 +15,20 @@ return call_user_func( function() {
 	);
 
 	$moduleTemplate = array(
-		'localBasePath' => __DIR__ . '/js',
-		'remoteExtPath' => $remoteExtPathParts[1] . '/js',
+		'localBasePath' => __DIR__,
+		'remoteExtPath' => $remoteExtPathParts[1],
 	);
 
 	return array(
-		'dataTypes' => $moduleTemplate + array(
-			'scripts' => 'dataTypes.js', // also contains dataType.DataType constructor
+		'dataTypes.DataType' => $moduleTemplate + array(
+			'scripts' => 'dataTypes/DataType.js',
+		),
+
+		'dataTypes.DataTypeStore' => $moduleTemplate + array(
+			'scripts' => 'dataTypes/DataTypeStore.js',
+		),
+		'dependencies' => array(
+			'dataTypes.DataType',
 		),
 	);
 

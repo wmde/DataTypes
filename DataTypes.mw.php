@@ -41,5 +41,5 @@ Message::registerTextFunction( function() {
 // Resource Loader module registration
 $GLOBALS['wgResourceModules'] = array_merge(
 	$GLOBALS['wgResourceModules'],
-	include( __DIR__ . '/DataTypes.resources.php' )
+	include( __DIR__ . '/js/resources.php' )
 );

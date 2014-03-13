@@ -56,12 +56,15 @@ for the [Wikidata project](https://wikidata.org/).
 
 * dataTypes.DataType JavaScript object may not be initialized providing a dataValues.DataValue object anymore.
 * Removed dataTypes.DataType.getLabel().
+* Removed global DataType registration in the dataTypes object; DataTypeStore is to be used instead.
+* Split up generic "dataTypes" ResourceLoader module into "dataTypes.DataType" and "dataTypes.DataTypeStore".
 
 #### Enhancements
 
 * Removed MediaWiki and DataValues dependencies from JavaScript code.
 * Made code PSR-4 compliant
 * Removed ResourceLoader dependency of QUnit tests.
+* Implemented DataTypeStore.
 
 ### 0.1.1 (2013-12-23)
 
