@@ -10,7 +10,7 @@ php:
 
 matrix:
   include:
-    - php: 5.5
+    - php: 5.3
       env: QUNIT=true
 
 before_script:
@@ -24,8 +24,6 @@ notifications:
       - jeroendedauw@gmail.com
     on_success: change
     on_failure: always
-
-notifications:
   irc:
     channels:
       - "chat.freenode.net#wikidata"
