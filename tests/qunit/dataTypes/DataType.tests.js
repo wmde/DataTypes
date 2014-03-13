@@ -2,7 +2,7 @@
  * @licence GNU GPL v2+
  * @author Daniel Werner < daniel.werner@wikimedia.de >
  */
-define( ['qunit', 'jquery', 'dataTypes/dataTypes', 'qunit.parameterize'], function( QUnit, $, dt ) {
+define( ['qunit', 'jquery', 'dataTypes/DataType', 'qunit.parameterize'], function( QUnit, $, dt ) {
 	'use strict';
 
 	var DataType = dt.DataType;
@@ -73,7 +73,7 @@ define( ['qunit', 'jquery', 'dataTypes/dataTypes', 'qunit.parameterize'], functi
 			constructorParams: [ null, 'xxx' ]
 		}
 	] )
-		.test( 'invalid construtor arguments', function( params, assert ) {
+		.test( 'invalid constructor arguments', function( params, assert ) {
 			assert.throws(
 				function() {
 					instanceFromDefinition( params );

@@ -14,7 +14,7 @@ this.config = ( function() {
 			jquery: 'js/lib/jquery/jquery',
 			qunit: 'js/lib/qunit/qunit',
 			'qunit.parameterize': 'js/lib/qunit.parameterize/qunit.parameterize',
-			dataTypes: 'js'
+			dataTypes: 'js/dataTypes'
 		},
 		shim: {
 			qunit: {
@@ -30,14 +30,19 @@ this.config = ( function() {
 				deps: ['qunit']
 			},
 
-			'dataTypes/dataTypes': {
+			'dataTypes/DataType': {
 				exports: 'dataTypes',
-				deps: ['jquery']
+				deps: ['jquery', 'qunit.parameterize']
+			},
+
+			'dataTypes/DataTypeStore': {
+				exports: 'dataTypes',
+				deps: ['jquery', 'dataTypes/DataType']
 			}
 		},
 		tests: [
-			'tests/qunit/dataTypes.DataType.tests',
-			'tests/qunit/dataTypes.tests'
+			'tests/qunit/dataTypes/DataType.tests',
+			'tests/qunit/dataTypes/DataTypeStore.tests'
 		]
 	};
 
