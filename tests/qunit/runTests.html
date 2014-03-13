@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>QUnit tests</title>
+	<link rel="stylesheet" href="../../js/lib/qunit/qunit.css">
+</head>
+<body>
+<div id="qunit"></div><div id="qunit-fixture"></div>
+<script src="../../js/config.js"></script>
+<script src="../../js/lib/TestRunner/TestRunner.js"></script>
+<script src="../../js/lib/require/require.js"></script>
+<script>
+( function( window, require, TestRunner, config ) {
+	config.baseUrl = '../..';
+
+	require.config( config );
+
+	if( location.search.split( '=' ).length > 1 ) {
+		require( TestRunner.filterTestModules( config.tests ), function() {
+			QUnit.load();
+			QUnit.start();
+		} );
+
+	} else {
+		window.onload = function() {
+
+			var testRunner = new TestRunner( {
+				queue: config.tests
+			} );
+
+			testRunner.start();
+		};
+	}
+}( window, require, TestRunner, config ) );
+</script>
+</body>
+</html>
