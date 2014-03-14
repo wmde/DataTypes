@@ -50,7 +50,7 @@ for the [Wikidata project](https://wikidata.org/).
 
 ## Release notes
 
-### 0.2 (dev)
+### 0.2 (2014-03-14)
 
 #### Breaking changes
 
