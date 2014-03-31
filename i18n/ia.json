@@ -1,0 +1,18 @@
+{
+    "@metadata": {
+        "authors": [
+            "McDutchie"
+        ]
+    },
+    "datatypes-desc": "Collection de definitiones de typos de datos",
+    "datatypes-type-string": "Catena de characteres",
+    "datatypes-type-quantity": "Quantitate",
+    "datatypes-type-monolingual-text": "Texto monolingue",
+    "datatypes-type-multilingual-text": "Texto multilingue",
+    "datatypes-type-number": "Numero",
+    "datatypes-type-mediawiki-title": "Titulo de MediaWiki",
+    "datatypes-type-unknown": "Non specificate",
+    "datatypes-type-boolean": "Boolean",
+    "datatypes-type-globe-coordinate": "Coordinatas geographic",
+    "datatypes-type-time": "Hora"
+}

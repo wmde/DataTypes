@@ -1,0 +1,17 @@
+{
+    "@metadata": {
+        "authors": [
+            "Njardarlogar"
+        ]
+    },
+    "datatypes-desc": "Samling av definisjonar på datatypar",
+    "datatypes-type-string": "Streng",
+    "datatypes-type-quantity": "Kvantitet",
+    "datatypes-type-monolingual-text": "Eittspråkleg tekst",
+    "datatypes-type-multilingual-text": "Mangspråkleg tekst",
+    "datatypes-type-number": "Tal",
+    "datatypes-type-mediawiki-title": "MediaWiki-tittel",
+    "datatypes-type-unknown": "Uspesifisert",
+    "datatypes-type-boolean": "Boolsk",
+    "datatypes-type-globe-coordinate": "Geografisk koordinat"
+}

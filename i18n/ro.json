@@ -1,0 +1,20 @@
+{
+    "@metadata": {
+        "authors": [
+            "Firilacroco",
+            "Minisarm",
+            "Stelistcristi"
+        ]
+    },
+    "datatypes-desc": "Colecție cu definiții pentru tipuri de date",
+    "datatypes-type-string": "Șir",
+    "datatypes-type-quantity": "Cantitate",
+    "datatypes-type-monolingual-text": "Text monolingv",
+    "datatypes-type-multilingual-text": "Text multilingvistic",
+    "datatypes-type-number": "Număr",
+    "datatypes-type-mediawiki-title": "Titlu MediaWiki",
+    "datatypes-type-unknown": "Nespecificat",
+    "datatypes-type-boolean": "Adevărat/fals",
+    "datatypes-type-globe-coordinate": "Coordonate geografice",
+    "datatypes-type-time": "Timp"
+}

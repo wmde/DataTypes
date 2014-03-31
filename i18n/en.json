@@ -1,0 +1,18 @@
+{
+    "@metadata": {
+        "authors": [
+            "Jeroen De Dauw"
+        ]
+    },
+    "datatypes-desc": "Collection of data type definitions",
+    "datatypes-type-string": "String",
+    "datatypes-type-quantity": "Quantity",
+    "datatypes-type-monolingual-text": "Monolingual text",
+    "datatypes-type-multilingual-text": "Multilingual text",
+    "datatypes-type-number": "Number",
+    "datatypes-type-mediawiki-title": "MediaWiki title",
+    "datatypes-type-unknown": "Unspecified",
+    "datatypes-type-boolean": "Boolean",
+    "datatypes-type-globe-coordinate": "Geographic coordinates",
+    "datatypes-type-time": "Time"
+}

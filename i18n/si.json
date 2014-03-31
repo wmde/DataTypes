@@ -1,0 +1,17 @@
+{
+    "@metadata": {
+        "authors": [
+            "පසිඳු කාවින්ද"
+        ]
+    },
+    "datatypes-desc": "දත්ත වර්ග නිර්වචනවල එකතුවක්",
+    "datatypes-type-string": "තන්තුව",
+    "datatypes-type-quantity": "ප්‍රමාණය",
+    "datatypes-type-monolingual-text": "ඒකාශ්මය පාඨය",
+    "datatypes-type-multilingual-text": "බහු භාෂා පාඨය",
+    "datatypes-type-number": "අංකය",
+    "datatypes-type-mediawiki-title": "මාධ්‍යවිකි ශීර්ෂය",
+    "datatypes-type-unknown": "විශේෂණය නොකෙරූ",
+    "datatypes-type-boolean": "බූලියන්",
+    "datatypes-type-globe-coordinate": "භූගෝලීය ඛණ්ඩාංකය"
+}

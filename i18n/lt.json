@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "Eitvys200"
+        ]
+    },
+    "datatypes-type-quantity": "Kiekis",
+    "datatypes-type-number": "Numeris",
+    "datatypes-type-mediawiki-title": "MediaWiki pavadinimas",
+    "datatypes-type-unknown": "Nenurodyta",
+    "datatypes-type-time": "Laikas"
+}

@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "Shanmugamp7"
+        ]
+    },
+    "datatypes-type-quantity": "அளவு",
+    "datatypes-type-monolingual-text": "ஒரு மொழி உரை",
+    "datatypes-type-multilingual-text": "பன்மொழி உரை",
+    "datatypes-type-number": "எண்",
+    "datatypes-type-mediawiki-title": "மீடியாவிக்கி தலைப்பு",
+    "datatypes-type-unknown": "குறிப்பிடப்படவில்லை"
+}

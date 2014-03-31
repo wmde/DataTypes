@@ -1,0 +1,18 @@
+{
+    "@metadata": {
+        "authors": [
+            "Toliño"
+        ]
+    },
+    "datatypes-desc": "Colección de definicións de tipos de datos",
+    "datatypes-type-string": "Cadea de caracteres",
+    "datatypes-type-quantity": "Cantidade",
+    "datatypes-type-monolingual-text": "Texto monolingüe",
+    "datatypes-type-multilingual-text": "Texto multilingüe",
+    "datatypes-type-number": "Número",
+    "datatypes-type-mediawiki-title": "Título de MediaWiki",
+    "datatypes-type-unknown": "Non especificado",
+    "datatypes-type-boolean": "Booleano",
+    "datatypes-type-globe-coordinate": "Coordenadas xeográficas",
+    "datatypes-type-time": "Hora"
+}

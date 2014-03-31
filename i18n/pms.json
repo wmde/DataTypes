@@ -1,0 +1,17 @@
+{
+    "@metadata": {
+        "authors": [
+            "Dragonòt"
+        ]
+    },
+    "datatypes-desc": "Colession ëd definission ëd sòrt ëd dat",
+    "datatypes-type-string": "Stringa",
+    "datatypes-type-quantity": "Quantità",
+    "datatypes-type-monolingual-text": "test monolenga",
+    "datatypes-type-multilingual-text": "test multilenga",
+    "datatypes-type-number": "Nùmer",
+    "datatypes-type-mediawiki-title": "Tìtol MediaWiki",
+    "datatypes-type-unknown": "Pa specificà",
+    "datatypes-type-boolean": "Boolean",
+    "datatypes-type-globe-coordinate": "Coordinà geogràfica"
+}

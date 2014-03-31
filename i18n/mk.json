@@ -1,0 +1,18 @@
+{
+    "@metadata": {
+        "authors": [
+            "Bjankuloski06"
+        ]
+    },
+    "datatypes-desc": "Збир дефиниции на податочни типови",
+    "datatypes-type-string": "Низа",
+    "datatypes-type-quantity": "Количина",
+    "datatypes-type-monolingual-text": "Еднојазичен текст",
+    "datatypes-type-multilingual-text": "Повеќејазичен текст",
+    "datatypes-type-number": "Број",
+    "datatypes-type-mediawiki-title": "МедијаВики-наслов",
+    "datatypes-type-unknown": "Неукажано",
+    "datatypes-type-boolean": "Булов",
+    "datatypes-type-globe-coordinate": "Географски координати",
+    "datatypes-type-time": "Време"
+}

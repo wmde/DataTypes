@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "ChrisPtDe"
+        ]
+    },
+    "datatypes-type-string": "Chêna",
+    "datatypes-type-quantity": "Quantitât",
+    "datatypes-type-mediawiki-title": "Titro MediaWiki",
+    "datatypes-type-unknown": "Pas spècifiâ",
+    "datatypes-type-boolean": "Boolèen",
+    "datatypes-type-globe-coordinate": "Coordonâs g·eografiques"
+}

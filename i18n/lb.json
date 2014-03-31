@@ -1,0 +1,18 @@
+{
+    "@metadata": {
+        "authors": [
+            "Robby",
+            "Soued031"
+        ]
+    },
+    "datatypes-desc": "Kollektioun vun Definitioune vun Datentypen",
+    "datatypes-type-string": "Zeecheketten",
+    "datatypes-type-quantity": "Quantitéit",
+    "datatypes-type-monolingual-text": "Text an enger Sprooch",
+    "datatypes-type-multilingual-text": "Text a méi Sproochen",
+    "datatypes-type-number": "Zuel",
+    "datatypes-type-mediawiki-title": "MediaWiki-Titel",
+    "datatypes-type-unknown": "Net uginn",
+    "datatypes-type-globe-coordinate": "Geographesch Koordinaten",
+    "datatypes-type-time": "Zäit"
+}

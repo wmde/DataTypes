@@ -1,0 +1,18 @@
+{
+    "@metadata": {
+        "authors": [
+            "Anakmalaysia"
+        ]
+    },
+    "datatypes-desc": "Koleksi definisi jenis data",
+    "datatypes-type-string": "Rentetan",
+    "datatypes-type-quantity": "Kuantiti",
+    "datatypes-type-monolingual-text": "Teks satu bahasa",
+    "datatypes-type-multilingual-text": "Teks berbilang bahasa",
+    "datatypes-type-number": "Nombor",
+    "datatypes-type-mediawiki-title": "Tajuk MediaWiki",
+    "datatypes-type-unknown": "Tidak ditentukan",
+    "datatypes-type-boolean": "Boolean",
+    "datatypes-type-globe-coordinate": "Koordinat geografi",
+    "datatypes-type-time": "Waktu"
+}

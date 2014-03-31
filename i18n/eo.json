@@ -1,0 +1,15 @@
+{
+    "@metadata": {
+        "authors": [
+            "Yekrats"
+        ]
+    },
+    "datatypes-type-string": "Bitĉeno",
+    "datatypes-type-quantity": "Kvanto",
+    "datatypes-type-monolingual-text": "Unulingva teksto",
+    "datatypes-type-multilingual-text": "Multlingva teksto",
+    "datatypes-type-number": "Nombro",
+    "datatypes-type-mediawiki-title": "Titolo MidaWiki",
+    "datatypes-type-unknown": "Nespecifa",
+    "datatypes-type-boolean": "Bulea"
+}
