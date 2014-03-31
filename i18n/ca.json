@@ -1,0 +1,20 @@
+{
+    "@metadata": {
+        "authors": [
+            "Alvaro Vidal-Abarca",
+            "Arnaugir",
+            "Pitort",
+            "Vogone"
+        ]
+    },
+    "datatypes-type-string": "Cadena",
+    "datatypes-type-quantity": "Quantitat",
+    "datatypes-type-monolingual-text": "Text monolingüe",
+    "datatypes-type-multilingual-text": "Text multilingüe",
+    "datatypes-type-number": "Nombre",
+    "datatypes-type-mediawiki-title": "Títol de MediaWiki",
+    "datatypes-type-unknown": "Sense especificar",
+    "datatypes-type-boolean": "Booleà",
+    "datatypes-type-globe-coordinate": "Coordenades geogràfiques",
+    "datatypes-type-time": "Data"
+}

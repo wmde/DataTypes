@@ -1,0 +1,14 @@
+{
+    "@metadata": {
+        "authors": [
+            "Veeven"
+        ]
+    },
+    "datatypes-type-string": "పదబంధం",
+    "datatypes-type-quantity": "రాశి",
+    "datatypes-type-monolingual-text": "ఏకభాషా పాఠ్యం",
+    "datatypes-type-multilingual-text": "పలు భాషల పాఠ్యం",
+    "datatypes-type-number": "సంఖ్య",
+    "datatypes-type-mediawiki-title": "మీడియావికీ శీర్షిక",
+    "datatypes-type-time": "సమయం"
+}

@@ -1,0 +1,21 @@
+{
+    "@metadata": {
+        "authors": [
+            "Armando-Martin",
+            "Fitoschido",
+            "Minh Nguyen",
+            "Vivaelcelta"
+        ]
+    },
+    "datatypes-desc": "Colección de definiciones de tipos de datos",
+    "datatypes-type-string": "Cadena",
+    "datatypes-type-quantity": "Cantidad",
+    "datatypes-type-monolingual-text": "Texto monolingüe",
+    "datatypes-type-multilingual-text": "Texto multilingüe",
+    "datatypes-type-number": "Número",
+    "datatypes-type-mediawiki-title": "Título de MediaWiki",
+    "datatypes-type-unknown": "No especificado",
+    "datatypes-type-boolean": "Expresión Booleana",
+    "datatypes-type-globe-coordinate": "Coordenadas geográficas",
+    "datatypes-type-time": "Hora"
+}

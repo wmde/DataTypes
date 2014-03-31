@@ -1,0 +1,18 @@
+{
+    "@metadata": {
+        "authors": [
+            "Minh Nguyen"
+        ]
+    },
+    "datatypes-desc": "Bộ sưu tập các định nghĩa kiểu dữ liệu",
+    "datatypes-type-string": "Chuỗi",
+    "datatypes-type-quantity": "Số lượng",
+    "datatypes-type-monolingual-text": "Văn bản đơn ngữ",
+    "datatypes-type-multilingual-text": "Văn bản đa ngữ",
+    "datatypes-type-number": "Số",
+    "datatypes-type-mediawiki-title": "Tiêu đề MediaWiki",
+    "datatypes-type-unknown": "Không xác định",
+    "datatypes-type-boolean": "Luận lý",
+    "datatypes-type-globe-coordinate": "Tọa độ địa lý",
+    "datatypes-type-time": "Thời điểm"
+}

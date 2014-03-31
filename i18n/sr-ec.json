@@ -1,0 +1,11 @@
+{
+    "@metadata": {
+        "authors": [
+            "Rancher"
+        ]
+    },
+    "datatypes-type-string": "Ниска",
+    "datatypes-type-quantity": "Количина",
+    "datatypes-type-monolingual-text": "Једнојезички текст",
+    "datatypes-type-multilingual-text": "Вишејезички текст"
+}

@@ -1,0 +1,18 @@
+{
+    "@metadata": {
+        "authors": [
+            "Michawiki"
+        ]
+    },
+    "datatypes-desc": "Zběrka definicijow datowych typow",
+    "datatypes-type-string": "Znamješkowy rjećazk",
+    "datatypes-type-quantity": "Mnóstwo",
+    "datatypes-type-monolingual-text": "Jednorěčny tekst",
+    "datatypes-type-multilingual-text": "Wjacerěčny tekst",
+    "datatypes-type-number": "Ličba",
+    "datatypes-type-mediawiki-title": "Titul MediaWiki",
+    "datatypes-type-unknown": "Njepodaty",
+    "datatypes-type-boolean": "Boolean",
+    "datatypes-type-globe-coordinate": "Geografiske koordinaty",
+    "datatypes-type-time": "Čas"
+}

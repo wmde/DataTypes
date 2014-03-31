@@ -1,0 +1,19 @@
+{
+    "@metadata": {
+        "authors": [
+            "Siebrand",
+            "Wiki13"
+        ]
+    },
+    "datatypes-desc": "Verameling gegevenstypedefinities",
+    "datatypes-type-string": "Tekenreeks",
+    "datatypes-type-quantity": "Hoeveelheid",
+    "datatypes-type-monolingual-text": "Enkeltalige tekst",
+    "datatypes-type-multilingual-text": "Meertalige tekst",
+    "datatypes-type-number": "Getal",
+    "datatypes-type-mediawiki-title": "MeidaWikipagina",
+    "datatypes-type-unknown": "Niet opgegeven",
+    "datatypes-type-boolean": "Booleaanse operator",
+    "datatypes-type-globe-coordinate": "Geografische coördinaten",
+    "datatypes-type-time": "Tijd"
+}

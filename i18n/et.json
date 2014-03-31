@@ -1,0 +1,18 @@
+{
+    "@metadata": {
+        "authors": [
+            "Avjoska",
+            "Pikne"
+        ]
+    },
+    "datatypes-desc": "Andmetüübi määratluste kogu",
+    "datatypes-type-string": "Sõne",
+    "datatypes-type-quantity": "Kogus",
+    "datatypes-type-monolingual-text": "Ühekeelne tekst",
+    "datatypes-type-multilingual-text": "Mitmekeelne tekst",
+    "datatypes-type-number": "Number",
+    "datatypes-type-mediawiki-title": "MediaWiki pealkiri",
+    "datatypes-type-unknown": "Määratlemata",
+    "datatypes-type-globe-coordinate": "Geograafiline koordinaat",
+    "datatypes-type-time": "Aeg"
+}

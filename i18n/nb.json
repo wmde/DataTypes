@@ -1,0 +1,19 @@
+{
+    "@metadata": {
+        "authors": [
+            "Danmichaelo",
+            "Jeblad"
+        ]
+    },
+    "datatypes-desc": "Samling av datatypedefinisjoner",
+    "datatypes-type-string": "streng",
+    "datatypes-type-quantity": "mengde",
+    "datatypes-type-monolingual-text": "enspråklig tekst",
+    "datatypes-type-multilingual-text": "flerspråklig tekst",
+    "datatypes-type-number": "tall",
+    "datatypes-type-mediawiki-title": "MediaWiki-tittel",
+    "datatypes-type-unknown": "uspesifisert",
+    "datatypes-type-boolean": "boolsk verdi",
+    "datatypes-type-globe-coordinate": "geografisk koordinat",
+    "datatypes-type-time": "tid"
+}

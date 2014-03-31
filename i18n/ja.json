@@ -1,0 +1,19 @@
+{
+    "@metadata": {
+        "authors": [
+            "Fryed-peach",
+            "Shirayuki"
+        ]
+    },
+    "datatypes-desc": "データ型の定義のコレクション",
+    "datatypes-type-string": "文字列",
+    "datatypes-type-quantity": "数量",
+    "datatypes-type-monolingual-text": "単一言語のテキスト",
+    "datatypes-type-multilingual-text": "多言語のテキスト",
+    "datatypes-type-number": "数値",
+    "datatypes-type-mediawiki-title": "MediaWiki ページ名",
+    "datatypes-type-unknown": "未指定",
+    "datatypes-type-boolean": "ブール値",
+    "datatypes-type-globe-coordinate": "緯度経度",
+    "datatypes-type-time": "時刻"
+}

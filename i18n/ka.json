@@ -1,0 +1,17 @@
+{
+    "@metadata": {
+        "authors": [
+            "David1010"
+        ]
+    },
+    "datatypes-type-string": "ველი",
+    "datatypes-type-quantity": "რაოდენობა",
+    "datatypes-type-monolingual-text": "ერთენოვანი ტექსტი",
+    "datatypes-type-multilingual-text": "მრავალენოვანი ტექსტი",
+    "datatypes-type-number": "ნომერი",
+    "datatypes-type-mediawiki-title": "მედიავიკის სათაური",
+    "datatypes-type-unknown": "არ არის მითითებული",
+    "datatypes-type-boolean": "ლოგიკური მნიშვნელობა",
+    "datatypes-type-globe-coordinate": "გეოგრაფიული კოორდინატები",
+    "datatypes-type-time": "დრო"
+}
