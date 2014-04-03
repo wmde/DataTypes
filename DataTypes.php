@@ -12,7 +12,7 @@ namespace DataTypes;
 use Exception;
 
 if ( defined( 'DataTypes_VERSION' ) ) {
-	// Do not initialize more then once.
+	// Do not initialize more than once.
 	return 1;
 }
 
