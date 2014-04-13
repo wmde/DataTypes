@@ -14,6 +14,6 @@
     "datatypes-type-mediawiki-title": "MediaWiki-tittel",
     "datatypes-type-unknown": "uspesifisert",
     "datatypes-type-boolean": "boolsk verdi",
-    "datatypes-type-globe-coordinate": "geografisk koordinat",
+    "datatypes-type-globe-coordinate": "geografiske koordinater",
     "datatypes-type-time": "tid"
 }
