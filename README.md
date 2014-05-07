@@ -51,6 +51,11 @@ for the [Wikidata project](https://wikidata.org/).
 
 ## Release notes
 
+### 0.2.1 (2014-05-06)
+
+* migrate i18n to JSON
+* run tests on PHP 5.6 and HHVM on travis
+
 ### 0.2 (2014-03-14)
 
 #### Breaking changes
