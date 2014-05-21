@@ -36,10 +36,10 @@ class DataTypeFactoryTest extends \PHPUnit_Framework_TestCase {
 			'quantity' => array(
 				'datavalue' => 'quantity',
 			),
-			'monolingual-text' => array(
+			'monolingualtext' => array(
 				'datavalue' => 'monolingualtext',
 			),
-			'multilingual-text' => array(
+			'multilingualtext' => array(
 				'datavalue' => 'multilingualtext',
 			),
 			'time' => array(

@@ -51,6 +51,11 @@ for the [Wikidata project](https://wikidata.org/).
 
 ## Release notes
 
+### 0.3 (2014-05-21)
+
+* Rename `monolingual-text` to `monolingualtext`
+* Rename `multilingual-text` to `multilingualtext`
+
 ### 0.2.1 (2014-05-06)
 
 * migrate i18n to JSON
