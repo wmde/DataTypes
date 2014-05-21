@@ -51,6 +51,10 @@ for the [Wikidata project](https://wikidata.org/).
 
 ## Release notes
 
+### 0.4 (2014-05-21)
+
+* Removed the global variable wgDataTypes
+
 ### 0.3 (2014-05-21)
 
 * Rename `monolingual-text` to `monolingualtext`
