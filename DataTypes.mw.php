@@ -18,11 +18,9 @@ $GLOBALS['wgExtensionCredits']['datavalues'][] = array(
 	'name' => 'DataTypes',
 	'version' => DataTypes_VERSION,
 	'author' => array(
-		'[https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw Jeroen De Dauw]',
-		'[https://www.mediawiki.org/wiki/User:Danwe Daniel Werner]',
-		'[http://www.snater.com H. Snater]',
+		'The Wikidata team',
 	),
-	'url' => 'https://www.mediawiki.org/wiki/Extension:DataTypes',
+	'url' => 'https://github.com/wmde/DataTypes',
 	'descriptionmsg' => 'datatypes-desc',
 );
 
