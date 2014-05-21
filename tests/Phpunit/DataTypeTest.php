@@ -17,7 +17,11 @@ class DataTypeTest extends \PHPUnit_Framework_TestCase {
 	 * @return DataType[]
 	 */
 	protected function getInstances() {
-		$factory = new DataTypeFactory( $GLOBALS['wgDataTypes'] );
+		$typeBuilders = array(
+			'string' => array( 'datavalue' => 'string' ),
+		);
+		$factory = new DataTypeFactory( $typeBuilders );
+
 		return $factory->getTypes();
 	}
 
