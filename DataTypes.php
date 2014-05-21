@@ -18,30 +18,6 @@ if ( defined( 'DataTypes_VERSION' ) ) {
 
 define( 'DataTypes_VERSION', '0.2.1' );
 
-$GLOBALS['wgDataTypes'] = array(
-	'commonsMedia' => array(
-		'datavalue' => 'string',
-	),
-	'string' => array(
-		'datavalue' => 'string',
-	),
-	'globe-coordinate' => array(
-		'datavalue' => 'globecoordinate',
-	),
-	'quantity' => array(
-		'datavalue' => 'quantity',
-	),
-	'monolingualtext' => array(
-		'datavalue' => 'monolingualtext',
-	),
-	'multilingualtext' => array(
-		'datavalue' => 'multilingualtext',
-	),
-	'time' => array(
-		'datavalue' => 'time',
-	),
-);
-
 // @codeCoverageIgnoreStart
 if ( defined( 'MEDIAWIKI' ) ) {
 	include __DIR__ . '/DataTypes.mw.php';

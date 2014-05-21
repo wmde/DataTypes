@@ -23,31 +23,11 @@ class DataTypeFactoryTest extends \PHPUnit_Framework_TestCase {
 	 * @return DataTypeFactory
 	 */
 	protected function getInstance() {
-		static $typeSpecs = array(
-			'commonsMedia' => array(
-				'datavalue' => 'string',
-			),
-			'string' => array(
-				'datavalue' => 'string',
-			),
-			'globe-coordinate' => array(
-				'datavalue' => 'globecoordinate',
-			),
-			'quantity' => array(
-				'datavalue' => 'quantity',
-			),
-			'monolingualtext' => array(
-				'datavalue' => 'monolingualtext',
-			),
-			'multilingualtext' => array(
-				'datavalue' => 'multilingualtext',
-			),
-			'time' => array(
-				'datavalue' => 'time',
-			) );
-
 		if ( $this->instance === null ) {
-			$this->instance = new DataTypeFactory( $typeSpecs );
+			$typeBuilders = array(
+				'string' => array( 'datavalue' => 'string' ),
+			);
+			$this->instance = new DataTypeFactory( $typeBuilders );
 		}
 
 		return $this->instance;
