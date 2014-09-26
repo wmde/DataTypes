@@ -22,6 +22,7 @@ $GLOBALS['wgExtensionCredits']['datavalues'][] = array(
 	),
 	'url' => 'https://github.com/wmde/DataTypes',
 	'descriptionmsg' => 'datatypes-desc',
+	'license-name' => 'GPL-2.0+'
 );
 
 $GLOBALS['wgMessagesDirs']['DataTypes'] = __DIR__ . '/i18n';
