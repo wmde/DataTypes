@@ -51,27 +51,31 @@ for the [Wikidata project](https://wikidata.org/).
 
 ## Release notes
 
-### 0.4 (2014-05-21)
+### 0.4.1 (2014-11-18)
 
-* Removed the global variable wgDataTypes
+* Improved path detection so it does not break when the library is included in `vendor` rather than `extensions`
 
-### 0.3 (2014-05-21)
+### 0.4.0 (2014-05-21)
+
+* Removed the global variable `wgDataTypes`
+
+### 0.3.0 (2014-05-21)
 
 * Rename `monolingual-text` to `monolingualtext`
 * Rename `multilingual-text` to `multilingualtext`
 
 ### 0.2.1 (2014-05-06)
 
-* migrate i18n to JSON
-* run tests on PHP 5.6 and HHVM on travis
+* Migrated the i18n support to the new MediaWiki JSON format
+* The tests are now run on PHP 5.6 and HHVM on travis
 
-### 0.2 (2014-03-14)
+### 0.2.0 (2014-03-14)
 
 #### Breaking changes
 
-* dataTypes.DataType JavaScript object may not be initialized providing a dataValues.DataValue object anymore.
-* Removed dataTypes.DataType.getLabel().
-* Removed global DataType registration in the dataTypes object; DataTypeStore is to be used instead.
+* `dataTypes.DataType` JavaScript object may no longer be initialized from a `dataValues.DataValue` object.
+* Removed `dataTypes.DataType.getLabel`.
+* Removed global DataType registration in the `dataTypes` object; `DataTypeStore` is to be used instead.
 * Split up generic "dataTypes" ResourceLoader module into "dataTypes.DataType" and "dataTypes.DataTypeStore".
 
 #### Enhancements
@@ -85,7 +89,7 @@ for the [Wikidata project](https://wikidata.org/).
 
 * Remove assumption about where the extension is installed in the resource loading paths.
 
-### 0.1 (2013-12-15)
+### 0.1.0 (2013-12-15)
 
 Initial release.
 

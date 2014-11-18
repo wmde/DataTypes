@@ -16,7 +16,7 @@ if ( defined( 'DataTypes_VERSION' ) ) {
 	return 1;
 }
 
-define( 'DataTypes_VERSION', '0.4' );
+define( 'DataTypes_VERSION', '0.4.1' );
 
 // @codeCoverageIgnoreStart
 if ( defined( 'MEDIAWIKI' ) ) {
