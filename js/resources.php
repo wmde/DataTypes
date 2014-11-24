@@ -25,10 +25,11 @@ return call_user_func( function() {
 
 		'dataTypes.DataTypeStore' => $moduleTemplate + array(
 			'scripts' => 'dataTypes/DataTypeStore.js',
+			'dependencies' => array(
+				'dataTypes.DataType',
+			),
 		),
-		'dependencies' => array(
-			'dataTypes.DataType',
-		),
+
 	);
 
 } );
