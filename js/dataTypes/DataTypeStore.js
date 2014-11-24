@@ -2,9 +2,6 @@
  * @licence GNU GPL v2+
  * @author H. Snater < mediawiki@snater.com >
  */
-
-this.dataTypes = this.dataTypes || {};
-
 dataTypes.DataTypeStore = ( function DataTypeStore( $ ) {
 	'use strict';
 

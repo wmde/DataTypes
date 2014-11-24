@@ -3,9 +3,6 @@
  * @author Daniel Werner
  * @author H. Snater < mediawiki@snater.com >
  */
-
-this.dataTypes = this.dataTypes || {};
-
 dataTypes.DataType = new ( function DataType( $ ) {
 	'use strict';
 
