@@ -3,6 +3,7 @@
 
 /**
  * DataType store.
+ * @class dataTypes.DataTypeStore
  * @since 0.2
  * @licence GNU GPL v2+
  * @author H. Snater < mediawiki@snater.com >
@@ -16,16 +17,18 @@ var SELF = dt.DataTypeStore = function DtDataTypeStore() {
 $.extend( SELF.prototype, {
 	/**
 	 * Data type definitions.
-	 * @var {Object}
+	 * @property {Object}
+	 * @private
 	 */
 	_dataTypes: null,
 
 	/**
 	 * Returns the data type of a specific data type id.
-	 * @since 0.2
 	 *
 	 * @param {string} dataTypeId
 	 * @return {dataTypes.DataType|null}
+	 *
+	 * @throws {Error} when supplied data type id is not a string.
 	 */
 	getDataType: function( dataTypeId ) {
 		if( !dataTypeId || typeof dataTypeId !== 'string' ) {
@@ -36,7 +39,6 @@ $.extend( SELF.prototype, {
 
 	/**
 	 * Returns if there is a DataType of the provided type.
-	 * @since 0.2
 	 *
 	 * @param {string} dataTypeId
 	 * @return {boolean}
@@ -48,9 +50,10 @@ $.extend( SELF.prototype, {
 	/**
 	 * Registers a new data type. A data type already registered for the id of the new data type
 	 * will be overwritten.
-	 * @since 0.2
 	 *
 	 * @param {dataTypes.DataType} dataType
+	 *
+	 * @throws {Error} if data type is not a dt.DataType instance.
 	 */
 	registerDataType: function( dataType ) {
 		if( !( dataType instanceof dataTypes.DataType ) ) {

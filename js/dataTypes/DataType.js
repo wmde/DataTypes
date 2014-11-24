@@ -3,6 +3,7 @@
 
 /**
  * Base constructor for objects representing a data type.
+ * @class dataTypes.DataType
  * @abstract
  * @since 0.1
  * @licence GNU GPL v2+
@@ -12,15 +13,17 @@
  * @constructor
  * @param {string} dataTypeId
  * @param {string} dataValueType
+ *
+ * @throws {Error} if data type id is not provided as a string.
+ * @throws {Error} if data value type is not provided as a string.
  */
 var SELF = dt.DataType = function DtDataType( dataTypeId, dataValueType ) {
-	if( typeof dataValueType !== 'string' ) {
-		throw new Error( 'A data value type has to be given in form of a string or DataValue '
-			+ 'constructor' );
-	}
-
 	if( !dataTypeId || typeof dataTypeId !== 'string' ) {
 		throw new Error( 'A data type\'s ID has to be a string' );
+	}
+
+	if( typeof dataValueType !== 'string' ) {
+		throw new Error( 'A data value type has to be given in form of a string' );
 	}
 
 	this._id = dataTypeId;
@@ -30,19 +33,20 @@ var SELF = dt.DataType = function DtDataType( dataTypeId, dataValueType ) {
 $.extend( SELF.prototype, {
 	/**
 	 * DataType identifier.
-	 * @type {string}
+	 * @property {string}
+	 * @private
 	 */
 	_id: null,
 
 	/**
 	 * DataValue identifier.
-	 * @type {string}
+	 * @property {string}
+	 * @private
 	 */
 	_dataValueType: null,
 
 	/**
 	 * Returns the data type's identifier.
-	 * @since 0.1
 	 *
 	 * @return {string}
 	 */
@@ -52,7 +56,6 @@ $.extend( SELF.prototype, {
 
 	/**
 	 * Returns the DataValue used by this data type.
-	 * @since 0.1
 	 *
 	 * @return {string}
 	 */
@@ -63,7 +66,7 @@ $.extend( SELF.prototype, {
 
 /**
  * Creates a new DataType object from a given JSON structure.
- * @since 0.1
+ * @static
  *
  * @param {string} dataTypeId
  * @param {Object} json
