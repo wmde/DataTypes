@@ -30,14 +30,18 @@ this.config = ( function() {
 				deps: ['qunit']
 			},
 
+			'dataType/__namespace': {
+				exports: 'dataTypes'
+			},
+
 			'dataTypes/DataType': {
 				exports: 'dataTypes',
-				deps: ['jquery', 'qunit.parameterize']
+				deps: ['jquery', 'dataTypes/__namespace', 'qunit.parameterize']
 			},
 
 			'dataTypes/DataTypeStore': {
 				exports: 'dataTypes',
-				deps: ['jquery', 'dataTypes/DataType']
+				deps: ['jquery', 'dataTypes/__namespace', 'dataTypes/DataType']
 			}
 		},
 		tests: [
