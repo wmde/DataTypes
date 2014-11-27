@@ -17,7 +17,7 @@ var SELF = dt.DataTypeStore = function DtDataTypeStore() {
 $.extend( SELF.prototype, {
 	/**
 	 * Data type definitions.
-	 * @property {Object}
+	 * @property {Object} [_dataTypes={}]
 	 * @private
 	 */
 	_dataTypes: null,
