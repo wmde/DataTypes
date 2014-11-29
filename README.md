@@ -51,6 +51,10 @@ for the [Wikidata project](https://wikidata.org/).
 
 ## Release notes
 
+### 0.4.2 (dev)
+
+* Updated code documentation for being able to automatically generate a proper documentation using JSDuck.
+
 ### 0.4.1 (2014-11-18)
 
 * Improved path detection so it does not break when the library is included in `vendor` rather than `extensions`

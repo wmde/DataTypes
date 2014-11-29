@@ -19,15 +19,22 @@ return call_user_func( function() {
 	);
 
 	return array(
+
+		'dataTypes.__namespace' => $moduleTemplate + array(
+			'scripts' => 'dataTypes/__namespace.js',
+		),
+
 		'dataTypes.DataType' => $moduleTemplate + array(
 			'scripts' => 'dataTypes/DataType.js',
+			'dependencies' => 'dataTypes.__namespace',
 		),
 
 		'dataTypes.DataTypeStore' => $moduleTemplate + array(
 			'scripts' => 'dataTypes/DataTypeStore.js',
-		),
-		'dependencies' => array(
-			'dataTypes.DataType',
+			'dependencies' => array(
+				'dataTypes.__namespace',
+				'dataTypes.DataType',
+			),
 		),
 	);
 
