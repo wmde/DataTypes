@@ -22,24 +22,22 @@ class DataTypeFactory {
 	/**
 	 * Maps type id to DataType.
 	 *
-	 * @since 0.1
-	 *
 	 * @var DataType[]
 	 */
-	protected $types = array();
+	private $types = array();
 
 	/**
 	 * Maps type id to a DataType builder spec.
 	 * See buildType() for more information.
 	 *
-	 * @var array
+	 * @var callable[]
 	 */
-	protected $typeBuilders = array();
+	private $typeBuilders = array();
 
 	/**
 	 * @since 0.1
 	 *
-	 * @param array $typeBuilders An array mapping type IDs to type builders. A type builder
+	 * @param callable[] $typeBuilders An array mapping type IDs to type builders. A type builder
 	 *        is a callable that takes a type ID as a parameter and returns a DataType object.
 	 *        Alternatively, a DataType object may be provided directly.
 	 */
@@ -93,8 +91,6 @@ class DataTypeFactory {
 	/**
 	 * Creates a DataType instance from some form of builder.
 	 *
-	 * @since 0.4
-	 *
 	 * @param string $typeId
 	 * @param mixed  $builderSpec specifies how to build the data type.
 	 *                            It supports several ways to specify a builder:
@@ -104,9 +100,10 @@ class DataTypeFactory {
 	 *                            is called for backwards compatibility
 	 *
 	 * @throws InvalidArgumentException
+	 * @throws RuntimeException
 	 * @return DataType
 	 */
-	protected function buildType( $typeId, $builderSpec ) {
+	private function buildType( $typeId, $builderSpec ) {
 		if ( $builderSpec instanceof DataType ) {
 			$type = $builderSpec;
 		} elseif ( is_array( $builderSpec )
@@ -135,17 +132,15 @@ class DataTypeFactory {
 	 * Returns a new instance of DataType constructed from the
 	 * provided type data.
 	 *
-	 * @since 0.1
-	 *
 	 * @param string $typeId
 	 * @param array $typeData
 	 *
 	 * @deprecated since 0.4, use a proper callable builder instead.
 	 *
-	 * @return DataType
 	 * @throws InvalidArgumentException
+	 * @return DataType
 	 */
-	protected function newType( $typeId, array $typeData ) {
+	private function newType( $typeId, array $typeData ) {
 		if ( !array_key_exists( 'datavalue', $typeData ) || !is_string( $typeData['datavalue'] ) ) {
 			throw new InvalidArgumentException( 'Invalid datavalue type provided to DataTypeFactory' );
 		}
@@ -175,12 +170,13 @@ class DataTypeFactory {
 	 *
 	 * @since 0.1
 	 *
-	 * @return string[] $typeId
+	 * @return string[]
 	 */
 	public function getTypeIds() {
 		return array_unique( array_merge(
 			array_keys( $this->types ),
-			array_keys( $this->typeBuilders ) ) );
+			array_keys( $this->typeBuilders )
+		) );
 	}
 
 	/**
@@ -191,8 +187,8 @@ class DataTypeFactory {
 	 *
 	 * @param string $typeId
 	 *
-	 * @return DataType
 	 * @throws OutOfBoundsException if the requested type is not known.
+	 * @return DataType
 	 */
 	public function getType( $typeId ) {
 		if ( !array_key_exists( $typeId, $this->types )
