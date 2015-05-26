@@ -1,6 +1,6 @@
 # DataTypes
 
-PHP library defining the DataTypes\DataType class of which instances represent a type of value,
+PHP library defining the `DataTypes\DataType` class of which instances represent a type of value,
 such as "positive integer" or "percentage".
 
 [![Build Status](https://secure.travis-ci.org/wmde/DataTypes.png?branch=master)](http://travis-ci.org/wmde/DataTypes)
@@ -23,11 +23,11 @@ the git repository and take care of loading yourself.
 To add this package as a local, per-project dependency to your project, simply add a
 dependency on `data-values/data-types` to your project's `composer.json` file.
 Here is a minimal example of a `composer.json` file that just defines a dependency on
-DataTypes 0.1.0:
+DataTypes 0.4:
 
     {
         "require": {
-            "data-values/data-types": "0.1.*"
+            "data-values/data-types": "~0.4"
         }
     }
 
