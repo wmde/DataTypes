@@ -51,6 +51,10 @@ for the [Wikidata project](https://wikidata.org/).
 
 ## Release notes
 
+### 0.4.3 (2015-06-18)
+
+* Fixed version number constant.
+
 ### 0.4.2 (2015-06-18)
 
 * Updated code documentation for being able to automatically generate a proper documentation using JSDuck.
