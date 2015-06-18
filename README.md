@@ -51,9 +51,10 @@ for the [Wikidata project](https://wikidata.org/).
 
 ## Release notes
 
-### 0.4.2 (dev)
+### 0.4.2 (2015-06-18)
 
 * Updated code documentation for being able to automatically generate a proper documentation using JSDuck.
+* Removed the ResourceLoader module "dependencies" which had been defined by accident.
 
 ### 0.4.1 (2014-11-18)
 
