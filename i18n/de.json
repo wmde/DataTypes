@@ -15,5 +15,5 @@
     "datatypes-type-unknown": "Nicht angegeben",
     "datatypes-type-boolean": "Wahrheitswert",
     "datatypes-type-globe-coordinate": "Geografische Koordinaten",
-    "datatypes-type-time": "Zeit"
+    "datatypes-type-time": "Zeitpunkt"
 }

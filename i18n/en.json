@@ -14,5 +14,5 @@
     "datatypes-type-unknown": "Unspecified",
     "datatypes-type-boolean": "Boolean",
     "datatypes-type-globe-coordinate": "Geographic coordinates",
-    "datatypes-type-time": "Time"
+    "datatypes-type-time": "Point in time"
 }
