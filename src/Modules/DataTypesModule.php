@@ -169,4 +169,5 @@ class DataTypesModule extends ResourceLoaderModule {
 
 		return $messageKeys;
 	}
+
 }

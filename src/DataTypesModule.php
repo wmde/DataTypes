@@ -7,4 +7,6 @@ use DataTypes\Modules\DataTypesModule as CurrentClass;
 /**
  * @deprecated
  */
-class DataTypesModule extends CurrentClass {}
+class DataTypesModule extends CurrentClass {
+
+}
