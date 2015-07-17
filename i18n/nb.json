@@ -15,5 +15,5 @@
     "datatypes-type-unknown": "Uspesifisert",
     "datatypes-type-boolean": "Boolsk verdi",
     "datatypes-type-globe-coordinate": "Geografiske koordinater",
-    "datatypes-type-time": "Tid"
+    "datatypes-type-time": "Tidspunkt"
 }
