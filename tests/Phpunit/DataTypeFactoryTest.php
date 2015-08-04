@@ -24,10 +24,10 @@ class DataTypeFactoryTest extends \PHPUnit_Framework_TestCase {
 	 */
 	protected function getInstance() {
 		if ( $this->instance === null ) {
-			$typeBuilders = array(
-				'string' => array( 'datavalue' => 'string' ),
+			$types = array(
+				'string' => 'string',
 			);
-			$this->instance = new DataTypeFactory( $typeBuilders );
+			$this->instance = new DataTypeFactory( $types );
 		}
 
 		return $this->instance;
@@ -81,28 +81,9 @@ class DataTypeFactoryTest extends \PHPUnit_Framework_TestCase {
 	public static function provideDataTypeBuilder() {
 		return array(
 			array( // #0
-				'old-school',
-				array( 'datavalue' => 'oldschool' ),
-				'oldschool',
-				'old style spec'
-			),
-			array( // #1
-				'new-school',
-				new DataType( 'new-school', 'newschool', array() ),
-				'newschool',
-				'DataValue object'
-			),
-			array( // #2
-				'new-school',
-				array( '\DataTypes\Tests\Phpunit\DummyType', '__construct' ),
-				'dummy',
-				'constructor'
-			),
-			array( // #3
-				'new-school',
-				array( '\DataTypes\Tests\Phpunit\DummyType', 'newDummy' ),
-				'dummy',
-				'callable'
+				'data-type',
+				array( 'data-type' => 'valuetype' ),
+				'valuetype'
 			),
 		);
 	}
@@ -110,23 +91,13 @@ class DataTypeFactoryTest extends \PHPUnit_Framework_TestCase {
 	/**
 	 * @dataProvider provideDataTypeBuilder
 	 */
-	public function testDataTypeBuilder( $id, $builderSpec, $expected, $message ) {
-		$factory = new DataTypeFactory( array( $id => $builderSpec ) );
+	public function testDataTypeBuilder( $id, $types, $expected ) {
+		$factory = new DataTypeFactory( $types );
 
 		$type = $factory->getType( $id );
 
-		$this->assertEquals( $id, $type->getId(), $message );
-		$this->assertEquals( $expected, $type->getDataValueType(), $message );
+		$this->assertEquals( $id, $type->getId() );
+		$this->assertEquals( $expected, $type->getDataValueType() );
 	}
 
-}
-
-class DummyType extends DataType {
-	public function __construct( $typeId, $dataValueType = 'dummy' ) {
-		parent::__construct( $typeId, $dataValueType, array(), array(), array() );
-	}
-
-	public static function newDummy( $typeId ) {
-		return new DummyType( $typeId );
-	}
 }

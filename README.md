@@ -23,11 +23,11 @@ the git repository and take care of loading yourself.
 To add this package as a local, per-project dependency to your project, simply add a
 dependency on `data-values/data-types` to your project's `composer.json` file.
 Here is a minimal example of a `composer.json` file that just defines a dependency on
-DataTypes 0.4:
+DataTypes 0.5:
 
     {
         "require": {
-            "data-values/data-types": "~0.4"
+            "data-values/data-types": "~0.5"
         }
     }
 
@@ -50,6 +50,11 @@ DataTypes has been written by the Wikidata team at [Wikimedia Germany](https://w
 for the [Wikidata project](https://wikidata.org/).
 
 ## Release notes
+
+### 0.5 (2015-08-06)
+
+* Drop support for ValueValidators in DataTypes
+* Simplified DataTypeFactory
 
 ### 0.4.3 (2015-06-18)
 

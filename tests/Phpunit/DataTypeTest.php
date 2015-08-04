@@ -17,10 +17,9 @@ class DataTypeTest extends \PHPUnit_Framework_TestCase {
 	 * @return DataType[]
 	 */
 	protected function getInstances() {
-		$typeBuilders = array(
-			'string' => array( 'datavalue' => 'string' ),
-		);
-		$factory = new DataTypeFactory( $typeBuilders );
+		$factory = new DataTypeFactory( array(
+			'string' => 'string',
+		) );
 
 		return $factory->getTypes();
 	}
@@ -49,15 +48,6 @@ class DataTypeTest extends \PHPUnit_Framework_TestCase {
 	 */
 	public function testGetDataValueType( DataType $type ) {
 		$this->assertInternalType( 'string', $type->getDataValueType() );
-	}
-
-	/**
-	 * @dataProvider instanceProvider
-	 * @param DataType $type
-	 */
-	public function testGetValidators( DataType $type ) {
-		$this->assertInternalType( 'array', $type->getValidators() );
-		$this->assertContainsOnlyInstancesOf( 'ValueValidators\ValueValidator', $type->getValidators() );
 	}
 
 	/**
