@@ -51,10 +51,12 @@ for the [Wikidata project](https://wikidata.org/).
 
 ## Release notes
 
-### 0.5 (2015-08-06)
+### 0.5 (dev)
 
-* Drop support for ValueValidators in DataTypes
-* Simplified DataTypeFactory
+* `DataType` no longer takes an array of `ValueValidator` in its constructor
+* `DataType::getValidators` has been removed
+* `DataTypeFactory` now takes a map from data type id to data value type.
+* `DataTypeFactory::registerBuilder` has been removed
 
 ### 0.4.3 (2015-06-18)
 
