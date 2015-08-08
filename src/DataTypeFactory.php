@@ -2,19 +2,11 @@
 
 namespace DataTypes;
 
-use InvalidArgumentException;
 use OutOfBoundsException;
-use RuntimeException;
+use Wikimedia\Assert\Assert;
 
 /**
- * @deprecated since 0.1
- *
- * This class acts both as a DataType registry and a DataType deserializer,
- * and it is doing a bad job at both tasks. Thus create a proper registry or
- * deserializer when one is needed.
- *
  * @licence GNU GPL v2+
- * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  * @author Daniel Kinzler
  */
 class DataTypeFactory {
@@ -27,23 +19,19 @@ class DataTypeFactory {
 	private $types = array();
 
 	/**
-	 * Maps type id to a DataType builder spec.
-	 * See buildType() for more information.
-	 *
-	 * @var callable[]
+	 * @var string[]
 	 */
-	private $typeBuilders = array();
+	private $valueTypes = array();
 
 	/**
-	 * @since 0.1
+	 * @since 0.5
 	 *
-	 * @param callable[] $typeBuilders An array mapping type IDs to type builders. A type builder
-	 *        is a callable that takes a type ID as a parameter and returns a DataType object.
-	 *        Alternatively, a DataType object may be provided directly.
+	 * @param string[] $valueTypes
 	 */
-	public function __construct( array $typeBuilders = array() ) {
-		//TODO: check element type
-		$this->typeBuilders = $typeBuilders;
+	public function __construct( array $valueTypes ) {
+		Assert::parameterElementType( 'string', $valueTypes, '$valueTypes' );
+
+		$this->valueTypes = $valueTypes;
 	}
 
 	/**
@@ -54,7 +42,7 @@ class DataTypeFactory {
 	 * @return DataTypeFactory
 	 */
 	public static function newFromTypes( array $dataTypes ) {
-		$factory = new self();
+		$factory = new self( array() );
 
 		foreach ( $dataTypes as $dataType ) {
 			$factory->registerDataType( $dataType );
@@ -73,99 +61,6 @@ class DataTypeFactory {
 	}
 
 	/**
-	 * @since 0.4
-	 *
-	 * @param string $typeId
-	 * @param callable $builder A builder that takes $typeId and returns a DataType object
-	 *
-	 * @throws InvalidArgumentException
-	 */
-	public function registerBuilder( $typeId, $builder ) {
-		if ( !is_callable( $builder ) ) {
-			throw new InvalidArgumentException( "Builder must be callable." );
-		}
-
-		$this->typeBuilders[$typeId] = $builder;
-	}
-
-	/**
-	 * Creates a DataType instance from some form of builder.
-	 *
-	 * @param string $typeId
-	 * @param mixed  $builderSpec specifies how to build the data type.
-	 *                            It supports several ways to specify a builder:
-	 *        - if $builderSpec as a DataType object already, it is returned.
-	 *        - if $builderSpec as callable, it will be called with $typeId as the only parameter.
-	 *        - if $builderSpec as an associative array, newType( $typeId, $builderSpec )
-	 *                            is called for backwards compatibility
-	 *
-	 * @throws InvalidArgumentException
-	 * @throws RuntimeException
-	 * @return DataType
-	 */
-	private function buildType( $typeId, $builderSpec ) {
-		if ( $builderSpec instanceof DataType ) {
-			$type = $builderSpec;
-		} elseif ( is_array( $builderSpec )
-			&& count( $builderSpec  ) == 2
-			&& $builderSpec[1] === '__construct' ) {
-
-			$class = new \ReflectionClass( $builderSpec[0] );
-			$type = $class->newInstance( $typeId );
-		} elseif ( is_callable( $builderSpec ) ) {
-			$type = call_user_func( $builderSpec, $typeId );
-		} elseif ( is_array( $builderSpec ) ) {
-			//B/C mode
-			$type = $this->newType( $typeId, $builderSpec );
-		} else {
-			throw new InvalidArgumentException( "Bad builder spec, expected a callable." );
-		}
-
-		if ( !( $type instanceof DataType ) ) {
-			throw new RuntimeException( "DataType builder did not return a DataType" );
-		}
-
-		return $type;
-	}
-
-	/**
-	 * Returns a new instance of DataType constructed from the
-	 * provided type data.
-	 *
-	 * @param string $typeId
-	 * @param array $typeData
-	 *
-	 * @deprecated since 0.4, use a proper callable builder instead.
-	 *
-	 * @throws InvalidArgumentException
-	 * @return DataType
-	 */
-	private function newType( $typeId, array $typeData ) {
-		if ( !array_key_exists( 'datavalue', $typeData ) || !is_string( $typeData['datavalue'] ) ) {
-			throw new InvalidArgumentException( 'Invalid datavalue type provided to DataTypeFactory' );
-		}
-
-		if ( array_key_exists( 'validators', $typeData ) ) {
-			$validators = is_array( $typeData['validators'] ) ? $typeData['validators'] : array( $typeData['validators'] );
-		}
-		else {
-			$validators = array();
-		}
-
-		foreach ( $validators as &$validator ) {
-			if ( is_string( $validator ) ) {
-				$validator = new $validator();
-			}
-		}
-
-		return new DataType(
-			$typeId,
-			$typeData['datavalue'],
-			$validators
-		);
-	}
-
-	/**
 	 * Returns the type identifiers.
 	 *
 	 * @since 0.1
@@ -173,10 +68,7 @@ class DataTypeFactory {
 	 * @return string[]
 	 */
 	public function getTypeIds() {
-		return array_unique( array_merge(
-			array_keys( $this->types ),
-			array_keys( $this->typeBuilders )
-		) );
+		return array_keys( $this->valueTypes );
 	}
 
 	/**
@@ -191,18 +83,16 @@ class DataTypeFactory {
 	 * @return DataType
 	 */
 	public function getType( $typeId ) {
-		if ( !array_key_exists( $typeId, $this->types )
-			&& array_key_exists( $typeId, $this->typeBuilders ) ) {
+		if ( !array_key_exists( $typeId, $this->types ) ) {
+			if ( !array_key_exists( $typeId, $this->valueTypes ) ) {
+				throw new OutOfBoundsException( "Unknown data type '$typeId'" );
+			}
 
-			$builderSpec = $this->typeBuilders[$typeId];
-			$this->types[$typeId] = $this->buildType( $typeId, $builderSpec );
+			$valueType = $this->valueTypes[$typeId];
+			$this->types[$typeId] = new DataType( $typeId, $valueType );
 		}
 
-		if ( array_key_exists( $typeId, $this->types ) ) {
-			return $this->types[$typeId];
-		}
-
-		throw new OutOfBoundsException( "Unknown data type '$typeId'" );
+		return $this->types[$typeId];
 	}
 
 	/**

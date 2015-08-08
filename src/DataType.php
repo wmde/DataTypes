@@ -3,7 +3,6 @@
 namespace DataTypes;
 
 use InvalidArgumentException;
-use ValueValidators\ValueValidator;
 
 /**
  * @since 0.1
@@ -32,24 +31,14 @@ class DataType {
 	protected $dataValueType;
 
 	/**
-	 * The ValueValidator objects used by this data type.
-	 *
-	 * @since 0.1
-	 *
-	 * @var ValueValidator[]
-	 */
-	protected $validators;
-
-	/**
-	 * @since 0.1
+	 * @since 0.5
 	 *
 	 * @param string $typeId
 	 * @param string $dataValueType
-	 * @param ValueValidator[] $validators
 	 *
 	 * @throws InvalidArgumentException
 	 */
-	public function __construct( $typeId, $dataValueType, array $validators ) {
+	public function __construct( $typeId, $dataValueType ) {
 		if ( !is_string( $typeId ) ) {
 			throw new InvalidArgumentException( '$typeId must be a string' );
 		}
@@ -60,7 +49,6 @@ class DataType {
 
 		$this->typeId = $typeId;
 		$this->dataValueType = $dataValueType;
-		$this->validators = $validators;
 	}
 
 	/**
@@ -83,17 +71,6 @@ class DataType {
 	 */
 	public function getDataValueType() {
 		return $this->dataValueType;
-	}
-
-	/**
-	 * Returns the ValueValidators that are supported by this data type.
-	 *
-	 * @since 0.1
-	 *
-	 * @return ValueValidator[]
-	 */
-	public function getValidators() {
-		return $this->validators;
 	}
 
 	/**
