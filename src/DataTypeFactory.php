@@ -3,7 +3,7 @@
 namespace DataTypes;
 
 use OutOfBoundsException;
-use Wikimedia\Assert\Assert;
+use InvalidArgumentException;
 
 /**
  * @licence GNU GPL v2+
@@ -27,9 +27,15 @@ class DataTypeFactory {
 	 * @since 0.5
 	 *
 	 * @param string[] $valueTypes
+	 *
+	 * @throws InvalidArgumentException
 	 */
 	public function __construct( array $valueTypes ) {
-		Assert::parameterElementType( 'string', $valueTypes, '$valueTypes' );
+		foreach ( $valueTypes as $valueType ) {
+			if ( !is_string( $valueType ) ) {
+				throw new InvalidArgumentException( '$valueTypes needs to be an array of string' );
+			}
+		}
 
 		$this->valueTypes = $valueTypes;
 	}
