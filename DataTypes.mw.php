@@ -32,7 +32,7 @@ Message::registerTextFunction( function() {
 	$args = func_get_args();
 	$key = array_shift( $args );
 	$language = array_shift( $args );
-	$message = new Message( $key, $args );
+	$message = new \Message( $key, $args );
 	return $message->inLanguage( $language )->text();
 	// @codeCoverageIgnoreEnd
 } );
