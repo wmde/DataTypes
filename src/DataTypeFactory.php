@@ -116,7 +116,7 @@ class DataTypeFactory {
 		$types = array();
 
 		foreach ( $this->getTypeIds() as $typeId ) {
-			$types[] = $this->getType( $typeId );
+			$types[$typeId] = $this->getType( $typeId );
 		}
 
 		return $types;
