@@ -14,7 +14,7 @@ if ( defined( 'DataTypes_VERSION' ) ) {
 	return 1;
 }
 
-define( 'DataTypes_VERSION', '0.5.0' );
+define( 'DataTypes_VERSION', '0.5.1' );
 
 if ( defined( 'MEDIAWIKI' ) ) {
 	include __DIR__ . '/DataTypes.mw.php';

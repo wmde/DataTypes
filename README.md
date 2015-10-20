@@ -51,6 +51,9 @@ for the [Wikidata project](https://wikidata.org/).
 
 ## Release notes
 
+### 0.5.1 (2015-10-20)
+* `DataTypeFactory::getTypes()` now returns array with typeId keys as documented
+
 ### 0.5.0 (2015-08-10)
 
 #### Breaking changes
