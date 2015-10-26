@@ -2,8 +2,8 @@
 
 namespace DataTypes;
 
-use OutOfBoundsException;
 use InvalidArgumentException;
+use OutOfBoundsException;
 
 /**
  * @since 0.1
@@ -21,21 +21,22 @@ class DataTypeFactory {
 	private $types = array();
 
 	/**
-	 * @var string[]
+	 * @var string[] Associative array mapping data type identifiers to data value type identifiers.
 	 */
 	private $valueTypes = array();
 
 	/**
 	 * @since 0.5
 	 *
-	 * @param string[] $valueTypes
+	 * @param string[] $valueTypes Associative array mapping data type identifiers to data value
+	 *  type identifiers.
 	 *
 	 * @throws InvalidArgumentException
 	 */
 	public function __construct( array $valueTypes ) {
-		foreach ( $valueTypes as $valueType ) {
-			if ( !is_string( $valueType ) ) {
-				throw new InvalidArgumentException( '$valueTypes needs to be an array of string' );
+		foreach ( $valueTypes as $typeId => $valueType ) {
+			if ( !is_string( $typeId ) || !is_string( $valueType ) ) {
+				throw new InvalidArgumentException( '$valueTypes must be an associative array of strings' );
 			}
 		}
 
