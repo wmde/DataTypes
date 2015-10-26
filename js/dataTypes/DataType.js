@@ -18,11 +18,11 @@
  * @throws {Error} if data value type is not provided as a string.
  */
 var SELF = dt.DataType = function DtDataType( dataTypeId, dataValueType ) {
-	if( !dataTypeId || typeof dataTypeId !== 'string' ) {
+	if ( !dataTypeId || typeof dataTypeId !== 'string' ) {
 		throw new Error( 'A data type\'s ID has to be a string' );
 	}
 
-	if( typeof dataValueType !== 'string' ) {
+	if ( typeof dataValueType !== 'string' ) {
 		throw new Error( 'A data value type has to be given in form of a string' );
 	}
 

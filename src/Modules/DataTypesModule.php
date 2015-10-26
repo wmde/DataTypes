@@ -65,7 +65,7 @@ class DataTypesModule extends ResourceLoaderModule {
 			: null;
 
 
-		if( !is_string( $dataTypesConfigVarName ) || $dataTypesConfigVarName === '' ) {
+		if ( !is_string( $dataTypesConfigVarName ) || $dataTypesConfigVarName === '' ) {
 			throw new Exception(
 				'The "datatypesconfigvarname" value of the resource definition' .
 				' has to be a non-empty string value'
@@ -90,11 +90,11 @@ class DataTypesModule extends ResourceLoaderModule {
 			? $resourceDefinition['datatypefactory']
 			: null;
 
-		if( is_callable( $dataTypeFactory ) ) {
+		if ( is_callable( $dataTypeFactory ) ) {
 			$dataTypeFactory = call_user_func( $dataTypeFactory );
 		}
 
-		if( !( $dataTypeFactory instanceof DataTypeFactory ) ) {
+		if ( !( $dataTypeFactory instanceof DataTypeFactory ) ) {
 			throw new Exception(
 				'The "datatypefactory" value of the resource definition has' .
 				' to be an instance of DataTypeFactory or a callback returning one'

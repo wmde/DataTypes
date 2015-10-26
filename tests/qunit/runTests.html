@@ -16,7 +16,7 @@
 
 	require.config( config );
 
-	if( location.search.split( '=' ).length > 1 ) {
+	if ( location.search.split( '=' ).length > 1 ) {
 		require( TestRunner.filterTestModules( config.tests ), function() {
 			QUnit.load();
 			QUnit.start();
