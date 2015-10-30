@@ -31,7 +31,7 @@ $.extend( SELF.prototype, {
 	 * @throws {Error} when supplied data type id is not a string.
 	 */
 	getDataType: function( dataTypeId ) {
-		if( !dataTypeId || typeof dataTypeId !== 'string' ) {
+		if ( !dataTypeId || typeof dataTypeId !== 'string' ) {
 			throw new Error( 'The ID given to identify a data type needs to be a string' );
 		}
 		return this._dataTypes[dataTypeId] || null;
@@ -56,7 +56,7 @@ $.extend( SELF.prototype, {
 	 * @throws {Error} if data type is not a dt.DataType instance.
 	 */
 	registerDataType: function( dataType ) {
-		if( !( dataType instanceof dataTypes.DataType ) ) {
+		if ( !( dataType instanceof dataTypes.DataType ) ) {
 			throw new Error( 'Can only register instances of dataTypes.DataType' );
 		}
 		this._dataTypes[dataType.getId()] = dataType;
