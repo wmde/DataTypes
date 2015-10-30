@@ -4,6 +4,7 @@ namespace DataTypes\Tests\Phpunit;
 
 use DataTypes\DataType;
 use DataTypes\DataTypeFactory;
+use PHPUnit_Framework_TestCase;
 
 /**
  * @covers DataTypes\DataTypeFactory
@@ -11,71 +12,69 @@ use DataTypes\DataTypeFactory;
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  * @author Daniel Kinzler
+ * @author Thiemo Mättig
  */
-class DataTypeFactoryTest extends \PHPUnit_Framework_TestCase {
+class DataTypeFactoryTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * @var null|DataTypeFactory
+	 * @dataProvider valueTypesProvider
 	 */
-	protected $instance = null;
+	public function testConstructor( array $valueTypes ) {
+		$instance = new DataTypeFactory( $valueTypes );
+		$this->assertInstanceOf( 'DataTypes\DataTypeFactory', $instance );
+	}
+
+	public function valueTypesProvider() {
+		return array(
+			array( array() ),
+			array( array( 'string' => 'string' ) ),
+			array( array( 'customType' => 'customValueType' ) ),
+		);
+	}
 
 	/**
-	 * @return DataTypeFactory
+	 * @dataProvider invalidConstructorArgumentProvider
 	 */
-	protected function getInstance() {
-		if ( $this->instance === null ) {
-			$types = array(
-				'string' => 'string',
-			);
-			$this->instance = new DataTypeFactory( $types );
-		}
+	public function testConstructorThrowsException( array $argument ) {
+		$this->setExpectedException( 'InvalidArgumentException' );
+		new DataTypeFactory( $argument );
+	}
 
-		return $this->instance;
+	public function invalidConstructorArgumentProvider() {
+		return array(
+			array( array( 'string' => 1 ) ),
+			array( array( 'string' => new DataType( 'string', 'string' ) ) ),
+			array( array( 0 => 'string' ) ),
+			array( array( 0 => new DataType( 'string', 'string' ) ) ),
+		);
 	}
 
 	public function testGetTypeIds() {
-		$ids = $this->getInstance()->getTypeIds();
-		$this->assertInternalType( 'array', $ids );
+		$instance = new DataTypeFactory( array( 'customType' => 'string' ) );
 
-		foreach ( $ids as $id ) {
-			$this->assertInternalType( 'string', $id );
-		}
-
-		$this->assertEquals( array_unique( $ids ), $ids );
+		$expected = array( 'customType' );
+		$this->assertSame( $expected, $instance->getTypeIds() );
 	}
 
 	public function testGetType() {
-		$factory = $this->getInstance();
+		$instance = new DataTypeFactory( array( 'customType' => 'string' ) );
 
-		foreach ( $factory->getTypeIds() as $id ) {
-			$this->assertInstanceOf( 'DataTypes\DataType', $factory->getType( $id ) );
-		}
+		$expected = new DataType( 'customType', 'string' );
+		$this->assertEquals( $expected, $instance->getType( 'customType' ) );
 	}
 
 	public function testGetUnknownType() {
-		$factory = $this->getInstance();
+		$instance = new DataTypeFactory( array() );
 
 		$this->setExpectedException( 'OutOfBoundsException' );
-
-		$factory->getType( "I'm in your tests, being rather silly ~=[,,_,,]:3" );
+		$instance->getType( 'unknownTypeId' );
 	}
 
 	public function testGetTypes() {
-		$factory = $this->getInstance();
+		$instance = new DataTypeFactory( array( 'customType' => 'string' ) );
 
-		$expectedIds = array_map(
-			function( DataType $type ) {
-				return $type->getId();
-			},
-			$factory->getTypes()
-		);
-
-		$expectedIds = array_values( $expectedIds );
-
-		$this->assertEquals(
-			$expectedIds,
-			$factory->getTypeIds()
-		);
+		$expected = array( 'customType' => new DataType( 'customType', 'string' ) );
+		$this->assertEquals( $expected, $instance->getTypes() );
 	}
 
 	public static function provideDataTypeBuilder() {
