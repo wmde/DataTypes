@@ -1,4 +1,4 @@
 /**
  * @ignore
  */
-this.dataTypes = {};
+var dataTypes = dataTypes || {};
