@@ -4,6 +4,7 @@ namespace DataTypes\Modules;
 
 use DataTypes\DataTypeFactory;
 use Exception;
+use FormatJson;
 use ResourceLoaderContext;
 use ResourceLoaderModule;
 
@@ -134,7 +135,7 @@ class DataTypesModule extends ResourceLoaderModule {
 	 *
 	 * @since 0.1
 	 *
-	 * @param \ResourceLoaderContext $context
+	 * @param ResourceLoaderContext $context
 	 *
 	 * @return string
 	 */
@@ -145,7 +146,7 @@ class DataTypesModule extends ResourceLoaderModule {
 		foreach( $this->dataTypes as $dataType ) {
 			$typesJson[ $dataType->getId() ] = $dataType->toArray();
 		}
-		$typesJson = \FormatJson::encode( $typesJson );
+		$typesJson = FormatJson::encode( $typesJson );
 
 		return "mediaWiki.config.set( '$configVarName', $typesJson );";
 	}
