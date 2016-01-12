@@ -34,13 +34,11 @@ $GLOBALS['wgHooks']['UnitTestsList'][] = function( array &$paths ) {
 	return true;
 };
 
-Message::registerTextFunction( function() {
+Message::registerTextFunction( function( $key, $languageCode ) {
 	// @codeCoverageIgnoreStart
-	$args = func_get_args();
-	$key = array_shift( $args );
-	$language = array_shift( $args );
-	$message = new \Message( $key, $args );
-	return $message->inLanguage( $language )->text();
+	$params = array_slice( func_get_args(), 2 );
+	$message = new \Message( $key, $params );
+	return $message->inLanguage( $languageCode )->text();
 	// @codeCoverageIgnoreEnd
 } );
 

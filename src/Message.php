@@ -26,7 +26,15 @@ class Message {
 		self::$textFunction = $textFunction;
 	}
 
-	public static function text() {
+	/**
+	 * @param string $key
+	 * @param string $languageCode
+	 * @param string [$params,...]
+	 *
+	 * @throws Exception
+	 * @return string
+	 */
+	public static function text( $key, $languageCode ) {
 		if ( is_null( self::$textFunction ) ) {
 			throw new Exception( 'No text function set in DataTypes\Message' );
 		} else {
