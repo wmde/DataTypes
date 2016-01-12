@@ -54,8 +54,8 @@ class DataTypesModule extends ResourceLoaderModule {
 	 * @since 0.1
 	 *
 	 * @param array $resourceDefinition
-	 * @return string
 	 *
+	 * @return string
 	 * @throws Exception If the given resource definition is not sufficient
 	 */
 	public static function extractDataTypesConfigVarNameFromResourceDefinition(
@@ -80,8 +80,8 @@ class DataTypesModule extends ResourceLoaderModule {
 	 * @since 0.1
 	 *
 	 * @param array $resourceDefinition
-	 * @return DataTypeFactory
 	 *
+	 * @return DataTypeFactory
 	 * @throws Exception If the given resource definition is not sufficient
 	 */
 	public static function extractDataTypeFactoryFromResourceDefinition(
