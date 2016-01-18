@@ -44,8 +44,10 @@ class DataTypeFactoryTest extends PHPUnit_Framework_TestCase {
 
 	public function invalidConstructorArgumentProvider() {
 		return array(
+			array( array( 'string' => '' ) ),
 			array( array( 'string' => 1 ) ),
 			array( array( 'string' => new DataType( 'string', 'string' ) ) ),
+			array( array( '' => 'string' ) ),
 			array( array( 0 => 'string' ) ),
 			array( array( 0 => new DataType( 'string', 'string' ) ) ),
 		);

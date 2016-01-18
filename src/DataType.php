@@ -39,12 +39,12 @@ class DataType {
 	 * @throws InvalidArgumentException
 	 */
 	public function __construct( $typeId, $dataValueType ) {
-		if ( !is_string( $typeId ) ) {
-			throw new InvalidArgumentException( '$typeId must be a string' );
+		if ( !is_string( $typeId ) || $typeId === '' ) {
+			throw new InvalidArgumentException( '$typeId must be a non-empty string' );
 		}
 
-		if ( !is_string( $dataValueType ) ) {
-			throw new InvalidArgumentException( '$dataValueType must be a string' );
+		if ( !is_string( $dataValueType ) || $dataValueType === '' ) {
+			throw new InvalidArgumentException( '$dataValueType must be a non-empty string' );
 		}
 
 		$this->typeId = $typeId;

@@ -35,10 +35,14 @@ class DataTypeTest extends PHPUnit_Framework_TestCase {
 
 	public function invalidConstructorArgumentsProvider() {
 		return array(
+			array( 'propertyType', '' ),
 			array( 'propertyType', null ),
 			array( 'propertyType', false ),
+			array( 'propertyType', 1 ),
+			array( '', 'valueType' ),
 			array( null, 'valueType' ),
 			array( false, 'valueType' ),
+			array( 0, 'valueType' ),
 		);
 	}
 
