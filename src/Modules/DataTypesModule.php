@@ -22,6 +22,9 @@ use ResourceLoaderModule;
  */
 class DataTypesModule extends ResourceLoaderModule {
 
+	/**
+	 * @var DataType[]
+	 */
 	protected $dataTypes;
 
 	/**
@@ -169,6 +172,22 @@ class DataTypesModule extends ResourceLoaderModule {
 		}
 
 		return $messageKeys;
+	}
+
+	/**
+	 * @see ResourceLoaderModule::getDefinitionSummary
+	 *
+	 * @param ResourceLoaderContext $context
+	 *
+	 * @return array
+	 */
+	public function getDefinitionSummary( ResourceLoaderContext $context ) {
+		$summary = parent::getDefinitionSummary( $context );
+		$summary[] = array(
+			'dataHash' => sha1( json_encode( array_keys( $this->dataTypes ) ) )
+		);
+
+		return $summary;
 	}
 
 }
