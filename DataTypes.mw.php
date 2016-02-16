@@ -27,6 +27,13 @@ $GLOBALS['wgExtensionCredits']['datavalues'][] = array(
 
 $GLOBALS['wgMessagesDirs']['DataTypes'] = __DIR__ . '/i18n';
 
+$GLOBALS['wgHooks']['UnitTestsList'][] = function( array &$paths ) {
+	$paths[] = __DIR__ . '/tests/Modules/';
+	$paths[] = __DIR__ . '/tests/Phpunit/';
+
+	return true;
+};
+
 Message::registerTextFunction( function() {
 	// @codeCoverageIgnoreStart
 	$args = func_get_args();
