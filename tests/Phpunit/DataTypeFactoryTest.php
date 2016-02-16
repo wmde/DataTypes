@@ -9,6 +9,8 @@ use PHPUnit_Framework_TestCase;
 /**
  * @covers DataTypes\DataTypeFactory
  *
+ * @group DataTypes
+ *
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  * @author Daniel Kinzler

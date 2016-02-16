@@ -8,6 +8,8 @@ use DataTypes\Modules\DataTypesModule;
 /**
  * @covers DataTypes\Modules\DataTypesModule
  *
+ * @group DataTypes
+ *
  * @licence GNU GPL v2+
  * @author Daniel Werner < daniel.werner@wikimedia.de >
  */
