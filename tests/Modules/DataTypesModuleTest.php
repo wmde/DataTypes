@@ -17,13 +17,13 @@ class DataTypesModuleTest extends \PHPUnit_Framework_TestCase {
 	 * @return array [instance, resource definition]
 	 */
 	public function provideDataTypesModuleAndResourceDefinition() {
-		$dataTypeFactory = new DataTypeFactory();
+		$dataTypeFactory = new DataTypeFactory( array( 'url' => 'string' ) );
 
 		$validResourceDefinitions = array(
 			array(
 				'datatypesconfigvarname' => 'foo',
 				'datatypefactory' => function() {
-					return new DataTypeFactory();
+					return new DataTypeFactory( array() );
 				}
 			),
 			array(
@@ -58,12 +58,12 @@ class DataTypesModuleTest extends \PHPUnit_Framework_TestCase {
 	 * @return array [invalid resource definition, case description]
 	 */
 	public function provideInvalidResourceDefinition() {
-		$dataTypeFactory = new DataTypeFactory();
+		$dataTypeFactory = new DataTypeFactory( array() );
 
 		$validDefinition = array(
 			'datatypesconfigvarname' => 'foo',
 			'datatypefactory' => function() {
-				return new DataTypeFactory();
+				return new DataTypeFactory( array() );
 			}
 		);
 
