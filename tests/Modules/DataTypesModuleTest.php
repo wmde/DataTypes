@@ -10,6 +10,7 @@ use DataTypes\Modules\DataTypesModule;
  *
  * @licence GNU GPL v2+
  * @author Daniel Werner < daniel.werner@wikimedia.de >
+ * @author Katie Filbert < aude.wiki@gmail.com >
  */
 class DataTypesModuleTest extends \PHPUnit_Framework_TestCase {
 
@@ -135,6 +136,57 @@ class DataTypesModuleTest extends \PHPUnit_Framework_TestCase {
 		$this->setExpectedException( 'Exception' );
 
 		new DataTypesModule( $definition );
+	}
+
+	public function testGetDefinitionSummary() {
+		$definition = $this->makeDefinition(
+			array( 'foo' => 'string' )
+		);
+
+		$module = new DataTypesModule( $definition );
+		$summary = $module->getDefinitionSummary( $this->getContext() );
+
+		$this->assertInternalType( 'array', $summary );
+		$this->assertArrayHasKey( 0, $summary );
+		$this->assertArrayHasKey( 'dataHash', $summary[0] );
+	}
+
+	public function testGetDefinitionSummary_notEqualForDifferentDataTypes() {
+		$definition1 = $this->makeDefinition( array(
+			'foo' => 'string'
+		) );
+
+		$definition2 = $this->makeDefinition( array(
+			'foo' => 'string',
+			'bar' => 'string'
+		) );
+
+		$module1 = new DataTypesModule( $definition1 );
+		$module2 = new DataTypesModule( $definition2 );
+
+		$context = $this->getContext();
+
+		$summary1 = $module1->getDefinitionSummary( $context );
+		$summary2 = $module2->getDefinitionSummary( $context );
+
+		$this->assertNotEquals( $summary1[0]['dataHash'], $summary2[0]['dataHash'] );
+	}
+
+
+	private function makeDefinition( array $dataTypes ) {
+		return array(
+			'datatypesconfigvarname' => 'foo123',
+			'datatypefactory' => new DataTypeFactory( $dataTypes )
+		);
+	}
+
+	/**
+	 * @return ResourceLoaderContext
+	 */
+	private function getContext() {
+		return $this->getMockBuilder( 'ResourceLoaderContext' )
+			->disableOriginalConstructor()
+			->getMock();
 	}
 
 }
