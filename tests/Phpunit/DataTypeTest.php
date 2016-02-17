@@ -3,7 +3,8 @@
 namespace DataTypes\Tests\Phpunit;
 
 use DataTypes\DataType;
-use DataTypes\DataTypeFactory;
+use DataTypes\Message;
+use PHPUnit_Framework_TestCase;
 
 /**
  * @covers DataTypes\DataType
@@ -12,55 +13,53 @@ use DataTypes\DataTypeFactory;
  *
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
+ * @author Thiemo Mättig
  */
-class DataTypeTest extends \PHPUnit_Framework_TestCase {
+class DataTypeTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * @return DataType[]
-	 */
-	protected function getInstances() {
-		$factory = new DataTypeFactory( array(
-			'string' => 'string',
-		) );
+	protected function setUp() {
+		parent::setUp();
 
-		return $factory->getTypes();
-	}
-
-	public function instanceProvider() {
-		$argLists = array();
-
-		foreach ( $this->getInstances() as $instance ) {
-			$argLists[] = array( $instance );
-		}
-
-		return $argLists;
+		Message::registerTextFunction( function( $key, $languageCode ) {
+			return implode( '|', func_get_args() );
+		} );
 	}
 
 	/**
-	 * @dataProvider instanceProvider
-	 * @param DataType $type
+	 * @dataProvider invalidConstructorArgumentsProvider
 	 */
-	public function testGetId( DataType $type ) {
-		$this->assertInternalType( 'string', $type->getId() );
+	public function testConstructorThrowsException( $propertyType, $valueType ) {
+		$this->setExpectedException( 'InvalidArgumentException' );
+		new DataType( $propertyType, $valueType );
 	}
 
-	/**
-	 * @dataProvider instanceProvider
-	 * @param DataType $type
-	 */
-	public function testGetDataValueType( DataType $type ) {
-		$this->assertInternalType( 'string', $type->getDataValueType() );
+	public function invalidConstructorArgumentsProvider() {
+		return array(
+			array( 'propertyType', null ),
+			array( 'propertyType', false ),
+			array( null, 'valueType' ),
+			array( false, 'valueType' ),
+		);
 	}
 
-	/**
-	 * @dataProvider instanceProvider
-	 * @param DataType $type
-	 */
-	public function testGetLabel( DataType $type ) {
-		foreach ( array( 'en', 'de', 'nl', 'o_O' ) as $langCode ) {
-			$actual = $type->getLabel( $langCode );
-			$this->assertTrue( $actual === null || is_string( $actual ) );
-		}
+	public function testGetId() {
+		$type = new DataType( 'propertyType', 'valueType' );
+		$this->assertSame( 'propertyType', $type->getId() );
+	}
+
+	public function testGetDataValueType() {
+		$type = new DataType( 'propertyType', 'valueType' );
+		$this->assertSame( 'valueType', $type->getDataValueType() );
+	}
+
+	public function testGetLabel() {
+		$type = new DataType( 'propertyType', 'valueType' );
+		$this->assertSame( 'datatypes-type-propertyType|en', $type->getLabel( 'en' ) );
+	}
+
+	public function testToArray() {
+		$type = new DataType( 'propertyType', 'valueType' );
+		$this->assertSame( array( 'dataValueType' => 'valueType' ), $type->toArray() );
 	}
 
 }
