@@ -5,6 +5,7 @@ namespace DataTypes\Tests\Phpunit;
 use DataTypes\DataType;
 use DataTypes\Message;
 use PHPUnit_Framework_TestCase;
+use ReflectionClass;
 
 /**
  * @covers DataTypes\DataType
@@ -17,12 +18,27 @@ use PHPUnit_Framework_TestCase;
  */
 class DataTypeTest extends PHPUnit_Framework_TestCase {
 
+	/**
+	 * @var callable|null
+	 */
+	private $textFunction;
+
 	protected function setUp() {
 		parent::setUp();
+
+		$class = new ReflectionClass( 'DataTypes\Message' );
+		$properties = $class->getStaticProperties();
+		$this->textFunction = $properties['textFunction'];
 
 		Message::registerTextFunction( function( $key, $languageCode ) {
 			return implode( '|', func_get_args() );
 		} );
+	}
+
+	protected function tearDown() {
+		Message::registerTextFunction( $this->textFunction );
+
+		parent::tearDown();
 	}
 
 	/**
