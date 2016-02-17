@@ -51,6 +51,10 @@ for the [Wikidata project](https://wikidata.org/).
 
 ## Release notes
 
+### 0.5.2 (2016-02-17)
+* Fixed cache invalidation in `DataTypesModule`.
+* Fixed `DataTypeFactory` to report invalid arguments on construction.
+
 ### 0.5.1 (2015-10-20)
 * `DataTypeFactory::getTypes()` now returns array with typeId keys as documented
 
