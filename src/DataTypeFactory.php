@@ -14,7 +14,7 @@ use OutOfBoundsException;
 class DataTypeFactory {
 
 	/**
-	 * Maps type id to DataType.
+	 * Associative array mapping data type identifiers to DataType objects.
 	 *
 	 * @var DataType[]
 	 */
@@ -28,8 +28,8 @@ class DataTypeFactory {
 	/**
 	 * @since 0.5
 	 *
-	 * @param string[] $valueTypes Associative array mapping data type identifiers to data value
-	 *  type identifiers.
+	 * @param string[] $valueTypes Associative array mapping data type identifiers (also
+	 *  referred to as "property types") to data value type identifiers.
 	 *
 	 * @throws InvalidArgumentException
 	 */
@@ -70,7 +70,7 @@ class DataTypeFactory {
 	}
 
 	/**
-	 * Returns the type identifiers.
+	 * Returns the list of registered data type identifiers (also referred to as "property types").
 	 *
 	 * @since 0.1
 	 *
@@ -86,7 +86,7 @@ class DataTypeFactory {
 	 *
 	 * @since 0.1
 	 *
-	 * @param string $typeId
+	 * @param string $typeId Data type identifier (also referred to as "property type").
 	 *
 	 * @throws OutOfBoundsException if the requested type is not known.
 	 * @return DataType
@@ -106,7 +106,7 @@ class DataTypeFactory {
 
 	/**
 	 * Returns all data types in an associative array with
-	 * the keys being type identifiers pointing to their
+	 * the keys being data type identifiers (also referred to as "property types") pointing to their
 	 * corresponding data type.
 	 *
 	 * @since 0.1

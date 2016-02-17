@@ -13,7 +13,7 @@ use InvalidArgumentException;
 class DataType {
 
 	/**
-	 * Identifier for the data type.
+	 * Identifier of this data type (also referred to as "property type").
 	 *
 	 * @since 0.1
 	 *
@@ -33,8 +33,8 @@ class DataType {
 	/**
 	 * @since 0.5
 	 *
-	 * @param string $typeId
-	 * @param string $dataValueType
+	 * @param string $typeId Identifier of this data type (also referred to as "property type").
+	 * @param string $dataValueType Identifier for the type of the DataValue.
 	 *
 	 * @throws InvalidArgumentException
 	 */
@@ -52,7 +52,7 @@ class DataType {
 	}
 
 	/**
-	 * Returns the identifier of this data type.
+	 * Returns the identifier of this data type (also referred to as "property type").
 	 *
 	 * @since 0.1
 	 *
@@ -89,7 +89,7 @@ class DataType {
 	/**
 	 * @since 0.1
 	 *
-	 * @return array
+	 * @return string[]
 	 */
 	public function toArray() {
 		return array(
