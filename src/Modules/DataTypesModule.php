@@ -2,6 +2,7 @@
 
 namespace DataTypes\Modules;
 
+use DataTypes\DataType;
 use DataTypes\DataTypeFactory;
 use Exception;
 use FormatJson;
@@ -183,6 +184,7 @@ class DataTypesModule extends ResourceLoaderModule {
 	 */
 	public function getDefinitionSummary( ResourceLoaderContext $context ) {
 		$summary = parent::getDefinitionSummary( $context );
+
 		$summary[] = array(
 			'dataHash' => sha1( json_encode( array_keys( $this->dataTypes ) ) )
 		);
