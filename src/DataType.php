@@ -87,8 +87,6 @@ class DataType {
 	}
 
 	/**
-	 * @see DataType::toArray
-	 *
 	 * @since 0.1
 	 *
 	 * @return array

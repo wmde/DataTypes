@@ -48,7 +48,7 @@ class DataTypeFactory {
 	 *
 	 * @param DataType[] $dataTypes
 	 *
-	 * @return DataTypeFactory
+	 * @return self
 	 */
 	public static function newFromTypes( array $dataTypes ) {
 		$factory = new self( array() );
