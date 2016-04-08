@@ -1,18 +1,16 @@
 {
-    "@metadata": {
-        "authors": [
-            "Xuacu"
-        ]
-    },
-    "datatypes-desc": "Coleición de definiciones de tipos de datos",
-    "datatypes-type-string": "Cadena",
-    "datatypes-type-quantity": "Cantidá",
-    "datatypes-type-monolingual-text": "Testu monollingüe",
-    "datatypes-type-multilingual-text": "Testu multillingüe",
-    "datatypes-type-number": "Númberu",
-    "datatypes-type-mediawiki-title": "Títulu de MediaWiki",
-    "datatypes-type-unknown": "No especificáu",
-    "datatypes-type-boolean": "Booleanu",
-    "datatypes-type-globe-coordinate": "Coordenaes xeográfiques",
-    "datatypes-type-time": "Hora"
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"datatypes-desc": "Coleición de definiciones de tipos de datos",
+	"datatypes-type-string": "Cadena",
+	"datatypes-type-quantity": "Cantidá",
+	"datatypes-type-number": "Númberu",
+	"datatypes-type-mediawiki-title": "Títulu de MediaWiki",
+	"datatypes-type-unknown": "No especificáu",
+	"datatypes-type-boolean": "Booleanu",
+	"datatypes-type-globe-coordinate": "Coordenaes xeográfiques",
+	"datatypes-type-time": "Hora"
 }

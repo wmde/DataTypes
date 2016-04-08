@@ -1,18 +1,19 @@
 {
-    "@metadata": {
-        "authors": [
-            "Base"
-        ]
-    },
-    "datatypes-desc": "Набір визначень типів даних",
-    "datatypes-type-string": "Рядок",
-    "datatypes-type-quantity": "Кількість",
-    "datatypes-type-monolingual-text": "Одномовний текст",
-    "datatypes-type-multilingual-text": "Багатомовний текст",
-    "datatypes-type-number": "Число",
-    "datatypes-type-mediawiki-title": "Заголовок MediaWiki",
-    "datatypes-type-unknown": "Не визначений",
-    "datatypes-type-boolean": "Булев",
-    "datatypes-type-globe-coordinate": "Географічні координати",
-    "datatypes-type-time": "Час"
+	"@metadata": {
+		"authors": [
+			"Base",
+			"Piramidion"
+		]
+	},
+	"datatypes-desc": "Набір визначень типів даних",
+	"datatypes-type-string": "Рядок",
+	"datatypes-type-quantity": "Кількість",
+	"datatypes-type-monolingualtext": "Одномовний текст",
+	"datatypes-type-multilingualtext": "Багатомовний текст",
+	"datatypes-type-number": "Число",
+	"datatypes-type-mediawiki-title": "Заголовок MediaWiki",
+	"datatypes-type-unknown": "Не визначений",
+	"datatypes-type-boolean": "Булев",
+	"datatypes-type-globe-coordinate": "Географічні координати",
+	"datatypes-type-time": "Момент часу"
 }

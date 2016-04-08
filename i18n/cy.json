@@ -1,18 +1,16 @@
 {
-    "@metadata": {
-        "authors": [
-            "Lloffiwr"
-        ]
-    },
-    "datatypes-desc": "Casgliad o ddiffiniadau o fathau o ddata",
-    "datatypes-type-string": "Llinyn",
-    "datatypes-type-quantity": "Mesur",
-    "datatypes-type-monolingual-text": "Testun unieithog",
-    "datatypes-type-multilingual-text": "Testun amlieithog",
-    "datatypes-type-number": "Rhif",
-    "datatypes-type-mediawiki-title": "Teitl yn MediaWiki",
-    "datatypes-type-unknown": "Heb ei nodi",
-    "datatypes-type-boolean": "Boole",
-    "datatypes-type-globe-coordinate": "Cyfesurynnau daearyddol",
-    "datatypes-type-time": "Amser"
+	"@metadata": {
+		"authors": [
+			"Lloffiwr"
+		]
+	},
+	"datatypes-desc": "Casgliad o ddiffiniadau o fathau o ddata",
+	"datatypes-type-string": "Llinyn",
+	"datatypes-type-quantity": "Mesur",
+	"datatypes-type-number": "Rhif",
+	"datatypes-type-mediawiki-title": "Teitl yn MediaWiki",
+	"datatypes-type-unknown": "Heb ei nodi",
+	"datatypes-type-boolean": "Boole",
+	"datatypes-type-globe-coordinate": "Cyfesurynnau daearyddol",
+	"datatypes-type-time": "Amser"
 }

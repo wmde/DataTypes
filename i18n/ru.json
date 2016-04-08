@@ -1,19 +1,21 @@
 {
-    "@metadata": {
-        "authors": [
-            "Ignatus",
-            "Ole Yves"
-        ]
-    },
-    "datatypes-desc": "Коллекция определений типов данных",
-    "datatypes-type-string": "Строка",
-    "datatypes-type-quantity": "Количество",
-    "datatypes-type-monolingual-text": "Одноязычный текст",
-    "datatypes-type-multilingual-text": "Многоязычный текст",
-    "datatypes-type-number": "Номер",
-    "datatypes-type-mediawiki-title": "Заголовок MediaWiki",
-    "datatypes-type-unknown": "Не уточнено",
-    "datatypes-type-boolean": "Логическое значение",
-    "datatypes-type-globe-coordinate": "Географические координаты",
-    "datatypes-type-time": "Время"
+	"@metadata": {
+		"authors": [
+			"Ignatus",
+			"Ole Yves",
+			"Okras",
+			"Александр Сигачёв"
+		]
+	},
+	"datatypes-desc": "Коллекция определений типов данных",
+	"datatypes-type-string": "Строка",
+	"datatypes-type-quantity": "Количество",
+	"datatypes-type-monolingualtext": "Одноязычный текст",
+	"datatypes-type-multilingualtext": "Многоязычный текст",
+	"datatypes-type-number": "Число",
+	"datatypes-type-mediawiki-title": "Заголовок MediaWiki",
+	"datatypes-type-unknown": "Не уточнено",
+	"datatypes-type-boolean": "Логическое значение",
+	"datatypes-type-globe-coordinate": "Географические координаты",
+	"datatypes-type-time": "Момент времени"
 }

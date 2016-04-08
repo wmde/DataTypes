@@ -1,19 +1,19 @@
 {
-    "@metadata": {
-        "authors": [
-            "Kghbln",
-            "Metalhead64"
-        ]
-    },
-    "datatypes-desc": "Stellt eine Zusammenstellung von Datentypdefinitionen bereit",
-    "datatypes-type-string": "Zeichenkette",
-    "datatypes-type-quantity": "Menge",
-    "datatypes-type-monolingual-text": "Einsprachiger Text",
-    "datatypes-type-multilingual-text": "Mehrsprachiger Text",
-    "datatypes-type-number": "Zahl",
-    "datatypes-type-mediawiki-title": "MediaWiki-Titel",
-    "datatypes-type-unknown": "Nicht angegeben",
-    "datatypes-type-boolean": "Wahrheitswert",
-    "datatypes-type-globe-coordinate": "Geografische Koordinaten",
-    "datatypes-type-time": "Zeitpunkt"
+	"@metadata": {
+		"authors": [
+			"Kghbln",
+			"Metalhead64"
+		]
+	},
+	"datatypes-desc": "Stellt eine Zusammenstellung von Datentypdefinitionen bereit",
+	"datatypes-type-string": "Zeichenkette",
+	"datatypes-type-quantity": "Menge",
+	"datatypes-type-monolingualtext": "Einsprachiger Text",
+	"datatypes-type-multilingualtext": "Mehrsprachiger Text",
+	"datatypes-type-number": "Zahl",
+	"datatypes-type-mediawiki-title": "MediaWiki-Titel",
+	"datatypes-type-unknown": "Nicht angegeben",
+	"datatypes-type-boolean": "Wahrheitswert",
+	"datatypes-type-globe-coordinate": "Geografische Koordinaten",
+	"datatypes-type-time": "Zeitpunkt"
 }

@@ -1,18 +1,19 @@
 {
-    "@metadata": {
-        "authors": [
-            "WTM"
-        ]
-    },
-    "datatypes-desc": "Zbiór definicji typów danych",
-    "datatypes-type-string": "Łańcuch",
-    "datatypes-type-quantity": "Ilość",
-    "datatypes-type-monolingual-text": "Tekst jednojęzyczny",
-    "datatypes-type-multilingual-text": "Tekst wielojęzyczny",
-    "datatypes-type-number": "Liczba",
-    "datatypes-type-mediawiki-title": "Tytuł MediaWiki",
-    "datatypes-type-unknown": "Nieokreślone",
-    "datatypes-type-boolean": "Wartość logiczna",
-    "datatypes-type-globe-coordinate": "Współrzędne geograficzne",
-    "datatypes-type-time": "Czas"
+	"@metadata": {
+		"authors": [
+			"WTM",
+			"Chrumps"
+		]
+	},
+	"datatypes-desc": "Zbiór definicji typów danych",
+	"datatypes-type-string": "Łańcuch",
+	"datatypes-type-quantity": "Ilość",
+	"datatypes-type-monolingualtext": "Tekst jednojęzyczny",
+	"datatypes-type-multilingualtext": "Tekst wielojęzyczny",
+	"datatypes-type-number": "Liczba",
+	"datatypes-type-mediawiki-title": "Tytuł MediaWiki",
+	"datatypes-type-unknown": "Nieokreślone",
+	"datatypes-type-boolean": "Wartość logiczna",
+	"datatypes-type-globe-coordinate": "Współrzędne geograficzne",
+	"datatypes-type-time": "Czas"
 }

@@ -1,19 +1,18 @@
 {
-    "@metadata": {
-        "authors": [
-            "Calak",
-            "Mjbmr"
-        ]
-    },
-    "datatypes-desc": "مجموعهای از تعاریف نوع داده",
-    "datatypes-type-string": "رشته",
-    "datatypes-type-quantity": "مقدار",
-    "datatypes-type-monolingual-text": "متن معدودی",
-    "datatypes-type-multilingual-text": "متن چندزبانه",
-    "datatypes-type-number": "عدد",
-    "datatypes-type-mediawiki-title": "عنوان مدیاویکی",
-    "datatypes-type-unknown": "مشخصنشده",
-    "datatypes-type-boolean": "بولی",
-    "datatypes-type-globe-coordinate": "مختصات جغرافیایی",
-    "datatypes-type-time": "زمان"
+	"@metadata": {
+		"authors": [
+			"Calak",
+			"Mjbmr",
+			"Ebraminio"
+		]
+	},
+	"datatypes-desc": "مجموعه‌ای از تعاریف نوع داده",
+	"datatypes-type-string": "رشته",
+	"datatypes-type-quantity": "مقدار",
+	"datatypes-type-number": "عدد",
+	"datatypes-type-mediawiki-title": "عنوان مدیاویکی",
+	"datatypes-type-unknown": "مشخصنشده",
+	"datatypes-type-boolean": "بولی",
+	"datatypes-type-globe-coordinate": "مختصات جغرافیایی",
+	"datatypes-type-time": "زمان"
 }

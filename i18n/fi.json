@@ -1,20 +1,18 @@
 {
-    "@metadata": {
-        "authors": [
-            "Nedergard",
-            "Silvonen",
-            "Stryn"
-        ]
-    },
-    "datatypes-desc": "Kokoelma tietotyyppimäärittelyjä",
-    "datatypes-type-string": "Merkkijono",
-    "datatypes-type-quantity": "Määrä",
-    "datatypes-type-monolingual-text": "Yksikielinen teksti",
-    "datatypes-type-multilingual-text": "Monikielinen teksti",
-    "datatypes-type-number": "Numero",
-    "datatypes-type-mediawiki-title": "MediaWiki-otsikko",
-    "datatypes-type-unknown": "Määrittelemätön",
-    "datatypes-type-boolean": "Totuusarvo",
-    "datatypes-type-globe-coordinate": "Maantieteellinen koordinaatti",
-    "datatypes-type-time": "Aika"
+	"@metadata": {
+		"authors": [
+			"Nedergard",
+			"Silvonen",
+			"Stryn"
+		]
+	},
+	"datatypes-desc": "Kokoelma tietotyyppimäärittelyjä",
+	"datatypes-type-string": "Merkkijono",
+	"datatypes-type-quantity": "Määrä",
+	"datatypes-type-number": "Numero",
+	"datatypes-type-mediawiki-title": "MediaWiki-otsikko",
+	"datatypes-type-unknown": "Määrittelemätön",
+	"datatypes-type-boolean": "Totuusarvo",
+	"datatypes-type-globe-coordinate": "Maantieteellinen koordinaatti",
+	"datatypes-type-time": "Aika"
 }

@@ -1,18 +1,16 @@
 {
-    "@metadata": {
-        "authors": [
-            "Lam-ang"
-        ]
-    },
-    "datatypes-desc": "Urnong dagiti panangilawlawag iti kita ti datos",
-    "datatypes-type-string": "Kuerdas",
-    "datatypes-type-quantity": "Kaadu",
-    "datatypes-type-monolingual-text": "Testo ti maymaysa pagsasao",
-    "datatypes-type-multilingual-text": "Adu a pagsasao a testo",
-    "datatypes-type-number": "Numero",
-    "datatypes-type-mediawiki-title": "Titulo ti MediaWiki",
-    "datatypes-type-unknown": "Di naibagbaga",
-    "datatypes-type-boolean": "Boolean",
-    "datatypes-type-globe-coordinate": "Heograpiko a nagsasabtan",
-    "datatypes-type-time": "Oras"
+	"@metadata": {
+		"authors": [
+			"Lam-ang"
+		]
+	},
+	"datatypes-desc": "Urnong dagiti panangilawlawag iti kita ti datos",
+	"datatypes-type-string": "Kuerdas",
+	"datatypes-type-quantity": "Kaadu",
+	"datatypes-type-number": "Numero",
+	"datatypes-type-mediawiki-title": "Titulo ti MediaWiki",
+	"datatypes-type-unknown": "Di naibagbaga",
+	"datatypes-type-boolean": "Boolean",
+	"datatypes-type-globe-coordinate": "Heograpiko a nagsasabtan",
+	"datatypes-type-time": "Oras"
 }

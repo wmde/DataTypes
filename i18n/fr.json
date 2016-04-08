@@ -1,19 +1,20 @@
 {
-    "@metadata": {
-        "authors": [
-            "Gomoko",
-            "Zolo"
-        ]
-    },
-    "datatypes-desc": "Collection de définitions de types de donnée",
-    "datatypes-type-string": "Chaîne",
-    "datatypes-type-quantity": "Quantité",
-    "datatypes-type-monolingual-text": "Texte monolingue",
-    "datatypes-type-multilingual-text": "Texte multilingue",
-    "datatypes-type-number": "Nombre",
-    "datatypes-type-mediawiki-title": "Titre MediaWiki",
-    "datatypes-type-unknown": "Non spécifié",
-    "datatypes-type-boolean": "Booléen",
-    "datatypes-type-globe-coordinate": "Coordonnées géographiques",
-    "datatypes-type-time": "Date"
+	"@metadata": {
+		"authors": [
+			"Gomoko",
+			"Zolo",
+			"Wladek92"
+		]
+	},
+	"datatypes-desc": "Collection de définitions de types de donnée",
+	"datatypes-type-string": "Chaîne",
+	"datatypes-type-quantity": "Quantité",
+	"datatypes-type-monolingualtext": "Texte monolingue",
+	"datatypes-type-multilingualtext": "Texte multilingue",
+	"datatypes-type-number": "Nombre",
+	"datatypes-type-mediawiki-title": "Titre MediaWiki",
+	"datatypes-type-unknown": "Non spécifié",
+	"datatypes-type-boolean": "Booléen",
+	"datatypes-type-globe-coordinate": "Coordonnées géographiques",
+	"datatypes-type-time": "Point dans le temps"
 }

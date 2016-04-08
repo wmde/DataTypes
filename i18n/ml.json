@@ -1,18 +1,16 @@
 {
-    "@metadata": {
-        "authors": [
-            "Praveenp"
-        ]
-    },
-    "datatypes-desc": "ഡേറ്റാ ടൈപ്പ് നിർവചനങ്ങളുടെ ശേഖരം",
-    "datatypes-type-string": "പദം",
-    "datatypes-type-quantity": "അളവ്",
-    "datatypes-type-monolingual-text": "ഒറ്റഭാഷയിലുള്ള എഴുത്ത്",
-    "datatypes-type-multilingual-text": "ബഹുഭാഷാ എഴുത്ത്",
-    "datatypes-type-number": "സംഖ്യ",
-    "datatypes-type-mediawiki-title": "മീഡിയവിക്കി തലക്കെട്ട്",
-    "datatypes-type-unknown": "വ്യക്തമാക്കാത്തവ",
-    "datatypes-type-boolean": "ബൂളിയൻ",
-    "datatypes-type-globe-coordinate": "ഭൗമനിർദ്ദേശാങ്കങ്ങൾ",
-    "datatypes-type-time": "സമയം"
+	"@metadata": {
+		"authors": [
+			"Praveenp"
+		]
+	},
+	"datatypes-desc": "ഡേറ്റാ ടൈപ്പ് നിർവചനങ്ങളുടെ ശേഖരം",
+	"datatypes-type-string": "പദം",
+	"datatypes-type-quantity": "അളവ്",
+	"datatypes-type-number": "സംഖ്യ",
+	"datatypes-type-mediawiki-title": "മീഡിയവിക്കി തലക്കെട്ട്",
+	"datatypes-type-unknown": "വ്യക്തമാക്കാത്തവ",
+	"datatypes-type-boolean": "ബൂളിയൻ",
+	"datatypes-type-globe-coordinate": "ഭൗമനിർദ്ദേശാങ്കങ്ങൾ",
+	"datatypes-type-time": "സമയം"
 }

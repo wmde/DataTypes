@@ -1,18 +1,17 @@
 {
-    "@metadata": {
-        "authors": [
-            "Amire80"
-        ]
-    },
-    "datatypes-desc": "אוסף של הגדרות סוגי נתונים",
-    "datatypes-type-string": "מחרוזת",
-    "datatypes-type-quantity": "כמות",
-    "datatypes-type-monolingual-text": "טקסט חד־לשוני",
-    "datatypes-type-multilingual-text": "טקסט רב־לשוני",
-    "datatypes-type-number": "מספר",
-    "datatypes-type-mediawiki-title": "כותרת מדיה־ויקי",
-    "datatypes-type-unknown": "בלתי־מוגדר",
-    "datatypes-type-boolean": "בוליאני",
-    "datatypes-type-globe-coordinate": "נקודת ציון גאוגרפית",
-    "datatypes-type-time": "זמן"
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Inkbug"
+		]
+	},
+	"datatypes-desc": "אוסף של הגדרות סוגי נתונים",
+	"datatypes-type-string": "מחרוזת",
+	"datatypes-type-quantity": "כמות",
+	"datatypes-type-number": "מספר",
+	"datatypes-type-mediawiki-title": "כותרת מדיה־ויקי",
+	"datatypes-type-unknown": "בלתי־מוגדר",
+	"datatypes-type-boolean": "בוליאני",
+	"datatypes-type-globe-coordinate": "נקודות ציון גאוגרפיות",
+	"datatypes-type-time": "זמן"
 }

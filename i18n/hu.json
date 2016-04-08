@@ -1,17 +1,19 @@
 {
-    "@metadata": {
-        "authors": [
-            "Dj"
-        ]
-    },
-    "datatypes-desc": "Adattípus definíciók gyűjteménye",
-    "datatypes-type-string": "Szöveg",
-    "datatypes-type-quantity": "Mennyiség",
-    "datatypes-type-monolingual-text": "Egynyelvű szöveg",
-    "datatypes-type-multilingual-text": "Többnyelvű szöveg",
-    "datatypes-type-number": "Szám",
-    "datatypes-type-mediawiki-title": "MediaWiki cím",
-    "datatypes-type-unknown": "Meghatározatlan",
-    "datatypes-type-boolean": "Logikai érték",
-    "datatypes-type-globe-coordinate": "Földrajzi koordináta"
+	"@metadata": {
+		"authors": [
+			"Dj",
+			"JulesWinnfield-hu",
+			"Máté"
+		]
+	},
+	"datatypes-desc": "Adattípus definíciók gyűjteménye",
+	"datatypes-type-string": "Karakterlánc",
+	"datatypes-type-quantity": "Mennyiség",
+	"datatypes-type-monolingualtext": "Egynyelvű szöveg",
+	"datatypes-type-number": "Szám",
+	"datatypes-type-mediawiki-title": "MediaWiki-cím",
+	"datatypes-type-unknown": "Meghatározatlan",
+	"datatypes-type-boolean": "Logikai érték",
+	"datatypes-type-globe-coordinate": "Földrajzi koordináta",
+	"datatypes-type-time": "Időpont"
 }

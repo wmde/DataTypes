@@ -1,21 +1,19 @@
 {
-    "@metadata": {
-        "authors": [
-            "Ainali",
-            "Lokal Profil",
-            "Rotsee",
-            "WikiPhoenix"
-        ]
-    },
-    "datatypes-desc": "Samling av definitioner av olika datatyper",
-    "datatypes-type-string": "Sträng",
-    "datatypes-type-quantity": "Kvantitet",
-    "datatypes-type-monolingual-text": "Enspråkig text",
-    "datatypes-type-multilingual-text": "Flerspråkig text",
-    "datatypes-type-number": "Nummer",
-    "datatypes-type-mediawiki-title": "MediaWiki-titel",
-    "datatypes-type-unknown": "Ospecificerad",
-    "datatypes-type-boolean": "Boolesk",
-    "datatypes-type-globe-coordinate": "Geografiska koordinater",
-    "datatypes-type-time": "Tid"
+	"@metadata": {
+		"authors": [
+			"Ainali",
+			"Lokal Profil",
+			"Rotsee",
+			"WikiPhoenix"
+		]
+	},
+	"datatypes-desc": "Samling av definitioner av olika datatyper",
+	"datatypes-type-string": "Sträng",
+	"datatypes-type-quantity": "Kvantitet",
+	"datatypes-type-number": "Nummer",
+	"datatypes-type-mediawiki-title": "MediaWiki-titel",
+	"datatypes-type-unknown": "Ospecificerad",
+	"datatypes-type-boolean": "Boolesk",
+	"datatypes-type-globe-coordinate": "Geografiska koordinater",
+	"datatypes-type-time": "Tid"
 }

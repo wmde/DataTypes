@@ -1,20 +1,21 @@
 {
-    "@metadata": {
-        "authors": [
-            "Mormegil",
-            "Reaperman",
-            "Vks"
-        ]
-    },
-    "datatypes-desc": "Soubor definic datových typů",
-    "datatypes-type-string": "Řetězec",
-    "datatypes-type-quantity": "Množství",
-    "datatypes-type-monolingual-text": "Jednojazyčný text",
-    "datatypes-type-multilingual-text": "Vícejazyčný text",
-    "datatypes-type-number": "Číslo",
-    "datatypes-type-mediawiki-title": "Titulek MediaWiki",
-    "datatypes-type-unknown": "Neurčené",
-    "datatypes-type-boolean": "Logická hodnota",
-    "datatypes-type-globe-coordinate": "Zeměpisné souřadnice",
-    "datatypes-type-time": "Čas"
+	"@metadata": {
+		"authors": [
+			"Mormegil",
+			"Reaperman",
+			"Vks",
+			"Matěj Suchánek"
+		]
+	},
+	"datatypes-desc": "Soubor definic datových typů",
+	"datatypes-type-string": "Řetězec",
+	"datatypes-type-quantity": "Množství",
+	"datatypes-type-monolingualtext": "Jednojazyčný text",
+	"datatypes-type-multilingualtext": "Vícejazyčný text",
+	"datatypes-type-number": "Číslo",
+	"datatypes-type-mediawiki-title": "Titulek MediaWiki",
+	"datatypes-type-unknown": "Neurčené",
+	"datatypes-type-boolean": "Logická hodnota",
+	"datatypes-type-globe-coordinate": "Zeměpisné souřadnice",
+	"datatypes-type-time": "Bod v čase"
 }

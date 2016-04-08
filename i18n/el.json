@@ -1,18 +1,16 @@
 {
-    "@metadata": {
-        "authors": [
-            "Glavkos",
-            "Protnet",
-            "ZaDiak"
-        ]
-    },
-    "datatypes-desc": "Συλλογή από ορισμούς τύπων δεδομένων",
-    "datatypes-type-string": "Συμβολοσειρά",
-    "datatypes-type-quantity": "Ποσότητα",
-    "datatypes-type-monolingual-text": "Μονόγλωσσο κείμενο",
-    "datatypes-type-multilingual-text": "Πολύγλωσσο κείμενο",
-    "datatypes-type-number": "Αριθμός",
-    "datatypes-type-mediawiki-title": "Τίτλος MediaWiki",
-    "datatypes-type-unknown": "Αδιευκρίνιστο",
-    "datatypes-type-boolean": "Δυαδική τιμή"
+	"@metadata": {
+		"authors": [
+			"Glavkos",
+			"Protnet",
+			"ZaDiak"
+		]
+	},
+	"datatypes-desc": "Συλλογή από ορισμούς τύπων δεδομένων",
+	"datatypes-type-string": "Συμβολοσειρά",
+	"datatypes-type-quantity": "Ποσότητα",
+	"datatypes-type-number": "Αριθμός",
+	"datatypes-type-mediawiki-title": "Τίτλος MediaWiki",
+	"datatypes-type-unknown": "Αδιευκρίνιστο",
+	"datatypes-type-boolean": "Δυαδική τιμή"
 }

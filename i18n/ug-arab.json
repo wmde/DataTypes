@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Sahran"
-        ]
-    },
-    "datatypes-type-string": "تېكىست",
-    "datatypes-type-quantity": "سانى",
-    "datatypes-type-number": "نومۇرى",
-    "datatypes-type-unknown": "بەلگىلەنمىگەن",
-    "datatypes-type-boolean": "بۇلىن"
+	"@metadata": {
+		"authors": [
+			"Sahran"
+		]
+	},
+	"datatypes-type-string": "تېكىست",
+	"datatypes-type-quantity": "سانى",
+	"datatypes-type-number": "نومۇرى",
+	"datatypes-type-unknown": "بەلگىلەنمىگەن",
+	"datatypes-type-boolean": "بۇلىن"
 }

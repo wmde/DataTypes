@@ -1,18 +1,20 @@
 {
-    "@metadata": {
-        "authors": [
-            "Shirayuki"
-        ]
-    },
-    "datatypes-desc": "{{desc|name=Data Types|url=http://www.mediawiki.org/wiki/Extension:DataTypes}}",
-    "datatypes-type-string": "The name of a data type.\n{{Identical|String}}",
-    "datatypes-type-quantity": "The name of a data type for quantities (proper name, capitalised in English; first letter capitalised anyway in this message and relatives).",
-    "datatypes-type-monolingualtext": "The name of a data type.\n{{Identical|Monolingual text}}",
-    "datatypes-type-multilingualtext": "The name of a data type.\n{{Identical|Multilingual text}}",
-    "datatypes-type-number": "The name of a data type.\n{{Identical|Number}}",
-    "datatypes-type-mediawiki-title": "The name of a data type",
-    "datatypes-type-unknown": "The name of a data type",
-    "datatypes-type-boolean": "The name of a data type",
-    "datatypes-type-globe-coordinate": "The name of a data type",
-    "datatypes-type-time": "The name of a data type.\n{{Identical|Time}}"
+	"@metadata": {
+		"authors": [
+			"Shirayuki",
+			"Liuxinyu970226",
+			"Umherirrender"
+		]
+	},
+	"datatypes-desc": "{{desc|name=Data Types|url=https://www.mediawiki.org/wiki/Extension:DataTypes}}",
+	"datatypes-type-string": "The name of a data type.\n{{Identical|String}}",
+	"datatypes-type-quantity": "The name of a data type for quantities (proper name, capitalised in English; first letter capitalised anyway in this message and relatives).",
+	"datatypes-type-monolingualtext": "The name of a data type.\n{{Identical|Monolingual text}}",
+	"datatypes-type-multilingualtext": "The name of a data type.\n{{Identical|Multilingual text}}",
+	"datatypes-type-number": "The name of a data type.\n{{Identical|Number}}",
+	"datatypes-type-mediawiki-title": "The name of a data type",
+	"datatypes-type-unknown": "The name of a data type",
+	"datatypes-type-boolean": "The name of a data type",
+	"datatypes-type-globe-coordinate": "The name of a data type",
+	"datatypes-type-time": "The name of a data type."
 }

@@ -1,20 +1,18 @@
 {
-    "@metadata": {
-        "authors": [
-            "Erdemaslancan",
-            "Marmase",
-            "Mirzali"
-        ]
-    },
-    "datatypes-desc": "Agoznayeya babete malumat de koleksiyonan",
-    "datatypes-type-string": "La",
-    "datatypes-type-quantity": "Miktar",
-    "datatypes-type-monolingual-text": "Yewzıwan metin",
-    "datatypes-type-multilingual-text": "Nuşteyê zehfzıwanan",
-    "datatypes-type-number": "Numre",
-    "datatypes-type-mediawiki-title": "Sernamey MediaWiki",
-    "datatypes-type-unknown": "Nêvaciyayo",
-    "datatypes-type-boolean": "Boolean",
-    "datatypes-type-globe-coordinate": "Goğrafi koordinati",
-    "datatypes-type-time": "Zeman"
+	"@metadata": {
+		"authors": [
+			"Erdemaslancan",
+			"Marmase",
+			"Mirzali"
+		]
+	},
+	"datatypes-desc": "Agoznayeya babete malumat de koleksiyonan",
+	"datatypes-type-string": "La",
+	"datatypes-type-quantity": "Miktar",
+	"datatypes-type-number": "Numre",
+	"datatypes-type-mediawiki-title": "Sernamey MediaWiki",
+	"datatypes-type-unknown": "Nêvaciyayo",
+	"datatypes-type-boolean": "Boolean",
+	"datatypes-type-globe-coordinate": "Koordinatê coğrafyayêni",
+	"datatypes-type-time": "Zeman"
 }

@@ -1,19 +1,20 @@
 {
-    "@metadata": {
-        "authors": [
-            "Justincheng12345",
-            "Simon Shek"
-        ]
-    },
-    "datatypes-desc": "資料類型定義的集合",
-    "datatypes-type-string": "字串",
-    "datatypes-type-quantity": "數量",
-    "datatypes-type-monolingual-text": "單語言文字",
-    "datatypes-type-multilingual-text": "多語言文字",
-    "datatypes-type-number": "數字",
-    "datatypes-type-mediawiki-title": "MediaWiki 標題",
-    "datatypes-type-unknown": "未指定",
-    "datatypes-type-boolean": "布爾",
-    "datatypes-type-globe-coordinate": "地理座標",
-    "datatypes-type-time": "時間"
+	"@metadata": {
+		"authors": [
+			"Justincheng12345",
+			"Simon Shek",
+			"Liuxinyu970226"
+		]
+	},
+	"datatypes-desc": "資料類型定義的集合",
+	"datatypes-type-string": "字串",
+	"datatypes-type-quantity": "數量",
+	"datatypes-type-monolingualtext": "單語言內容",
+	"datatypes-type-multilingualtext": "多語言內容",
+	"datatypes-type-number": "數字",
+	"datatypes-type-mediawiki-title": "MediaWiki 標題",
+	"datatypes-type-unknown": "未指定",
+	"datatypes-type-boolean": "布林值",
+	"datatypes-type-globe-coordinate": "地理座標",
+	"datatypes-type-time": "時間"
 }

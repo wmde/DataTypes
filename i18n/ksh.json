@@ -1,18 +1,16 @@
 {
-    "@metadata": {
-        "authors": [
-            "Purodha"
-        ]
-    },
-    "datatypes-desc": "En Versammlong vun Aate vun Daate iehr Defenizjuhne.",
-    "datatypes-type-string": "En ZeischeKätt",
-    "datatypes-type-quantity": "Wäät",
-    "datatypes-type-monolingual-text": "Einschproocheje Täx",
-    "datatypes-type-multilingual-text": "Miehschproocheje Täx",
-    "datatypes-type-number": "Nommer",
-    "datatypes-type-mediawiki-title": "MediaWiki Tittel",
-    "datatypes-type-unknown": "Nit aanjejovve",
-    "datatypes-type-boolean": "Joh udder Nää",
-    "datatypes-type-globe-coordinate": "Ko'odenaate om Jloobos",
-    "datatypes-type-time": "En Uhrzick"
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"datatypes-desc": "En Versammlong vun Aate vun Daate iehr Defenizjuhne.",
+	"datatypes-type-string": "En ZeischeKätt",
+	"datatypes-type-quantity": "Wäät",
+	"datatypes-type-number": "Nommer",
+	"datatypes-type-mediawiki-title": "MediaWiki Tittel",
+	"datatypes-type-unknown": "Nit aanjejovve",
+	"datatypes-type-boolean": "Joh udder Nää",
+	"datatypes-type-globe-coordinate": "Ko'odenaate om Jloobos",
+	"datatypes-type-time": "En Uhrzick"
 }

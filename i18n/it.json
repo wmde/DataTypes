@@ -1,18 +1,18 @@
 {
-    "@metadata": {
-        "authors": [
-            "Beta16"
-        ]
-    },
-    "datatypes-desc": "Collezione di definizione di tipi di dati",
-    "datatypes-type-string": "Stringa",
-    "datatypes-type-quantity": "Quantità",
-    "datatypes-type-monolingual-text": "Testo monolingua",
-    "datatypes-type-multilingual-text": "Testo multilingua",
-    "datatypes-type-number": "Numero",
-    "datatypes-type-mediawiki-title": "Titolo MediaWiki",
-    "datatypes-type-unknown": "Non specificato",
-    "datatypes-type-boolean": "Booleano",
-    "datatypes-type-globe-coordinate": "Coordinate geografiche",
-    "datatypes-type-time": "Data e ora"
+	"@metadata": {
+		"authors": [
+			"Beta16"
+		]
+	},
+	"datatypes-desc": "Collezione di definizione di tipi di dati",
+	"datatypes-type-string": "Stringa",
+	"datatypes-type-quantity": "Quantità",
+	"datatypes-type-monolingualtext": "Testo monolingua",
+	"datatypes-type-multilingualtext": "Testo multilingua",
+	"datatypes-type-number": "Numero",
+	"datatypes-type-mediawiki-title": "Titolo MediaWiki",
+	"datatypes-type-unknown": "Non specificato",
+	"datatypes-type-boolean": "Booleano",
+	"datatypes-type-globe-coordinate": "Coordinate geografiche",
+	"datatypes-type-time": "Punto nel tempo"
 }
