@@ -10,10 +10,12 @@
 	"datatypes-desc": "Samling av definitioner av olika datatyper",
 	"datatypes-type-string": "Sträng",
 	"datatypes-type-quantity": "Kvantitet",
+	"datatypes-type-monolingualtext": "Enspråkig text",
+	"datatypes-type-multilingualtext": "Flerspråkig text",
 	"datatypes-type-number": "Nummer",
 	"datatypes-type-mediawiki-title": "MediaWiki-titel",
 	"datatypes-type-unknown": "Ospecificerad",
 	"datatypes-type-boolean": "Boolesk",
 	"datatypes-type-globe-coordinate": "Geografiska koordinater",
-	"datatypes-type-time": "Tid"
+	"datatypes-type-time": "Tidpunkt"
 }

@@ -2,12 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
-			"Inkbug"
+			"Inkbug",
+			"Guycn2"
 		]
 	},
 	"datatypes-desc": "אוסף של הגדרות סוגי נתונים",
 	"datatypes-type-string": "מחרוזת",
 	"datatypes-type-quantity": "כמות",
+	"datatypes-type-monolingualtext": "טקסט חד־לשוני",
+	"datatypes-type-multilingualtext": "טקסט רב־לשוני",
 	"datatypes-type-number": "מספר",
 	"datatypes-type-mediawiki-title": "כותרת מדיה־ויקי",
 	"datatypes-type-unknown": "בלתי־מוגדר",

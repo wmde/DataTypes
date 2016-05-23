@@ -9,6 +9,8 @@
 	"datatypes-desc": "Kokoelma tietotyyppimäärittelyjä",
 	"datatypes-type-string": "Merkkijono",
 	"datatypes-type-quantity": "Määrä",
+	"datatypes-type-monolingualtext": "Yksikielinen teksti",
+	"datatypes-type-multilingualtext": "Monikielinen teksti",
 	"datatypes-type-number": "Numero",
 	"datatypes-type-mediawiki-title": "MediaWiki-otsikko",
 	"datatypes-type-unknown": "Määrittelemätön",

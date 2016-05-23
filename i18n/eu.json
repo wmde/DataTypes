@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"An13sa"
+		]
+	},
+	"datatypes-type-quantity": "Kopurua",
+	"datatypes-type-monolingualtext": "Hizkuntza bakarreko testua",
+	"datatypes-type-multilingualtext": "Hizkuntza anitzeko testua",
+	"datatypes-type-number": "Zenbakia",
+	"datatypes-type-mediawiki-title": "MediaWiki izenburua",
+	"datatypes-type-unknown": "Zehaztugabea",
+	"datatypes-type-boolean": "Boolearra",
+	"datatypes-type-globe-coordinate": "Koordenatu geografikoak"
+}

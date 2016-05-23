@@ -1,16 +1,19 @@
 {
 	"@metadata": {
 		"authors": [
-			"Wizardist"
+			"Wizardist",
+			"Red Winged Duck"
 		]
 	},
 	"datatypes-desc": "Збор вызначэньняў тыпаў зьвестак",
 	"datatypes-type-string": "Радок",
 	"datatypes-type-quantity": "Колькасьць",
+	"datatypes-type-monolingualtext": "Аднамоўны тэкст",
+	"datatypes-type-multilingualtext": "Шматмоўны тэкст",
 	"datatypes-type-number": "Лік",
 	"datatypes-type-mediawiki-title": "Загаловак MediaWiki",
 	"datatypes-type-unknown": "Не пазначаны",
 	"datatypes-type-boolean": "Булевы",
 	"datatypes-type-globe-coordinate": "Геаграфічныя каардынаты",
-	"datatypes-type-time": "Час"
+	"datatypes-type-time": "Момант часу"
 }

@@ -3,16 +3,19 @@
 		"authors": [
 			"Calak",
 			"Mjbmr",
-			"Ebraminio"
+			"Ebraminio",
+			"Mahdy Saffar"
 		]
 	},
 	"datatypes-desc": "مجموعه‌ای از تعاریف نوع داده",
 	"datatypes-type-string": "رشته",
 	"datatypes-type-quantity": "مقدار",
+	"datatypes-type-monolingualtext": "متن تک‌زبانه",
+	"datatypes-type-multilingualtext": "متن چندزبانه",
 	"datatypes-type-number": "عدد",
 	"datatypes-type-mediawiki-title": "عنوان مدیاویکی",
 	"datatypes-type-unknown": "مشخصنشده",
 	"datatypes-type-boolean": "بولی",
 	"datatypes-type-globe-coordinate": "مختصات جغرافیایی",
-	"datatypes-type-time": "زمان"
+	"datatypes-type-time": "نقطه در زمان"
 }

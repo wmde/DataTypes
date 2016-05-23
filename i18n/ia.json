@@ -7,10 +7,12 @@
 	"datatypes-desc": "Collection de definitiones de typos de datos",
 	"datatypes-type-string": "Catena de characteres",
 	"datatypes-type-quantity": "Quantitate",
+	"datatypes-type-monolingualtext": "Texto monolingue",
+	"datatypes-type-multilingualtext": "Texto multilingue",
 	"datatypes-type-number": "Numero",
 	"datatypes-type-mediawiki-title": "Titulo de MediaWiki",
 	"datatypes-type-unknown": "Non specificate",
 	"datatypes-type-boolean": "Boolean",
 	"datatypes-type-globe-coordinate": "Coordinatas geographic",
-	"datatypes-type-time": "Hora"
+	"datatypes-type-time": "Puncto in tempore"
 }
