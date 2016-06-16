@@ -1,15 +1,19 @@
 {
 	"@metadata": {
 		"authors": [
-			"Farras"
+			"Farras",
+			"Rachmat.Wahidi"
 		]
 	},
 	"datatypes-desc": "Koleksi definisi jenis data",
 	"datatypes-type-string": "String",
 	"datatypes-type-quantity": "Jumlah",
+	"datatypes-type-monolingualtext": "Teks bahasa tunggal",
+	"datatypes-type-multilingualtext": "Teks multibahasa",
 	"datatypes-type-number": "Nomor",
 	"datatypes-type-mediawiki-title": "Judul MediaWiki",
 	"datatypes-type-unknown": "Tidak ditentukan",
 	"datatypes-type-boolean": "Boolean",
-	"datatypes-type-globe-coordinate": "Koordinat geografis"
+	"datatypes-type-globe-coordinate": "Koordinat geografis",
+	"datatypes-type-time": "Titik waktu"
 }

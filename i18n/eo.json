@@ -1,13 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yekrats"
+			"Yekrats",
+			"Robin van der Vliet"
 		]
 	},
 	"datatypes-type-string": "Bitĉeno",
 	"datatypes-type-quantity": "Kvanto",
+	"datatypes-type-monolingualtext": "Unulingva teksto",
+	"datatypes-type-multilingualtext": "Plurlingva teksto",
 	"datatypes-type-number": "Nombro",
 	"datatypes-type-mediawiki-title": "Titolo MidaWiki",
 	"datatypes-type-unknown": "Nespecifa",
-	"datatypes-type-boolean": "Bulea"
+	"datatypes-type-boolean": "Bulea",
+	"datatypes-type-globe-coordinate": "Geografiaj koordinatoj",
+	"datatypes-type-time": "Tempopunkto"
 }

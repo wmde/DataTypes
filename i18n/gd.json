@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"GunChleoc"
+		]
+	},
+	"datatypes-desc": "Cruinneachadh dhe dheifiniseanan air seòrsaichean dàta",
+	"datatypes-type-string": "Sreang",
+	"datatypes-type-quantity": "Uiread",
+	"datatypes-type-monolingualtext": "Teacsa aon-chànanach",
+	"datatypes-type-multilingualtext": "Teacsa ioma-chànanach",
+	"datatypes-type-number": "Àireamh",
+	"datatypes-type-mediawiki-title": "Tiotal MediaWiki",
+	"datatypes-type-unknown": "Gun sònrachadh",
+	"datatypes-type-boolean": "Booleach",
+	"datatypes-type-globe-coordinate": "Co-chomharran cruinn-eòlasach",
+	"datatypes-type-time": "Àm"
+}

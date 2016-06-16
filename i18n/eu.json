@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"An13sa"
+			"An13sa",
+			"Sator"
 		]
 	},
+	"datatypes-type-string": "Katea",
 	"datatypes-type-quantity": "Kopurua",
 	"datatypes-type-monolingualtext": "Hizkuntza bakarreko testua",
 	"datatypes-type-multilingualtext": "Hizkuntza anitzeko testua",

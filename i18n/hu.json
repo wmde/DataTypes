@@ -3,13 +3,15 @@
 		"authors": [
 			"Dj",
 			"JulesWinnfield-hu",
-			"Máté"
+			"Máté",
+			"Wolf Rex"
 		]
 	},
 	"datatypes-desc": "Adattípus definíciók gyűjteménye",
 	"datatypes-type-string": "Karakterlánc",
 	"datatypes-type-quantity": "Mennyiség",
 	"datatypes-type-monolingualtext": "Egynyelvű szöveg",
+	"datatypes-type-multilingualtext": "Többnyelvű szöveg",
 	"datatypes-type-number": "Szám",
 	"datatypes-type-mediawiki-title": "MediaWiki-cím",
 	"datatypes-type-unknown": "Meghatározatlan",

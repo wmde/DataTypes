@@ -16,5 +16,5 @@
 	"datatypes-type-unknown": "בלתי־מוגדר",
 	"datatypes-type-boolean": "בוליאני",
 	"datatypes-type-globe-coordinate": "נקודות ציון גאוגרפיות",
-	"datatypes-type-time": "זמן"
+	"datatypes-type-time": "נקודת זמן"
 }
