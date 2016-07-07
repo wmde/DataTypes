@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"AmaryllisGardener"
+		]
+	},
+	"datatypes-desc": "Collection o data teep defineetions",
+	"datatypes-type-string": "String",
+	"datatypes-type-quantity": "Quantity",
+	"datatypes-type-monolingualtext": "Monolingual text",
+	"datatypes-type-multilingualtext": "Multilingual text",
+	"datatypes-type-number": "Nummer",
+	"datatypes-type-mediawiki-title": "MediaWiki teetle",
+	"datatypes-type-unknown": "Unspecified",
+	"datatypes-type-boolean": "Boolean",
+	"datatypes-type-globe-coordinate": "Geografic coordinates",
+	"datatypes-type-time": "Pynt in time"
+}
