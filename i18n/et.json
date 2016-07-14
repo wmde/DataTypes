@@ -7,10 +7,13 @@
 	},
 	"datatypes-desc": "Andmetüübi määratluste kogu",
 	"datatypes-type-string": "Sõne",
-	"datatypes-type-quantity": "Kogus",
+	"datatypes-type-quantity": "Suurus",
+	"datatypes-type-monolingualtext": "Ühekeelne tekst",
+	"datatypes-type-multilingualtext": "Mitmekeelne tekst",
 	"datatypes-type-number": "Number",
 	"datatypes-type-mediawiki-title": "MediaWiki pealkiri",
 	"datatypes-type-unknown": "Määratlemata",
-	"datatypes-type-globe-coordinate": "Geograafiline koordinaat",
-	"datatypes-type-time": "Aeg"
+	"datatypes-type-boolean": "Kahendmuutuja",
+	"datatypes-type-globe-coordinate": "Geograafilised koordinaadid",
+	"datatypes-type-time": "Ajahetk"
 }

@@ -3,7 +3,8 @@
 		"authors": [
 			"Nedergard",
 			"Silvonen",
-			"Stryn"
+			"Stryn",
+			"01miki10"
 		]
 	},
 	"datatypes-desc": "Kokoelma tietotyyppimäärittelyjä",
@@ -16,5 +17,5 @@
 	"datatypes-type-unknown": "Määrittelemätön",
 	"datatypes-type-boolean": "Totuusarvo",
 	"datatypes-type-globe-coordinate": "Maantieteellinen koordinaatti",
-	"datatypes-type-time": "Aika"
+	"datatypes-type-time": "Ajanhetki"
 }
