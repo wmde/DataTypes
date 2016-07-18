@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"WTM",
-			"Chrumps"
+			"Chrumps",
+			"Woytecr"
 		]
 	},
 	"datatypes-desc": "Zbiór definicji typów danych",
@@ -15,5 +16,5 @@
 	"datatypes-type-unknown": "Nieokreślone",
 	"datatypes-type-boolean": "Wartość logiczna",
 	"datatypes-type-globe-coordinate": "Współrzędne geograficzne",
-	"datatypes-type-time": "Czas"
+	"datatypes-type-time": "Moment w czasie"
 }

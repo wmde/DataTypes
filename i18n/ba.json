@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lizalizaufa"
+		]
+	},
+	"datatypes-desc": "Бирем төрҙәре билдәләмәһе коллекцияһы",
+	"datatypes-type-quantity": "нисбәте",
+	"datatypes-type-monolingualtext": "бер телле текст",
+	"datatypes-type-multilingualtext": "Күп телле текст",
+	"datatypes-type-mediawiki-title": "MediaWiki титулы",
+	"datatypes-type-unknown": "Аныҡланмаған",
+	"datatypes-type-globe-coordinate": "географик координаттар",
+	"datatypes-type-time": "Ваҡыт мәле"
+}
