@@ -7,6 +7,7 @@
 	"datatypes-desc": "Samling av definisjonar på datatypar",
 	"datatypes-type-string": "Streng",
 	"datatypes-type-quantity": "Kvantitet",
+	"datatypes-type-monolingualtext": "Einspråkleg tekst",
 	"datatypes-type-number": "Tal",
 	"datatypes-type-mediawiki-title": "MediaWiki-tittel",
 	"datatypes-type-unknown": "Uspesifisert",
