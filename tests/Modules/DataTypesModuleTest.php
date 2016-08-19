@@ -4,6 +4,7 @@ namespace DataTypes\Tests\Modules;
 
 use DataTypes\DataTypeFactory;
 use DataTypes\Modules\DataTypesModule;
+use ResourceLoaderContext;
 
 /**
  * @covers DataTypes\Modules\DataTypesModule
