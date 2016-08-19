@@ -5,7 +5,7 @@
  * DataType store.
  * @class dataTypes.DataTypeStore
  * @since 0.2
- * @licence GNU GPL v2+
+ * @license GPL-2.0+
  * @author H. Snater < mediawiki@snater.com >
  *
  * @constructor
