@@ -37,7 +37,7 @@ class DataTypesModuleTest extends \PHPUnit_Framework_TestCase {
 
 		$cases = array();
 
-		foreach( $validResourceDefinitions as $definition ) {
+		foreach ( $validResourceDefinitions as $definition ) {
 			$instance = new DataTypesModule( $definition );
 			$cases[] = array( $instance, $definition );
 		}
@@ -173,7 +173,6 @@ class DataTypesModuleTest extends \PHPUnit_Framework_TestCase {
 
 		$this->assertNotEquals( $summary1[0]['dataHash'], $summary2[0]['dataHash'] );
 	}
-
 
 	private function makeDefinition( array $dataTypes ) {
 		return array(

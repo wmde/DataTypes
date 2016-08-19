@@ -69,7 +69,6 @@ class DataTypesModule extends ResourceLoaderModule {
 			? $resourceDefinition['datatypesconfigvarname']
 			: null;
 
-
 		if ( !is_string( $dataTypesConfigVarName ) || $dataTypesConfigVarName === '' ) {
 			throw new Exception(
 				'The "datatypesconfigvarname" value of the resource definition' .
@@ -147,7 +146,7 @@ class DataTypesModule extends ResourceLoaderModule {
 		$configVarName = $this->getConfigVarName();
 		$typesJson = array();
 
-		foreach( $this->dataTypes as $dataType ) {
+		foreach ( $this->dataTypes as $dataType ) {
 			$typesJson[ $dataType->getId() ] = $dataType->toArray();
 		}
 		$typesJson = FormatJson::encode( $typesJson );
@@ -160,12 +159,12 @@ class DataTypesModule extends ResourceLoaderModule {
 	 * @see ResourceLoaderModule::getMessages
 	 * @since 0.1
 	 *
-	 * @return Array
+	 * @return string[]
 	 */
 	public function getMessages() {
 		$messageKeys = array();
 
-		foreach( $this->dataTypes as $dataType ) {
+		foreach ( $this->dataTypes as $dataType ) {
 			// TODO: currently we assume that the type is using a message while it does not have to.
 			//  Either change the system to ensure that a message is used or put the type labels
 			//  directly into the JSON. Either way, the information should be in DataType::toArray.
