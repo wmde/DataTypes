@@ -25,6 +25,9 @@
 	"require": {
 		"php": ">=5.3.0"
 	},
+	"require-dev": {
+		"mediawiki/mediawiki-codesniffer": "~0.5"
+	},
 	"autoload": {
 		"files" : [
 			"DataTypes.php"
@@ -32,5 +35,10 @@
 		"psr-4": {
 			"DataTypes\\": "src/"
 		}
+	},
+	"scripts": {
+		"phpcs": [
+			"vendor/bin/phpcs src/* tests/* --standard=phpcs.xml -sp"
+		]
 	}
 }
