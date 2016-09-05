@@ -4,7 +4,8 @@
 			"Alchimista",
 			"Luckas",
 			"Imperadeiro98",
-			"Vitorvicentevalente"
+			"Vitorvicentevalente",
+			"Fúlvio"
 		]
 	},
 	"datatypes-desc": "Coleção de definições de tipos de dados",
@@ -17,5 +18,5 @@
 	"datatypes-type-unknown": "Não Especificado",
 	"datatypes-type-boolean": "Booleano",
 	"datatypes-type-globe-coordinate": "Coordenadas geográficas",
-	"datatypes-type-time": "Tempo"
+	"datatypes-type-time": "Ponto no tempo"
 }

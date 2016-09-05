@@ -4,12 +4,15 @@
 			"Cedric31"
 		]
 	},
+	"datatypes-desc": "Colleccion de definicions de tipes de donadas",
 	"datatypes-type-string": "Cadena",
 	"datatypes-type-quantity": "Quantitat",
+	"datatypes-type-monolingualtext": "Tèxte monolingüe",
+	"datatypes-type-multilingualtext": "Tèxte multilingüe",
 	"datatypes-type-number": "Nombre",
 	"datatypes-type-mediawiki-title": "Títol MediaWiki",
 	"datatypes-type-unknown": "Pas especificat",
 	"datatypes-type-boolean": "Boolean",
 	"datatypes-type-globe-coordinate": "Coordenadas geograficas",
-	"datatypes-type-time": "Data"
+	"datatypes-type-time": "Punt dins lo temps"
 }

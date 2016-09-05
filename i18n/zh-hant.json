@@ -3,7 +3,8 @@
 		"authors": [
 			"Justincheng12345",
 			"Simon Shek",
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Wehwei"
 		]
 	},
 	"datatypes-desc": "資料類型定義的集合",
@@ -16,5 +17,5 @@
 	"datatypes-type-unknown": "未指定",
 	"datatypes-type-boolean": "布林值",
 	"datatypes-type-globe-coordinate": "地理座標",
-	"datatypes-type-time": "時間"
+	"datatypes-type-time": "時間點"
 }
