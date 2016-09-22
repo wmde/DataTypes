@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"V.narsikar"
+		]
+	},
+	"datatypes-type-quantity": "संख्या",
+	"datatypes-type-monolingualtext": "एकभाषिक मजकूर",
+	"datatypes-type-multilingualtext": "बहुभाषिक मजकूर",
+	"datatypes-type-number": "आकडा",
+	"datatypes-type-mediawiki-title": "मिडियाविकि शीर्षक",
+	"datatypes-type-unknown": "अनमूद",
+	"datatypes-type-boolean": "बुलियन (Boolean)"
+}
