@@ -35,8 +35,10 @@ class DataTypeFactory {
 	 */
 	public function __construct( array $valueTypes ) {
 		foreach ( $valueTypes as $typeId => $valueType ) {
-			if ( !is_string( $typeId ) || !is_string( $valueType ) ) {
-				throw new InvalidArgumentException( '$valueTypes must be an associative array of strings' );
+			if ( !is_string( $typeId ) || $typeId === ''
+				|| !is_string( $valueType ) || $valueType === ''
+			) {
+				throw new InvalidArgumentException( '$valueTypes must be an associative array of non-empty strings' );
 			}
 		}
 
