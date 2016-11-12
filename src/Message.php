@@ -12,6 +12,9 @@ use Exception;
  */
 class Message {
 
+	/**
+	 * @var callable|null
+	 */
 	protected static $textFunction = null;
 
 	/**
