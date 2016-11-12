@@ -9,6 +9,7 @@ use InvalidArgumentException;
  *
  * @license GPL-2.0+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
+ * @author Thiemo Mättig
  */
 class DataType {
 
@@ -78,12 +79,12 @@ class DataType {
 	 *
 	 * @since 0.1
 	 *
-	 * @param string $langCode
+	 * @param string $languageCode
 	 *
-	 * @return string|null
+	 * @return string
 	 */
-	public function getLabel( $langCode ) {
-		return Message::text( 'datatypes-type-' . $this->getId(), $langCode );
+	public function getLabel( $languageCode ) {
+		return Message::text( 'datatypes-type-' . $this->typeId, $languageCode );
 	}
 
 	/**
