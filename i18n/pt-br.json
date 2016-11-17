@@ -2,12 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Cainamarques",
-			"Jaideraf"
+			"Jaideraf",
+			"O andarilho"
 		]
 	},
 	"datatypes-desc": "Coleção de definições de tipo de dados",
 	"datatypes-type-string": "String",
 	"datatypes-type-quantity": "Quantidade",
+	"datatypes-type-monolingualtext": "Texto multilíngue",
 	"datatypes-type-number": "Número",
 	"datatypes-type-mediawiki-title": "Título do MediaWiki",
 	"datatypes-type-unknown": "Não especificado",
