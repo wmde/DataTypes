@@ -38,7 +38,9 @@ class DataTypeFactory {
 			if ( !is_string( $typeId ) || $typeId === ''
 				|| !is_string( $valueType ) || $valueType === ''
 			) {
-				throw new InvalidArgumentException( '$valueTypes must be an associative array of non-empty strings' );
+				throw new InvalidArgumentException(
+					'$valueTypes must be an associative array of non-empty strings'
+				);
 			}
 		}
 
