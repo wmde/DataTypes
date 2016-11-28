@@ -3,16 +3,19 @@
 		"authors": [
 			"Danmichaelo",
 			"Jeblad",
-			"Event"
+			"Event",
+			"Jon Harald Søby"
 		]
 	},
 	"datatypes-desc": "Samling av datatypedefinisjoner",
 	"datatypes-type-string": "streng",
 	"datatypes-type-quantity": "størrelse",
+	"datatypes-type-monolingualtext": "Enspråklig tekst",
+	"datatypes-type-multilingualtext": "Flerspråklig tekst",
 	"datatypes-type-number": "tall",
 	"datatypes-type-mediawiki-title": "MediaWiki-tittel",
 	"datatypes-type-unknown": "uspesifisert",
 	"datatypes-type-boolean": "boolsk verdi",
 	"datatypes-type-globe-coordinate": "geografiske koordinater",
-	"datatypes-type-time": "tidspunkt"
+	"datatypes-type-time": "Tidspunkt"
 }
