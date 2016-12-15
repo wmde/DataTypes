@@ -3,17 +3,19 @@
 		"authors": [
 			"Cainamarques",
 			"Jaideraf",
-			"O andarilho"
+			"O andarilho",
+			"!Silent"
 		]
 	},
 	"datatypes-desc": "Coleção de definições de tipo de dados",
 	"datatypes-type-string": "String",
 	"datatypes-type-quantity": "Quantidade",
 	"datatypes-type-monolingualtext": "Texto multilíngue",
+	"datatypes-type-multilingualtext": "Texto multilíngue",
 	"datatypes-type-number": "Número",
 	"datatypes-type-mediawiki-title": "Título do MediaWiki",
 	"datatypes-type-unknown": "Não especificado",
 	"datatypes-type-boolean": "Booleano",
 	"datatypes-type-globe-coordinate": "Coordenadas geográfica",
-	"datatypes-type-time": "Tempo"
+	"datatypes-type-time": "Ponto no tempo"
 }
