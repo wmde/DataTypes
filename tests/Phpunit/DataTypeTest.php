@@ -3,7 +3,6 @@
 namespace DataTypes\Tests\Phpunit;
 
 use DataTypes\DataType;
-use DataTypes\Message;
 use PHPUnit_Framework_TestCase;
 use ReflectionClass;
 
@@ -17,29 +16,6 @@ use ReflectionClass;
  * @author Thiemo Mättig
  */
 class DataTypeTest extends PHPUnit_Framework_TestCase {
-
-	/**
-	 * @var callable|null
-	 */
-	private $textFunction;
-
-	protected function setUp() {
-		parent::setUp();
-
-		$class = new ReflectionClass( 'DataTypes\Message' );
-		$properties = $class->getStaticProperties();
-		$this->textFunction = $properties['textFunction'];
-
-		Message::registerTextFunction( function( $key, $languageCode ) {
-			return implode( '|', func_get_args() );
-		} );
-	}
-
-	protected function tearDown() {
-		Message::registerTextFunction( $this->textFunction );
-
-		parent::tearDown();
-	}
 
 	/**
 	 * @dataProvider invalidConstructorArgumentsProvider
@@ -72,9 +48,9 @@ class DataTypeTest extends PHPUnit_Framework_TestCase {
 		$this->assertSame( 'valueType', $type->getDataValueType() );
 	}
 
-	public function testGetLabel() {
+	public function testGetMessageKey() {
 		$type = new DataType( 'propertyType', 'valueType' );
-		$this->assertSame( 'datatypes-type-propertyType|en', $type->getLabel( 'en' ) );
+		$this->assertSame( 'datatypes-type-propertyType', $type->getMessageKey() );
 	}
 
 	public function testToArray() {

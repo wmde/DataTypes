@@ -34,14 +34,6 @@ $GLOBALS['wgHooks']['UnitTestsList'][] = function( array &$paths ) {
 	return true;
 };
 
-Message::registerTextFunction( function( $key, $languageCode ) {
-	// @codeCoverageIgnoreStart
-	$params = array_slice( func_get_args(), 2 );
-	$message = new \Message( $key, $params );
-	return $message->inLanguage( $languageCode )->text();
-	// @codeCoverageIgnoreEnd
-} );
-
 // Resource Loader module registration
 $GLOBALS['wgResourceModules'] = array_merge(
 	$GLOBALS['wgResourceModules'],
