@@ -75,16 +75,12 @@ class DataType {
 	}
 
 	/**
-	 * Returns the label of the data type in the provided language or null if there is none.
-	 *
-	 * @since 0.1
-	 *
-	 * @param string $languageCode
+	 * @since 1.0
 	 *
 	 * @return string
 	 */
-	public function getLabel( $languageCode ) {
-		return Message::text( 'datatypes-type-' . $this->typeId, $languageCode );
+	public function getMessageKey() {
+		return 'datatypes-type-' . $this->typeId;
 	}
 
 	/**
