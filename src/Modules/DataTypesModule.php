@@ -144,7 +144,7 @@ class DataTypesModule extends ResourceLoaderModule {
 	 */
 	public function getScript( ResourceLoaderContext $context ) {
 		$configVarName = $this->getConfigVarName();
-		$typesJson = array();
+		$typesJson = [];
 
 		foreach ( $this->dataTypes as $dataType ) {
 			$typesJson[ $dataType->getId() ] = $dataType->toArray();
@@ -162,7 +162,7 @@ class DataTypesModule extends ResourceLoaderModule {
 	 * @return string[]
 	 */
 	public function getMessages() {
-		$messageKeys = array();
+		$messageKeys = [];
 
 		foreach ( $this->dataTypes as $dataType ) {
 			// TODO: currently we assume that the type is using a message while it does not have to.
@@ -184,9 +184,9 @@ class DataTypesModule extends ResourceLoaderModule {
 	public function getDefinitionSummary( ResourceLoaderContext $context ) {
 		$summary = parent::getDefinitionSummary( $context );
 
-		$summary[] = array(
+		$summary[] = [
 			'dataHash' => sha1( json_encode( array_keys( $this->dataTypes ) ) )
-		);
+		];
 
 		return $summary;
 	}

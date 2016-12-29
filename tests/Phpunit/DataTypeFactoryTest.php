@@ -27,11 +27,11 @@ class DataTypeFactoryTest extends PHPUnit_Framework_TestCase {
 	}
 
 	public function valueTypesProvider() {
-		return array(
-			array( array() ),
-			array( array( 'string' => 'string' ) ),
-			array( array( 'customType' => 'customValueType' ) ),
-		);
+		return [
+			[ [] ],
+			[ [ 'string' => 'string' ] ],
+			[ [ 'customType' => 'customValueType' ] ],
+		];
 	}
 
 	/**
@@ -43,52 +43,52 @@ class DataTypeFactoryTest extends PHPUnit_Framework_TestCase {
 	}
 
 	public function invalidConstructorArgumentProvider() {
-		return array(
-			array( array( 'string' => '' ) ),
-			array( array( 'string' => 1 ) ),
-			array( array( 'string' => new DataType( 'string', 'string' ) ) ),
-			array( array( '' => 'string' ) ),
-			array( array( 0 => 'string' ) ),
-			array( array( 0 => new DataType( 'string', 'string' ) ) ),
-		);
+		return [
+			[ [ 'string' => '' ] ],
+			[ [ 'string' => 1 ] ],
+			[ [ 'string' => new DataType( 'string', 'string' ) ] ],
+			[ [ '' => 'string' ] ],
+			[ [ 0 => 'string' ] ],
+			[ [ 0 => new DataType( 'string', 'string' ) ] ],
+		];
 	}
 
 	public function testGetTypeIds() {
-		$instance = new DataTypeFactory( array( 'customType' => 'string' ) );
+		$instance = new DataTypeFactory( [ 'customType' => 'string' ] );
 
-		$expected = array( 'customType' );
+		$expected = [ 'customType' ];
 		$this->assertSame( $expected, $instance->getTypeIds() );
 	}
 
 	public function testGetType() {
-		$instance = new DataTypeFactory( array( 'customType' => 'string' ) );
+		$instance = new DataTypeFactory( [ 'customType' => 'string' ] );
 
 		$expected = new DataType( 'customType', 'string' );
 		$this->assertEquals( $expected, $instance->getType( 'customType' ) );
 	}
 
 	public function testGetUnknownType() {
-		$instance = new DataTypeFactory( array() );
+		$instance = new DataTypeFactory( [] );
 
 		$this->setExpectedException( 'OutOfBoundsException' );
 		$instance->getType( 'unknownTypeId' );
 	}
 
 	public function testGetTypes() {
-		$instance = new DataTypeFactory( array( 'customType' => 'string' ) );
+		$instance = new DataTypeFactory( [ 'customType' => 'string' ] );
 
-		$expected = array( 'customType' => new DataType( 'customType', 'string' ) );
+		$expected = [ 'customType' => new DataType( 'customType', 'string' ) ];
 		$this->assertEquals( $expected, $instance->getTypes() );
 	}
 
 	public static function provideDataTypeBuilder() {
-		return array(
-			array( // #0
+		return [
+			[
 				'data-type',
-				array( 'data-type' => 'valuetype' ),
+				[ 'data-type' => 'valuetype' ],
 				'valuetype'
-			),
-		);
+			],
+		];
 	}
 
 	/**

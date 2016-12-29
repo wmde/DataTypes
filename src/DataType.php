@@ -89,9 +89,9 @@ class DataType {
 	 * @return string[]
 	 */
 	public function toArray() {
-		return array(
+		return [
 			'dataValueType' => $this->dataValueType
-		);
+		];
 	}
 
 }

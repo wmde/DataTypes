@@ -13,17 +13,17 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
-$GLOBALS['wgExtensionCredits']['datavalues'][] = array(
+$GLOBALS['wgExtensionCredits']['datavalues'][] = [
 	'path' => __DIR__,
 	'name' => 'DataTypes',
 	'version' => DataTypes_VERSION,
-	'author' => array(
+	'author' => [
 		'The Wikidata team',
-	),
+	],
 	'url' => 'https://github.com/wmde/DataTypes',
 	'descriptionmsg' => 'datatypes-desc',
 	'license-name' => 'GPL-2.0+'
-);
+];
 
 $GLOBALS['wgMessagesDirs']['DataTypes'] = __DIR__ . '/i18n';
 
