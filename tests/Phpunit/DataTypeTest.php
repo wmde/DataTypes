@@ -26,16 +26,16 @@ class DataTypeTest extends PHPUnit_Framework_TestCase {
 	}
 
 	public function invalidConstructorArgumentsProvider() {
-		return array(
-			array( 'propertyType', '' ),
-			array( 'propertyType', null ),
-			array( 'propertyType', false ),
-			array( 'propertyType', 1 ),
-			array( '', 'valueType' ),
-			array( null, 'valueType' ),
-			array( false, 'valueType' ),
-			array( 0, 'valueType' ),
-		);
+		return [
+			[ 'propertyType', '' ],
+			[ 'propertyType', null ],
+			[ 'propertyType', false ],
+			[ 'propertyType', 1 ],
+			[ '', 'valueType' ],
+			[ null, 'valueType' ],
+			[ false, 'valueType' ],
+			[ 0, 'valueType' ],
+		];
 	}
 
 	public function testGetId() {
@@ -55,7 +55,7 @@ class DataTypeTest extends PHPUnit_Framework_TestCase {
 
 	public function testToArray() {
 		$type = new DataType( 'propertyType', 'valueType' );
-		$this->assertSame( array( 'dataValueType' => 'valueType' ), $type->toArray() );
+		$this->assertSame( [ 'dataValueType' => 'valueType' ], $type->toArray() );
 	}
 
 }

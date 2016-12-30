@@ -13,29 +13,28 @@ return call_user_func( function() {
 	preg_match( '+' . preg_quote( DIRECTORY_SEPARATOR ) . '(?:vendor|extensions)'
 		. preg_quote( DIRECTORY_SEPARATOR ) . '.*+', __DIR__, $remoteExtPath );
 
-	$moduleTemplate = array(
+	$moduleTemplate = [
 		'localBasePath' => __DIR__,
 		'remoteExtPath' => '..' . $remoteExtPath[0],
-	);
+	];
 
-	return array(
-
-		'dataTypes.__namespace' => $moduleTemplate + array(
+	return [
+		'dataTypes.__namespace' => $moduleTemplate + [
 			'scripts' => 'dataTypes/__namespace.js',
-		),
+		],
 
-		'dataTypes.DataType' => $moduleTemplate + array(
+		'dataTypes.DataType' => $moduleTemplate + [
 			'scripts' => 'dataTypes/DataType.js',
 			'dependencies' => 'dataTypes.__namespace',
-		),
+		],
 
-		'dataTypes.DataTypeStore' => $moduleTemplate + array(
+		'dataTypes.DataTypeStore' => $moduleTemplate + [
 			'scripts' => 'dataTypes/DataTypeStore.js',
-			'dependencies' => array(
+			'dependencies' => [
 				'dataTypes.__namespace',
 				'dataTypes.DataType',
-			),
-		),
-	);
+			],
+		],
+	];
 
 } );

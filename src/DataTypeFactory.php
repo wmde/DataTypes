@@ -18,12 +18,12 @@ class DataTypeFactory {
 	 *
 	 * @var DataType[]
 	 */
-	private $types = array();
+	private $types = [];
 
 	/**
 	 * @var string[] Associative array mapping data type identifiers to data value type identifiers.
 	 */
-	private $valueTypes = array();
+	private $valueTypes = [];
 
 	/**
 	 * @since 0.5
@@ -55,7 +55,7 @@ class DataTypeFactory {
 	 * @return self
 	 */
 	public static function newFromTypes( array $dataTypes ) {
-		$factory = new self( array() );
+		$factory = new self( [] );
 
 		foreach ( $dataTypes as $dataType ) {
 			$factory->registerDataType( $dataType );
@@ -118,7 +118,7 @@ class DataTypeFactory {
 	 * @return DataType[]
 	 */
 	public function getTypes() {
-		$types = array();
+		$types = [];
 
 		foreach ( $this->getTypeIds() as $typeId ) {
 			$types[$typeId] = $this->getType( $typeId );
