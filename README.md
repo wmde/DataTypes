@@ -23,11 +23,11 @@ the git repository and take care of loading yourself.
 To add this package as a local, per-project dependency to your project, simply add a
 dependency on `data-values/data-types` to your project's `composer.json` file.
 Here is a minimal example of a `composer.json` file that just defines a dependency on
-DataTypes 0.5.0:
+DataTypes 1.0:
 
     {
         "require": {
-            "data-values/data-types": "~0.5.0"
+            "data-values/data-types": "~1.0"
         }
     }
 
@@ -50,6 +50,12 @@ DataTypes has been written by the Wikidata team at [Wikimedia Germany](https://w
 for the [Wikidata project](https://wikidata.org/).
 
 ## Release notes
+
+### 1.0.0 (2016-12-29)
+* `DataType` and `DataTypeFactory` do not accept empty strings any more.
+* Removed `DataType::getLabel` along with the `DataTypes\Message` class.
+* Added `DataType::getMessageKey`.
+* Added a basic PHPCS rule set, can be run with `composer phpcs`.
 
 ### 0.5.2 (2016-02-17)
 * Fixed cache invalidation in `DataTypesModule`.
