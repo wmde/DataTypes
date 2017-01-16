@@ -4,15 +4,19 @@
 			"Alvaro Vidal-Abarca",
 			"Arnaugir",
 			"Pitort",
-			"Vogone"
+			"Vogone",
+			"Toniher"
 		]
 	},
+	"datatypes-desc": "Col·lecció de definicions de tipus de dades",
 	"datatypes-type-string": "Cadena",
 	"datatypes-type-quantity": "Quantitat",
+	"datatypes-type-monolingualtext": "Text monolingüe",
+	"datatypes-type-multilingualtext": "Text multilingüe",
 	"datatypes-type-number": "Nombre",
 	"datatypes-type-mediawiki-title": "Títol de MediaWiki",
 	"datatypes-type-unknown": "Sense especificar",
 	"datatypes-type-boolean": "Booleà",
 	"datatypes-type-globe-coordinate": "Coordenades geogràfiques",
-	"datatypes-type-time": "Data"
+	"datatypes-type-time": "Punt en el temps"
 }
