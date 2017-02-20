@@ -2,15 +2,19 @@
 	"@metadata": {
 		"authors": [
 			"Fohanno",
-			"Y-M D"
+			"Y-M D",
+			"Fulup"
 		]
 	},
+	"datatypes-desc": "Dastumad termenadurioù diwar-benn ar seurtoù roadennoù",
 	"datatypes-type-string": "Neudennad",
 	"datatypes-type-quantity": "Kementad",
+	"datatypes-type-monolingualtext": "Testenn unyezhek",
+	"datatypes-type-multilingualtext": "Testenn liesyezhek",
 	"datatypes-type-number": "Niver",
 	"datatypes-type-mediawiki-title": "Titl MediaWiki",
 	"datatypes-type-unknown": "Anspisaet",
 	"datatypes-type-boolean": "Boulean",
 	"datatypes-type-globe-coordinate": "Daveennoù douaroniel",
-	"datatypes-type-time": "Deiziad"
+	"datatypes-type-time": "Mare en amzer"
 }

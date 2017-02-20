@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jagwar"
+		]
+	},
+	"datatypes-desc": "Fitambaram-pamaritan'endrik'angona",
+	"datatypes-type-string": "Soratra",
+	"datatypes-type-quantity": "Habetsaka",
+	"datatypes-type-monolingualtext": "Lahatsoratra amin'ny fiteny tokana",
+	"datatypes-type-multilingualtext": "Lahatsoratraa ami'ny fiteny maro",
+	"datatypes-type-number": "Isa",
+	"datatypes-type-mediawiki-title": "Lohateny MediaWiki",
+	"datatypes-type-unknown": "Tsy voalaza",
+	"datatypes-type-boolean": "Booleanina",
+	"datatypes-type-globe-coordinate": "Laharan-toerana ara-jeografika",
+	"datatypes-type-time": "Toerana anatin'ny fotoana"
+}
