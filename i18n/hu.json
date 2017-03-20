@@ -16,6 +16,6 @@
 	"datatypes-type-mediawiki-title": "MediaWiki-cím",
 	"datatypes-type-unknown": "Meghatározatlan",
 	"datatypes-type-boolean": "Logikai érték",
-	"datatypes-type-globe-coordinate": "Földrajzi koordináta",
+	"datatypes-type-globe-coordinate": "Földrajzi koordináták",
 	"datatypes-type-time": "Időpont"
 }
