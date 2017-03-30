@@ -1,9 +1,15 @@
 {
-    "@metadata": {
-        "authors": [
-            "Bellayet"
-        ]
-    },
-    "datatypes-type-quantity": "পরিমাণ",
-    "datatypes-type-number": "সংখ্যা"
+	"@metadata": {
+		"authors": [
+			"Bellayet",
+			"Aftabuzzaman"
+		]
+	},
+	"datatypes-type-quantity": "পরিমাণ",
+	"datatypes-type-number": "সংখ্যা",
+	"datatypes-type-mediawiki-title": "মিডিয়াউইকি শিরোনাম",
+	"datatypes-type-unknown": "অনির্দিষ্ট",
+	"datatypes-type-boolean": "বুলিয়ান",
+	"datatypes-type-globe-coordinate": "ভৌগলিক স্থানাঙ্ক",
+	"datatypes-type-time": "সময়ের বিন্দু"
 }
