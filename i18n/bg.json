@@ -1,8 +1,19 @@
 {
-    "@metadata": {
-        "authors": [
-            "පසිඳු කාවින්ද"
-        ]
-    },
-    "datatypes-type-number": "Число"
+	"@metadata": {
+		"authors": [
+			"පසිඳු කාවින්ද",
+			"StanProg"
+		]
+	},
+	"datatypes-desc": "Колекция от дефиниции на типове данни",
+	"datatypes-type-string": "Низ",
+	"datatypes-type-quantity": "Количество",
+	"datatypes-type-monolingualtext": "Едноезичен текст",
+	"datatypes-type-multilingualtext": "Многоезичен текст",
+	"datatypes-type-number": "Число",
+	"datatypes-type-mediawiki-title": "Заглавие на МедияУики",
+	"datatypes-type-unknown": "Неуказано",
+	"datatypes-type-boolean": "Булев",
+	"datatypes-type-globe-coordinate": "Географски координати",
+	"datatypes-type-time": "Момент във времето"
 }
