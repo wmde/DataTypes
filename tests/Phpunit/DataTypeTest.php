@@ -4,7 +4,6 @@ namespace DataTypes\Tests\Phpunit;
 
 use DataTypes\DataType;
 use PHPUnit_Framework_TestCase;
-use ReflectionClass;
 
 /**
  * @covers DataTypes\DataType
