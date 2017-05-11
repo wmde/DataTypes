@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Srdjan m"
+		]
+	},
+	"datatypes-type-quantity": "Količina",
+	"datatypes-type-monolingualtext": "Jednojezički tekst",
+	"datatypes-type-multilingualtext": "Višejezički tekst",
+	"datatypes-type-number": "Broj",
+	"datatypes-type-globe-coordinate": "Geografski koordinati",
+	"datatypes-type-time": "Tačka u vremenu"
+}

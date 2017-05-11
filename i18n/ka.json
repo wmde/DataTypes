@@ -11,5 +11,5 @@
 	"datatypes-type-unknown": "არ არის მითითებული",
 	"datatypes-type-boolean": "ლოგიკური მნიშვნელობა",
 	"datatypes-type-globe-coordinate": "გეოგრაფიული კოორდინატები",
-	"datatypes-type-time": "დრო"
+	"datatypes-type-time": "დროის მომენტი"
 }

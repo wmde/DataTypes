@@ -2,15 +2,19 @@
 	"@metadata": {
 		"authors": [
 			"Ansumang",
-			"Siddhartha Ghai"
+			"Siddhartha Ghai",
+			"चक्रपाणी"
 		]
 	},
 	"datatypes-desc": "डेटा प्रकार परिभाषाओं का संग्रह",
 	"datatypes-type-string": "स्ट्रिंग",
-	"datatypes-type-quantity": "परिमाण",
+	"datatypes-type-quantity": "मात्रा",
+	"datatypes-type-monolingualtext": "एकभाषी टेक्स्ट",
+	"datatypes-type-multilingualtext": "बहुभाषी टेक्स्ट",
 	"datatypes-type-number": "संख्या",
 	"datatypes-type-mediawiki-title": "मीडियाविकि शीर्षक",
 	"datatypes-type-unknown": "अनिर्दिष्ट",
 	"datatypes-type-boolean": "बूलियन",
-	"datatypes-type-globe-coordinate": "भौगोलिक निर्देशांक"
+	"datatypes-type-globe-coordinate": "भौगोलिक निर्देशांक",
+	"datatypes-type-time": "समय में एक बिंदु"
 }
