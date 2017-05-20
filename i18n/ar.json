@@ -3,7 +3,8 @@
 		"authors": [
 			"Antime",
 			"Tarawneh",
-			"محمد أحمد عبد الفتاح"
+			"محمد أحمد عبد الفتاح",
+			"Mido"
 		]
 	},
 	"datatypes-desc": "مجموعة من تعريفات انواع البيانات",
@@ -15,5 +16,5 @@
 	"datatypes-type-unknown": "غير محدد",
 	"datatypes-type-boolean": "قيمة منطقية",
 	"datatypes-type-globe-coordinate": "إحداثيات جغرافية",
-	"datatypes-type-time": "زمن"
+	"datatypes-type-time": "نقطة زمنية"
 }
