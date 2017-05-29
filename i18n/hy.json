@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Narek",
+			"Աշոտ1997"
+		]
+	},
+	"datatypes-type-string": "Տող",
+	"datatypes-type-multilingualtext": "Բազմալեզու տեքստ",
+	"datatypes-type-number": "Թիվ",
+	"datatypes-type-boolean": "Տրամաբանական տիպ",
+	"datatypes-type-globe-coordinate": "Աշխարհագրական կոորդինատներ"
+}
