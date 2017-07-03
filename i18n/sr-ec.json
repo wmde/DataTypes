@@ -2,12 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Rancher",
-			"Obsuser"
+			"Obsuser",
+			"Милан Јелисавчић"
 		]
 	},
 	"datatypes-desc": "Колекција дефиниција типа података",
-	"datatypes-type-string": "Ниска",
-	"datatypes-type-quantity": "Количина",
+	"datatypes-type-string": "ниска",
+	"datatypes-type-quantity": "количина",
 	"datatypes-type-monolingualtext": "Једнојезички текст",
 	"datatypes-type-multilingualtext": "Вишејезички текст",
 	"datatypes-type-number": "Број",
