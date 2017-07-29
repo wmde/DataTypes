@@ -1,7 +1,7 @@
-( function( $, dt ) {
+( function ( $, dt ) {
 	'use strict';
 
-/**
+	/**
  * Base constructor for objects representing a data type.
  * @class dataTypes.DataType
  * @abstract
@@ -17,54 +17,54 @@
  * @throws {Error} if data type id is not provided as a string.
  * @throws {Error} if data value type is not provided as a string.
  */
-var SELF = dt.DataType = function DtDataType( dataTypeId, dataValueType ) {
-	if ( !dataTypeId || typeof dataTypeId !== 'string' ) {
-		throw new Error( 'A data type\'s ID has to be a string' );
-	}
+	var SELF = dt.DataType = function DtDataType( dataTypeId, dataValueType ) {
+		if ( !dataTypeId || typeof dataTypeId !== 'string' ) {
+			throw new Error( 'A data type\'s ID has to be a string' );
+		}
 
-	if ( typeof dataValueType !== 'string' ) {
-		throw new Error( 'A data value type has to be given in form of a string' );
-	}
+		if ( typeof dataValueType !== 'string' ) {
+			throw new Error( 'A data value type has to be given in form of a string' );
+		}
 
-	this._id = dataTypeId;
-	this._dataValueType = dataValueType;
-};
+		this._id = dataTypeId;
+		this._dataValueType = dataValueType;
+	};
 
-$.extend( SELF.prototype, {
+	$.extend( SELF.prototype, {
 	/**
 	 * DataType identifier.
 	 * @property {string}
 	 * @private
 	 */
-	_id: null,
+		_id: null,
 
-	/**
+		/**
 	 * DataValue identifier.
 	 * @property {string}
 	 * @private
 	 */
-	_dataValueType: null,
+		_dataValueType: null,
 
-	/**
+		/**
 	 * Returns the data type's identifier.
 	 *
 	 * @return {string}
 	 */
-	getId: function() {
-		return this._id;
-	},
+		getId: function () {
+			return this._id;
+		},
 
-	/**
+		/**
 	 * Returns the DataValue used by this data type.
 	 *
 	 * @return {string}
 	 */
-	getDataValueType: function() {
-		return this._dataValueType;
-	}
-} );
+		getDataValueType: function () {
+			return this._dataValueType;
+		}
+	} );
 
-/**
+	/**
  * Creates a new DataType object from a given JSON structure.
  * @static
  *
@@ -72,8 +72,8 @@ $.extend( SELF.prototype, {
  * @param {Object} json
  * @return {dataTypes.DataType}
  */
-SELF.newFromJSON = function( dataTypeId, json ) {
-	return new SELF( dataTypeId, json.dataValueType );
-};
+	SELF.newFromJSON = function ( dataTypeId, json ) {
+		return new SELF( dataTypeId, json.dataValueType );
+	};
 
 }( jQuery, dataTypes ) );
