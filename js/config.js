@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  * @author H. Snater < mediawiki@snater.com >
  */
-this.config = ( function() {
+this.config = ( function () {
 	'use strict';
 
 	return {
@@ -19,7 +19,7 @@ this.config = ( function() {
 		shim: {
 			qunit: {
 				exports: 'QUnit',
-				init: function() {
+				init: function () {
 					QUnit.config.autoload = false;
 					QUnit.config.autostart = false;
 				}
@@ -27,7 +27,7 @@ this.config = ( function() {
 
 			'qunit.parameterize': {
 				exports: 'QUnit.cases',
-				deps: ['qunit']
+				deps: [ 'qunit' ]
 			},
 
 			'dataType/__namespace': {
@@ -36,12 +36,12 @@ this.config = ( function() {
 
 			'dataTypes/DataType': {
 				exports: 'dataTypes',
-				deps: ['jquery', 'dataTypes/__namespace', 'qunit.parameterize']
+				deps: [ 'jquery', 'dataTypes/__namespace', 'qunit.parameterize' ]
 			},
 
 			'dataTypes/DataTypeStore': {
 				exports: 'dataTypes',
-				deps: ['jquery', 'dataTypes/__namespace', 'dataTypes/DataType']
+				deps: [ 'jquery', 'dataTypes/__namespace', 'dataTypes/DataType' ]
 			}
 		},
 		tests: [
@@ -50,4 +50,4 @@ this.config = ( function() {
 		]
 	};
 
-} )();
+}() );

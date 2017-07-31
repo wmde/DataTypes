@@ -1,0 +1,15 @@
+{
+	"extends": "wikimedia",
+	"env": {
+		"browser": true,
+		"jquery": true,
+		"qunit": true
+	},
+	"globals": {
+		"dataTypes": false,
+		"define": false
+	},
+	"rules": {
+		"no-underscore-dangle": "off"
+	}
+}

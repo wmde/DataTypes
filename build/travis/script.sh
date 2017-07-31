@@ -6,9 +6,9 @@ if [ "$QUNIT" == true ]; then
 
 cd js/lib/TestRunner
 phantomjs runTests.phantom.js ../../../tests/qunit/runTests.html
-
-else
-
-phpunit
+cd -
 
 fi
+
+composer test
+./node_modules/.bin/eslint .

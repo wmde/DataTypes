@@ -4,12 +4,12 @@
  */
 define( [
 	'jquery', 'qunit', 'dataTypes/DataTypeStore', 'dataTypes/DataType'
-], function( $, QUnit, dataTypes ) {
+], function ( $, QUnit, dataTypes ) {
 	'use strict';
 
 	QUnit.module( 'dataTypes.DataTypeStore' );
 
-	QUnit.test( 'Test initializing a DataType object', function( assert ) {
+	QUnit.test( 'Test initializing a DataType object', function ( assert ) {
 		var dataTypeStore = new dataTypes.DataTypeStore(),
 			testDataType = new dataTypes.DataType( 'foo', 'fooDataValueType' ),
 			testDataTypeId = testDataType.getId();

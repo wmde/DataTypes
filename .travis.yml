@@ -3,9 +3,12 @@ language: php
 env:
   - QUNIT=false
 
+dist: trusty
+
 php:
   - 5.5
   - 5.6
+  - 7
   - hhvm
 
 matrix:
@@ -15,6 +18,7 @@ matrix:
 
 before_script:
   - composer install --prefer-source
+  - npm install eslint eslint-config-wikimedia
 
 script: bash ./build/travis/script.sh
 
