@@ -10,15 +10,6 @@
 		"define": false
 	},
 	"rules": {
-		"dot-notation": "off",
-		"new-cap": "off",
-		"no-underscore-dangle": "off",
-		"no-use-before-define": [ "error", "nofunc" ],
-		"no-unused-vars": "off",
-		"no-useless-concat": "off",
-		"one-var": "off",
-		"operator-linebreak": "off",
-		"valid-jsdoc": "off",
-		"vars-on-top": "off"
+		"no-underscore-dangle": "off"
 	}
 }
