@@ -9,7 +9,7 @@ phantomjs runTests.phantom.js ../../../tests/qunit/runTests.html
 cd ../../..
 else
 
-php phpunit-4.8.phar
+composer test
 
 fi
 
