@@ -9,12 +9,12 @@
 
 namespace DataTypes;
 
-if ( defined( 'DataTypes_VERSION' ) ) {
+if ( defined( 'DATATYPES_VERSION' ) ) {
 	// Do not initialize more than once.
 	return 1;
 }
 
-define( 'DataTypes_VERSION', '1.0.0' );
+define( 'DATATYPES_VERSION', '1.0.0' );
 
 if ( defined( 'MEDIAWIKI' ) ) {
 	include __DIR__ . '/DataTypes.mw.php';
