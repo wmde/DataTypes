@@ -20,7 +20,9 @@ before_script:
   - composer install --prefer-source
   - npm install eslint eslint-config-wikimedia
 
-script: bash ./build/travis/script.sh
+script:
+  - composer test
+  - bash ./build/travis/script.sh
 
 notifications:
   email:

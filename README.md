@@ -52,8 +52,8 @@ for the [Wikidata project](https://wikidata.org/).
 ## Release notes
 
 ### 1.1.0 (dev)
-* Renamed `DataTypes_VERSION` constant to `DATATYPES_VERSION`, leaving a deprecated alias.
 * Updated internationalizations.
+* Updated to use the ESLint and Wikibase code sniffers.
 
 ### 1.0.0 (2016-12-29)
 * `DataType` and `DataTypeFactory` do not accept empty strings any more.
