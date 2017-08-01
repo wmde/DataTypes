@@ -39,14 +39,8 @@
 	},
 	"scripts": {
 		"test": [
+			"phpcs -p -s",
 			"phpunit"
-		],
-		"phpcs": [
-			"vendor/bin/phpcs -sp"
-		],
-		"ci": [
-			"@test",
-			"@phpcs"
 		]
 	}
 }

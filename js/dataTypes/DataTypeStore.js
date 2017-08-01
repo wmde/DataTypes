@@ -2,7 +2,6 @@
 	'use strict';
 
 	/**
-	 * DataType store.
 	 * @class dataTypes.DataTypeStore
 	 * @since 0.2
 	 * @license GPL-2.0+
@@ -14,6 +13,9 @@
 		this._dataTypes = {};
 	};
 
+	/**
+	 * @class dataTypes.DataTypeStore
+	 */
 	$.extend( SELF.prototype, {
 		/**
 		 * Data type definitions.

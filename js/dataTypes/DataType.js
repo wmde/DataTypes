@@ -30,23 +30,26 @@
 		this._dataValueType = dataValueType;
 	};
 
+	/**
+	 * @class dataTypes.DataType
+	 */
 	$.extend( SELF.prototype, {
 		/**
-		 * DataType identifier.
+		 * Data type (a.k.a. property type) identifier.
 		 * @property {string}
 		 * @private
 		 */
 		_id: null,
 
 		/**
-		 * DataValue identifier.
+		 * Identifier of the data value type internally used by this data type.
 		 * @property {string}
 		 * @private
 		 */
 		_dataValueType: null,
 
 		/**
-		 * Returns the data type's identifier.
+		 * Returns the data type (a.k.a. property type) identifier.
 		 *
 		 * @return {string}
 		 */
@@ -55,7 +58,7 @@
 		},
 
 		/**
-		 * Returns the DataValue used by this data type.
+		 * Returns the identifier of the data value type internally used by this data type.
 		 *
 		 * @return {string}
 		 */
