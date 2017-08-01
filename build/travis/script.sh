@@ -10,5 +10,5 @@ cd -
 
 fi
 
-composer ci
+composer test
 ./node_modules/.bin/eslint .

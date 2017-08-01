@@ -14,7 +14,12 @@ if ( defined( 'DATATYPES_VERSION' ) ) {
 	return 1;
 }
 
-define( 'DATATYPES_VERSION', '1.0.0' );
+define( 'DATATYPES_VERSION', '1.1.0' );
+
+/**
+ * @deprecated
+ */
+define( 'DataTypes_VERSION', DATATYPES_VERSION );
 
 if ( defined( 'MEDIAWIKI' ) ) {
 	include __DIR__ . '/DataTypes.mw.php';
