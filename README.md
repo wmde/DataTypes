@@ -53,7 +53,6 @@ for the [Wikidata project](https://wikidata.org/).
 
 ### 1.1.0 (dev)
 * Updated internationalizations.
-* Updated to use the ESLint and Wikibase code sniffers.
 
 ### 1.0.0 (2016-12-29)
 * `DataType` and `DataTypeFactory` do not accept empty strings any more.
