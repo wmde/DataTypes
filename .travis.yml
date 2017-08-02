@@ -1,7 +1,7 @@
 language: php
 
 env:
-  - QUNIT=false
+  - JS_BUILD=false
 
 dist: trusty
 
@@ -14,16 +14,15 @@ php:
 matrix:
   include:
     - php: 5.5
-      env: QUNIT=true
+      env: JS_BUILD=true
 
 before_script:
   - composer install --prefer-source
-  - npm install
+  - if [[ "$JS_BUILD" == true ]]; then npm install; fi
 
 script:
   - composer test
-  - npm test
-  - bash ./build/travis/script.sh
+  - if [[ "$JS_BUILD" == true ]]; then npm test; fi
 
 notifications:
   email:

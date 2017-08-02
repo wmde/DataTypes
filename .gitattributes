@@ -6,6 +6,7 @@
 .travis.yml export-ignore
 build export-ignore
 composer.json export-ignore
+karma.conf.js export-ignore
 phpcs.xml export-ignore
 phpunit.xml.dist export-ignore
 tests export-ignore
