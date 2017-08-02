@@ -18,10 +18,11 @@ matrix:
 
 before_script:
   - composer install --prefer-source
-  - npm install eslint eslint-config-wikimedia
+  - npm install
 
 script:
   - composer test
+  - npm test
   - bash ./build/travis/script.sh
 
 notifications:

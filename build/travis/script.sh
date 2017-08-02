@@ -9,6 +9,3 @@ phantomjs runTests.phantom.js ../../../tests/qunit/runTests.html
 cd -
 
 fi
-
-./node_modules/.bin/eslint .
-exit $?
