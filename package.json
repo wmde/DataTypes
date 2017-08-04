@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-wikimedia": "0.4.0"
+  },
+  "scripts": {
+    "eslint": "eslint ."
+  }
+}

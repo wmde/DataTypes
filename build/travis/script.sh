@@ -10,5 +10,4 @@ cd -
 
 fi
 
-./node_modules/.bin/eslint .
 exit $?
