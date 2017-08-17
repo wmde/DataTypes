@@ -1,12 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Lloffiwr"
+			"Lloffiwr",
+			"Robin Owain"
 		]
 	},
 	"datatypes-desc": "Casgliad o ddiffiniadau o fathau o ddata",
 	"datatypes-type-string": "Llinyn",
 	"datatypes-type-quantity": "Mesur",
+	"datatypes-type-monolingualtext": "Testun uniaith",
+	"datatypes-type-multilingualtext": "Testun amlieithog",
 	"datatypes-type-number": "Rhif",
 	"datatypes-type-mediawiki-title": "Teitl yn MediaWiki",
 	"datatypes-type-unknown": "Heb ei nodi",
