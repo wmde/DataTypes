@@ -4,10 +4,11 @@
 			"Dj",
 			"JulesWinnfield-hu",
 			"Máté",
-			"Wolf Rex"
+			"Wolf Rex",
+			"Bináris"
 		]
 	},
-	"datatypes-desc": "Adattípus definíciók gyűjteménye",
+	"datatypes-desc": "Adattípus-definíciók gyűjteménye",
 	"datatypes-type-string": "Karakterlánc",
 	"datatypes-type-quantity": "Mennyiség",
 	"datatypes-type-monolingualtext": "Egynyelvű szöveg",
