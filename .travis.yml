@@ -1,7 +1,7 @@
 language: php
 
 env:
-  - QUNIT=false
+  - JS_BUILD=false
 
 dist: trusty
 
@@ -9,20 +9,21 @@ php:
   - 5.5
   - 5.6
   - 7
+  - 7.1
   - hhvm
 
 matrix:
   include:
     - php: 5.5
-      env: QUNIT=true
+      env: JS_BUILD=true
 
 before_script:
   - composer install --prefer-source
-  - npm install eslint eslint-config-wikimedia
+  - if [[ "$JS_BUILD" == true ]]; then npm install; fi
 
 script:
   - composer test
-  - bash ./build/travis/script.sh
+  - if [[ "$JS_BUILD" == true ]]; then npm test; fi
 
 notifications:
   email:

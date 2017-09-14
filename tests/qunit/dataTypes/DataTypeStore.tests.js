@@ -2,9 +2,7 @@
  * @license GPL-2.0+
  * @author H. Snater < mediawiki@snater.com >
  */
-define( [
-	'jquery', 'qunit', 'dataTypes/DataTypeStore', 'dataTypes/DataType'
-], function ( $, QUnit, dataTypes ) {
+( function ( QUnit, dataTypes ) {
 	'use strict';
 
 	QUnit.module( 'dataTypes.DataTypeStore' );
@@ -27,4 +25,4 @@ define( [
 		);
 	} );
 
-} );
+}( QUnit, dataTypes ) );

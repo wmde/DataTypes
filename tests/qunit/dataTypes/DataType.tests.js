@@ -2,84 +2,83 @@
  * @license GPL-2.0+
  * @author Daniel Werner < daniel.werner@wikimedia.de >
  */
-define( [ 'qunit', 'jquery', 'dataTypes/DataType', 'qunit.parameterize' ], function ( QUnit, $, dt ) {
+( function ( QUnit, dt ) {
 	'use strict';
 
 	var DataType = dt.DataType;
 
 	QUnit.module( 'dataTypes.DataType' );
 
-	var instanceDefinitions = [
+	QUnit.test( 'constructor', function ( assert ) {
+		var dataType = new DataType( 'foo', 'string' );
+
+		assert.ok(
+			dataType instanceof DataType,
+			'New data type created and instance of DataType'
+		);
+	} );
+
+	QUnit.test( 'getId', function ( assert ) {
+		var dataType = new DataType( 'foo', 'string' );
+
+		assert.strictEqual(
+			dataType.getId(),
+			'foo',
+			'getId() returns string ID provided in constructor'
+		);
+	} );
+
+	QUnit.test( 'getDataValueType', function ( assert ) {
+		var dataType = new DataType( 'foo', 'string' ),
+			dvType = dataType.getDataValueType();
+
+		assert.equal(
+			typeof dvType,
+			'string',
+			'getDataValueType() returns string'
+		);
+
+		assert.ok(
+			dvType !== '',
+			'string returned by getDataValueType() is not empty'
+		);
+	} );
+
+	var invalidArguments = [
 		{
-			title: 'simple DataType',
-			constructorParams: [ 'foo', 'string' ],
-			valueType: 'string'
+			title: 'no arguments',
+			constructorParams: []
+		},
+		{
+			title: 'missing data value type',
+			constructorParams: [ 'foo' ]
+		},
+		{
+			title: 'wrong type for data value type',
+			constructorParams: [ 'foo', {} ]
+		},
+		{
+			title: 'wrong type for ID',
+			constructorParams: [ null, 'xxx' ]
 		}
 	];
 
-	function instanceFromDefinition( definition ) {
-		var cp = definition.constructorParams;
-		return new DataType( cp[ 0 ], cp[ 1 ] );
-	}
+	QUnit.test( 'invalid constructor arguments', function ( assert ) {
+		assert.expect( invalidArguments.length );
 
-	QUnit
-		.cases( instanceDefinitions )
-		.test( 'constructor', function ( params, assert ) {
-			var dataType = instanceFromDefinition( params );
+		function instantiateObject( testArguments ) {
+			return function () {
+				var args = testArguments.constructorParams;
+				return new DataType( args[ 0 ], args[ 1 ] );
+			};
+		}
 
-			assert.ok(
-				dataType instanceof DataType,
-				'New data type created and instance of DataType'
-			);
-		} )
-		.test( 'getId', function ( params, assert ) {
-			var dataType = instanceFromDefinition( params );
-
-			assert.strictEqual(
-				dataType.getId(),
-				params.constructorParams[ 0 ],
-				'getId() returns string ID provided in constructor'
-			);
-		} )
-		.test( 'getDataValueType', function ( params, assert ) {
-			var dataType = instanceFromDefinition( params ),
-				dvType = dataType.getDataValueType();
-
-			assert.equal(
-				typeof dvType,
-				'string',
-				'getDataValueType() returns string'
-			);
-
-			assert.ok(
-				dvType !== '',
-				'string returned by getDataValueType() is not empty'
-			);
-		} );
-
-	QUnit
-		.cases( [
-			{
-				title: 'no arguments',
-				constructorParams: []
-			}, {
-				title: 'missing data value type',
-				constructorParams: [ 'foo' ]
-			}, {
-				title: 'wrong type for data value type',
-				constructorParams: [ 'foo', {} ]
-			}, {
-				title: 'wrong type for ID',
-				constructorParams: [ null, 'xxx' ]
-			}
-		] )
-		.test( 'invalid constructor arguments', function ( params, assert ) {
+		for ( var i = 0; i < invalidArguments.length; i++ ) {
 			assert.throws(
-				function () {
-					instanceFromDefinition( params );
-				},
-				'DataType can not be constructed from invalid arguments'
+				instantiateObject( invalidArguments[ i ] ),
+				'DataType can not be constructed from invalid arguments: ' + invalidArguments[ i ].title
 			);
-		} );
+		}
+	} );
 
-} );
+}( QUnit, dataTypes ) );
