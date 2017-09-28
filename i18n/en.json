@@ -4,7 +4,6 @@
             "Jeroen De Dauw"
         ]
     },
-    "datatypes-desc": "Collection of data type definitions",
     "datatypes-type-string": "String",
     "datatypes-type-quantity": "Quantity",
     "datatypes-type-monolingualtext": "Monolingual text",
