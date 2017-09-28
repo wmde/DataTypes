@@ -4,6 +4,8 @@ namespace DataTypes\Tests\Phpunit;
 
 use DataTypes\DataType;
 use DataTypes\DataTypeFactory;
+use InvalidArgumentException;
+use OutOfBoundsException;
 use PHPUnit_Framework_TestCase;
 
 /**
@@ -23,7 +25,7 @@ class DataTypeFactoryTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testConstructor( array $valueTypes ) {
 		$instance = new DataTypeFactory( $valueTypes );
-		$this->assertInstanceOf( 'DataTypes\DataTypeFactory', $instance );
+		$this->assertInstanceOf( DataTypeFactory::class, $instance );
 	}
 
 	public function valueTypesProvider() {
@@ -38,7 +40,7 @@ class DataTypeFactoryTest extends PHPUnit_Framework_TestCase {
 	 * @dataProvider invalidConstructorArgumentProvider
 	 */
 	public function testConstructorThrowsException( array $argument ) {
-		$this->setExpectedException( 'InvalidArgumentException' );
+		$this->setExpectedException( InvalidArgumentException::class );
 		new DataTypeFactory( $argument );
 	}
 
@@ -70,7 +72,7 @@ class DataTypeFactoryTest extends PHPUnit_Framework_TestCase {
 	public function testGetUnknownType() {
 		$instance = new DataTypeFactory( [] );
 
-		$this->setExpectedException( 'OutOfBoundsException' );
+		$this->setExpectedException( OutOfBoundsException::class );
 		$instance->getType( 'unknownTypeId' );
 	}
 

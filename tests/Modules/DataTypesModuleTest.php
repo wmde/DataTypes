@@ -4,6 +4,7 @@ namespace DataTypes\Tests\Modules;
 
 use DataTypes\DataTypeFactory;
 use DataTypes\Modules\DataTypesModule;
+use Exception;
 use ResourceLoaderContext;
 
 /**
@@ -52,10 +53,7 @@ class DataTypesModuleTest extends \PHPUnit_Framework_TestCase {
 	 * @param DataTypesModule $module
 	 */
 	public function testGetDataTypeFactory( DataTypesModule $module ) {
-		$this->assertInstanceOf(
-			'DataTypes\DataTypeFactory',
-			$module->getDataTypeFactory()
-		);
+		$this->assertInstanceOf( DataTypeFactory::class, $module->getDataTypeFactory() );
 	}
 
 	/**
@@ -136,7 +134,7 @@ class DataTypesModuleTest extends \PHPUnit_Framework_TestCase {
 	 */
 	public function testConstructorErrors( array $definition, $caseDescription ) {
 		$this->setName( 'Instantiation raises exception in case ' . $caseDescription );
-		$this->setExpectedException( 'Exception' );
+		$this->setExpectedException( Exception::class );
 
 		new DataTypesModule( $definition );
 	}
@@ -186,7 +184,7 @@ class DataTypesModuleTest extends \PHPUnit_Framework_TestCase {
 	 * @return ResourceLoaderContext
 	 */
 	private function getContext() {
-		return $this->getMockBuilder( 'ResourceLoaderContext' )
+		return $this->getMockBuilder( ResourceLoaderContext::class )
 			->disableOriginalConstructor()
 			->getMock();
 	}
