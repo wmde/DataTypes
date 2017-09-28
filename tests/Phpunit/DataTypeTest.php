@@ -3,6 +3,7 @@
 namespace DataTypes\Tests\Phpunit;
 
 use DataTypes\DataType;
+use InvalidArgumentException;
 use PHPUnit_Framework_TestCase;
 
 /**
@@ -20,7 +21,7 @@ class DataTypeTest extends PHPUnit_Framework_TestCase {
 	 * @dataProvider invalidConstructorArgumentsProvider
 	 */
 	public function testConstructorThrowsException( $propertyType, $valueType ) {
-		$this->setExpectedException( 'InvalidArgumentException' );
+		$this->setExpectedException( InvalidArgumentException::class );
 		new DataType( $propertyType, $valueType );
 	}
 
