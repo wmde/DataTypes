@@ -6,7 +6,6 @@
 			"Umherirrender"
 		]
 	},
-	"datatypes-desc": "{{desc|name=Data Types|url=https://www.mediawiki.org/wiki/Extension:DataTypes}}",
 	"datatypes-type-string": "The name of a data type.\n{{Identical|String}}",
 	"datatypes-type-quantity": "The name of a data type for quantities (proper name, capitalised in English; first letter capitalised anyway in this message and relatives).\n{{Identical|Quantity}}",
 	"datatypes-type-monolingualtext": "The name of a data type.\n{{Identical|Monolingual text}}",
